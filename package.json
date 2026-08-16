@@ -1,0 +1,12 @@
+{
+  "name": "solmais",
+  "version": "1.0.0",
+  "description": "SolMais - Demonstracao de energia solar fotovoltaica com simulador ilustrativo",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.2.0"
+  }
+}
