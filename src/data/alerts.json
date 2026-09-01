@@ -1,0 +1,38 @@
+[
+  {
+    "id": "alert-001",
+    "systemId": "sys-004",
+    "projectId": "SOL-3012",
+    "type": "inversor-offline",
+    "severity": "alto",
+    "title": "Inversor offline",
+    "description": "Comunicacao interrompida — inversor offline ha 2h 15min",
+    "createdAt": "2026-09-01 06:30",
+    "status": "aberto",
+    "actions": ["Ver sistema", "Criar chamado", "Marcar resolvido"]
+  },
+  {
+    "id": "alert-002",
+    "systemId": "sys-002",
+    "projectId": "SOL-2091",
+    "type": "producao-abaixo",
+    "severity": "medio",
+    "title": "Producao 8% abaixo do esperado",
+    "description": "Sistema SOL-2091 gerando abaixo da estimativa — possivel sombreamento",
+    "createdAt": "2026-08-31 14:00",
+    "status": "aberto",
+    "actions": ["Ver sistema", "Criar chamado", "Marcar resolvido"]
+  },
+  {
+    "id": "alert-003",
+    "systemId": "sys-001",
+    "projectId": "SOL-4821",
+    "type": "comunicacao-restaurada",
+    "severity": "info",
+    "title": "Comunicacao restaurada",
+    "description": "Sistema SOL-4821 voltou a comunicar normalmente apos reinicializacao",
+    "createdAt": "2026-08-28 10:15",
+    "status": "resolvido",
+    "actions": ["Ver sistema"]
+  }
+]

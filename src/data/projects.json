@@ -1,0 +1,223 @@
+[
+  {
+    "id": "SOL-4821",
+    "customerId": "cus-001",
+    "customerName": "Rafael Demonstracao",
+    "systemId": "sys-001",
+    "type": "residencial",
+    "location": "Santos, SP",
+    "power": 5.5,
+    "panels": 10,
+    "status": "conectado",
+    "stage": "monitoramento",
+    "createdAt": "2026-02-01",
+    "installedAt": "2026-03-15",
+    "connectedAt": "2026-03-20",
+    "timeline": [
+      { "step": "simulacao", "label": "Simulacao", "status": "done", "date": "2026-02-01", "desc": "Simulacao inicial concluida — sistema 5,5 kWp recomendado" },
+      { "step": "analise", "label": "Analise tecnica", "status": "done", "date": "2026-02-05", "desc": "Analise de viabilidade e irradicao local" },
+      { "step": "projeto", "label": "Projeto eletrico", "status": "done", "date": "2026-02-12", "desc": "Projeto eletrico e memorial descritivo elaborados" },
+      { "step": "documentacao", "label": "Documentacao", "status": "done", "date": "2026-02-20", "desc": "Documentacao tecnica preparada para envio a distribuidora" },
+      { "step": "solicitacao", "label": "Solicitacao de conexao", "status": "done", "date": "2026-02-22", "desc": "Solicitacao de acesso enviada a distribuidora" },
+      { "step": "instalacao", "label": "Instalacao", "status": "done", "date": "2026-03-15", "desc": "Instalacao concluida em 2 dias — 10 modulos, inversor 5kW" },
+      { "step": "vistoria", "label": "Vistoria da distribuidora", "status": "done", "date": "2026-03-18", "desc": "Vistoria realizada pela distribuidora" },
+      { "step": "conexao", "label": "Sistema conectado", "status": "done", "date": "2026-03-20", "desc": "Sistema conectado e em operacao" },
+      { "step": "monitoramento", "label": "Monitoramento ativo", "status": "current", "date": "2026-03-20", "desc": "Monitoramento em funcionamento — sistema normal" }
+    ],
+    "documents": ["doc-projeto-eletrico", "doc-diagrama-unifilar", "doc-memorial", "doc-termo-conexao", "doc-manual", "doc-nota-fiscal"],
+    "team": [
+      { "role": "Consultor", "name": "Bruno Demo" },
+      { "role": "Engenheiro", "name": "Carla Demo" },
+      { "role": "Instalador", "name": "Diego Demo" }
+    ]
+  },
+  {
+    "id": "SOL-2091",
+    "customerId": "cus-002",
+    "customerName": "Comercial Sao Vicente",
+    "systemId": "sys-002",
+    "type": "comercial",
+    "location": "Sao Vicente, SP",
+    "power": 18.0,
+    "panels": 33,
+    "status": "conectado",
+    "stage": "monitoramento",
+    "createdAt": "2025-12-10",
+    "installedAt": "2026-01-15",
+    "connectedAt": "2026-01-20",
+    "timeline": [
+      { "step": "simulacao", "label": "Simulacao", "status": "done", "date": "2025-12-10", "desc": "Simulacao comercial — sistema 18 kWp" },
+      { "step": "analise", "label": "Analise tecnica", "status": "done", "date": "2025-12-15", "desc": "Analise de viabilidade comercial" },
+      { "step": "projeto", "label": "Projeto eletrico", "status": "done", "date": "2025-12-22", "desc": "Projeto eletrico comercial elaborado" },
+      { "step": "documentacao", "label": "Documentacao", "status": "done", "date": "2025-12-28", "desc": "Documentacao enviada" },
+      { "step": "solicitacao", "label": "Solicitacao de conexao", "status": "done", "date": "2025-12-30", "desc": "Solicitacao enviada a distribuidora" },
+      { "step": "instalacao", "label": "Instalacao", "status": "done", "date": "2026-01-15", "desc": "Instalacao comercial concluida — 33 modulos" },
+      { "step": "vistoria", "label": "Vistoria", "status": "done", "date": "2026-01-18", "desc": "Vistoria aprovada" },
+      { "step": "conexao", "label": "Sistema conectado", "status": "done", "date": "2026-01-20", "desc": "Sistema conectado" },
+      { "step": "monitoramento", "label": "Monitoramento ativo", "status": "current", "date": "2026-01-20", "desc": "Monitoramento ativo — atencao: producao 8% abaixo" }
+    ],
+    "documents": ["doc-projeto-eletrico", "doc-diagrama-unifilar", "doc-memorial", "doc-termo-conexao", "doc-manual", "doc-nota-fiscal"],
+    "team": [
+      { "role": "Consultor", "name": "Bruno Demo" },
+      { "role": "Engenheiro", "name": "Eduardo Demo" },
+      { "role": "Instalador", "name": "Felipe Demo" }
+    ]
+  },
+  {
+    "id": "SOL-1038",
+    "customerId": "cus-003",
+    "customerName": "Condominio Praia Grande",
+    "systemId": "sys-003",
+    "type": "condominio",
+    "location": "Praia Grande, SP",
+    "power": 35.0,
+    "panels": 64,
+    "status": "conectado",
+    "stage": "monitoramento",
+    "createdAt": "2025-09-15",
+    "installedAt": "2025-11-05",
+    "connectedAt": "2025-11-10",
+    "timeline": [
+      { "step": "simulacao", "label": "Simulacao", "status": "done", "date": "2025-09-15", "desc": "Simulacao condominio — 35 kWp" },
+      { "step": "analise", "label": "Analise tecnica", "status": "done", "date": "2025-09-22", "desc": "Analise estrutural laje" },
+      { "step": "projeto", "label": "Projeto eletrico", "status": "done", "date": "2025-10-01", "desc": "Projeto eletrico condominio" },
+      { "step": "documentacao", "label": "Documentacao", "status": "done", "date": "2025-10-10", "desc": "Documentacao condominio" },
+      { "step": "solicitacao", "label": "Solicitacao de conexao", "status": "done", "date": "2025-10-15", "desc": "Solicitacao enviada" },
+      { "step": "instalacao", "label": "Instalacao", "status": "done", "date": "2025-11-05", "desc": "Instalacao em 4 dias — 64 modulos" },
+      { "step": "vistoria", "label": "Vistoria", "status": "done", "date": "2025-11-08", "desc": "Vistoria aprovada" },
+      { "step": "conexao", "label": "Sistema conectado", "status": "done", "date": "2025-11-10", "desc": "Sistema conectado" },
+      { "step": "monitoramento", "label": "Monitoramento ativo", "status": "current", "date": "2025-11-10", "desc": "Sistema normal" }
+    ],
+    "documents": ["doc-projeto-eletrico", "doc-diagrama-unifilar", "doc-memorial", "doc-termo-conexao", "doc-manual", "doc-nota-fiscal"],
+    "team": [
+      { "role": "Consultor", "name": "Ana Demo" },
+      { "role": "Engenheiro", "name": "Carla Demo" },
+      { "role": "Instalador", "name": "Diego Demo" }
+    ]
+  },
+  {
+    "id": "SOL-3012",
+    "customerId": "cus-004",
+    "customerName": "Sitio Cubatao",
+    "systemId": "sys-004",
+    "type": "rural",
+    "location": "Cubatao, SP",
+    "power": 4.4,
+    "panels": 8,
+    "status": "alerta",
+    "stage": "monitoramento",
+    "createdAt": "2026-04-01",
+    "installedAt": "2026-05-05",
+    "connectedAt": "2026-05-08",
+    "timeline": [
+      { "step": "simulacao", "label": "Simulacao", "status": "done", "date": "2026-04-01", "desc": "Simulacao rural — 4,4 kWp" },
+      { "step": "analise", "label": "Analise tecnica", "status": "done", "date": "2026-04-08", "desc": "Analise rural" },
+      { "step": "projeto", "label": "Projeto eletrico", "status": "done", "date": "2026-04-15", "desc": "Projeto eletrico rural" },
+      { "step": "documentacao", "label": "Documentacao", "status": "done", "date": "2026-04-20", "desc": "Documentacao enviada" },
+      { "step": "solicitacao", "label": "Solicitacao de conexao", "status": "done", "date": "2026-04-25", "desc": "Solicitacao enviada" },
+      { "step": "instalacao", "label": "Instalacao", "status": "done", "date": "2026-05-05", "desc": "Instalacao rural — 8 modulos" },
+      { "step": "vistoria", "label": "Vistoria", "status": "done", "date": "2026-05-07", "desc": "Vistoria aprovada" },
+      { "step": "conexao", "label": "Sistema conectado", "status": "done", "date": "2026-05-08", "desc": "Sistema conectado" },
+      { "step": "monitoramento", "label": "Monitoramento ativo", "status": "alerta", "date": "2026-05-08", "desc": "ALERTA: inversor offline — comunicacao interrompida" }
+    ],
+    "documents": ["doc-projeto-eletrico", "doc-diagrama-unifilar", "doc-memorial", "doc-termo-conexao", "doc-manual", "doc-nota-fiscal"],
+    "team": [
+      { "role": "Consultor", "name": "Ana Demo" },
+      { "role": "Engenheiro", "name": "Eduardo Demo" },
+      { "role": "Instalador", "name": "Felipe Demo" }
+    ]
+  },
+  {
+    "id": "SOL-5520",
+    "customerId": "cus-005",
+    "customerName": "Residencial Guaruja",
+    "systemId": "sys-005",
+    "type": "residencial",
+    "location": "Guaruja, SP",
+    "power": 6.6,
+    "panels": 12,
+    "status": "instalacao",
+    "stage": "instalacao",
+    "createdAt": "2026-06-01",
+    "installedAt": "2026-06-22",
+    "connectedAt": null,
+    "timeline": [
+      { "step": "simulacao", "label": "Simulacao", "status": "done", "date": "2026-06-01", "desc": "Simulacao residencial — 6,6 kWp" },
+      { "step": "analise", "label": "Analise tecnica", "status": "done", "date": "2026-06-05", "desc": "Analise de viabilidade" },
+      { "step": "projeto", "label": "Projeto eletrico", "status": "done", "date": "2026-06-10", "desc": "Projeto eletrico elaborado" },
+      { "step": "documentacao", "label": "Documentacao", "status": "done", "date": "2026-06-15", "desc": "Documentacao preparada" },
+      { "step": "solicitacao", "label": "Solicitacao de conexao", "status": "done", "date": "2026-06-18", "desc": "Solicitacao enviada" },
+      { "step": "instalacao", "label": "Instalacao", "status": "current", "date": "2026-06-22", "desc": "Instalacao em andamento — 12 modulos" },
+      { "step": "vistoria", "label": "Vistoria da distribuidora", "status": "pending", "date": null, "desc": "Aguardando conclusao da instalacao" },
+      { "step": "conexao", "label": "Sistema conectado", "status": "pending", "date": null, "desc": "Aguardando vistoria" },
+      { "step": "monitoramento", "label": "Monitoramento ativo", "status": "pending", "date": null, "desc": "Aguardando conexao" }
+    ],
+    "documents": ["doc-projeto-eletrico", "doc-diagrama-unifilar", "doc-memorial"],
+    "team": [
+      { "role": "Consultor", "name": "Bruno Demo" },
+      { "role": "Engenheiro", "name": "Carla Demo" },
+      { "role": "Instalador", "name": "Diego Demo" }
+    ]
+  },
+  {
+    "id": "SOL-6700",
+    "customerId": "cus-006",
+    "customerName": "Empresa Guarulhos Demo",
+    "systemId": null,
+    "type": "comercial",
+    "location": "Guarulhos, SP",
+    "power": 22.0,
+    "panels": 40,
+    "status": "documentacao",
+    "stage": "documentacao",
+    "createdAt": "2026-08-20",
+    "installedAt": null,
+    "connectedAt": null,
+    "timeline": [
+      { "step": "simulacao", "label": "Simulacao", "status": "done", "date": "2026-08-20", "desc": "Simulacao comercial — 22 kWp" },
+      { "step": "analise", "label": "Analise tecnica", "status": "done", "date": "2026-08-25", "desc": "Analise concluida" },
+      { "step": "projeto", "label": "Projeto eletrico", "status": "done", "date": "2026-08-28", "desc": "Projeto elaborado" },
+      { "step": "documentacao", "label": "Documentacao", "status": "current", "date": "2026-08-30", "desc": "Documentacao em preparacao" },
+      { "step": "solicitacao", "label": "Solicitacao de conexao", "status": "pending", "date": null, "desc": "Aguardando documentacao" },
+      { "step": "instalacao", "label": "Instalacao", "status": "pending", "date": null, "desc": "Aguardando aprovacao" },
+      { "step": "vistoria", "label": "Vistoria", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "conexao", "label": "Sistema conectado", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "monitoramento", "label": "Monitoramento ativo", "status": "pending", "date": null, "desc": "Aguardando" }
+    ],
+    "documents": ["doc-projeto-eletrico", "doc-diagrama-unifilar"],
+    "team": [
+      { "role": "Consultor", "name": "Ana Demo" },
+      { "role": "Engenheiro", "name": "Eduardo Demo" }
+    ]
+  },
+  {
+    "id": "SOL-7800",
+    "customerId": "cus-007",
+    "customerName": "Residencia Santos Centro",
+    "systemId": null,
+    "type": "residencial",
+    "location": "Santos, SP",
+    "power": 4.4,
+    "panels": 8,
+    "status": "simulacao",
+    "stage": "simulacao",
+    "createdAt": "2026-08-31",
+    "installedAt": null,
+    "connectedAt": null,
+    "timeline": [
+      { "step": "simulacao", "label": "Simulacao", "status": "current", "date": "2026-08-31", "desc": "Simulacao inicial — aguardando qualificacao" },
+      { "step": "analise", "label": "Analise tecnica", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "projeto", "label": "Projeto eletrico", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "documentacao", "label": "Documentacao", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "solicitacao", "label": "Solicitacao de conexao", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "instalacao", "label": "Instalacao", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "vistoria", "label": "Vistoria", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "conexao", "label": "Sistema conectado", "status": "pending", "date": null, "desc": "Aguardando" },
+      { "step": "monitoramento", "label": "Monitoramento ativo", "status": "pending", "date": null, "desc": "Aguardando" }
+    ],
+    "documents": [],
+    "team": [
+      { "role": "Consultor", "name": "Bruno Demo" }
+    ]
+  }
+]

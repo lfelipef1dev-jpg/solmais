@@ -1,0 +1,59 @@
+[
+  {
+    "id": "fin-a-vista",
+    "name": "A vista",
+    "description": "Pagamento unico do sistema completo",
+    "icon": "cash",
+    "investment": 32000,
+    "monthlySavings": 480,
+    "payback": 4.8,
+    "details": {
+      "entrada": 32000,
+      "parcelas": 0,
+      "taxa": null,
+      "economia25anos": 144000,
+      "roi": 350
+    },
+    "pros": ["Sistema seu desde o dia 1", "Maior economia acumulada", "Sem parcelas mensais", "Payback mais rapido"],
+    "cons": ["Investimento inicial alto"],
+    "disclaimer": "Valor demonstrativo — nao constitui oferta comercial."
+  },
+  {
+    "id": "fin-financiamento",
+    "name": "Financiamento",
+    "description": "Pagamento parcelado com entrada",
+    "icon": "card",
+    "investment": 32000,
+    "monthlySavings": 480,
+    "payback": 6.2,
+    "details": {
+      "entrada": 8000,
+      "parcelas": 60,
+      "valorParcela": 480,
+      "taxa": 1.2,
+      "economia25anos": 108000,
+      "roi": 237
+    },
+    "pros": ["Entrada reduzida", "Parcela proxima da economia gerada", "Sistema seu ao final"],
+    "cons": ["Payback mais longo", "Juros sobre o financiado"],
+    "disclaimer": "Cenario demonstrativo — nao constitui oferta de credito."
+  },
+  {
+    "id": "fin-assinatura",
+    "name": "Assinatura",
+    "description": "Mensalidade fixa sem aquisicao do ativo",
+    "icon": "refresh",
+    "investment": 0,
+    "monthlySavings": 280,
+    "payback": null,
+    "details": {
+      "mensalidade": 200,
+      "economiaLiquida": 280,
+      "economia25anos": 84000,
+      "roi": null
+    },
+    "pros": ["Zero investimento inicial", "Manutencao inclusa", "Saida a qualquer momento (demo)"],
+    "cons": ["Sistema nao e seu", "Economia liquida menor", "Sem payback definido"],
+    "disclaimer": "Cenario demonstrativo — nao constitui oferta comercial."
+  }
+]

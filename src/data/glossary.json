@@ -1,0 +1,17 @@
+[
+  { "term": "kW", "definition": "Quilowatt — unidade de potencia instantanea. 1 kW = 1000 watts." },
+  { "term": "kWh", "definition": "Quilowatt-hora — unidade de energia gerada ou consumida ao longo do tempo. 1 kWh = 1 kW por 1 hora." },
+  { "term": "kWp", "definition": "Quilowatt-pico — potencia nominal do painel em Condicoes Padrao de Teste (STC)." },
+  { "term": "Irradiacao", "definition": "Quantidade de energia solar que incide sobre uma superficie, medida em kWh/m²/dia." },
+  { "term": "Inversor", "definition": "Dispositivo que converte corrente continua (CC) dos paineis em corrente alternada (CA) da rede." },
+  { "term": "String", "definition": "Conjunto de modulos conectados em serie que alimenta uma entrada do inversor." },
+  { "term": "SCEE", "definition": "Sistema de Compensacao de Energia Eletrica — mecanismo que permite abater o excedente injetado na rede." },
+  { "term": "MMGD", "definition": "Micro e Minigeracao Distribuida — geracao de energia em pequena escala proximo ao consumo." },
+  { "term": "Geracao Distribuida", "definition": "Producao de eletricidade proxima ao ponto de consumo, conectada a rede de distribuicao." },
+  { "term": "Compensacao", "definition": "Sistema onde o excedente injetado na rede e abatido do consumo em outros periodos." },
+  { "term": "Modulo fotovoltaico", "definition": "Painel que converte luz solar em eletricidade pelo efeito fotovoltaico." },
+  { "term": "Degradacao", "definition": "Reducao gradual da capacidade de geracao do modulo ao longo dos anos." },
+  { "term": "Payback", "definition": "Tempo necessario para que a economia gerada pague o investimento inicial." },
+  { "term": "CAPEX", "definition": "Capital Expenditure — investimento inicial na implantacao do sistema." },
+  { "term": "O&M", "definition": "Operacao e Manutencao — custos de manter o sistema funcionando ao longo da vida util." }
+]

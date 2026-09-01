@@ -1,0 +1,62 @@
+[
+  {
+    "id": "doc-projeto-eletrico",
+    "name": "Projeto Eletrico — DEMO",
+    "projectId": "SOL-4821",
+    "type": "PDF",
+    "size": "2,4 MB",
+    "uploadedAt": "2026-02-12",
+    "demo": true,
+    "description": "Projeto eletrico fotovoltaico — documento demonstrativo"
+  },
+  {
+    "id": "doc-diagrama-unifilar",
+    "name": "Diagrama Unifilar — DEMO",
+    "projectId": "SOL-4821",
+    "type": "PDF",
+    "size": "890 KB",
+    "uploadedAt": "2026-02-12",
+    "demo": true,
+    "description": "Diagrama unifilar do sistema — documento demonstrativo"
+  },
+  {
+    "id": "doc-memorial",
+    "name": "Memorial Descritivo — DEMO",
+    "projectId": "SOL-4821",
+    "type": "PDF",
+    "size": "1,2 MB",
+    "uploadedAt": "2026-02-15",
+    "demo": true,
+    "description": "Memorial descritivo do sistema — documento demonstrativo"
+  },
+  {
+    "id": "doc-termo-conexao",
+    "name": "Termo de Conexao — DEMO",
+    "projectId": "SOL-4821",
+    "type": "PDF",
+    "size": "650 KB",
+    "uploadedAt": "2026-02-22",
+    "demo": true,
+    "description": "Termo de conexao com a distribuidora — documento demonstrativo"
+  },
+  {
+    "id": "doc-manual",
+    "name": "Manual do Sistema — DEMO",
+    "projectId": "SOL-4821",
+    "type": "PDF",
+    "size": "3,8 MB",
+    "uploadedAt": "2026-03-15",
+    "demo": true,
+    "description": "Manual do sistema fotovoltaico — documento demonstrativo"
+  },
+  {
+    "id": "doc-nota-fiscal",
+    "name": "Nota Fiscal — DEMO",
+    "projectId": "SOL-4821",
+    "type": "PDF",
+    "size": "120 KB",
+    "uploadedAt": "2026-03-15",
+    "demo": true,
+    "description": "Nota fiscal demonstrativa — documento ficticio"
+  }
+]

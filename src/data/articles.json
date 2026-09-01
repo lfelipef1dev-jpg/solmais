@@ -1,0 +1,102 @@
+[
+  {
+    "id": "art-01",
+    "slug": "como-funciona-energia-solar",
+    "title": "Como funciona a energia solar fotovoltaica",
+    "category": "fundamentos",
+    "description": "Entenda o processo de geracao de eletricidade a partir da luz solar.",
+    "readTime": "4 min",
+    "date": "2026-08-15",
+    "content": "Sistemas fotovoltaicos convertem luz solar em eletricidade atraves do efeito fotovoltaico. Quando a luz atinge as celulas dos modulos, os eletrons sao excitados e geram corrente continua. Um inversor converte essa corrente em corrente alternada, utilizavel na sua casa ou empresa. O excedente pode ser injetado na rede e compensado conforme as regras vigentes."
+  },
+  {
+    "id": "art-02",
+    "slug": "kw-vs-kwh-vs-kwp",
+    "title": "kW vs kWh vs kWp — qual a diferenca?",
+    "category": "fundamentos",
+    "description": "Entenda as tres unidades mais confundidas no universo solar.",
+    "readTime": "3 min",
+    "date": "2026-08-16",
+    "content": "kW (quilowatt) e potencia instantanea. kWh (quilowatt-hora) e energia gerada ou consumida ao longo do tempo. kWp (quilowatt-pico) e a potencia nominal do painel em condicoes padrao de teste. Um sistema de 5,5 kWp pode gerar 650 kWh por mes dependendo da irradicacao local."
+  },
+  {
+    "id": "art-03",
+    "slug": "como-ler-conta-de-luz",
+    "title": "Como ler a conta de luz",
+    "category": "pratico",
+    "description": "Entenda os principais campos da sua fatura de energia.",
+    "readTime": "5 min",
+    "date": "2026-08-17",
+    "content": "A conta de luz contem informacoes como consumo em kWh, tarifa aplicada, historico de consumo, impostos e dados da distribuidora. Entender esses campos ajuda a dimensionar um sistema solar e avaliar a economia potencial."
+  },
+  {
+    "id": "art-04",
+    "slug": "inversor-solar",
+    "title": "Como funciona o inversor solar",
+    "category": "equipamentos",
+    "description": "O inversor e o cerebro do sistema fotovoltaico.",
+    "readTime": "4 min",
+    "date": "2026-08-18",
+    "content": "O inversor converte a corrente continua gerada pelos paineis em corrente alternada compativel com a rede eletrica. Existem inversores string, microinversores e hibridos. A escolha depende do sistema, sombreamento e objetivos do projeto."
+  },
+  {
+    "id": "art-05",
+    "slug": "energia-solar-dias-nublados",
+    "title": "Energia solar em dias nublados",
+    "category": "fundamentos",
+    "description": "Sistemas fotovoltaicos geram energia mesmo sem sol pleno.",
+    "readTime": "3 min",
+    "date": "2026-08-19",
+    "content": "Paineis fotovoltaicos geram eletricidade com luz difusa, nao apenas com sol direto. Em dias nublados a geracao reduz, mas nao para. A reducao varia conforme a densidade das nuvens e a tecnologia do painel."
+  },
+  {
+    "id": "art-06",
+    "slug": "dimensionamento-solar",
+    "title": "Como e feito o dimensionamento",
+    "category": "tecnico",
+    "description": "Entenda os fatores que determinam o tamanho do seu sistema.",
+    "readTime": "6 min",
+    "date": "2026-08-20",
+    "content": "O dimensionamento considera consumo medio, tarifa, irradicacao local, area disponivel, orientacao, sombreamento, tipo de telhado e objetivos do cliente. O resultado e a potencia em kWp, numero de modulos, inversor e area necessaria."
+  },
+  {
+    "id": "art-07",
+    "slug": "compensacao-de-energia",
+    "title": "Compensacao de energia — como funciona",
+    "category": "regulatorio",
+    "description": "Entenda o sistema de compensacao de energia e os creditos.",
+    "readTime": "5 min",
+    "date": "2026-08-21",
+    "content": "A compensacao permite que o excedente injetado na rede seja abatido do consumo em outros periodos. Os creditos tem validade conforme as regras vigentes. O marco legal da micro/minigeracao distribuida estabelece as modalidades e condicoes aplicaveis."
+  },
+  {
+    "id": "art-08",
+    "slug": "manutencao-solar",
+    "title": "Manutencao de sistemas fotovoltaicos",
+    "category": "pratico",
+    "description": "Sistemas solares exigem pouca manutencao, mas nao zero.",
+    "readTime": "4 min",
+    "date": "2026-08-22",
+    "content": "A manutencao inclui limpeza periodica dos modulos, verificacao de conexoes, inspecao do inversor e monitoramento de desempenho. Sistemas bem mantidos podem operar por 25+ anos com degradacao controlada."
+  },
+  {
+    "id": "art-09",
+    "slug": "vida-util-painel",
+    "title": "Vida util dos paineis solares",
+    "category": "equipamentos",
+    "description": "Quanto tempo duram os componentes de um sistema fotovoltaico.",
+    "readTime": "3 min",
+    "date": "2026-08-23",
+    "content": "Modulos fotovoltaicos tipicamente tem vida util de 25+ anos com degradacao gradual. Inversores podem durar 10-15 anos. Estruturas e cabos tem vida longa quando bem instalados. Garantias variam conforme fabricante e componente."
+  },
+  {
+    "id": "art-10",
+    "slug": "carro-eletrico-solar",
+    "title": "Carro eletrico + energia solar",
+    "category": "futuro",
+    "description": "Como a energia solar complementa a mobilidade eletrica.",
+    "readTime": "4 min",
+    "date": "2026-08-24",
+    "content": "Carregar um carro eletrico com energia solar reduz o custo de operacao e a pegada de carbono. O dimensionamento do sistema precisa considerar o consumo adicional do veiculo. A integracao solar + VE e uma tendencia crescente."
+  }
+]

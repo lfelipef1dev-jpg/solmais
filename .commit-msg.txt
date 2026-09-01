@@ -1,0 +1,19 @@
+feat: SolMais 2.0 — plataforma energy-tech end-to-end
+
+Transforma landing page em plataforma digital completa:
+- 54 paginas geradas (home, simulador, resultado, projeto, portal, monitoramento, admin, conteudo)
+- Simulador wizard de 6 etapas (localizacao, consumo, imovel, objetivo, configuracao, resultado)
+- Dashboard de monitoramento com fluxo energetico, graficos e status
+- Portal do cliente com 8 secoes (visao geral, projeto, instalacao, monitoramento, economia, documentos, suporte, perfil)
+- Admin com 12 modulos (dashboard, pipeline kanban, projetos, instalacoes, sistemas, monitoramento, alertas, clientes, financeiro, documentos, analytics, config)
+- Comparador de 3 sistemas + cenarios financeiros (a vista, financiamento, assinatura)
+- 10 artigos educativos + glossario + 5 cases demonstrativos
+- Compensacao de energia + modalidades GD (Lei 14.300/SCEE)
+- Claims tecnicamente responsaveis (sem 95% universal, sem payback fixo, sem homologacao 60 dias)
+- Demo badges em todas as paginas
+- Build: node build.js -> out/
+- Deploy: GitHub Actions -> Cloudflare Pages (directory: out)
+
+Generated with [Devin](https://devin.ai)
+
+Co-Authored-By: Devin <158243242+devin-ai-integration[bot]@users.noreply.github.com>

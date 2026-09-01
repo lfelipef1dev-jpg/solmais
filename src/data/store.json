@@ -1,0 +1,42 @@
+{
+  "name": "SolMais",
+  "tagline": "Energia solar calculada para a sua realidade",
+  "description": "Plataforma digital para simulacao, projeto, implantacao e monitoramento de energia solar fotovoltaica.",
+  "url": "https://solmais.expostacker.com.br",
+  "email": "contato@demo.solmais.com.br",
+  "phone": "(13) 4000-0000",
+  "city": "Santos",
+  "state": "SP",
+  "region": "Baixada Santista",
+  "founded": "2024",
+  "demoNotice": "Plataforma demonstrativa — todos os dados sao ficticios. Nao constitui proposta comercial, projeto eletrico, orcamento, oferta de credito ou garantia de economia.",
+  "nav": [
+    { "label": "Inicio", "href": "index.html", "slug": "index" },
+    { "label": "Simulador", "href": "simulador.html", "slug": "simulador" },
+    { "label": "Como funciona", "href": "como-funciona.html", "slug": "como-funciona" },
+    { "label": "Projetos", "href": "projetos.html", "slug": "projetos" },
+    { "label": "Conteudo", "href": "conteudo.html", "slug": "conteudo" },
+    { "label": "Sobre", "href": "sobre.html", "slug": "sobre" }
+  ],
+  "footerLinks": {
+    "plataforma": [
+      { "label": "Simulador solar", "href": "simulador.html" },
+      { "label": "Meu projeto", "href": "projeto.html" },
+      { "label": "Monitoramento", "href": "monitoramento.html" },
+      { "label": "Portal do cliente", "href": "conta.html" }
+    ],
+    "conteudo": [
+      { "label": "Como funciona", "href": "como-funciona.html" },
+      { "label": "Compensacao de energia", "href": "compensacao.html" },
+      { "label": "Modalidades de GD", "href": "modalidades-gd.html" },
+      { "label": "Glossario solar", "href": "glossario.html" }
+    ],
+    "institucional": [
+      { "label": "Sobre", "href": "sobre.html" },
+      { "label": "Projetos demo", "href": "projetos.html" },
+      { "label": "Contato", "href": "contato.html" },
+      { "label": "Privacidade", "href": "privacidade.html" },
+      { "label": "Termos", "href": "termos.html" }
+    ]
+  }
+}

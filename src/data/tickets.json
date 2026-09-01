@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ticket-001",
+    "systemId": "sys-004",
+    "projectId": "SOL-3012",
+    "customerId": "cus-004",
+    "customerName": "Sitio Cubatao",
+    "category": "inversor",
+    "subject": "Inversor offline — sem comunicacao",
+    "description": "O inversor parou de comunicar ha mais de 2 horas. Nao ha dados de geracao.",
+    "priority": "alta",
+    "status": "em-analise",
+    "createdAt": "2026-09-01 07:00",
+    "timeline": [
+      { "time": "2026-09-01 07:00", "action": "Chamado aberto pelo sistema (alerta automatico)", "author": "Sistema" },
+      { "time": "2026-09-01 07:15", "action": "Chamado atribuido a equipe tecnica", "author": "Admin Demo" },
+      { "time": "2026-09-01 07:30", "action": "Tentativa de reinicializacao remota — sem sucesso", "author": "Tecnico Demo" }
+    ]
+  },
+  {
+    "id": "ticket-002",
+    "systemId": "sys-002",
+    "projectId": "SOL-2091",
+    "customerId": "cus-002",
+    "customerName": "Comercial Sao Vicente",
+    "category": "monitoramento",
+    "subject": "Producao abaixo do esperado",
+    "description": "Sistema gerando 8% abaixo da estimativa nos ultimos 7 dias.",
+    "priority": "media",
+    "status": "aberto",
+    "createdAt": "2026-08-31 14:30",
+    "timeline": [
+      { "time": "2026-08-31 14:30", "action": "Chamado aberto pelo sistema (alerta automatico)", "author": "Sistema" }
+    ]
+  },
+  {
+    "id": "ticket-003",
+    "systemId": "sys-001",
+    "projectId": "SOL-4821",
+    "customerId": "cus-001",
+    "customerName": "Rafael Demonstracao",
+    "category": "documentacao",
+    "subject": "Solicitar copia do termo de conexao",
+    "description": "Gostaria de receber copia do termo de conexao com a distribuidora.",
+    "priority": "baixa",
+    "status": "resolvido",
+    "createdAt": "2026-08-20 10:00",
+    "timeline": [
+      { "time": "2026-08-20 10:00", "action": "Chamado aberto", "author": "Rafael Demonstracao" },
+      { "time": "2026-08-20 11:00", "action": "Documento enviado via portal", "author": "Admin Demo" },
+      { "time": "2026-08-20 12:00", "action": "Chamado resolvido", "author": "Rafael Demonstracao" }
+    ]
+  }
+]
