@@ -265,18 +265,18 @@ module.exports = {
   renderHead, renderAnnouncement, renderHeader, renderFooter,
   renderBreadcrumb, renderBreadcrumbSchema, renderLayout,
   renderGraphSchema, renderOrganizationSchema, renderWebSiteSchema,
-  // Visuais premium
-  heroArchitectural: V.heroArchitectural,
+  // Visuais 3.0 — Digital Twin + sistema premium
+  digitalTwin: V.digitalTwin,
+  cinematicHero: V.cinematicHero,
+  roofCAD: V.roofCAD,
+  equipmentRender: V.equipmentRender,
+  solarCurve: V.solarCurve,
   energyFlow: V.energyFlow,
-  roofLayout: V.roofLayout,
-  systemRender: V.systemRender,
-  inverterRender: V.inverterRender,
-  installationScene: V.installationScene,
-  mapDemo: V.mapDemo,
-  sparkline: V.sparkline,
   areaChart: V.areaChart,
-  donutChart: V.donutChart,
-  caseThumbnail: V.caseThumbnail,
+  gauge: V.gauge,
+  sparkline: V.sparkline,
+  caseHero: V.caseHero,
+  mapDemo: V.mapDemo,
   ogImage: V.ogImage,
   pageHero: V.pageHero
 };

@@ -52,388 +52,296 @@
   </div>
 </header>
   <main id="conteudo" role="main">
-    <section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-content">
-      <span class="badge-premium mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Plataforma demonstrativa — dados ficticios</span>
-      <h1>Energia solar <span>calculada</span> para a sua realidade</h1>
-      <p>Simule seu sistema, visualize geracao e economia estimadas e acompanhe cada etapa do projeto — da analise ao monitoramento.</p>
-      <div class="hero-cta">
-        <a href="simulador.html" class="btn btn-primary btn-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Simular meu sistema</a>
-        <a href="monitoramento.html" class="btn btn-secondary btn-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Explorar demonstracao</a>
-      </div>
-    </div>
-    <div class="hero-visual-wrap">
-      <svg class="hero-arch-svg" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Residencia contemporanea com sistema solar fotovoltaico integrado ao telhado">
+    <div class="cinematic-hero">
+  <div class="cinematic-hero-visual">
+    <svg class="digital-twin-svg" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Digital twin: residencia contemporanea com sistema fotovoltaico integrado">
   <defs>
-    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0a1628"/>
-      <stop offset="35%" stop-color="#142840"/>
-      <stop offset="65%" stop-color="#1e3a5f"/>
-      <stop offset="100%" stop-color="#2a4a6f"/>
+    <linearGradient id="hero-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="60%" stop-color="#0f1623"/>
+      <stop offset="100%" stop-color="#141d2e"/>
     </linearGradient>
-    <linearGradient id="sun-glow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    <linearGradient id="hero-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2f3e"/>
+      <stop offset="100%" stop-color="#232838"/>
     </linearGradient>
-    <linearGradient id="panel-grad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="hero-wall-side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#232838"/>
+      <stop offset="100%" stop-color="#1a1f2e"/>
+    </linearGradient>
+    <linearGradient id="hero-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2330"/>
+      <stop offset="100%" stop-color="#161a26"/>
+    </linearGradient>
+    <linearGradient id="hero-panel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e3a5f"/>
-      <stop offset="50%" stop-color="#0f2744"/>
-      <stop offset="100%" stop-color="#0a1e36"/>
+      <stop offset="50%" stop-color="#0a1525"/>
+      <stop offset="100%" stop-color="#050a15"/>
     </linearGradient>
-    <linearGradient id="panel-sheen" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
-      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    <linearGradient id="hero-panel-sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(96,165,250,0.25)"/>
+      <stop offset="50%" stop-color="rgba(96,165,250,0.05)"/>
+      <stop offset="100%" stop-color="rgba(59,130,246,0)"/>
     </linearGradient>
-    <linearGradient id="house-wall" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e2e8f0"/>
-      <stop offset="100%" stop-color="#94a3b8"/>
+    <linearGradient id="hero-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(96,165,250,0.2)"/>
+      <stop offset="100%" stop-color="rgba(30,58,95,0.5)"/>
     </linearGradient>
-    <linearGradient id="glass-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#1e3a5f" stop-opacity="0.8"/>
+    <linearGradient id="hero-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1420"/>
+      <stop offset="100%" stop-color="#080d16"/>
     </linearGradient>
-    <linearGradient id="ground-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1a2a3a"/>
-      <stop offset="100%" stop-color="#0a1520"/>
-    </linearGradient>
-    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
-      <feOffset dx="0" dy="4"/>
+    <radialGradient id="hero-sun-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hero-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
+      <feOffset dx="0" dy="8"/>
       <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="hero-soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
-  <!-- Ceu -->
-  <rect width="1200" height="600" fill="url(#sky-grad)"/>
+  <!-- Ceu / background -->
+  <rect width="900" height="600" fill="url(#hero-sky)"/>
 
-  <!-- Sol / brilho -->
-  <circle cx="983.9999999999999" cy="108" r="60" fill="url(#sun-glow)"/>
-  <circle cx="983.9999999999999" cy="108" r="25" fill="#f59e0b" opacity="0.9"/>
-  <circle cx="983.9999999999999" cy="108" r="15" fill="#fbbf24" opacity="0.95"/>
+  <!-- Sol com brilho -->
+  <circle cx="765" cy="90" r="80" fill="url(#hero-sun-glow)"/>
+  <circle cx="765" cy="90" r="22" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="765" cy="90" r="14" fill="#fbbf24" opacity="0.95"/>
 
-  <!-- Montanhas distantes -->
-  <path d="M0 330 L180 252 L360 300 L540 228 L720 288 L900 240 L1080 276 L1200 252 L1200 360 L0 360 Z" fill="#0f1e30" opacity="0.6"/>
-  <path d="M0 360 L240 300 L480 330 L660 288 L840 312 L1020 276 L1200 300 L1200 390 L0 390 Z" fill="#0a1828" opacity="0.8"/>
+  <!-- Linhas de grade sutis (estilo tecnico) -->
+  <g opacity="0.04" stroke="#e2e8f0" stroke-width="0.5">
+    <line x1="0" y1="0" x2="900" y2="0"/><line x1="0" y1="50" x2="900" y2="50"/><line x1="0" y1="100" x2="900" y2="100"/><line x1="0" y1="150" x2="900" y2="150"/><line x1="0" y1="200" x2="900" y2="200"/><line x1="0" y1="250" x2="900" y2="250"/><line x1="0" y1="300" x2="900" y2="300"/><line x1="0" y1="350" x2="900" y2="350"/><line x1="0" y1="400" x2="900" y2="400"/><line x1="0" y1="450" x2="900" y2="450"/><line x1="0" y1="500" x2="900" y2="500"/><line x1="0" y1="550" x2="900" y2="550"/>
+    <line x1="0" y1="0" x2="0" y2="600"/><line x1="56.25" y1="0" x2="56.25" y2="600"/><line x1="112.5" y1="0" x2="112.5" y2="600"/><line x1="168.75" y1="0" x2="168.75" y2="600"/><line x1="225" y1="0" x2="225" y2="600"/><line x1="281.25" y1="0" x2="281.25" y2="600"/><line x1="337.5" y1="0" x2="337.5" y2="600"/><line x1="393.75" y1="0" x2="393.75" y2="600"/><line x1="450" y1="0" x2="450" y2="600"/><line x1="506.25" y1="0" x2="506.25" y2="600"/><line x1="562.5" y1="0" x2="562.5" y2="600"/><line x1="618.75" y1="0" x2="618.75" y2="600"/><line x1="675" y1="0" x2="675" y2="600"/><line x1="731.25" y1="0" x2="731.25" y2="600"/><line x1="787.5" y1="0" x2="787.5" y2="600"/><line x1="843.75" y1="0" x2="843.75" y2="600"/>
+  </g>
 
-  <!-- Chao -->
-  <rect y="468" width="1200" height="132" fill="url(#ground-grad)"/>
+  <!-- Chao isometrico -->
+  <polygon points="90,432 810,432 855,468 45,468" fill="url(#hero-ground)"/>
+  <polygon points="45,468 855,468 828,510 72,510" fill="#080d16" opacity="0.6"/>
 
-  <!-- Casa contemporanea - estrutura base -->
-  <!-- Volume principal (retangular moderno) -->
-  <rect x="180" y="270" width="420" height="198" fill="url(#house-wall)" filter="url(#soft-shadow)"/>
+  <!-- ===== CASA ISOMETRICA ===== -->
+  <!-- A casa e composta por 2 volumes: principal (maior) + anexo -->
 
-  <!-- Segundo volume (mais baixo, a direita) -->
-  <rect x="576" y="312" width="264" height="156" fill="#cbd5e1" filter="url(#soft-shadow)"/>
+  <!-- Sombra da casa no chao -->
+  <ellipse cx="450" cy="456" rx="288" ry="24" fill="rgba(0,0,0,0.4)" filter="url(#hero-shadow)"/>
 
-  <!-- Telhado inclinado com paineis (volume principal) -->
-  <!-- Telhado -->
-  <polygon points="144,270 600,270 600,210 240,210" fill="#1a2a3a"/>
-  <!-- Paineis no telhado (grade) -->
-  <g transform="translate(168.00000000000003 216)">
-    <g transform="translate(0 0)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(55 2)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(110 4)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(165 6)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(220 8)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(275 10)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(0 18)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(55 20)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(110 22)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(165 24)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(220 26)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(275 28)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(0 36)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(55 38)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(110 40)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(165 42)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(220 44)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(275 46)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(0 54)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(55 56)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(110 58)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(165 60)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(220 62)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(275 64)">
-          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+  <!-- Volume principal - face frontal (esquerda) -->
+  <polygon points="198,270 468,270 468,432 198,432" fill="url(#hero-wall)"/>
+
+  <!-- Volume principal - face lateral (direita, mais escura) -->
+  <polygon points="468,270 585,228 585,390 468,432" fill="url(#hero-wall-side)"/>
+
+  <!-- Volume anexo (mais baixo, a direita) -->
+  <polygon points="468,330 648,288 648,408.00000000000006 468,432" fill="#1a1f2e" opacity="0.85"/>
+
+  <!-- Telhado - volume principal (inclinado, face superior) -->
+  <polygon points="198,270 468,270 585,228 315,228" fill="url(#hero-roof)"/>
+
+  <!-- Telhado - beirada -->
+  <polygon points="180,270 198,270 315,228 297,228" fill="#161a26"/>
+  <polygon points="315,228 585,228 603,240 333,240" fill="#161a26" opacity="0.7"/>
+
+  <!-- ===== PAINELS SOLARES NO TELHADO ===== -->
+  <!-- Os paineis sao posicionados na face superior do telhado do volume principal -->
+  <g transform="translate(216 252) skewY(-15)">
+    <g transform="translate(0 0)" class="twin-panel" data-panel="1">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0s"/></rect>
+        </g><g transform="translate(42 0)" class="twin-panel" data-panel="2">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.2s"/></rect>
+        </g><g transform="translate(84 0)" class="twin-panel" data-panel="3">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.4s"/></rect>
+        </g><g transform="translate(126 0)" class="twin-panel" data-panel="4">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.6000000000000001s"/></rect>
+        </g><g transform="translate(168 0)" class="twin-panel" data-panel="5">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.8s"/></rect>
+        </g><g transform="translate(0 26)" class="twin-panel" data-panel="6">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1s"/></rect>
+        </g><g transform="translate(42 26)" class="twin-panel" data-panel="7">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.2000000000000002s"/></rect>
+        </g><g transform="translate(84 26)" class="twin-panel" data-panel="8">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.4000000000000001s"/></rect>
+        </g><g transform="translate(126 26)" class="twin-panel" data-panel="9">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.6s"/></rect>
+        </g><g transform="translate(168 26)" class="twin-panel" data-panel="10">
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#hero-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.8s"/></rect>
         </g>
   </g>
 
-  <!-- Telhado volume secundario (plano com paineis) -->
-  <rect x="576" y="294" width="264" height="24" fill="#1a2a3a"/>
-  <g transform="translate(588 297)">
-    <g transform="translate(0 0)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(48 0)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(96 0)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(144 0)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(192 0)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(0 14)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(48 14)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(96 14)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(144 14)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g><g transform="translate(192 14)">
-          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
-          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
-        </g>
-  </g>
+  <!-- Telhado do anexo (plano, sem paineis) -->
+  <polygon points="468,330 648,288 666,294 486.00000000000006,336.00000000000006" fill="#1e2330" opacity="0.8"/>
 
-  <!-- Janelas (vidro grande - arquitetura contemporanea) -->
-  <rect x="216" y="330" width="96" height="90" fill="url(#glass-grad)" opacity="0.7"/>
-  <rect x="336.00000000000006" y="330" width="96" height="90" fill="url(#glass-grad)" opacity="0.7"/>
-  <rect x="456" y="330" width="72" height="90" fill="url(#glass-grad)" opacity="0.6"/>
-
+  <!-- Janelas grandes (arquitetura contemporanea - vidro) -->
+  <!-- Janela frontal 1 -->
+  <rect x="234" y="312" width="54" height="72" rx="1" fill="url(#hero-glass)"/>
+  <line x1="261" y1="312" x2="261" y2="384" stroke="#1a1f2e" stroke-width="0.5"/>
+  <!-- Janela frontal 2 -->
+  <rect x="315" y="312" width="54" height="72" rx="1" fill="url(#hero-glass)"/>
+  <line x1="342" y1="312" x2="342" y2="384" stroke="#1a1f2e" stroke-width="0.5"/>
   <!-- Porta -->
-  <rect x="540" y="372" width="48" height="96" fill="#1e293b"/>
+  <rect x="396" y="348" width="36" height="84.00000000000001" rx="0.5" fill="#1a1f2e"/>
+  <!-- Janela lateral -->
+  <polygon points="486.00000000000006,300 567,258 567,330 486.00000000000006,372" fill="url(#hero-glass)" opacity="0.7"/>
 
-  <!-- Janelas volume secundario -->
-  <rect x="612" y="348" width="72" height="72" fill="url(#glass-grad)" opacity="0.7"/>
-  <rect x="708" y="348" width="72" height="72" fill="url(#glass-grad)" opacity="0.7"/>
+  <!-- Inversor na parede lateral (pequeno detalhe tecnico) -->
+  <rect x="504.00000000000006" y="360" width="14" height="20" rx="1" fill="#161a26" stroke="#f59e0b" stroke-width="0.5"/>
+  <circle cx="511.00000000000006" cy="366" r="2" fill="#22c55e">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- Linhas arquitetonicas (detalhes) -->
-  <line x1="180" y1="270" x2="600" y2="270" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
-  <line x1="576" y1="312" x2="840" y2="312" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+  <!-- Linha de conexao painel -> inversor (sutil) -->
+  <path d="M 315 252 L 504.00000000000006 360" stroke="#f59e0b" stroke-width="0.8" opacity="0.3" stroke-dasharray="2,2"/>
 
-  <!-- Inversor na parede (detalhe tecnico) -->
-  <g transform="translate(624 360)">
-    <rect width="18" height="24" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
-    <rect x="2" y="3" width="14" height="8" rx="1" fill="#0f172a"/>
-    <circle cx="9" cy="18" r="2" fill="#22c55e" opacity="0.8">
-      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+  <!-- ===== FLUXO ENERGETICO ANIMADO ===== -->
+  
+  <!-- Sol -> Painels -->
+  <g class="flow-sun-panels">
+    <path d="M 765 90 Q 630 150 360 228" stroke="#f59e0b" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="4,6">
+      <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <circle r="3" fill="#f59e0b" opacity="0.8">
+      <animateMotion dur="2s" repeatCount="indefinite" path="M 765 90 Q 630 150 360 228"/>
     </circle>
-    <circle cx="9" cy="18" r="1" fill="#4ade80"/>
   </g>
+  <!-- Painels -> Casa -->
+  <g class="flow-panels-house">
+    <path d="M 315 252 L 315 348" stroke="#22c55e" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="4,6">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <circle r="3" fill="#22c55e" opacity="0.8">
+      <animateMotion dur="1.5s" repeatCount="indefinite" path="M 315 252 L 315 348"/>
+    </circle>
+  </g>
+  <!-- Casa -> Rede -->
+  <g class="flow-house-grid">
+    <path d="M 468 432 L 702 468" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.2" stroke-dasharray="4,6">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <circle r="2.5" fill="#3b82f6" opacity="0.6">
+      <animateMotion dur="2s" repeatCount="indefinite" path="M 468 432 L 702 468"/>
+    </circle>
+  </g>
+  
 
-  <!-- Linhas de energia (do telhado para o inversor) -->
-  <path d="M660 300 L660 348 L636 360" stroke="#f59e0b" stroke-width="1" opacity="0.4" stroke-dasharray="3 2">
-    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
-  </path>
+  <!-- ===== HOTSPOTS ===== -->
+  
 
-  <!-- Vegetacao sutil (nao exagerar) -->
-  <ellipse cx="120" cy="474" rx="30" ry="8" fill="#0f1e1a" opacity="0.6"/>
-  <ellipse cx="900" cy="474" rx="25" ry="6" fill="#0f1e1a" opacity="0.6"/>
+  <!-- Poste da rede eletrica (canto direito) -->
+  <line x1="738" y1="330" x2="738" y2="468" stroke="#1a1f2e" stroke-width="1.5"/>
+  <line x1="711" y1="348" x2="765" y2="348" stroke="#1a1f2e" stroke-width="1"/>
+  <line x1="720" y1="366" x2="756" y2="366" stroke="#1a1f2e" stroke-width="1"/>
 
-  <!-- Grade de energia ao fundo (poste sutil) -->
-  <line x1="1104" y1="300" x2="1104" y2="468" stroke="#334155" stroke-width="1" opacity="0.4"/>
-  <line x1="1056" y1="330" x2="1152" y2="330" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
-
-  <!-- Particulas de energia (pontos luminosos) -->
-  <circle cx="360" cy="180" r="1.5" fill="#f59e0b" opacity="0.6">
-    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="600" cy="150" r="1" fill="#60a5fa" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="780" cy="192" r="1.2" fill="#f59e0b" opacity="0.4">
-    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Arvores sutis (paisagismo) -->
+  <g opacity="0.5">
+    <circle cx="108" cy="408.00000000000006" r="12" fill="#1a2a1a"/>
+    <rect x="103.5" y="408.00000000000006" width="2" height="10" fill="#1a1f2e"/>
+    <circle cx="792" cy="420" r="10" fill="#1a2a1a"/>
+    <rect x="789.3" y="420" width="2" height="8" fill="#1a1f2e"/>
+  </g>
 </svg>
+  </div>
+  <div class="cinematic-hero-overlay">
+    <div class="cinematic-hero-content">
+      <span class="cinematic-hero-eyebrow">Plataforma energy-tech</span>
+      <h1 class="cinematic-hero-title">Energia solar sem complicacao</h1>
+      <p class="cinematic-hero-subtitle">Simule, projete, acompanhe e monitore seu sistema fotovoltaico em uma plataforma unica.</p>
+      <div class="cinematic-hero-ctas">
+        <a href="simulador.html" class="btn btn-primary btn-lg">Iniciar simulacao</a>
+        <a href="projetos.html" class="btn btn-ghost-light btn-lg">Ver projetos</a>
+      </div>
+    </div>
+    <div class="cinematic-hero-widgets">
+      <div class="hero-widget">
+        <div class="hero-widget-value">5,5 <span class="hero-widget-unit">kWp</span></div>
+        <div class="hero-widget-label">Sistema estimado</div>
+      </div>
+      <div class="hero-widget">
+        <div class="hero-widget-value">650 <span class="hero-widget-unit">kWh</span></div>
+        <div class="hero-widget-label">Geracao mensal</div>
+      </div>
+      <div class="hero-widget">
+        <div class="hero-widget-value">R$ 480</div>
+        <div class="hero-widget-label">Economia estimada</div>
+      </div>
     </div>
   </div>
-</section>
-
-<section class="section" style="padding-top: var(--space-8)">
+</div><section class="section" style="padding-top: var(--space-10)">
   <div class="container">
-    <div class="quick-sim" style="max-width: 600px; margin: 0 auto;">
-      <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Simulacao rapida</h3>
-      <div class="grid grid-2">
-        <div class="field">
+    <div class="editorial-grid">
+      <div class="editorial-text">
+        <span class="cinematic-hero-eyebrow">Simulacao rapida</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-bottom:var(--space-3)">Descubra seu potencial solar em 10 segundos</h2>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-5)">Informe sua conta media e tipo de imovel. O algoritmo estima potencia, geracao mensal, economia e payback.</p>
+        <div class="field mb-3">
           <label class="label">Minha conta media</label>
           <input type="number" class="input" id="qs-bill" placeholder="R$ 650" value="650">
         </div>
-        <div class="field">
+        <div class="field mb-4">
           <label class="label">Tipo de imovel</label>
           <select class="select" id="qs-type">
             <option value="residencial">Residencial</option>
@@ -442,121 +350,348 @@
             <option value="rural">Rural</option>
           </select>
         </div>
+        <button class="btn btn-primary btn-lg" onclick="SolMais.quickSim()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Calcular potencial solar</button>
+        <div class="quick-sim-result hidden" id="qs-result" style="margin-top:var(--space-5)">
+          <div class="grid grid-4">
+            <div><div class="big-number big-number-amber" id="qs-power">5,5<span class="big-number-unit">kWp</span></div><div class="big-number-label">Sistema</div></div>
+            <div><div class="big-number big-number-light" id="qs-gen">650<span class="big-number-unit">kWh</span></div><div class="big-number-label">Geracao/mes</div></div>
+            <div><div class="big-number big-number-green" id="qs-save">R$ 480</div><div class="big-number-label">Economia/mes</div></div>
+            <div><div class="big-number big-number-light" id="qs-payback">4,8<span class="big-number-unit">anos</span></div><div class="big-number-label">Payback</div></div>
+          </div>
+          <a href="simulador.html" class="btn btn-secondary btn-block mt-4">Fazer simulacao completa <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <p class="text-xs text-muted mt-4">Estimativa demonstrativa — dados ficticios</p>
       </div>
-      <button class="btn btn-primary btn-block" onclick="SolMais.quickSim()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Calcular potencial solar</button>
-      <div class="quick-sim-result hidden" id="qs-result">
-        <div class="quick-sim-stat"><div class="val" id="qs-power">5,5 kWp</div><div class="lbl">Sistema estimado</div></div>
-        <div class="quick-sim-stat"><div class="val" id="qs-gen">650 kWh</div><div class="lbl">Geracao/mes</div></div>
-        <div class="quick-sim-stat"><div class="val" id="qs-save">R$ 480</div><div class="lbl">Economia/mes</div></div>
-        <div class="quick-sim-stat"><div class="val" id="qs-payback">4,8 anos</div><div class="lbl">Payback estimado</div></div>
-        <a href="simulador.html" class="btn btn-secondary btn-block mt-4">Fazer simulacao completa <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <div class="digital-twin-wrap">
+        <svg class="digital-twin-svg" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Digital twin: residencia contemporanea com sistema fotovoltaico integrado">
+  <defs>
+    <linearGradient id="home-quick-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="60%" stop-color="#0f1623"/>
+      <stop offset="100%" stop-color="#141d2e"/>
+    </linearGradient>
+    <linearGradient id="home-quick-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2f3e"/>
+      <stop offset="100%" stop-color="#232838"/>
+    </linearGradient>
+    <linearGradient id="home-quick-wall-side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#232838"/>
+      <stop offset="100%" stop-color="#1a1f2e"/>
+    </linearGradient>
+    <linearGradient id="home-quick-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2330"/>
+      <stop offset="100%" stop-color="#161a26"/>
+    </linearGradient>
+    <linearGradient id="home-quick-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="50%" stop-color="#0a1525"/>
+      <stop offset="100%" stop-color="#050a15"/>
+    </linearGradient>
+    <linearGradient id="home-quick-panel-sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(96,165,250,0.25)"/>
+      <stop offset="50%" stop-color="rgba(96,165,250,0.05)"/>
+      <stop offset="100%" stop-color="rgba(59,130,246,0)"/>
+    </linearGradient>
+    <linearGradient id="home-quick-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(96,165,250,0.2)"/>
+      <stop offset="100%" stop-color="rgba(30,58,95,0.5)"/>
+    </linearGradient>
+    <linearGradient id="home-quick-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1420"/>
+      <stop offset="100%" stop-color="#080d16"/>
+    </linearGradient>
+    <radialGradient id="home-quick-sun-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="home-quick-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
+      <feOffset dx="0" dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="home-quick-soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ceu / background -->
+  <rect width="500" height="400" fill="url(#home-quick-sky)"/>
+
+  <!-- Sol com brilho -->
+  <circle cx="425" cy="60" r="80" fill="url(#home-quick-sun-glow)"/>
+  <circle cx="425" cy="60" r="22" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="425" cy="60" r="14" fill="#fbbf24" opacity="0.95"/>
+
+  <!-- Linhas de grade sutis (estilo tecnico) -->
+  <g opacity="0.04" stroke="#e2e8f0" stroke-width="0.5">
+    <line x1="0" y1="0" x2="500" y2="0"/><line x1="0" y1="33.333333333333336" x2="500" y2="33.333333333333336"/><line x1="0" y1="66.66666666666667" x2="500" y2="66.66666666666667"/><line x1="0" y1="100" x2="500" y2="100"/><line x1="0" y1="133.33333333333334" x2="500" y2="133.33333333333334"/><line x1="0" y1="166.66666666666666" x2="500" y2="166.66666666666666"/><line x1="0" y1="200" x2="500" y2="200"/><line x1="0" y1="233.33333333333334" x2="500" y2="233.33333333333334"/><line x1="0" y1="266.6666666666667" x2="500" y2="266.6666666666667"/><line x1="0" y1="300" x2="500" y2="300"/><line x1="0" y1="333.3333333333333" x2="500" y2="333.3333333333333"/><line x1="0" y1="366.6666666666667" x2="500" y2="366.6666666666667"/>
+    <line x1="0" y1="0" x2="0" y2="400"/><line x1="31.25" y1="0" x2="31.25" y2="400"/><line x1="62.5" y1="0" x2="62.5" y2="400"/><line x1="93.75" y1="0" x2="93.75" y2="400"/><line x1="125" y1="0" x2="125" y2="400"/><line x1="156.25" y1="0" x2="156.25" y2="400"/><line x1="187.5" y1="0" x2="187.5" y2="400"/><line x1="218.75" y1="0" x2="218.75" y2="400"/><line x1="250" y1="0" x2="250" y2="400"/><line x1="281.25" y1="0" x2="281.25" y2="400"/><line x1="312.5" y1="0" x2="312.5" y2="400"/><line x1="343.75" y1="0" x2="343.75" y2="400"/><line x1="375" y1="0" x2="375" y2="400"/><line x1="406.25" y1="0" x2="406.25" y2="400"/><line x1="437.5" y1="0" x2="437.5" y2="400"/><line x1="468.75" y1="0" x2="468.75" y2="400"/>
+  </g>
+
+  <!-- Chao isometrico -->
+  <polygon points="50,288 450,288 475,312 25,312" fill="url(#home-quick-ground)"/>
+  <polygon points="25,312 475,312 460,340 40,340" fill="#080d16" opacity="0.6"/>
+
+  <!-- ===== CASA ISOMETRICA ===== -->
+  <!-- A casa e composta por 2 volumes: principal (maior) + anexo -->
+
+  <!-- Sombra da casa no chao -->
+  <ellipse cx="250" cy="304" rx="160" ry="16" fill="rgba(0,0,0,0.4)" filter="url(#home-quick-shadow)"/>
+
+  <!-- Volume principal - face frontal (esquerda) -->
+  <polygon points="110,180 260,180 260,288 110,288" fill="url(#home-quick-wall)"/>
+
+  <!-- Volume principal - face lateral (direita, mais escura) -->
+  <polygon points="260,180 325,152 325,260 260,288" fill="url(#home-quick-wall-side)"/>
+
+  <!-- Volume anexo (mais baixo, a direita) -->
+  <polygon points="260,220.00000000000003 360,192 360,272 260,288" fill="#1a1f2e" opacity="0.85"/>
+
+  <!-- Telhado - volume principal (inclinado, face superior) -->
+  <polygon points="110,180 260,180 325,152 175,152" fill="url(#home-quick-roof)"/>
+
+  <!-- Telhado - beirada -->
+  <polygon points="100,180 110,180 175,152 165,152" fill="#161a26"/>
+  <polygon points="175,152 325,152 335,160 185,160" fill="#161a26" opacity="0.7"/>
+
+  <!-- ===== PAINELS SOLARES NO TELHADO ===== -->
+  <!-- Os paineis sao posicionados na face superior do telhado do volume principal -->
+  <g transform="translate(120 168) skewY(-15)">
+    <g transform="translate(0 0)" class="twin-panel" data-panel="1">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0s"/></rect>
+        </g><g transform="translate(42 0)" class="twin-panel" data-panel="2">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.2s"/></rect>
+        </g><g transform="translate(84 0)" class="twin-panel" data-panel="3">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.4s"/></rect>
+        </g><g transform="translate(126 0)" class="twin-panel" data-panel="4">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.6000000000000001s"/></rect>
+        </g><g transform="translate(168 0)" class="twin-panel" data-panel="5">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.8s"/></rect>
+        </g><g transform="translate(0 26)" class="twin-panel" data-panel="6">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1s"/></rect>
+        </g><g transform="translate(42 26)" class="twin-panel" data-panel="7">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.2000000000000002s"/></rect>
+        </g><g transform="translate(84 26)" class="twin-panel" data-panel="8">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.4000000000000001s"/></rect>
+        </g><g transform="translate(126 26)" class="twin-panel" data-panel="9">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.6s"/></rect>
+        </g><g transform="translate(168 26)" class="twin-panel" data-panel="10">
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#home-quick-panel-sheen)"/>
+          <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
+          <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.8s"/></rect>
+        </g>
+  </g>
+
+  <!-- Telhado do anexo (plano, sem paineis) -->
+  <polygon points="260,220.00000000000003 360,192 370,196 270,224.00000000000003" fill="#1e2330" opacity="0.8"/>
+
+  <!-- Janelas grandes (arquitetura contemporanea - vidro) -->
+  <!-- Janela frontal 1 -->
+  <rect x="130" y="208" width="30" height="48" rx="1" fill="url(#home-quick-glass)"/>
+  <line x1="145" y1="208" x2="145" y2="256" stroke="#1a1f2e" stroke-width="0.5"/>
+  <!-- Janela frontal 2 -->
+  <rect x="175" y="208" width="30" height="48" rx="1" fill="url(#home-quick-glass)"/>
+  <line x1="190" y1="208" x2="190" y2="256" stroke="#1a1f2e" stroke-width="0.5"/>
+  <!-- Porta -->
+  <rect x="220" y="231.99999999999997" width="20" height="56.00000000000001" rx="0.5" fill="#1a1f2e"/>
+  <!-- Janela lateral -->
+  <polygon points="270,200 315,172 315,220.00000000000003 270,248" fill="url(#home-quick-glass)" opacity="0.7"/>
+
+  <!-- Inversor na parede lateral (pequeno detalhe tecnico) -->
+  <rect x="280" y="240" width="14" height="20" rx="1" fill="#161a26" stroke="#f59e0b" stroke-width="0.5"/>
+  <circle cx="287" cy="246" r="2" fill="#22c55e">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Linha de conexao painel -> inversor (sutil) -->
+  <path d="M 175 168 L 280 240" stroke="#f59e0b" stroke-width="0.8" opacity="0.3" stroke-dasharray="2,2"/>
+
+  <!-- ===== FLUXO ENERGETICO ANIMADO ===== -->
+  
+  <!-- Sol -> Painels -->
+  <g class="flow-sun-panels">
+    <path d="M 425 60 Q 350 100 200 152" stroke="#f59e0b" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="4,6">
+      <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <circle r="3" fill="#f59e0b" opacity="0.8">
+      <animateMotion dur="2s" repeatCount="indefinite" path="M 425 60 Q 350 100 200 152"/>
+    </circle>
+  </g>
+  <!-- Painels -> Casa -->
+  <g class="flow-panels-house">
+    <path d="M 175 168 L 175 231.99999999999997" stroke="#22c55e" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="4,6">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <circle r="3" fill="#22c55e" opacity="0.8">
+      <animateMotion dur="1.5s" repeatCount="indefinite" path="M 175 168 L 175 231.99999999999997"/>
+    </circle>
+  </g>
+  <!-- Casa -> Rede -->
+  <g class="flow-house-grid">
+    <path d="M 260 288 L 390 312" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.2" stroke-dasharray="4,6">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <circle r="2.5" fill="#3b82f6" opacity="0.6">
+      <animateMotion dur="2s" repeatCount="indefinite" path="M 260 288 L 390 312"/>
+    </circle>
+  </g>
+  
+
+  <!-- ===== HOTSPOTS ===== -->
+  
+
+  <!-- Poste da rede eletrica (canto direito) -->
+  <line x1="410" y1="220.00000000000003" x2="410" y2="312" stroke="#1a1f2e" stroke-width="1.5"/>
+  <line x1="395" y1="231.99999999999997" x2="425" y2="231.99999999999997" stroke="#1a1f2e" stroke-width="1"/>
+  <line x1="400" y1="244" x2="420" y2="244" stroke="#1a1f2e" stroke-width="1"/>
+
+  <!-- Arvores sutis (paisagismo) -->
+  <g opacity="0.5">
+    <circle cx="60" cy="272" r="12" fill="#1a2a1a"/>
+    <rect x="57.5" y="272" width="2" height="10" fill="#1a1f2e"/>
+    <circle cx="440" cy="280" r="10" fill="#1a2a1a"/>
+    <rect x="438.5" y="280" width="2" height="8" fill="#1a1f2e"/>
+  </g>
+</svg>
       </div>
-      <p class="text-xs text-muted mt-4 text-center">Estimativa demonstrativa — dados ficticios</p>
     </div>
   </div>
 </section><section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2>Como funciona a energia solar</h2>
-      <p>Do sol a sua conta de luz — o fluxo energetico completo</p>
+    <div style="text-align:center;margin-bottom:var(--space-8)">
+      <span class="cinematic-hero-eyebrow">Como funciona</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Do sol a sua conta de luz</h2>
+      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">O fluxo energetico completo — sol, paineis, inversor, imovel e rede</p>
     </div>
-    <div class="energy-flow-wrap">
-      <svg class="energy-flow-svg" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo de energia: sol gera nos paineis, inversor converte, casa consome e excedente vai para a rede">
+    <div style="max-width:700px;margin:0 auto var(--space-8)">
+      <svg class="energy-flow-svg" viewBox="0 0 600 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo energetico: sol para paineis, paineis para casa, excedente para rede">
   <defs>
-    <linearGradient id="flow-sun" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fbbf24"/>
-    </linearGradient>
-    <linearGradient id="flow-panel" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#60a5fa"/>
-    </linearGradient>
-    <linearGradient id="flow-inv" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22c55e"/><stop offset="100%" stop-color="#4ade80"/>
-    </linearGradient>
-    <linearGradient id="flow-grid" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#818cf8"/>
-    </linearGradient>
-    <filter id="flow-glow"><feGaussianBlur stdDeviation="3"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="flow-sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-
   <!-- Sol -->
-  <g transform="translate(60 100)">
-    <circle r="32" fill="url(#flow-sun)" filter="url(#flow-glow)" opacity="0.9"/>
-    <circle r="22" fill="#fbbf24"/>
-    <g stroke="#f59e0b" stroke-width="2" stroke-linecap="round">
-      <line x1="0" y1="-40" x2="0" y2="-48"/><line x1="0" y1="40" x2="0" y2="48"/>
-      <line x1="-40" y1="0" x2="-48" y2="0"/><line x1="40" y1="0" x2="48" y2="0"/>
-      <line x1="-28" y1="-28" x2="-34" y2="-34"/><line x1="28" y1="28" x2="34" y2="34"/>
-      <line x1="-28" y1="28" x2="-34" y2="34"/><line x1="28" y1="-28" x2="34" y2="-34"/>
-    </g>
-    <text y="65" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600" font-family="Inter, sans-serif">SOL</text>
+  <circle cx="60" cy="60" r="40" fill="url(#flow-sun)"/>
+  <circle cx="60" cy="60" r="18" fill="#f59e0b"/>
+  <text x="60" y="105" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="600">SOL</text>
+  <!-- Flow: Sol -> Painels -->
+  <path d="M 90 60 L 200 60" stroke="#f59e0b" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="6,4">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <circle r="4" fill="#f59e0b"><animateMotion dur="1.5s" repeatCount="indefinite" path="M 90 60 L 200 60"/></circle>
+  <!-- Painels -->
+  <g transform="translate(200 40)">
+    <rect width="60" height="40" rx="2" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/>
+    <rect x="4" y="4" width="16" height="14" rx="0.5" fill="rgba(59,130,246,0.2)" stroke="#1a3a5f" stroke-width="0.3"/><rect x="22" y="4" width="16" height="14" rx="0.5" fill="rgba(59,130,246,0.2)" stroke="#1a3a5f" stroke-width="0.3"/><rect x="40" y="4" width="16" height="14" rx="0.5" fill="rgba(59,130,246,0.2)" stroke="#1a3a5f" stroke-width="0.3"/><rect x="4" y="20" width="16" height="14" rx="0.5" fill="rgba(59,130,246,0.2)" stroke="#1a3a5f" stroke-width="0.3"/><rect x="22" y="20" width="16" height="14" rx="0.5" fill="rgba(59,130,246,0.2)" stroke="#1a3a5f" stroke-width="0.3"/><rect x="40" y="20" width="16" height="14" rx="0.5" fill="rgba(59,130,246,0.2)" stroke="#1a3a5f" stroke-width="0.3"/>
   </g>
-
-  <!-- Seta Sol -> Painel -->
-  <line x1="100" y1="100" x2="180" y2="100" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
-  <polygon points="180,96 188,100 180,104" fill="#f59e0b" opacity="0.7"/>
-
-  <!-- Painel -->
-  <g transform="translate(220 100)">
-    <rect x="-35" y="-25" width="70" height="50" rx="3" fill="#0f2744" stroke="#1e3a5f" stroke-width="1"/>
-    <rect x="-32" y="-22" width="64" height="44" rx="2" fill="#1e3a5f" opacity="0.5"/>
-    <g stroke="#2a4a6f" stroke-width="0.5">
-      <line x1="-32" y1="-11" x2="32" y2="-11"/><line x1="-32" y1="0" x2="32" y2="0"/><line x1="-32" y1="11" x2="32" y2="11"/>
-      <line x1="-16" y1="-22" x2="-16" y2="22"/><line x1="0" y1="-22" x2="0" y2="22"/><line x1="16" y1="-22" x2="16" y2="22"/>
-    </g>
-    <rect x="-32" y="-22" width="64" height="44" rx="2" fill="url(#flow-panel)" opacity="0.1"/>
-    <text y="45" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="600" font-family="Inter, sans-serif">PAINEL</text>
-  </g>
-
-  <!-- Seta Painel -> Inversor -->
-  <line x1="260" y1="100" x2="340" y2="100" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
-  <polygon points="340,96 348,100 340,104" fill="#3b82f6" opacity="0.7"/>
-
-  <!-- Inversor -->
-  <g transform="translate(390 100)">
-    <rect x="-30" y="-25" width="60" height="50" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
-    <rect x="-25" y="-20" width="50" height="20" rx="2" fill="#0f172a"/>
-    <text x="0" y="-6" text-anchor="middle" fill="#22c55e" font-size="8" font-family="monospace" font-weight="600">3.42 kW</text>
-    <circle cx="-15" cy="12" r="3" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
-    <circle cx="0" cy="12" r="3" fill="#22c55e" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/></circle>
-    <circle cx="15" cy="12" r="3" fill="#22c55e" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/></circle>
-    <text y="45" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="600" font-family="Inter, sans-serif">INVERSOR</text>
-  </g>
-
-  <!-- Seta Inversor -> Casa -->
-  <line x1="425" y1="100" x2="505" y2="100" stroke="#22c55e" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
-  <polygon points="505,96 513,100 505,104" fill="#22c55e" opacity="0.7"/>
-
+  <text x="230" y="105" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">PAINELS</text>
+  <!-- Flow: Painels -> Casa -->
+  <path d="M 270 60 L 380 60" stroke="#22c55e" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="6,4">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="1.2s" repeatCount="indefinite"/>
+  </path>
+  <circle r="4" fill="#22c55e"><animateMotion dur="1.2s" repeatCount="indefinite" path="M 270 60 L 380 60"/></circle>
   <!-- Casa -->
-  <g transform="translate(555 100)">
-    <path d="M-30 -15 L0 -35 L30 -15 L30 20 L-30 20 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
-    <rect x="-15" y="-5" width="12" height="18" fill="#1e3a5f" opacity="0.6"/>
-    <rect x="5" y="-5" width="12" height="12" fill="#60a5fa" opacity="0.4"/>
-    <text y="40" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="600" font-family="Inter, sans-serif">IMÓVEL</text>
+  <g transform="translate(380 35)">
+    <rect width="50" height="50" rx="2" fill="#2a2f3e"/>
+    <polygon points="-5,0 55,0 50,-15 0,-15" fill="#1e2330"/>
+    <rect x="10" y="15" width="12" height="15" fill="rgba(96,165,250,0.3)"/>
+    <rect x="28" y="15" width="12" height="15" fill="rgba(96,165,250,0.3)"/>
   </g>
-
-  <!-- Seta Casa <-> Rede (bidirecional) -->
-  <line x1="590" y1="100" x2="670" y2="100" stroke="#6366f1" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
-  <polygon points="670,96 678,100 670,104" fill="#6366f1" opacity="0.7"/>
-  <polygon points="590,96 582,100 590,104" fill="#6366f1" opacity="0.5"/>
-
+  <text x="405" y="105" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="600">CASA</text>
+  <!-- Flow: Casa -> Rede -->
+  <path d="M 440 60 L 540 60" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.2" stroke-dasharray="6,4">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <circle r="3" fill="#3b82f6" opacity="0.6"><animateMotion dur="2s" repeatCount="indefinite" path="M 440 60 L 540 60"/></circle>
   <!-- Rede -->
-  <g transform="translate(720 100)">
-    <g stroke="#818cf8" stroke-width="1.5" fill="none">
-      <line x1="0" y1="-30" x2="0" y2="25"/>
-      <line x1="-20" y1="-20" x2="20" y2="-20"/>
-      <line x1="-15" y1="-10" x2="15" y2="-10"/>
-      <line x1="-10" y1="0" x2="10" y2="0"/>
-    </g>
-    <circle cx="0" cy="-25" r="3" fill="#818cf8"/>
-    <text y="45" text-anchor="middle" fill="#818cf8" font-size="11" font-weight="600" font-family="Inter, sans-serif">REDE</text>
-  </g>
+  <line x1="540" y1="30" x2="540" y2="80" stroke="#475569" stroke-width="2"/>
+  <line x1="535" y1="35" x2="545" y2="35" stroke="#475569" stroke-width="1"/>
+  <line x1="536" y1="42" x2="544" y2="42" stroke="#475569" stroke-width="1"/>
+  <text x="540" y="105" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600">REDE</text>
 </svg>
     </div>
-    <div class="grid grid-4 mt-6">
-      <div class="card text-center"><div class="kpi-card-icon solar" style="margin: 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><h4>Sol</h4><p class="text-sm text-muted">Luz solar atinge os modulos fotovoltaicos</p></div>
-      <div class="card text-center"><div class="kpi-card-icon info" style="margin: 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div><h4>Paineis</h4><p class="text-sm text-muted">Convertem luz em corrente continua (CC)</p></div>
-      <div class="card text-center"><div class="kpi-card-icon gen" style="margin: 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h4>Inversor</h4><p class="text-sm text-muted">Transforma CC em corrente alternada (CA)</p></div>
-      <div class="card text-center"><div class="kpi-card-icon warn" style="margin: 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h4>Imovel</h4><p class="text-sm text-muted">Consome e excedente vai para a rede</p></div>
+    <div class="grid grid-4">
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
+        <h4 style="margin-bottom:var(--space-2)">Sol</h4>
+        <p class="text-sm text-muted">Luz solar atinge os modulos fotovoltaicos</p>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div>
+        <h4 style="margin-bottom:var(--space-2)">Paineis</h4>
+        <p class="text-sm text-muted">Convertem luz em corrente continua (CC)</p>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h4 style="margin-bottom:var(--space-2)">Inversor</h4>
+        <p class="text-sm text-muted">Transforma CC em corrente alternada (CA)</p>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap warn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h4 style="margin-bottom:var(--space-2)">Imovel</h4>
+        <p class="text-sm text-muted">Consome e excedente vai para a rede</p>
+      </div>
     </div>
     <div class="text-center mt-6">
       <a href="como-funciona.html" class="btn btn-secondary">Entenda o processo completo <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -564,189 +699,208 @@
   </div>
 </section><section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2>Simular. Projetar. Acompanhar. Monitorar.</h2>
-      <p>Quatro experiencias integradas em uma plataforma end-to-end</p>
+    <div style="text-align:center;margin-bottom:var(--space-8)">
+      <span class="cinematic-hero-eyebrow">Plataforma end-to-end</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Simular. Projetar. Acompanhar. Monitorar.</h2>
+      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">Quatro experiencias integradas em uma plataforma unica</p>
     </div>
     <div class="grid grid-4">
-      <div class="card card-glow">
-        <div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Simular</h3>
-        <p class="text-sm text-secondary">Wizard de 6 etapas com localizacao, consumo, telhado e objetivo. Resultado com kWp, geracao e payback.</p>
-        <a href="simulador.html" class="btn btn-ghost btn-sm mt-4">Iniciar simulacao <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Simular</h3>
+        <p class="text-sm text-muted mb-4">Wizard de 6 etapas com localizacao, consumo, telhado e objetivo. Resultado com kWp, geracao e payback.</p>
+        <a href="simulador.html" class="btn btn-ghost btn-sm">Iniciar simulacao <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
-      <div class="card">
-        <div class="kpi-card-icon info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div>
-        <h3>Projetar</h3>
-        <p class="text-sm text-secondary">Projeto tecnico com diagrama energetico, layout do telhado, dimensionamento e documentos.</p>
-        <a href="projeto.html" class="btn btn-ghost btn-sm mt-4">Ver projeto demo <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Projetar</h3>
+        <p class="text-sm text-muted mb-4">Projeto tecnico com diagrama energetico, layout do telhado, dimensionamento e documentos.</p>
+        <a href="projeto.html" class="btn btn-ghost btn-sm">Ver projeto demo <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
-      <div class="card">
-        <div class="kpi-card-icon warn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h3>Acompanhar</h3>
-        <p class="text-sm text-secondary">Timeline de implantacao: simulacao, analise, projeto, documentacao, instalacao e conexao.</p>
-        <a href="conta.html" class="btn btn-ghost btn-sm mt-4">Portal do cliente <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap warn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Acompanhar</h3>
+        <p class="text-sm text-muted mb-4">Timeline de implantacao: simulacao, analise, projeto, documentacao, instalacao e conexao.</p>
+        <a href="conta.html" class="btn btn-ghost btn-sm">Portal do cliente <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
-      <div class="card">
-        <div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-        <h3>Monitorar</h3>
-        <p class="text-sm text-secondary">Dashboard energetico em tempo real: geracao atual, graficos diarios e mensais, status do sistema.</p>
-        <a href="monitoramento.html" class="btn btn-ghost btn-sm mt-4">Ver monitoramento <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Monitorar</h3>
+        <p class="text-sm text-muted mb-4">Dashboard energetico em tempo real: geracao atual, graficos diarios e mensais, status do sistema.</p>
+        <a href="monitoramento.html" class="btn btn-ghost btn-sm">Ver monitoramento <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </div>
   </div>
 </section><section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2>Projetos demonstrativos</h2>
-      <p>Exemplos ficticios de sistemas dimensionados para diferentes perfis</p>
+    <div style="text-align:center;margin-bottom:var(--space-8)">
+      <span class="cinematic-hero-eyebrow">Projetos demonstrativos</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Sistemas dimensionados para diferentes perfis</h2>
+      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">Exemplos ficticios com hero arquitetonico exclusivo por tipo</p>
     </div>
     <div class="grid grid-3">
       
-      <div class="case-card">
-        <svg class="case-thumb-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Projeto Residencial demonstrativo">
-  <defs>
-    <linearGradient id="ct-sky-residencial" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#142840"/><stop offset="100%" stop-color="#0a1520"/>
-    </linearGradient>
-    <linearGradient id="ct-panel-residencial" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="400" height="220" fill="url(#ct-sky-residencial)" rx="8"/>
-
-  <!-- Sol -->
-  <circle cx="340" cy="44" r="20" fill="#f59e0b" opacity="0.5"/>
-  <circle cx="340" cy="44" r="12" fill="#fbbf24" opacity="0.7"/>
-
-  <!-- Estrutura (varia por tipo) -->
-  
-    <polygon points="40,121.00000000000001 200,121.00000000000001 200,77 80,77" fill="#334155"/>
-    <rect x="48" y="121.00000000000001" width="144" height="66" fill="#cbd5e1" opacity="0.8"/>
-    <g transform="translate(56.00000000000001 81.4)">
-      <rect x="0" y="0" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="50" y="2" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="100" y="4" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="150" y="6" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="200" y="8" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="250" y="10" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="0" y="16" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="50" y="18" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="100" y="20" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="150" y="22" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="200" y="24" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="250" y="26" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="0" y="32" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="50" y="34" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="100" y="36" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="150" y="38" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="200" y="40" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="250" y="42" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="0" y="48" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="50" y="50" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="100" y="52" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="150" y="54" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="200" y="56" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="250" y="58" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <a href="projeto-residencial-santos-demo.html" style="text-decoration:none;color:inherit">
+        <div class="case-hero" style="min-height:280px;border-radius:16px;overflow:hidden;margin-bottom:var(--space-4)">
+          <div class="case-hero">
+  <svg class="case-hero-svg" viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Residencial Santos — DEMO - 5.5 kWp">
+    <defs>
+      <linearGradient id="home-residencial-santos-demo-sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0a0f1a"/>
+        <stop offset="100%" stop-color="#141d2e"/>
+      </linearGradient>
+      <radialGradient id="home-residencial-santos-demo-sun" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1200" height="500" fill="url(#home-residencial-santos-demo-sky)"/>
+    <circle cx="1000" cy="100" r="120" fill="url(#home-residencial-santos-demo-sun)"/>
+    <circle cx="1000" cy="100" r="30" fill="#f59e0b" opacity="0.7"/>
+    <!-- Edificio escalado e centralizado -->
+    <g transform="translate(450 100) scale(1.8)">
+      
+      <!-- Casa contemporanea -->
+      <polygon points="home-residencial-santos-demo-wall" fill="#2a2f3e"/>
+      <rect x="60" y="80" width="120" height="70" fill="#2a2f3e"/>
+      <polygon points="45,80 180,80 165,56.00000000000001 66,56.00000000000001" fill="#1e2330"/>
+      <g transform="translate(54 60) skewY(-12)">
+        <rect x="0" y="0" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="42" y="0" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="84" y="0" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="126" y="0" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="168" y="0" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="0" y="20" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="42" y="20" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="84" y="20" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="126" y="20" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/><rect x="168" y="20" width="38" height="16" rx="1" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.5"/>
+      </g>
+      <rect x="75" y="100" width="24" height="30" fill="rgba(96,165,250,0.2)"/>
+      <rect x="108" y="100" width="24" height="30" fill="rgba(96,165,250,0.2)"/>
     </g>
-  
-
-  <!-- Demo badge -->
-  <rect x="320" y="10" width="70" height="18" rx="9" fill="#f59e0b" opacity="0.9"/>
-  <text x="355" y="22" text-anchor="middle" fill="#0a1520" font-size="9" font-weight="700" font-family="Inter, sans-serif">DEMO</text>
-
-  <text x="15" y="210" fill="#64748b" font-size="10" font-family="Inter, sans-serif">Residencial — 10 modulos</text>
-</svg>
-        <div class="case-card-header" style="margin-top: var(--space-4)">
-          <div>
-            <h3>Residencial Santos — DEMO</h3>
-            <p class="text-xs text-muted">Santos, SP &middot; residencial</p>
-          </div>
-        </div>
-        <div class="case-card-stats">
-          <div class="case-stat"><div class="val">5.5 kWp</div><div class="lbl">Potencia</div></div>
-          <div class="case-stat"><div class="val">10</div><div class="lbl">Modulos</div></div>
-          <div class="case-stat"><div class="val">7.800 kWh</div><div class="lbl">Geracao/ano</div></div>
-          <div class="case-stat"><div class="val">R$ 480</div><div class="lbl">Economia/mes</div></div>
-        </div>
-        <a href="projeto-residencial-santos-demo.html" class="btn btn-secondary btn-sm">Ver detalhes <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-      <div class="case-card">
-        <svg class="case-thumb-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Projeto Comercial demonstrativo">
-  <defs>
-    <linearGradient id="ct-sky-comercial" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0a1520"/>
+    <!-- Overlay escuro para legibilidade -->
+    <rect width="1200" height="500" fill="url(#home-residencial-santos-demo-sky)" opacity="0.3"/>
+    <linearGradient id="home-residencial-santos-demo-overlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(10,15,26,0.6)"/>
+      <stop offset="60%" stop-color="rgba(10,15,26,0.2)"/>
+      <stop offset="100%" stop-color="rgba(10,15,26,0.7)"/>
     </linearGradient>
-    <linearGradient id="ct-panel-comercial" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="400" height="220" fill="url(#ct-sky-comercial)" rx="8"/>
-
-  <!-- Sol -->
-  <circle cx="340" cy="44" r="20" fill="#f59e0b" opacity="0.5"/>
-  <circle cx="340" cy="44" r="12" fill="#fbbf24" opacity="0.7"/>
-
-  <!-- Estrutura (varia por tipo) -->
-  
-    <rect x="20" y="88" width="360" height="99" fill="#1e293b"/>
-    <rect x="20" y="83.6" width="360" height="8.8" fill="#1a2a3a"/>
-    <g transform="translate(32 85.8)">
-      <rect x="0" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="32" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="64" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="96" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="128" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="160" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="192" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="224" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="256" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="288" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="320" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="32" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="64" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="96" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="128" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="160" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="192" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="224" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="256" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="288" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="320" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="32" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="64" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="96" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="128" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="160" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="192" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="224" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="256" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="288" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="320" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/>
+    <rect width="1200" height="500" fill="url(#home-residencial-santos-demo-overlay)"/>
+  </svg>
+  <div class="case-hero-overlay">
+    <span class="case-hero-badge">PROJETO DEMONSTRATIVO</span>
+    <h1 class="case-hero-title">Residencial Santos — DEMO</h1>
+    <div class="case-hero-stats">
+      <div class="case-hero-stat"><span class="case-hero-stat-value">5.5 kWp</span><span class="case-hero-stat-label">Potencia</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">10 modulos</span><span class="case-hero-stat-label">Modulos</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">7.800 kWh/ano</span><span class="case-hero-stat-label">Geracao anual</span></div>
+    </div>
+  </div>
+</div>
+        </div>
+      </a>
+      <a href="projeto-comercial-sao-vicente-demo.html" style="text-decoration:none;color:inherit">
+        <div class="case-hero" style="min-height:280px;border-radius:16px;overflow:hidden;margin-bottom:var(--space-4)">
+          <div class="case-hero">
+  <svg class="case-hero-svg" viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Comercial Sao Vicente — DEMO - 18 kWp">
+    <defs>
+      <linearGradient id="home-comercial-sao-vicente-demo-sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0d1117"/>
+        <stop offset="100%" stop-color="#1a1f2e"/>
+      </linearGradient>
+      <radialGradient id="home-comercial-sao-vicente-demo-sun" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1200" height="500" fill="url(#home-comercial-sao-vicente-demo-sky)"/>
+    <circle cx="1000" cy="100" r="120" fill="url(#home-comercial-sao-vicente-demo-sun)"/>
+    <circle cx="1000" cy="100" r="30" fill="#f59e0b" opacity="0.7"/>
+    <!-- Edificio escalado e centralizado -->
+    <g transform="translate(450 100) scale(1.8)">
+      
+      <!-- Edificio comercial -->
+      <rect x="45" y="30" width="135" height="120" fill="#2a2f3e"/>
+      <rect x="45" y="20" width="135" height="12" fill="#1e2330"/>
+      <!-- Paineis no topo (plano) -->
+      <g transform="translate(51.00000000000001 23)">
+        <rect x="0" y="0" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="16" y="0" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="32" y="0" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="48" y="0" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="64" y="0" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="80" y="0" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="96" y="0" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="112" y="0" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="0" y="8" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="16" y="8" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="32" y="8" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="48" y="8" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="64" y="8" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="80" y="8" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="96" y="8" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/><rect x="112" y="8" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/>
+      </g>
+      <!-- Janelas (grid comercial) -->
+      <rect x="54" y="44" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="76" y="44" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="98" y="44" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="120" y="44" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="142" y="44" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="54" y="60" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="76" y="60" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="98" y="60" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="120" y="60" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="142" y="60" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="54" y="76" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="76" y="76" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="98" y="76" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="120" y="76" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="142" y="76" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="54" y="92" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="76" y="92" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="98" y="92" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="120" y="92" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="142" y="92" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="54" y="108" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="76" y="108" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="98" y="108" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="120" y="108" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="142" y="108" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="54" y="124" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="76" y="124" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="98" y="124" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="120" y="124" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/><rect x="142" y="124" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/>
     </g>
-    <rect x="40" y="132" width="60" height="44" fill="#60a5fa" opacity="0.3"/>
-    <rect x="120" y="132" width="60" height="44" fill="#60a5fa" opacity="0.3"/>
-  
-
-  <!-- Demo badge -->
-  <rect x="320" y="10" width="70" height="18" rx="9" fill="#f59e0b" opacity="0.9"/>
-  <text x="355" y="22" text-anchor="middle" fill="#0a1520" font-size="9" font-weight="700" font-family="Inter, sans-serif">DEMO</text>
-
-  <text x="15" y="210" fill="#64748b" font-size="10" font-family="Inter, sans-serif">Comercial — 33 modulos</text>
-</svg>
-        <div class="case-card-header" style="margin-top: var(--space-4)">
-          <div>
-            <h3>Comercial Sao Vicente — DEMO</h3>
-            <p class="text-xs text-muted">Sao Vicente, SP &middot; comercial</p>
-          </div>
-        </div>
-        <div class="case-card-stats">
-          <div class="case-stat"><div class="val">18 kWp</div><div class="lbl">Potencia</div></div>
-          <div class="case-stat"><div class="val">33</div><div class="lbl">Modulos</div></div>
-          <div class="case-stat"><div class="val">25.200 kWh</div><div class="lbl">Geracao/ano</div></div>
-          <div class="case-stat"><div class="val">R$ 1.560</div><div class="lbl">Economia/mes</div></div>
-        </div>
-        <a href="projeto-comercial-sao-vicente-demo.html" class="btn btn-secondary btn-sm">Ver detalhes <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-      <div class="case-card">
-        <svg class="case-thumb-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Projeto Condominio demonstrativo">
-  <defs>
-    <linearGradient id="ct-sky-condominio" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1520"/>
+    <!-- Overlay escuro para legibilidade -->
+    <rect width="1200" height="500" fill="url(#home-comercial-sao-vicente-demo-sky)" opacity="0.3"/>
+    <linearGradient id="home-comercial-sao-vicente-demo-overlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(10,15,26,0.6)"/>
+      <stop offset="60%" stop-color="rgba(10,15,26,0.2)"/>
+      <stop offset="100%" stop-color="rgba(10,15,26,0.7)"/>
     </linearGradient>
-    <linearGradient id="ct-panel-condominio" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    <rect width="1200" height="500" fill="url(#home-comercial-sao-vicente-demo-overlay)"/>
+  </svg>
+  <div class="case-hero-overlay">
+    <span class="case-hero-badge">PROJETO DEMONSTRATIVO</span>
+    <h1 class="case-hero-title">Comercial Sao Vicente — DEMO</h1>
+    <div class="case-hero-stats">
+      <div class="case-hero-stat"><span class="case-hero-stat-value">18 kWp</span><span class="case-hero-stat-label">Potencia</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">33 modulos</span><span class="case-hero-stat-label">Modulos</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">25.200 kWh/ano</span><span class="case-hero-stat-label">Geracao anual</span></div>
+    </div>
+  </div>
+</div>
+        </div>
+      </a>
+      <a href="projeto-condominio-praia-grande-demo.html" style="text-decoration:none;color:inherit">
+        <div class="case-hero" style="min-height:280px;border-radius:16px;overflow:hidden;margin-bottom:var(--space-4)">
+          <div class="case-hero">
+  <svg class="case-hero-svg" viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Condominio Praia Grande — DEMO - 35 kWp">
+    <defs>
+      <linearGradient id="home-condominio-praia-grande-demo-sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0a1520"/>
+        <stop offset="100%" stop-color="#162030"/>
+      </linearGradient>
+      <radialGradient id="home-condominio-praia-grande-demo-sun" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1200" height="500" fill="url(#home-condominio-praia-grande-demo-sky)"/>
+    <circle cx="1000" cy="100" r="120" fill="url(#home-condominio-praia-grande-demo-sun)"/>
+    <circle cx="1000" cy="100" r="30" fill="#f59e0b" opacity="0.7"/>
+    <!-- Edificio escalado e centralizado -->
+    <g transform="translate(450 100) scale(1.8)">
+      
+      <!-- Condominio (3 torres) -->
+      <rect x="45" y="50" width="42.00000000000001" height="100" fill="#2a2f3e"/>
+        <rect x="45" y="46" width="42.00000000000001" height="4" fill="#1e2330"/>
+        <g transform="translate(49 48)">
+          <rect x="0" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/>
+        </g>
+        <rect x="49" y="60" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="69" y="60" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="89" y="60" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="49" y="78" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="69" y="78" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="89" y="78" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="49" y="96" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="69" y="96" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="89" y="96" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="49" y="114" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="69" y="114" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="89" y="114" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="49" y="132" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="69" y="132" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="89" y="132" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="99" y="60" width="42.00000000000001" height="90" fill="#2a2f3e"/>
+        <rect x="99" y="56" width="42.00000000000001" height="4" fill="#1e2330"/>
+        <g transform="translate(103 58)">
+          <rect x="0" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/>
+        </g>
+        <rect x="103" y="70" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="123" y="70" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="143" y="70" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="103" y="88" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="123" y="88" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="143" y="88" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="103" y="106" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="123" y="106" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="143" y="106" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="103" y="124" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="123" y="124" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="143" y="124" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="153" y="70" width="42.00000000000001" height="80" fill="#2a2f3e"/>
+        <rect x="153" y="66" width="42.00000000000001" height="4" fill="#1e2330"/>
+        <g transform="translate(157 68)">
+          <rect x="0" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="0" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="6" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="14" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="28" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/><rect x="42" y="12" width="12" height="4" rx="0.3" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.2"/>
+        </g>
+        <rect x="157" y="80" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="177" y="80" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="197" y="80" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="157" y="98" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="177" y="98" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="197" y="98" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="157" y="116" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="177" y="116" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="197" y="116" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="157" y="134" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="177" y="134" width="14" height="10" fill="rgba(96,165,250,0.15)"/><rect x="197" y="134" width="14" height="10" fill="rgba(96,165,250,0.15)"/>
+    </g>
+    <!-- Overlay escuro para legibilidade -->
+    <rect width="1200" height="500" fill="url(#home-condominio-praia-grande-demo-sky)" opacity="0.3"/>
+    <linearGradient id="home-condominio-praia-grande-demo-overlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(10,15,26,0.6)"/>
+      <stop offset="60%" stop-color="rgba(10,15,26,0.2)"/>
+      <stop offset="100%" stop-color="rgba(10,15,26,0.7)"/>
     </linearGradient>
-  </defs>
-
-  <rect width="400" height="220" fill="url(#ct-sky-condominio)" rx="8"/>
-
-  <!-- Sol -->
-  <circle cx="340" cy="44" r="20" fill="#f59e0b" opacity="0.5"/>
-  <circle cx="340" cy="44" r="12" fill="#fbbf24" opacity="0.7"/>
-
-  <!-- Estrutura (varia por tipo) -->
-  
-    <rect x="20" y="77" width="100" height="110" fill="#475569"/>
-    <rect x="140" y="66" width="100" height="121.00000000000001" fill="#475569"/>
-    <rect x="260" y="83.6" width="120" height="103.39999999999999" fill="#475569"/>
-    <g transform="translate(28.000000000000004 79.2)">
-      <rect x="0" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/>
-    </g>
-    <g transform="translate(148 68.2)">
-      <rect x="0" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/>
-    </g>
-  
-
-  <!-- Demo badge -->
-  <rect x="320" y="10" width="70" height="18" rx="9" fill="#f59e0b" opacity="0.9"/>
-  <text x="355" y="22" text-anchor="middle" fill="#0a1520" font-size="9" font-weight="700" font-family="Inter, sans-serif">DEMO</text>
-
-  <text x="15" y="210" fill="#64748b" font-size="10" font-family="Inter, sans-serif">Condominio — 64 modulos</text>
-</svg>
-        <div class="case-card-header" style="margin-top: var(--space-4)">
-          <div>
-            <h3>Condominio Praia Grande — DEMO</h3>
-            <p class="text-xs text-muted">Praia Grande, SP &middot; condominio</p>
-          </div>
+    <rect width="1200" height="500" fill="url(#home-condominio-praia-grande-demo-overlay)"/>
+  </svg>
+  <div class="case-hero-overlay">
+    <span class="case-hero-badge">PROJETO DEMONSTRATIVO</span>
+    <h1 class="case-hero-title">Condominio Praia Grande — DEMO</h1>
+    <div class="case-hero-stats">
+      <div class="case-hero-stat"><span class="case-hero-stat-value">35 kWp</span><span class="case-hero-stat-label">Potencia</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">64 modulos</span><span class="case-hero-stat-label">Modulos</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">50.400 kWh/ano</span><span class="case-hero-stat-label">Geracao anual</span></div>
+    </div>
+  </div>
+</div>
         </div>
-        <div class="case-card-stats">
-          <div class="case-stat"><div class="val">35 kWp</div><div class="lbl">Potencia</div></div>
-          <div class="case-stat"><div class="val">64</div><div class="lbl">Modulos</div></div>
-          <div class="case-stat"><div class="val">50.400 kWh</div><div class="lbl">Geracao/ano</div></div>
-          <div class="case-stat"><div class="val">R$ 3.100</div><div class="lbl">Economia/mes</div></div>
-        </div>
-        <a href="projeto-condominio-praia-grande-demo.html" class="btn btn-secondary btn-sm">Ver detalhes <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
+      </a>
     </div>
     <div class="text-center mt-6">
       <a href="projetos.html" class="btn btn-secondary">Ver todos os projetos <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>

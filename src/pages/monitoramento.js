@@ -1,172 +1,213 @@
-/* SolMais — Monitoramento (dashboard energetico premium)
-   FEATURE HERO: geracao atual, fluxo energetico SVG, graficos, gauges, status */
+/* SolMais — Monitoramento 3.0
+   A MELHOR TELA DO SOLMAIS
+   HERO do dashboard com Digital Twin + fluxo animado + metricas sobrepostas
+   Curva solar grande com pico destacado + linha de consumo */
 
 function render(data, T) {
   const store = data.store;
   const sys = (data.systems || [])[0];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Monitoramento' }];
+  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Monitoramento' }];
 
-  const hourlyData = sys.hourlyData.map(h => h.kw);
-  const hourlyLabels = sys.hourlyData.map(h => h.h + 'h');
-  const monthlyGenerated = sys.monthlyData.map(m => m.generated);
-  const monthlyEstimated = sys.monthlyData.map(m => m.estimated);
-  const monthlyLabels = sys.monthlyData.map(m => m.month);
+  /* === HERO DO DASHBOARD === */
+  const monitorHero = `<div class="monitor-hero">
+  <div class="monitor-hero-visual">
+    ${T.digitalTwin({ width: 800, height: 450, panels: sys.panels, showFlow: true, generating: true, id: 'mon-hero', theme: 'dark' })}
+  </div>
+  <div class="monitor-hero-overlay">
+    <div class="monitor-hero-status">
+      <div class="monitor-hero-status-dot"></div>
+      <span class="monitor-hero-status-text">SISTEMA OPERANDO NORMAL</span>
+    </div>
+    <div class="monitor-hero-generating">
+      <div class="monitor-hero-generating-label">Gerando agora</div>
+      <div class="monitor-hero-generating-value">3,42<span class="monitor-hero-generating-unit"> kW</span></div>
+    </div>
+    <div class="monitor-hero-kpis">
+      <div class="monitor-hero-kpi">
+        <div class="monitor-hero-kpi-value">18,7 kWh</div>
+        <div class="monitor-hero-kpi-label">Hoje</div>
+      </div>
+      <div class="monitor-hero-kpi">
+        <div class="monitor-hero-kpi-value">584 kWh</div>
+        <div class="monitor-hero-kpi-label">Mes</div>
+      </div>
+      <div class="monitor-hero-kpi">
+        <div class="monitor-hero-kpi-value">R$ 480</div>
+        <div class="monitor-hero-kpi-label">Economia</div>
+      </div>
+      <div class="monitor-hero-kpi">
+        <div class="monitor-hero-kpi-value">${sys.power} kWp</div>
+        <div class="monitor-hero-kpi-label">Potencia</div>
+      </div>
+    </div>
+  </div>
+</div>`;
+
+  /* === CURVA SOLAR (GRAFICO ASSINATURA) === */
+  const solarCurveSection = `<section class="section">
+  <div class="container">
+    <div class="solar-curve-wrap">
+      <div class="solar-curve-header">
+        <div>
+          <div class="solar-curve-title">Geracao hoje</div>
+          <div class="solar-curve-subtitle">Curva solar com pico destacado e linha de consumo</div>
+        </div>
+        <div style="text-align:right">
+          <div class="big-number big-number-amber" style="font-size:var(--fs-xl)">18,7<span class="big-number-unit">kWh</span></div>
+          <div class="big-number-label">Total do dia</div>
+        </div>
+      </div>
+      ${T.solarCurve({ id: 'mon-curve', width: 800, height: 280, showConsumption: true, peak: '4,82 kW', peakTime: '12:38' })}
+    </div>
+  </div>
+</section>`;
+
+  /* === GAUGES + STATUS === */
+  const gaugesSection = `<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="chart-premium text-center">
+        <h3>Performance</h3>
+        ${T.gauge(92, { id: 'g1', label: 'Eficiencia', unit: '%', max: 100, color: '#22c55e', size: 160 })}
+      </div>
+      <div class="chart-premium text-center">
+        <h3>Irradiacao</h3>
+        ${T.gauge(78, { id: 'g2', label: 'W/m²', unit: '%', max: 100, color: '#f59e0b', size: 160 })}
+      </div>
+      <div class="chart-premium text-center">
+        <h3>Consumo</h3>
+        ${T.gauge(65, { id: 'g3', label: 'Carga', unit: '%', max: 100, color: '#3b82f6', size: 160 })}
+      </div>
+      <div class="chart-premium text-center">
+        <h3>Saude</h3>
+        ${T.gauge(98, { id: 'g4', label: 'Sistema', unit: '%', max: 100, color: '#22c55e', size: 160 })}
+      </div>
+    </div>
+  </div>
+</section>`;
+
+  /* === GRAFICO MENSAL === */
+  const monthlySection = `<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="grid grid-2">
+      <div class="chart-premium">
+        <h3>Geracao mensal — Estimado vs Realizado</h3>
+        ${T.areaChart([580, 590, 600, 610, 620, 630, 640, 650, 640, 630, 600, 580], { width: 450, height: 200, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'mon-monthly', label: 'kWh/mes' })}
+      </div>
+      <div class="chart-premium">
+        <h3>Economia acumulada</h3>
+        ${T.areaChart([480, 960, 1440, 1920, 2400, 2880, 3360, 3840, 4320, 4800, 5280, 5760], { width: 450, height: 200, color: '#22c55e', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'mon-savings', label: 'R$ acumulado' })}
+      </div>
+    </div>
+  </div>
+</section>`;
+
+  /* === SAUDE DO SISTEMA + CLIMA === */
+  const healthSection = `<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="grid grid-2">
+      <div class="chart-premium">
+        <h3>Saude do sistema</h3>
+        <div class="grid grid-2">
+          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
+            <div class="kpi-icon-wrap gen">${T.ICONS.check}</div>
+            <div class="kpi-value" style="font-size:var(--fs-lg)">Normal</div>
+            <div class="kpi-label">Status geral</div>
+          </div>
+          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
+            <div class="kpi-icon-wrap solar">${T.ICONS.bolt}</div>
+            <div class="kpi-value" style="font-size:var(--fs-lg)">98%</div>
+            <div class="kpi-label">Disponibilidade</div>
+          </div>
+          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
+            <div class="kpi-icon-wrap info">${T.ICONS.panel}</div>
+            <div class="kpi-value" style="font-size:var(--fs-lg)">${sys.panels}</div>
+            <div class="kpi-label">Modulos ativos</div>
+          </div>
+          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
+            <div class="kpi-icon-wrap warn">${T.ICONS.clock}</div>
+            <div class="kpi-value" style="font-size:var(--fs-lg)">12:38</div>
+            <div class="kpi-label">Ultima atualizacao</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-premium">
+        <h3>Condicoes climaticas</h3>
+        <div class="grid grid-2">
+          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
+            <div class="kpi-icon-wrap solar">${T.ICONS.sun}</div>
+            <div class="kpi-value" style="font-size:var(--fs-lg)">78%</div>
+            <div class="kpi-label">Irradiacao</div>
+          </div>
+          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
+            <div class="kpi-icon-wrap info">${T.ICONS.chart}</div>
+            <div class="kpi-value" style="font-size:var(--fs-lg)">28°C</div>
+            <div class="kpi-label">Temp. modulo</div>
+          </div>
+          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
+            <div class="kpi-icon-wrap gen">${T.ICONS.check}</div>
+            <div class="kpi-value" style="font-size:var(--fs-lg)">Ensolarado</div>
+            <div class="kpi-label">Condicao</div>
+          </div>
+          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
+            <div class="kpi-icon-wrap warn">${T.ICONS.clock}</div>
+            <div class="kpi-value" style="font-size:var(--fs-lg)">5,2 h</div>
+            <div class="kpi-label">Horas de sol</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>`;
+
+  /* === IMPACTO AMBIENTAL === */
+  const impactSection = `<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="grid grid-3">
+      <div class="kpi-premium text-center">
+        <div class="big-number big-number-green" style="font-size:var(--fs-2xl)">2,1<span class="big-number-unit">t CO²</span></div>
+        <div class="big-number-label">Evitado/mes</div>
+      </div>
+      <div class="kpi-premium text-center">
+        <div class="big-number big-number-amber" style="font-size:var(--fs-2xl)">38<span class="big-number-unit">arvores</span></div>
+        <div class="big-number-label">Equivalente/ano</div>
+      </div>
+      <div class="kpi-premium text-center">
+        <div class="big-number big-number-light" style="font-size:var(--fs-2xl)">7,8<span class="big-number-unit">MWh</span></div>
+        <div class="big-number-label">Geracao/ano</div>
+      </div>
+    </div>
+  </div>
+</section>`;
 
   const content = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    ${T.pageHero('Monitoramento Energetico', 'Dashboard em tempo real — sistema ' + sys.projectId + ' em ' + T.escapeHtml(sys.location), { icon: T.ICONS.chart })}
-
-    <!-- Status bar -->
-    <div class="glass-card mb-6" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-3)">
-      <div>
-        <h3 style="font-size: var(--fs-lg)">Sistema ${sys.projectId} — ${sys.power} kWp</h3>
-        <p class="text-sm text-muted">${T.escapeHtml(sys.location)} — ${sys.panels} modulos — Inversor ${sys.inverter}</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--space-3)">
-        <span class="status-dot normal"></span>
-        <span class="badge badge-success">Sistema normal</span>
-        <span class="text-xs text-muted">Atualizado ha 2 min</span>
-      </div>
-    </div>
-
-    <!-- KPI Premium Row -->
-    <div class="grid grid-4 mb-6">
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap solar">${T.ICONS.bolt}</div>
-        <div class="kpi-value text-solar">3,42 kW</div>
-        <div class="kpi-label">Gerando agora</div>
-        <div class="mini-chart-wrap">${T.sparkline([0,0.1,0.8,1.8,2.9,3.8,4.5,4.8,4.6,4,3.2,2.3,1.4,0.6], {color:'#f59e0b', fill:'rgba(245,158,11,0.1)'})}</div>
-      </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap gen">${T.ICONS.sun}</div>
-        <div class="kpi-value text-gen">18,7</div>
-        <div class="kpi-label">kWh hoje</div>
-        <div class="mini-chart-wrap">${T.sparkline([2,4,6,8,10,12,14,16,18,18.7], {color:'#22c55e', fill:'rgba(34,197,94,0.1)'})}</div>
-      </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap info">${T.ICONS.chart}</div>
-        <div class="kpi-value">584</div>
-        <div class="kpi-label">kWh este mes</div>
-        <div class="mini-chart-wrap">${T.sparkline([530,535,540,545,550,560,570,575,580,584], {color:'#3b82f6', fill:'rgba(59,130,246,0.1)'})}</div>
-      </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap solar">${T.ICONS.cash}</div>
-        <div class="kpi-value text-solar">${T.formatBRL(480)}</div>
-        <div class="kpi-label">Economia estimada/mes</div>
-        <div class="mini-chart-wrap">${T.sparkline([420,440,450,460,465,470,475,478,480], {color:'#f59e0b', fill:'rgba(245,158,11,0.1)'})}</div>
-      </div>
-    </div>
-
-    <!-- Main Dashboard Grid -->
-    <div class="monitor-grid">
-      <!-- Main: Energy Flow + Hourly Chart -->
-      <div class="monitor-main">
-        <h3 style="color: #e2e8f0; margin-bottom: var(--space-2)">Fluxo de energia em tempo real</h3>
-        <p style="color: #94a3b8; font-size: var(--fs-sm); margin-bottom: var(--space-4)">Sol gera nos paineis, inversor converte, casa consome e excedente vai para a rede</p>
-        ${T.energyFlow()}
-        <div class="section-divider"></div>
-        <h3 style="color: #e2e8f0; margin-bottom: var(--space-4)">Geracao hoje — curva solar (00h as 24h)</h3>
-        ${T.areaChart(hourlyData, { width: 550, height: 160, color: '#f59e0b', labels: hourlyLabels, id: 'hourly', label: 'horaria (kW)' })}
-        <p class="text-xs text-muted mt-4">Curva solar natural: zero a noite, pico ao meio-dia. Dados demonstrativos.</p>
-      </div>
-
-      <!-- Side: Gauges + System Render -->
-      <div class="monitor-side">
-        <div class="glass-card text-center">
-          <h4 style="margin-bottom: var(--space-4)">Performance</h4>
-          <div class="monitor-gauge-row">
-            ${T.donutChart(87, 100, { label: 'Eficiencia', unit: '%', color: '#22c55e' })}
-          </div>
-        </div>
-        <div class="glass-card text-center">
-          <h4 style="margin-bottom: var(--space-4)">Sistema</h4>
-          ${T.systemRender({ panels: sys.panels, power: sys.power, inverter: sys.inverterPower + 'kW' })}
-        </div>
-      </div>
-    </div>
-
-    <!-- Monthly Chart Premium -->
-    <div class="chart-premium mt-6">
-      <h3>
-        <span>Geracao mensal — Estimado vs Gerado</span>
-        <span class="chart-legend">
-          <span class="chart-legend-item"><span class="chart-legend-dot" style="background:#3b82f6;opacity:0.5"></span> Estimado</span>
-          <span class="chart-legend-item"><span class="chart-legend-dot" style="background:#22c55e"></span> Gerado</span>
-        </span>
-      </h3>
-      ${T.areaChart(monthlyGenerated, { width: 600, height: 200, color: '#22c55e', color2: '#3b82f6', estimated: monthlyEstimated, labels: monthlyLabels, id: 'monthly', label: 'mensal (kWh)' })}
-      <p class="text-xs text-muted mt-4">Comparativo estimado vs realizado — dados demonstrativos. Meses futuros sem geracao registrada.</p>
-    </div>
-
-    <!-- System Health + Weather -->
-    <div class="grid grid-2 mt-6">
-      <div class="card">
-        <h3 style="margin-bottom: var(--space-4)">Saude do sistema</h3>
-        <div class="grid grid-2">
-          <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
-            <span class="status-dot normal"></span>
-            <div><strong>Sistema</strong><div class="text-xs text-muted">Normal</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
-            <span class="status-dot normal"></span>
-            <div><strong>Inversor</strong><div class="text-xs text-muted">Online</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
-            <span class="status-dot normal"></span>
-            <div><strong>Modulos</strong><div class="text-xs text-muted">Normal</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
-            <span class="status-dot normal"></span>
-            <div><strong>Comunicacao</strong><div class="text-xs text-muted">Online</div></div>
-          </div>
-        </div>
-        <div class="mini-chart-wrap">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span class="text-sm text-muted">Ultima comunicacao</span>
-            <span class="badge badge-success">ha 2 min</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <h3 style="margin-bottom: var(--space-4)">Clima (demonstrativo)</h3>
-        <div class="grid grid-3">
-          <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.sun}</div><div class="kpi-value">28C</div><div class="kpi-label">Ensolarado</div></div>
-          <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.bolt}</div><div class="kpi-value">Alta</div><div class="kpi-label">Irradiacao</div></div>
-          <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">27,5</div><div class="kpi-label">kWh previstos</div></div>
-        </div>
-        <p class="text-xs text-muted mt-4">Condicao meteorologica demonstrativa — nao utiliza API real</p>
-      </div>
-    </div>
-
-    <!-- Environmental Impact -->
-    <div class="card card-glow mt-6">
-      <h3 style="margin-bottom: var(--space-4)">Impacto ambiental (estimativa)</h3>
-      <div class="grid grid-3">
-        <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.bolt}</div><div class="kpi-value">6,2 MWh</div><div class="kpi-label">Energia produzida/ano</div></div>
-        <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.leaf}</div><div class="kpi-value">5,2 t</div><div class="kpi-label">CO2 evitado/ano</div></div>
-        <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.leaf}</div><div class="kpi-value">240</div><div class="kpi-label">Arvores equiv.</div></div>
-      </div>
-      <p class="text-xs text-muted mt-4">Estimativa demonstrativa — metodologia ilustrativa</p>
-    </div>
-
-    <p class="text-xs text-muted text-center mt-6">Plataforma demonstrativa — todos os dados de geracao, clima e status sao ficticios. Nao utiliza API real de concessionaria ou equipamento.</p>
   </div>
-</section>`;
+</section>
+${monitorHero}
+<section class="section">
+  <div class="container">
+    <p class="text-xs text-muted text-center" style="margin-bottom:var(--space-6)">Dados demonstrativos — sistema ficticio ${sys.projectId}</p>
+  </div>
+</section>
+${solarCurveSection}
+${gaugesSection}
+${monthlySection}
+${healthSection}
+${impactSection}`;
 
   return [{
     filename: 'monitoramento.html',
     slug: 'monitoramento',
-    noindex: false,
+    noindex: true,
     html: T.renderLayout({
-      store,
-      data,
-      title: 'Monitoramento Solar: Dashboard Energetico',
-      description: 'Dashboard de monitoramento solar em tempo real. Veja geracao atual, graficos horarios e mensais, fluxo energetico, status do inversor e impacto ambiental estimado.',
-      canonical: '/monitoramento.html',
-      active: '',
+      store, data,
+      title: 'Monitoramento Energetico',
+      description: 'Dashboard de monitoramento em tempo real — geracao, consumo, economia e saude do sistema.',
+      canonical: '/monitoramento.html', active: '',
+      noindex: true,
       ogImage: store.url.replace(/\/$/, '') + '/img/og/monitoramento.svg',
-      structuredData: T.renderBreadcrumbSchema(bcItems, store.url),
       content
     })
   }];

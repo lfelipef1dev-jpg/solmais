@@ -83,62 +83,42 @@
     <div class="grid grid-2 mb-6">
       <div class="chart-premium">
         <h3>Simulacoes por mes (12 meses)</h3>
-        <svg class="area-chart-svg" viewBox="0 0 350 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao simulacoes">
+        <svg class="area-chart-svg" viewBox="0 0 350 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="simulacoes">
   <defs>
-    <linearGradient id="area-grad-ana-sim" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="ana-sim-grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.02"/>
     </linearGradient>
   </defs>
-
-  <!-- Grid -->
-  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
-    <line x1="0" y1="32" x2="350" y2="32"/><line x1="0" y1="64" x2="350" y2="64"/><line x1="0" y1="96" x2="350" y2="96"/><line x1="0" y1="128" x2="350" y2="128"/>
+  <g stroke="rgba(148,163,184,0.1)" stroke-width="0.5">
+    <line x1="40" y1="40" x2="330" y2="40"/><line x1="40" y1="70" x2="330" y2="70"/><line x1="40" y1="100" x2="330" y2="100"/><line x1="40" y1="130" x2="330" y2="130"/>
   </g>
-
-  
-
-  <!-- Area -->
-  <polygon points="0,160 0.0,59.6 31.8,52.4 63.6,45.3 95.5,37.1 127.3,32.0 159.1,26.8 190.9,21.7 222.7,18.6 254.5,16.6 286.4,14.5 318.2,14.5 350.0,14.5 350,160" fill="url(#area-grad-ana-sim)"/>
-
-  <!-- Linha principal -->
-  <polyline points="0.0,59.6 31.8,52.4 63.6,45.3 95.5,37.1 127.3,32.0 159.1,26.8 190.9,21.7 222.7,18.6 254.5,16.6 286.4,14.5 318.2,14.5 350.0,14.5" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Pontos -->
-  <circle cx="0.0" cy="59.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="31.8" cy="52.4" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="63.6" cy="45.3" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="95.5" cy="37.1" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="127.3" cy="32.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="159.1" cy="26.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="190.9" cy="21.7" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="222.7" cy="18.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="254.5" cy="16.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="286.4" cy="14.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="318.2" cy="14.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="350.0" cy="14.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/>
-
-  <!-- Labels -->
-  <text x="0" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jan</text><text x="64" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mar</text><text x="127" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mai</text><text x="191" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jul</text><text x="255" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Set</text><text x="318" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Nov</text><text x="350" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Dez</text>
+  <path d="M 40,57.887323943661976 L 66.36363636363636,53.45070422535211 L 92.72727272727272,49.014084507042256 L 119.09090909090908,43.94366197183099 L 145.45454545454544,40.77464788732394 L 171.8181818181818,37.6056338028169 L 198.18181818181816,34.436619718309856 L 224.54545454545453,32.53521126760563 L 250.9090909090909,31.267605633802816 L 277.27272727272725,30 L 303.6363636363636,30 L 330,30 L 330,120 L 40,120 Z" fill="url(#ana-sim-grad)"/>
+  <path d="M 40,57.887323943661976 L 66.36363636363636,53.45070422535211 L 92.72727272727272,49.014084507042256 L 119.09090909090908,43.94366197183099 L 145.45454545454544,40.77464788732394 L 171.8181818181818,37.6056338028169 L 198.18181818181816,34.436619718309856 L 224.54545454545453,32.53521126760563 L 250.9090909090909,31.267605633802816 L 277.27272727272725,30 L 303.6363636363636,30 L 330,30" stroke="#f59e0b" stroke-width="2" fill="none"/>
+  <circle cx="40" cy="57.887323943661976" r="2.5" fill="#f59e0b"/><circle cx="66.36363636363636" cy="53.45070422535211" r="2.5" fill="#f59e0b"/><circle cx="92.72727272727272" cy="49.014084507042256" r="2.5" fill="#f59e0b"/><circle cx="119.09090909090908" cy="43.94366197183099" r="2.5" fill="#f59e0b"/><circle cx="145.45454545454544" cy="40.77464788732394" r="2.5" fill="#f59e0b"/><circle cx="171.8181818181818" cy="37.6056338028169" r="2.5" fill="#f59e0b"/><circle cx="198.18181818181816" cy="34.436619718309856" r="2.5" fill="#f59e0b"/><circle cx="224.54545454545453" cy="32.53521126760563" r="2.5" fill="#f59e0b"/><circle cx="250.9090909090909" cy="31.267605633802816" r="2.5" fill="#f59e0b"/><circle cx="277.27272727272725" cy="30" r="2.5" fill="#f59e0b"/><circle cx="303.6363636363636" cy="30" r="2.5" fill="#f59e0b"/><circle cx="330" cy="30" r="2.5" fill="#f59e0b"/>
+  <g fill="#64748b" font-size="8" font-family="monospace">
+    <text x="40" y="140" text-anchor="middle">Jan</text><text x="92.72727272727272" y="140" text-anchor="middle">Mar</text><text x="145.45454545454544" y="140" text-anchor="middle">Mai</text><text x="198.18181818181816" y="140" text-anchor="middle">Jul</text><text x="250.9090909090909" y="140" text-anchor="middle">Set</text><text x="303.6363636363636" y="140" text-anchor="middle">Nov</text>
+  </g>
 </svg>
       </div>
       <div class="chart-premium">
         <h3>Conversao mensal</h3>
-        <svg class="area-chart-svg" viewBox="0 0 350 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao % conversao">
+        <svg class="area-chart-svg" viewBox="0 0 350 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="% conversao">
   <defs>
-    <linearGradient id="area-grad-ana-conv" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="ana-conv-grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#22c55e" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.02"/>
     </linearGradient>
   </defs>
-
-  <!-- Grid -->
-  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
-    <line x1="0" y1="32" x2="350" y2="32"/><line x1="0" y1="64" x2="350" y2="64"/><line x1="0" y1="96" x2="350" y2="96"/><line x1="0" y1="128" x2="350" y2="128"/>
+  <g stroke="rgba(148,163,184,0.1)" stroke-width="0.5">
+    <line x1="40" y1="40" x2="330" y2="40"/><line x1="40" y1="70" x2="330" y2="70"/><line x1="40" y1="100" x2="330" y2="100"/><line x1="40" y1="130" x2="330" y2="130"/>
   </g>
-
-  
-
-  <!-- Area -->
-  <polygon points="0,160 0.0,52.8 31.8,45.2 63.6,37.5 95.5,33.7 127.3,29.9 159.1,26.0 190.9,22.2 222.7,18.4 254.5,18.4 286.4,14.5 318.2,14.5 350.0,14.5 350,160" fill="url(#area-grad-ana-conv)"/>
-
-  <!-- Linha principal -->
-  <polyline points="0.0,52.8 31.8,45.2 63.6,37.5 95.5,33.7 127.3,29.9 159.1,26.0 190.9,22.2 222.7,18.4 254.5,18.4 286.4,14.5 318.2,14.5 350.0,14.5" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Pontos -->
-  <circle cx="0.0" cy="52.8" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="31.8" cy="45.2" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="63.6" cy="37.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="95.5" cy="33.7" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="127.3" cy="29.9" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="159.1" cy="26.0" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="190.9" cy="22.2" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="222.7" cy="18.4" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="254.5" cy="18.4" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="286.4" cy="14.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="318.2" cy="14.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="350.0" cy="14.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/>
-
-  <!-- Labels -->
-  <text x="0" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jan</text><text x="64" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mar</text><text x="127" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mai</text><text x="191" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jul</text><text x="255" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Set</text><text x="318" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Nov</text><text x="350" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Dez</text>
+  <path d="M 40,53.684210526315795 L 66.36363636363636,48.94736842105263 L 92.72727272727272,44.21052631578948 L 119.09090909090908,41.84210526315789 L 145.45454545454544,39.473684210526315 L 171.8181818181818,37.10526315789474 L 198.18181818181816,34.736842105263165 L 224.54545454545453,32.368421052631575 L 250.9090909090909,32.368421052631575 L 277.27272727272725,30 L 303.6363636363636,30 L 330,30 L 330,120 L 40,120 Z" fill="url(#ana-conv-grad)"/>
+  <path d="M 40,53.684210526315795 L 66.36363636363636,48.94736842105263 L 92.72727272727272,44.21052631578948 L 119.09090909090908,41.84210526315789 L 145.45454545454544,39.473684210526315 L 171.8181818181818,37.10526315789474 L 198.18181818181816,34.736842105263165 L 224.54545454545453,32.368421052631575 L 250.9090909090909,32.368421052631575 L 277.27272727272725,30 L 303.6363636363636,30 L 330,30" stroke="#22c55e" stroke-width="2" fill="none"/>
+  <circle cx="40" cy="53.684210526315795" r="2.5" fill="#22c55e"/><circle cx="66.36363636363636" cy="48.94736842105263" r="2.5" fill="#22c55e"/><circle cx="92.72727272727272" cy="44.21052631578948" r="2.5" fill="#22c55e"/><circle cx="119.09090909090908" cy="41.84210526315789" r="2.5" fill="#22c55e"/><circle cx="145.45454545454544" cy="39.473684210526315" r="2.5" fill="#22c55e"/><circle cx="171.8181818181818" cy="37.10526315789474" r="2.5" fill="#22c55e"/><circle cx="198.18181818181816" cy="34.736842105263165" r="2.5" fill="#22c55e"/><circle cx="224.54545454545453" cy="32.368421052631575" r="2.5" fill="#22c55e"/><circle cx="250.9090909090909" cy="32.368421052631575" r="2.5" fill="#22c55e"/><circle cx="277.27272727272725" cy="30" r="2.5" fill="#22c55e"/><circle cx="303.6363636363636" cy="30" r="2.5" fill="#22c55e"/><circle cx="330" cy="30" r="2.5" fill="#22c55e"/>
+  <g fill="#64748b" font-size="8" font-family="monospace">
+    <text x="40" y="140" text-anchor="middle">Jan</text><text x="92.72727272727272" y="140" text-anchor="middle">Mar</text><text x="145.45454545454544" y="140" text-anchor="middle">Mai</text><text x="198.18181818181816" y="140" text-anchor="middle">Jul</text><text x="250.9090909090909" y="140" text-anchor="middle">Set</text><text x="303.6363636363636" y="140" text-anchor="middle">Nov</text>
+  </g>
 </svg>
       </div>
     </div>

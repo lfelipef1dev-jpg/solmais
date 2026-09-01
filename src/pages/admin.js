@@ -240,7 +240,7 @@ function render(data, T) {
           </div>
           <span class="status-dot ${s.health.system === 'normal' ? 'normal' : s.health.system === 'atencao' ? 'atencao' : 'alerta'}"></span>
         </div>
-        ${T.systemRender({ panels: s.panels, power: s.power, inverter: s.inverterPower + 'kW' })}
+        ${T.digitalTwin({ panels: s.panels, id: 'admin-sys-' + s.projectId, width: 280, height: 200, generating: s.health.system === 'normal' })}
         <div class="grid grid-2 mt-3">
           <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${s.power}</div><div class="kpi-label">kWp</div></div>
           <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${s.production.today}</div><div class="kpi-label">kWh hoje</div></div>

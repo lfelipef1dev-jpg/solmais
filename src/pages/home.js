@@ -1,38 +1,35 @@
-/* SolMais — Home page renderer
-   Hero arquitetonico + simulacao rapida + fluxo energetico + features + cases + CTA */
+/* SolMais — Home 3.0
+   CINEMATIC HERO com Digital Twin + widgets integrados
+   Secoes editoriais (nao cardizadas) + cases premium */
 
 function render(data, T) {
   const store = data.store;
   const systems = data.systems || [];
   const cases = data.cases || [];
 
-  const heroSection = `<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-content">
-      <span class="badge-premium mb-4">${T.ICONS.sun} Plataforma demonstrativa — dados ficticios</span>
-      <h1>Energia solar <span>calculada</span> para a sua realidade</h1>
-      <p>Simule seu sistema, visualize geracao e economia estimadas e acompanhe cada etapa do projeto — da analise ao monitoramento.</p>
-      <div class="hero-cta">
-        <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Simular meu sistema</a>
-        <a href="monitoramento.html" class="btn btn-secondary btn-lg">${T.ICONS.chart} Explorar demonstracao</a>
-      </div>
-    </div>
-    <div class="hero-visual-wrap">
-      ${T.heroArchitectural()}
-    </div>
-  </div>
-</section>
+  /* === HERO CINEMATOGRAFICO === */
+  const heroSection = T.cinematicHero({
+    title: 'Energia solar sem complicacao',
+    subtitle: 'Simule, projete, acompanhe e monitore seu sistema fotovoltaico em uma plataforma unica.',
+    cta: 'Iniciar simulacao',
+    ctaHref: 'simulador.html',
+    secondaryCta: 'Ver projetos',
+    secondaryHref: 'projetos.html'
+  });
 
-<section class="section" style="padding-top: var(--space-8)">
+  /* === SIMULACAO RAPIDA (editorial, sem card) === */
+  const quickSimSection = `<section class="section" style="padding-top: var(--space-10)">
   <div class="container">
-    <div class="quick-sim" style="max-width: 600px; margin: 0 auto;">
-      <h3>${T.ICONS.sun} Simulacao rapida</h3>
-      <div class="grid grid-2">
-        <div class="field">
+    <div class="editorial-grid">
+      <div class="editorial-text">
+        <span class="cinematic-hero-eyebrow">Simulacao rapida</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-bottom:var(--space-3)">Descubra seu potencial solar em 10 segundos</h2>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-5)">Informe sua conta media e tipo de imovel. O algoritmo estima potencia, geracao mensal, economia e payback.</p>
+        <div class="field mb-3">
           <label class="label">Minha conta media</label>
           <input type="number" class="input" id="qs-bill" placeholder="R$ 650" value="650">
         </div>
-        <div class="field">
+        <div class="field mb-4">
           <label class="label">Tipo de imovel</label>
           <select class="select" id="qs-type">
             <option value="residencial">Residencial</option>
@@ -41,34 +38,57 @@ function render(data, T) {
             <option value="rural">Rural</option>
           </select>
         </div>
+        <button class="btn btn-primary btn-lg" onclick="SolMais.quickSim()">${T.ICONS.bolt} Calcular potencial solar</button>
+        <div class="quick-sim-result hidden" id="qs-result" style="margin-top:var(--space-5)">
+          <div class="grid grid-4">
+            <div><div class="big-number big-number-amber" id="qs-power">5,5<span class="big-number-unit">kWp</span></div><div class="big-number-label">Sistema</div></div>
+            <div><div class="big-number big-number-light" id="qs-gen">650<span class="big-number-unit">kWh</span></div><div class="big-number-label">Geracao/mes</div></div>
+            <div><div class="big-number big-number-green" id="qs-save">R$ 480</div><div class="big-number-label">Economia/mes</div></div>
+            <div><div class="big-number big-number-light" id="qs-payback">4,8<span class="big-number-unit">anos</span></div><div class="big-number-label">Payback</div></div>
+          </div>
+          <a href="simulador.html" class="btn btn-secondary btn-block mt-4">Fazer simulacao completa ${T.ICONS.arrow}</a>
+        </div>
+        <p class="text-xs text-muted mt-4">Estimativa demonstrativa — dados ficticios</p>
       </div>
-      <button class="btn btn-primary btn-block" onclick="SolMais.quickSim()">${T.ICONS.bolt} Calcular potencial solar</button>
-      <div class="quick-sim-result hidden" id="qs-result">
-        <div class="quick-sim-stat"><div class="val" id="qs-power">5,5 kWp</div><div class="lbl">Sistema estimado</div></div>
-        <div class="quick-sim-stat"><div class="val" id="qs-gen">650 kWh</div><div class="lbl">Geracao/mes</div></div>
-        <div class="quick-sim-stat"><div class="val" id="qs-save">R$ 480</div><div class="lbl">Economia/mes</div></div>
-        <div class="quick-sim-stat"><div class="val" id="qs-payback">4,8 anos</div><div class="lbl">Payback estimado</div></div>
-        <a href="simulador.html" class="btn btn-secondary btn-block mt-4">Fazer simulacao completa ${T.ICONS.arrow}</a>
+      <div class="digital-twin-wrap">
+        ${T.digitalTwin({ width: 500, height: 400, panels: 10, showFlow: true, generating: true, id: 'home-quick', theme: 'dark' })}
       </div>
-      <p class="text-xs text-muted mt-4 text-center">Estimativa demonstrativa — dados ficticios</p>
     </div>
   </div>
 </section>`;
 
+  /* === COMO FUNCIONA (fluxo energetico editorial) === */
   const flowSection = `<section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2>Como funciona a energia solar</h2>
-      <p>Do sol a sua conta de luz — o fluxo energetico completo</p>
+    <div style="text-align:center;margin-bottom:var(--space-8)">
+      <span class="cinematic-hero-eyebrow">Como funciona</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Do sol a sua conta de luz</h2>
+      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">O fluxo energetico completo — sol, paineis, inversor, imovel e rede</p>
     </div>
-    <div class="energy-flow-wrap">
+    <div style="max-width:700px;margin:0 auto var(--space-8)">
       ${T.energyFlow()}
     </div>
-    <div class="grid grid-4 mt-6">
-      <div class="card text-center"><div class="kpi-card-icon solar" style="margin: 0 auto">${T.ICONS.sun}</div><h4>Sol</h4><p class="text-sm text-muted">Luz solar atinge os modulos fotovoltaicos</p></div>
-      <div class="card text-center"><div class="kpi-card-icon info" style="margin: 0 auto">${T.ICONS.panel}</div><h4>Paineis</h4><p class="text-sm text-muted">Convertem luz em corrente continua (CC)</p></div>
-      <div class="card text-center"><div class="kpi-card-icon gen" style="margin: 0 auto">${T.ICONS.bolt}</div><h4>Inversor</h4><p class="text-sm text-muted">Transforma CC em corrente alternada (CA)</p></div>
-      <div class="card text-center"><div class="kpi-card-icon warn" style="margin: 0 auto">${T.ICONS.home}</div><h4>Imovel</h4><p class="text-sm text-muted">Consome e excedente vai para a rede</p></div>
+    <div class="grid grid-4">
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap solar">${T.ICONS.sun}</div>
+        <h4 style="margin-bottom:var(--space-2)">Sol</h4>
+        <p class="text-sm text-muted">Luz solar atinge os modulos fotovoltaicos</p>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap info">${T.ICONS.panel}</div>
+        <h4 style="margin-bottom:var(--space-2)">Paineis</h4>
+        <p class="text-sm text-muted">Convertem luz em corrente continua (CC)</p>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap gen">${T.ICONS.bolt}</div>
+        <h4 style="margin-bottom:var(--space-2)">Inversor</h4>
+        <p class="text-sm text-muted">Transforma CC em corrente alternada (CA)</p>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap warn">${T.ICONS.home}</div>
+        <h4 style="margin-bottom:var(--space-2)">Imovel</h4>
+        <p class="text-sm text-muted">Consome e excedente vai para a rede</p>
+      </div>
     </div>
     <div class="text-center mt-6">
       <a href="como-funciona.html" class="btn btn-secondary">Entenda o processo completo ${T.ICONS.arrow}</a>
@@ -76,65 +96,58 @@ function render(data, T) {
   </div>
 </section>`;
 
+  /* === 4 PRODUTOS (editorial, nao cardizado) === */
   const featuresSection = `<section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2>Simular. Projetar. Acompanhar. Monitorar.</h2>
-      <p>Quatro experiencias integradas em uma plataforma end-to-end</p>
+    <div style="text-align:center;margin-bottom:var(--space-8)">
+      <span class="cinematic-hero-eyebrow">Plataforma end-to-end</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Simular. Projetar. Acompanhar. Monitorar.</h2>
+      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">Quatro experiencias integradas em uma plataforma unica</p>
     </div>
     <div class="grid grid-4">
-      <div class="card card-glow">
-        <div class="kpi-card-icon solar">${T.ICONS.bolt}</div>
-        <h3>Simular</h3>
-        <p class="text-sm text-secondary">Wizard de 6 etapas com localizacao, consumo, telhado e objetivo. Resultado com kWp, geracao e payback.</p>
-        <a href="simulador.html" class="btn btn-ghost btn-sm mt-4">Iniciar simulacao ${T.ICONS.arrow}</a>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap solar">${T.ICONS.bolt}</div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Simular</h3>
+        <p class="text-sm text-muted mb-4">Wizard de 6 etapas com localizacao, consumo, telhado e objetivo. Resultado com kWp, geracao e payback.</p>
+        <a href="simulador.html" class="btn btn-ghost btn-sm">Iniciar simulacao ${T.ICONS.arrow}</a>
       </div>
-      <div class="card">
-        <div class="kpi-card-icon info">${T.ICONS.panel}</div>
-        <h3>Projetar</h3>
-        <p class="text-sm text-secondary">Projeto tecnico com diagrama energetico, layout do telhado, dimensionamento e documentos.</p>
-        <a href="projeto.html" class="btn btn-ghost btn-sm mt-4">Ver projeto demo ${T.ICONS.arrow}</a>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap info">${T.ICONS.panel}</div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Projetar</h3>
+        <p class="text-sm text-muted mb-4">Projeto tecnico com diagrama energetico, layout do telhado, dimensionamento e documentos.</p>
+        <a href="projeto.html" class="btn btn-ghost btn-sm">Ver projeto demo ${T.ICONS.arrow}</a>
       </div>
-      <div class="card">
-        <div class="kpi-card-icon warn">${T.ICONS.clock}</div>
-        <h3>Acompanhar</h3>
-        <p class="text-sm text-secondary">Timeline de implantacao: simulacao, analise, projeto, documentacao, instalacao e conexao.</p>
-        <a href="conta.html" class="btn btn-ghost btn-sm mt-4">Portal do cliente ${T.ICONS.arrow}</a>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap warn">${T.ICONS.clock}</div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Acompanhar</h3>
+        <p class="text-sm text-muted mb-4">Timeline de implantacao: simulacao, analise, projeto, documentacao, instalacao e conexao.</p>
+        <a href="conta.html" class="btn btn-ghost btn-sm">Portal do cliente ${T.ICONS.arrow}</a>
       </div>
-      <div class="card">
-        <div class="kpi-card-icon gen">${T.ICONS.chart}</div>
-        <h3>Monitorar</h3>
-        <p class="text-sm text-secondary">Dashboard energetico em tempo real: geracao atual, graficos diarios e mensais, status do sistema.</p>
-        <a href="monitoramento.html" class="btn btn-ghost btn-sm mt-4">Ver monitoramento ${T.ICONS.arrow}</a>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap gen">${T.ICONS.chart}</div>
+        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Monitorar</h3>
+        <p class="text-sm text-muted mb-4">Dashboard energetico em tempo real: geracao atual, graficos diarios e mensais, status do sistema.</p>
+        <a href="monitoramento.html" class="btn btn-ghost btn-sm">Ver monitoramento ${T.ICONS.arrow}</a>
       </div>
     </div>
   </div>
 </section>`;
 
+  /* === CASES PREMIUM === */
   const casesSection = `<section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2>Projetos demonstrativos</h2>
-      <p>Exemplos ficticios de sistemas dimensionados para diferentes perfis</p>
+    <div style="text-align:center;margin-bottom:var(--space-8)">
+      <span class="cinematic-hero-eyebrow">Projetos demonstrativos</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Sistemas dimensionados para diferentes perfis</h2>
+      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">Exemplos ficticios com hero arquitetonico exclusivo por tipo</p>
     </div>
     <div class="grid grid-3">
       ${cases.slice(0, 3).map(c => `
-      <div class="case-card">
-        ${T.caseThumbnail(c.type, { power: c.power })}
-        <div class="case-card-header" style="margin-top: var(--space-4)">
-          <div>
-            <h3>${T.escapeHtml(c.title)}</h3>
-            <p class="text-xs text-muted">${T.escapeHtml(c.location)} &middot; ${T.escapeHtml(c.type)}</p>
-          </div>
+      <a href="projeto-${c.slug}.html" style="text-decoration:none;color:inherit">
+        <div class="case-hero" style="min-height:280px;border-radius:16px;overflow:hidden;margin-bottom:var(--space-4)">
+          ${T.caseHero(c.type, { title: c.title, power: c.power + ' kWp', modules: c.panels + ' modulos', annual: T.formatKWh(c.annualGeneration) + '/ano', id: 'home-' + c.slug })}
         </div>
-        <div class="case-card-stats">
-          <div class="case-stat"><div class="val">${c.power} kWp</div><div class="lbl">Potencia</div></div>
-          <div class="case-stat"><div class="val">${c.panels}</div><div class="lbl">Modulos</div></div>
-          <div class="case-stat"><div class="val">${T.formatKWh(c.annualGeneration)}</div><div class="lbl">Geracao/ano</div></div>
-          <div class="case-stat"><div class="val">${T.formatBRL(c.monthlySavings)}</div><div class="lbl">Economia/mes</div></div>
-        </div>
-        <a href="projeto-${c.slug}.html" class="btn btn-secondary btn-sm">Ver detalhes ${T.ICONS.arrow}</a>
-      </div>`).join('')}
+      </a>`).join('')}
     </div>
     <div class="text-center mt-6">
       <a href="projetos.html" class="btn btn-secondary">Ver todos os projetos ${T.ICONS.arrow}</a>
@@ -142,6 +155,7 @@ function render(data, T) {
   </div>
 </section>`;
 
+  /* === CTA === */
   const ctaSection = `<section class="section">
   <div class="container">
     <div class="visual-section">
@@ -153,7 +167,7 @@ function render(data, T) {
   </div>
 </section>`;
 
-  const content = heroSection + flowSection + featuresSection + casesSection + ctaSection;
+  const content = heroSection + quickSimSection + flowSection + featuresSection + casesSection + ctaSection;
 
   const orgSchema = T.renderOrganizationSchema(store);
   const siteSchema = T.renderWebSiteSchema(store);

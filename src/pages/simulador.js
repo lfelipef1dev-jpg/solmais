@@ -194,7 +194,7 @@ function render(data, T) {
           </div>
           <div class="card mt-4">
             <h4 style="margin-bottom: var(--space-3)">Preview do layout</h4>
-            ${T.roofLayout({ panels: 10, orientation: 'Norte', roofType: 'Ceramico' })}
+            ${T.roofCAD({ panels: 10, panelCols: 5, id: 'sim-roof-preview' })}
           </div>
         </div>
 
@@ -270,7 +270,7 @@ function render(data, T) {
             <div>
               <div class="card">
                 <h4 style="margin-bottom: var(--space-3)">Render do sistema</h4>
-                ${T.systemRender({ panels: 10, power: '5,5', inverter: '5kW' })}
+                ${T.digitalTwin({ panels: 10, id: 'sim-result-twin', width: 500, height: 350, showFlow: true, generating: true })}
               </div>
             </div>
           </div>
@@ -284,15 +284,13 @@ function render(data, T) {
             <div class="power">5,50 kWp</div>
           </div>
 
-          <!-- System render + roof layout -->
+          <!-- Digital Twin + Roof CAD -->
           <div class="grid grid-2 mb-6">
-            <div class="card">
-              <h4 style="margin-bottom: var(--space-3)">Sistema completo</h4>
-              ${T.systemRender({ panels: 10, power: '5,5', inverter: '5kW' })}
+            <div class="digital-twin-wrap">
+              ${T.digitalTwin({ panels: 10, id: 'sim-twin-2', width: 400, height: 300, showFlow: true, generating: true })}
             </div>
-            <div class="card">
-              <h4 style="margin-bottom: var(--space-3)">Layout do telhado</h4>
-              ${T.roofLayout({ panels: 10, orientation: 'Norte', roofType: 'Ceramico' })}
+            <div class="roof-cad-wrap">
+              ${T.roofCAD({ panels: 10, panelCols: 5, id: 'sim-roof-2' })}
             </div>
           </div>
 
@@ -323,21 +321,21 @@ function render(data, T) {
 
           <!-- Gauges -->
           <div class="grid grid-4 mt-6">
-            <div class="card text-center">
+            <div class="chart-premium text-center">
               <h4 style="margin-bottom: var(--space-3)">Cobertura</h4>
-              ${T.donutChart(90, 100, { label: 'do consumo', unit: '%', color: '#22c55e' })}
+              ${T.gauge(90, { id: 'g-cob', label: 'do consumo', unit: '%', max: 100, color: '#22c55e', size: 140 })}
             </div>
-            <div class="card text-center">
+            <div class="chart-premium text-center">
               <h4 style="margin-bottom: var(--space-3)">Payback</h4>
-              ${T.donutChart(48, 100, { label: '4,8 anos', unit: '', color: '#f59e0b' })}
+              ${T.gauge(48, { id: 'g-pay', label: '4,8 anos', unit: '', max: 100, color: '#f59e0b', size: 140 })}
             </div>
-            <div class="card text-center">
+            <div class="chart-premium text-center">
               <h4 style="margin-bottom: var(--space-3)">ROI 25 anos</h4>
-              ${T.donutChart(85, 100, { label: 'do investimento', unit: '%', color: '#3b82f6' })}
+              ${T.gauge(85, { id: 'g-roi', label: 'do invest.', unit: '%', max: 100, color: '#3b82f6', size: 140 })}
             </div>
-            <div class="card text-center">
+            <div class="chart-premium text-center">
               <h4 style="margin-bottom: var(--space-3)">Sustentabilidade</h4>
-              ${T.donutChart(75, 100, { label: 'impacto', unit: '%', color: '#22c55e' })}
+              ${T.gauge(75, { id: 'g-sus', label: 'impacto', unit: '%', max: 100, color: '#22c55e', size: 140 })}
             </div>
           </div>
 

@@ -64,7 +64,7 @@ function render(data, T) {
   <div class="grid grid-2 mb-6">
     <div class="card">
       <h3 style="margin-bottom: var(--space-3)">Meu sistema</h3>
-      ${T.systemRender({ panels: system.panels, power: system.power, inverter: system.inverterPower + 'kW' })}
+      ${T.digitalTwin({ panels: system.panels, id: 'portal-twin', width: 400, height: 280, generating: true })}
       <div class="grid grid-2 mt-3">
         <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.panels}</div><div class="kpi-label">Modulos</div></div>
         <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.area} m2</div><div class="kpi-label">Area</div></div>

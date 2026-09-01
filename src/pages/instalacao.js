@@ -21,17 +21,46 @@ function render(data, T) {
     ${T.renderBreadcrumb(bcItems)}
     ${T.pageHero('Jornada de Implantacao', 'Projeto ' + project.id + ' — ' + T.escapeHtml(project.location), { icon: T.ICONS.settings })}
 
-    <!-- Cena de instalacao -->
-    <div class="grid grid-2 mb-6">
-      <div class="card">
-        <h3 style="margin-bottom: var(--space-3)">Cena: montagem dos modulos</h3>
-        ${T.installationScene({ phase: 'panels' })}
-        <p class="text-xs text-muted mt-3 text-center">Instalacao profissional com EPI — cena demonstrativa</p>
-      </div>
-      <div class="card">
-        <h3 style="margin-bottom: var(--space-3)">Cena: conexao do inversor</h3>
-        ${T.inverterRender()}
-        <p class="text-xs text-muted mt-3 text-center">Inversor ${project.power} kWp — equipamento demonstrativo</p>
+    <!-- Narrativa fotografica: 5 etapas -->
+    <div style="margin:var(--space-6) 0">
+      <span class="cinematic-hero-eyebrow">Narrativa de instalacao</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-6)">5 etapas — do chão ao sistema conectado</h2>
+      <div class="grid grid-3" style="gap:var(--space-4)">
+        <div class="equipment-card">
+          ${T.equipmentRender('module', { id: 'inst-mod' })}
+          <div class="equipment-card-body">
+            <div class="equipment-card-name">01. Estrutura</div>
+            <div class="equipment-card-spec">Fixacao e perfilagem no telhado</div>
+          </div>
+        </div>
+        <div class="equipment-card">
+          ${T.equipmentRender('module', { id: 'inst-mod2' })}
+          <div class="equipment-card-body">
+            <div class="equipment-card-name">02. Modulos</div>
+            <div class="equipment-card-spec">Posicionamento e fixacao dos paineis</div>
+          </div>
+        </div>
+        <div class="equipment-card">
+          ${T.equipmentRender('inverter', { id: 'inst-inv' })}
+          <div class="equipment-card-body">
+            <div class="equipment-card-name">03. Inversor</div>
+            <div class="equipment-card-spec">Instalacao interna organizada</div>
+          </div>
+        </div>
+        <div class="equipment-card">
+          ${T.equipmentRender('protection', { id: 'inst-prot' })}
+          <div class="equipment-card-body">
+            <div class="equipment-card-name">04. Protecoes</div>
+            <div class="equipment-card-spec">Quadro CC/CA, DPS e aterramento</div>
+          </div>
+        </div>
+        <div class="digital-twin-wrap" style="border-radius:12px;overflow:hidden">
+          ${T.digitalTwin({ panels: 10, id: 'inst-twin', width: 300, height: 200, generating: true, showFlow: true })}
+          <div style="padding:var(--space-3);background:var(--sm-charcoal)">
+            <div class="equipment-card-name">05. Sistema concluido</div>
+            <div class="equipment-card-spec">Energizacao e homologacao</div>
+          </div>
+        </div>
       </div>
     </div>
 

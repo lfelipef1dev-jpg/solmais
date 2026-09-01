@@ -82,32 +82,22 @@
     </div>
     <div class="chart-premium mb-6">
       <h3>Receita mensal projetada</h3>
-      <svg class="area-chart-svg" viewBox="0 0 500 205" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao R$ / mes">
+      <svg class="area-chart-svg" viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="R$ / mes">
   <defs>
-    <linearGradient id="area-grad-fin-rev" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="fin-rev-grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.02"/>
     </linearGradient>
   </defs>
-
-  <!-- Grid -->
-  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
-    <line x1="0" y1="36" x2="500" y2="36"/><line x1="0" y1="72" x2="500" y2="72"/><line x1="0" y1="108" x2="500" y2="108"/><line x1="0" y1="144" x2="500" y2="144"/>
+  <g stroke="rgba(148,163,184,0.1)" stroke-width="0.5">
+    <line x1="40" y1="40" x2="480" y2="40"/><line x1="40" y1="76.66666666666666" x2="480" y2="76.66666666666666"/><line x1="40" y1="113.33333333333333" x2="480" y2="113.33333333333333"/><line x1="40" y1="150" x2="480" y2="150"/>
   </g>
-
-  
-
-  <!-- Area -->
-  <polygon points="0,180 0.0,54.8 45.5,48.1 90.9,45.9 136.4,41.4 181.8,36.9 227.3,32.5 272.7,28.0 318.2,23.5 363.6,21.3 409.1,19.0 454.5,16.8 500.0,16.4 500,180" fill="url(#area-grad-fin-rev)"/>
-
-  <!-- Linha principal -->
-  <polyline points="0.0,54.8 45.5,48.1 90.9,45.9 136.4,41.4 181.8,36.9 227.3,32.5 272.7,28.0 318.2,23.5 363.6,21.3 409.1,19.0 454.5,16.8 500.0,16.4" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Pontos -->
-  <circle cx="0.0" cy="54.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="45.5" cy="48.1" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="90.9" cy="45.9" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="136.4" cy="41.4" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="181.8" cy="36.9" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="227.3" cy="32.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="272.7" cy="28.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="318.2" cy="23.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="363.6" cy="21.3" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="409.1" cy="19.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="454.5" cy="16.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="500.0" cy="16.4" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/>
-
-  <!-- Labels -->
-  <text x="0" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jan</text><text x="91" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mar</text><text x="182" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mai</text><text x="273" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jul</text><text x="364" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Set</text><text x="455" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Nov</text><text x="500" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Dez</text>
+  <path d="M 40,55.84699453551913 L 80,51.33879781420765 L 120,49.83606557377048 L 160,46.830601092896174 L 200,43.825136612021865 L 240,40.81967213114754 L 280,37.81420765027322 L 320,34.80874316939891 L 360,33.306010928961754 L 400,31.803278688524586 L 440,30.30054644808743 L 480,30 L 480,140 L 40,140 Z" fill="url(#fin-rev-grad)"/>
+  <path d="M 40,55.84699453551913 L 80,51.33879781420765 L 120,49.83606557377048 L 160,46.830601092896174 L 200,43.825136612021865 L 240,40.81967213114754 L 280,37.81420765027322 L 320,34.80874316939891 L 360,33.306010928961754 L 400,31.803278688524586 L 440,30.30054644808743 L 480,30" stroke="#f59e0b" stroke-width="2" fill="none"/>
+  <circle cx="40" cy="55.84699453551913" r="2.5" fill="#f59e0b"/><circle cx="80" cy="51.33879781420765" r="2.5" fill="#f59e0b"/><circle cx="120" cy="49.83606557377048" r="2.5" fill="#f59e0b"/><circle cx="160" cy="46.830601092896174" r="2.5" fill="#f59e0b"/><circle cx="200" cy="43.825136612021865" r="2.5" fill="#f59e0b"/><circle cx="240" cy="40.81967213114754" r="2.5" fill="#f59e0b"/><circle cx="280" cy="37.81420765027322" r="2.5" fill="#f59e0b"/><circle cx="320" cy="34.80874316939891" r="2.5" fill="#f59e0b"/><circle cx="360" cy="33.306010928961754" r="2.5" fill="#f59e0b"/><circle cx="400" cy="31.803278688524586" r="2.5" fill="#f59e0b"/><circle cx="440" cy="30.30054644808743" r="2.5" fill="#f59e0b"/><circle cx="480" cy="30" r="2.5" fill="#f59e0b"/>
+  <g fill="#64748b" font-size="8" font-family="monospace">
+    <text x="40" y="160" text-anchor="middle">Jan</text><text x="120" y="160" text-anchor="middle">Mar</text><text x="200" y="160" text-anchor="middle">Mai</text><text x="280" y="160" text-anchor="middle">Jul</text><text x="360" y="160" text-anchor="middle">Set</text><text x="440" y="160" text-anchor="middle">Nov</text>
+  </g>
 </svg>
     </div>
     <div class="card">

@@ -217,8 +217,11 @@ function render(data, T) {
     ${T.pageHero('Projetos Demonstrativos', 'Cases ficticios para ilustrar diferentes perfis de sistema solar', { icon: T.ICONS.panel })}
     <div class="grid grid-3">
       ${cases.map(c => `
-      <div class="case-card">
-        ${T.caseThumbnail(c.type, { power: c.power })}
+      <a href="projeto-${c.slug}.html" style="text-decoration:none;color:inherit">
+      <div class="case-hero" style="min-height:240px;border-radius:16px;overflow:hidden;margin-bottom:var(--space-3)">
+        ${T.caseHero(c.type, { title: c.title, power: c.power + ' kWp', modules: c.panels + ' mod', annual: T.formatKWh(c.annualGeneration) + '/ano', id: 'list-' + c.slug })}
+      </div>
+      </a>
         <div class="case-card-header" style="margin-top: var(--space-4)"><div><h3>${T.escapeHtml(c.title)}</h3><p class="text-xs text-muted">${T.escapeHtml(c.location)} — ${T.escapeHtml(c.type)}</p></div></div>
         <div class="case-card-stats">
           <div class="case-stat"><div class="val">${c.power} kWp</div><div class="lbl">Potencia</div></div>
@@ -251,66 +254,94 @@ function render(data, T) {
     const monthlyGen = Array(12).fill(0).map((_, i) => Math.round(c.annualGeneration / 12 * (0.85 + Math.sin(i / 12 * Math.PI * 2) * 0.15)));
     const monthLabels = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
 
-    const caseContent = `<section class="section">
+    const caseContent = `
+    <!-- HERO FULL-WIDTH -->
+    ${T.caseHero(c.type, { title: c.title, power: c.power + ' kWp', modules: c.panels + ' modulos', annual: T.formatKWh(c.annualGeneration) + '/ano', id: 'hero-' + c.slug })}
+
+    <section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos', href: 'projetos.html' }, { label: c.title }])}
-    <span class="demo-badge mb-4">PROJETO FICTICIO PARA DEMONSTRACAO</span>
 
-    <!-- Hero visual do case -->
-    ${T.caseThumbnail(c.type, { power: c.power, width: 800, height: 300 })}
-
-    <h1 style="margin: var(--space-6) 0 var(--space-2)">${T.escapeHtml(c.title)}</h1>
-    <p class="text-secondary mb-6">${T.escapeHtml(c.location)} — ${T.escapeHtml(c.type)} — ${T.escapeHtml(c.roofType)}</p>
-
-    <div class="grid grid-4 mb-6">
-      <div class="kpi-card"><div class="kpi-value">${c.power}</div><div class="kpi-label">kWp</div></div>
-      <div class="kpi-card"><div class="kpi-value">${c.panels}</div><div class="kpi-label">Modulos</div></div>
-      <div class="kpi-card"><div class="kpi-value">${c.inverter}</div><div class="kpi-label">Inversor</div></div>
-      <div class="kpi-card"><div class="kpi-value">${c.area} m2</div><div class="kpi-label">Area</div></div>
-    </div>
-    <div class="grid grid-3 mb-6">
-      <div class="kpi-card"><div class="kpi-value">${T.formatKWh(c.annualGeneration)}</div><div class="kpi-label">Geracao/ano</div></div>
-      <div class="kpi-card"><div class="kpi-value text-solar">${T.formatBRL(c.monthlySavings)}</div><div class="kpi-label">Economia/mes</div></div>
-      <div class="kpi-card"><div class="kpi-value">${c.payback}</div><div class="kpi-label">Payback (anos)</div></div>
-    </div>
-
-    <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">Sobre o projeto</h3>
-      <p class="text-secondary">${T.escapeHtml(c.description)}</p>
-      <p class="text-xs text-muted mt-4">Instalado em ${c.installedAt} — Projeto ficticio para demonstracao da plataforma.</p>
-    </div>
-
-    <!-- Render + Roof Layout -->
-    <div class="grid grid-2 mb-6">
-      <div class="card">
-        <h4 style="margin-bottom: var(--space-3)">Render do sistema</h4>
-        ${T.systemRender({ panels: c.panels, power: c.power, inverter: c.inverter })}
+    <!-- VISAO GERAL -->
+    <div class="editorial-grid" style="margin:var(--space-8) 0">
+      <div class="editorial-text">
+        <span class="cinematic-hero-eyebrow">Visao geral</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">${T.escapeHtml(c.title)}</h2>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-3)">${T.escapeHtml(c.description)}</p>
+        <p class="text-sm text-muted">Instalado em ${c.installedAt} — ${T.escapeHtml(c.location)} — ${T.escapeHtml(c.type)} — ${T.escapeHtml(c.roofType)}</p>
       </div>
-      <div class="card">
-        <h4 style="margin-bottom: var(--space-3)">Layout do telhado</h4>
-        ${T.roofLayout({ panels: c.panels, orientation: c.orientation, roofType: c.roofType })}
+      <div class="grid grid-2">
+        <div class="kpi-premium"><div class="kpi-value">${c.power}</div><div class="kpi-label">kWp</div></div>
+        <div class="kpi-premium"><div class="kpi-value">${c.panels}</div><div class="kpi-label">Modulos</div></div>
+        <div class="kpi-premium"><div class="kpi-value">${c.inverter}</div><div class="kpi-label">Inversor</div></div>
+        <div class="kpi-premium"><div class="kpi-value">${c.area} m²</div><div class="kpi-label">Area</div></div>
+        <div class="kpi-premium"><div class="kpi-value">${T.formatKWh(c.annualGeneration)}</div><div class="kpi-label">Geracao/ano</div></div>
+        <div class="kpi-premium"><div class="kpi-value" style="color:var(--sm-amber)">${T.formatBRL(c.monthlySavings)}</div><div class="kpi-label">Economia/mes</div></div>
       </div>
     </div>
 
-    <!-- Grafico de geracao -->
-    <div class="chart-premium mb-6">
-      <h3>Geracao mensal estimada</h3>
-      ${T.areaChart(monthlyGen, { width: 600, height: 200, color: '#f59e0b', labels: monthLabels, id: 'case-' + c.slug, label: 'kWh/mes' })}
-      <p class="text-xs text-muted mt-3">Distribuicao sazonal estimada — dados demonstrativos</p>
+    <!-- PROJETO: DIGITAL TWIN -->
+    <div style="margin:var(--space-8) 0">
+      <span class="cinematic-hero-eyebrow">Projeto</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Digital Twin</h2>
+      <div class="digital-twin-wrap">
+        ${T.digitalTwin({ width: 700, height: 450, panels: c.panels, showFlow: true, generating: true, id: 'case-' + c.slug, theme: 'dark' })}
+      </div>
     </div>
 
-    <!-- Energy Flow -->
-    <div class="visual-section mb-6">
-      <h3>Fluxo energetico</h3>
-      <p>Sol -> Paineis -> Inversor -> Imovel <-> Rede</p>
-      ${T.energyFlow()}
+    <!-- LAYOUT: ROOF CAD -->
+    <div class="editorial-grid" style="margin:var(--space-8) 0;align-items:start">
+      <div>
+        <span class="cinematic-hero-eyebrow">Layout</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Telhado — top view</h2>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuicao dos ${c.panels} modulos com orientacao ${c.orientation || 'norte'} e area de ${c.area} m².</p>
+        <div class="grid grid-2">
+          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.area} m²</div><div class="kpi-label">Area utilizada</div></div>
+          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.orientation || 'Norte'}</div><div class="kpi-label">Orientacao</div></div>
+        </div>
+      </div>
+      <div class="roof-cad-wrap">
+        ${T.roofCAD({ panels: c.panels, panelCols: Math.ceil(c.panels/2), id: 'case-roof-' + c.slug, areaUsed: c.area + ' m²' })}
+      </div>
     </div>
 
-    <div class="card card-glow text-center">
+    <!-- PERFORMANCE -->
+    <div style="margin:var(--space-8) 0">
+      <span class="cinematic-hero-eyebrow">Performance</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Geracao mensal estimada</h2>
+      <div class="chart-premium">
+        ${T.areaChart(monthlyGen, { width: 700, height: 240, color: '#f59e0b', labels: monthLabels, id: 'case-' + c.slug, label: 'kWh/mes' })}
+      </div>
+    </div>
+
+    <!-- GALERIA: EQUIPAMENTOS -->
+    <div style="margin:var(--space-8) 0">
+      <span class="cinematic-hero-eyebrow">Galeria</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Equipamentos</h2>
+      <div class="grid grid-3">
+        <div class="equipment-card">
+          ${T.equipmentRender('module', { id: 'case-eq-mod-' + c.slug })}
+          <div class="equipment-card-body"><div class="equipment-card-name">SolMais Module 550</div><div class="equipment-card-spec">550 Wp × ${c.panels}</div></div>
+        </div>
+        <div class="equipment-card">
+          ${T.equipmentRender('inverter', { id: 'case-eq-inv-' + c.slug })}
+          <div class="equipment-card-body"><div class="equipment-card-name">SolMais Inverter ${c.inverter}</div><div class="equipment-card-spec">${c.inverter} string</div></div>
+        </div>
+        <div class="equipment-card">
+          ${T.equipmentRender('protection', { id: 'case-eq-prot-' + c.slug })}
+          <div class="equipment-card-body"><div class="equipment-card-name">SolMais Protection Box</div><div class="equipment-card-spec">DPS + Disjuntor</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="visual-section" style="margin:var(--space-8) 0">
       <h3>Quer um projeto como este?</h3>
-      <p class="text-secondary mb-4">Faca uma simulacao completa.</p>
+      <p>Faca uma simulacao completa.</p>
       <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Simular sistema</a>
     </div>
+
+    <p class="text-xs text-muted text-center" style="margin-bottom:var(--space-8)">Projeto ficticio para demonstracao da plataforma — todos os dados sao inventados</p>
   </div>
 </section>`;
     pages.push({
