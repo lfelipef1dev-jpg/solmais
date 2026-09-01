@@ -8,10 +8,7 @@ function render(data, T) {
   const content = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    <div class="section-header">
-      <h2>Comparador de aquisicao</h2>
-      <p>Compare formas de aquisicao — cenarios demonstrativos</p>
-    </div>
+    ${T.pageHero('Comparador de Aquisicao', 'Compare formas de aquisicao — cenarios demonstrativos', { icon: T.ICONS.cash })}
 
     <div class="grid grid-3 mb-6">
       ${financial.map(f => `

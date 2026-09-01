@@ -67,13 +67,29 @@ function render(data, T) {
         </div>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: var(--space-4)">Geração hoje por sistema</h3>
+        <h3 style="margin-bottom: var(--space-4)">Geracao hoje por sistema</h3>
         <div class="bar-chart" style="height: 180px">
           ${systems.map(s => {
             const max = Math.max(...systems.map(x => x.production.today));
             const h = (s.production.today / max * 100).toFixed(0);
             return '<div class="bar-chart-item gen" style="height:' + h + '%"><span class="bar-chart-label">' + s.projectId.replace('SOL-','') + '</span></div>';
           }).join('')}
+        </div>
+      </div>
+    </div>
+
+    <!-- Mapa demonstrativo -->
+    <div class="admin-map-card mt-6">
+      <h3 style="margin-bottom: var(--space-4)">Mapa de sistemas</h3>
+      <div class="grid grid-2">
+        <div>${T.mapDemo({ systems: systems.map(s => ({ projectId: s.projectId, health: s.health })) })}</div>
+        <div>
+          <div class="grid grid-3">
+            <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'normal').length}</div><div class="kpi-label">Normal</div></div>
+            <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'atencao').length}</div><div class="kpi-label">Atencao</div></div>
+            <div class="kpi-card"><div class="kpi-card-icon solar" style="background:rgba(239,68,68,0.1);color:#ef4444">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'alerta').length}</div><div class="kpi-label">Alerta</div></div>
+          </div>
+          <p class="text-xs text-muted mt-4">Localizacoes demonstrativas — status simulado</p>
         </div>
       </div>
     </div>
@@ -120,6 +136,12 @@ function render(data, T) {
   const pipelineContent = `
     <h1 style="margin-bottom: var(--space-2)">Pipeline</h1>
     <p class="text-secondary mb-6">Fluxo de projetos — arraste cards entre colunas (demonstrativo)</p>
+    <div class="admin-kpi-grid mb-6">
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${projects.filter(p => p.stage === 'simulacao').length}</div><div class="kpi-label">Simulacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.doc}</div><div class="kpi-value">${projects.filter(p => p.stage === 'documentacao').length}</div><div class="kpi-label">Documentacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalacao').length}</div><div class="kpi-label">Instalacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Conectado</div></div>
+    </div>
     <div class="kanban">
       ${stages.map(stage => {
         const items = projects.filter(p => p.stage === stage.id);
@@ -141,6 +163,12 @@ function render(data, T) {
   const projContent = `
     <h1 style="margin-bottom: var(--space-2)">Projetos</h1>
     <p class="text-secondary mb-6">Gestao de projetos — dados demonstrativos</p>
+    <div class="admin-kpi-grid mb-6">
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${projects.length}</div><div class="kpi-label">Total projetos</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Conectados</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalacao').length}</div><div class="kpi-label">Em instalacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.bolt}</div><div class="kpi-value">${projects.reduce((s,p)=>s+p.power,0)} kWp</div><div class="kpi-label">Potencia total</div></div>
+    </div>
     <div class="card">
       <table class="data-table">
         <tr><th>ID</th><th>Cliente</th><th>Local</th><th>Potencia</th><th>Estagio</th><th>Status</th></tr>
@@ -161,6 +189,12 @@ function render(data, T) {
   const instContent = `
     <h1 style="margin-bottom: var(--space-2)">Instalacoes</h1>
     <p class="text-secondary mb-6">Calendario e equipes — dados demonstrativos</p>
+    <div class="admin-kpi-grid mb-6">
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.installedAt).length}</div><div class="kpi-label">Instalacoes</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Concluidas</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.clock}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalacao').length}</div><div class="kpi-label">Em andamento</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.user}</div><div class="kpi-value">3</div><div class="kpi-label">Equipes</div></div>
+    </div>
     <div class="card mb-6">
       <table class="data-table">
         <tr><th>Projeto</th><th>Equipe</th><th>Cidade</th><th>Data</th><th>Potencia</th><th>Status</th></tr>
@@ -194,6 +228,26 @@ function render(data, T) {
       <div class="kpi-card"><div class="kpi-card-icon warn" style="background:var(--danger-soft);color:var(--danger)">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health.system === 'alerta').length}</div><div class="kpi-label">Alerta</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potencia total</div></div>
     </div>
+
+    <!-- Cards visuais de sistemas -->
+    <div class="grid grid-3 mb-6">
+      ${systems.map(s => `
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:var(--space-3)">
+          <div>
+            <h4 style="margin-bottom:var(--space-1)">${s.projectId}</h4>
+            <p class="text-xs text-muted">${T.escapeHtml(s.customerName)} — ${T.escapeHtml(s.location)}</p>
+          </div>
+          <span class="status-dot ${s.health.system === 'normal' ? 'normal' : s.health.system === 'atencao' ? 'atencao' : 'alerta'}"></span>
+        </div>
+        ${T.systemRender({ panels: s.panels, power: s.power, inverter: s.inverterPower + 'kW' })}
+        <div class="grid grid-2 mt-3">
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${s.power}</div><div class="kpi-label">kWp</div></div>
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${s.production.today}</div><div class="kpi-label">kWh hoje</div></div>
+        </div>
+      </div>`).join('')}
+    </div>
+
     <div class="card">
       <table class="data-table">
         <tr><th>Sistema</th><th>Cliente</th><th>Local</th><th>Potencia</th><th>Geracao hoje</th><th>Status</th><th>Ultima comun.</th></tr>
@@ -221,8 +275,18 @@ function render(data, T) {
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.chart}</div><div class="kpi-value">${(systems.reduce((s,x)=>s+x.production.year,0)/1000).toFixed(1)} MWh</div><div class="kpi-label">MWh este ano</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(systems.reduce((s,x)=>s+x.estimatedSavings,0))}</div><div class="kpi-label">Economia estimada/mes</div></div>
     </div>
+    <div class="grid grid-2 mb-6">
+      <div class="card">
+        <h3 style="margin-bottom: var(--space-4)">Geracao por sistema (hoje)</h3>
+        ${T.areaChart(systems.map(s => s.production.today), { width: 350, height: 180, color: '#22c55e', labels: systems.map(s => s.projectId.replace('SOL-','')), id: 'admin-mon', label: 'kWh' })}
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: var(--space-4)">Mapa de sistemas</h3>
+        ${T.mapDemo({ systems: systems.map(s => ({ projectId: s.projectId, health: s.health })) })}
+      </div>
+    </div>
     <div class="card">
-      <h3 style="margin-bottom: var(--space-4)">Geracao por sistema (hoje)</h3>
+      <h3 style="margin-bottom: var(--space-4)">Geracao por sistema (barras)</h3>
       <div class="bar-chart" style="height: 200px">
         ${systems.map(s => {
           const max = Math.max(...systems.map(x => x.production.today));
@@ -238,6 +302,12 @@ function render(data, T) {
   const alertContent = `
     <h1 style="margin-bottom: var(--space-2)">Central de alertas</h1>
     <p class="text-secondary mb-6">Alertas do sistema — dados demonstrativos</p>
+    <div class="admin-kpi-grid mb-6">
+      <div class="kpi-card"><div class="kpi-card-icon solar" style="background:rgba(239,68,68,0.1);color:#ef4444">${T.ICONS.alert}</div><div class="kpi-value">${alerts.filter(a => a.severity === 'alto').length}</div><div class="kpi-label">Severidade alta</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${alerts.filter(a => a.severity === 'medio').length}</div><div class="kpi-label">Severidade media</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.alert}</div><div class="kpi-value">${alerts.filter(a => a.severity === 'baixo').length}</div><div class="kpi-label">Severidade baixa</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${alerts.filter(a => a.status === 'resolvido').length}</div><div class="kpi-label">Resolvidos</div></div>
+    </div>
     <div class="card">
       <table class="data-table">
         <tr><th>ID</th><th>Sistema</th><th>Tipo</th><th>Severidade</th><th>Descricao</th><th>Status</th><th>Acoes</th></tr>
@@ -259,6 +329,12 @@ function render(data, T) {
   const cusContent = `
     <h1 style="margin-bottom: var(--space-2)">Clientes</h1>
     <p class="text-secondary mb-6">${customers.length} clientes demonstrativos</p>
+    <div class="admin-kpi-grid mb-6">
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.user}</div><div class="kpi-value">${customers.length}</div><div class="kpi-label">Total clientes</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.home}</div><div class="kpi-value">${customers.filter(c => c.type === 'residencial').length}</div><div class="kpi-label">Residenciais</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.bolt}</div><div class="kpi-value">${customers.filter(c => c.type === 'comercial').length}</div><div class="kpi-label">Comerciais</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(customers.reduce((s,c)=>s+c.monthlySavings,0))}</div><div class="kpi-label">Economia total/mes</div></div>
+    </div>
     <div class="card">
       <table class="data-table">
         <tr><th>ID</th><th>Nome</th><th>Tipo</th><th>Cidade</th><th>Sistema</th><th>Economia/mes</th><th>Desde</th></tr>
@@ -286,6 +362,10 @@ function render(data, T) {
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(156000)}</div><div class="kpi-label">Financiamento ativo</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.chart}</div><div class="kpi-value">${T.formatBRL(systems.reduce((s,x)=>s+x.estimatedSavings,0))}</div><div class="kpi-label">Economia clientes/mes</div></div>
     </div>
+    <div class="chart-premium mb-6">
+      <h3>Receita mensal projetada</h3>
+      ${T.areaChart([28000, 29500, 30000, 31000, 32000, 33000, 34000, 35000, 35500, 36000, 36500, 36600], { width: 500, height: 180, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'fin-rev', label: 'R$ / mes' })}
+    </div>
     <div class="card">
       <h3 style="margin-bottom: var(--space-4)">Receita por modalidade</h3>
       <table class="data-table">
@@ -303,6 +383,12 @@ function render(data, T) {
   const docContent = `
     <h1 style="margin-bottom: var(--space-2)">Documentos</h1>
     <p class="text-secondary mb-6">Gestao documental — dados demonstrativos</p>
+    <div class="admin-kpi-grid mb-6">
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.doc}</div><div class="kpi-value">${documents.length}</div><div class="kpi-label">Total documentos</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.check}</div><div class="kpi-value">${documents.filter(d => d.type === 'projeto').length}</div><div class="kpi-label">Projetos</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${documents.filter(d => d.type === 'contrato').length}</div><div class="kpi-label">Contratos</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.check}</div><div class="kpi-value">${documents.filter(d => d.type === 'certificado').length}</div><div class="kpi-label">Certificados</div></div>
+    </div>
     <div class="card">
       <table class="data-table">
         <tr><th>Documento</th><th>Projeto</th><th>Tipo</th><th>Tamanho</th><th>Data</th></tr>
@@ -327,6 +413,16 @@ function render(data, T) {
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">38%</div><div class="kpi-label">Conversao</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(32000)}</div><div class="kpi-label">Ticket demo</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potencia projetada</div></div>
+    </div>
+    <div class="grid grid-2 mb-6">
+      <div class="chart-premium">
+        <h3>Simulacoes por mes (12 meses)</h3>
+        ${T.areaChart([98, 105, 112, 120, 125, 130, 135, 138, 140, 142, 142, 142], { width: 350, height: 160, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'ana-sim', label: 'simulacoes' })}
+      </div>
+      <div class="chart-premium">
+        <h3>Conversao mensal</h3>
+        ${T.areaChart([28, 30, 32, 33, 34, 35, 36, 37, 37, 38, 38, 38], { width: 350, height: 160, color: '#22c55e', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'ana-conv', label: '% conversao' })}
+      </div>
     </div>
     <div class="grid grid-2">
       <div class="card">
@@ -366,6 +462,12 @@ function render(data, T) {
   const confContent = `
     <h1 style="margin-bottom: var(--space-2)">Configuracoes</h1>
     <p class="text-secondary mb-6">Configuracoes da plataforma — demonstrativo</p>
+    <div class="admin-kpi-grid mb-6">
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.settings}</div><div class="kpi-value">1</div><div class="kpi-label">Plataforma</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">Ativo</div><div class="kpi-label">Status</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.user}</div><div class="kpi-value">Demo</div><div class="kpi-label">Modo</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.clock}</div><div class="kpi-value">v2.0</div><div class="kpi-label">Versao</div></div>
+    </div>
     <div class="card mb-6">
       <h3 style="margin-bottom: var(--space-4)">Dados da empresa (demo)</h3>
       <div class="grid grid-2">

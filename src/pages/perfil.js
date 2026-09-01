@@ -8,10 +8,7 @@ function render(data, T) {
   const content = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb(bcItems)}
-    <div class="section-header">
-      <h2>Meu perfil</h2>
-      <p>Dados demonstrativos — nao sao reais</p>
-    </div>
+    ${T.pageHero('Meu Perfil', 'Dados demonstrativos — nao sao reais', { icon: T.ICONS.user })}
 
     <div class="card mb-6 text-center">
       <div class="portal-user-avatar" style="width: 80px; height: 80px; font-size: var(--fs-2xl)">${customer.avatar}</div>

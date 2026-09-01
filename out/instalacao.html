@@ -55,85 +55,239 @@
     <section class="section">
   <div class="container">
     <nav class="breadcrumb" aria-label="Navegacao"><ol class="breadcrumb-list"><li><a href="index.html">Inicio</a></li><li><a href="conta.html">Portal</a></li><li aria-current="page">Instalacao</li></ol></nav>
-    <div class="section-header">
-      <h2>Jornada de implantacao</h2>
-      <p>Projeto SOL-4821 — Santos, SP</p>
+    <div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+    <h1>Jornada de Implantacao</h1>
+    <p class="page-hero-subtitle">Projeto SOL-4821 — Santos, SP</p>
+  </div>
+</div>
+
+    <!-- Cena de instalacao -->
+    <div class="grid grid-2 mb-6">
+      <div class="card">
+        <h3 style="margin-bottom: var(--space-3)">Cena: montagem dos modulos</h3>
+        <svg class="install-scene-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cena de instalacao profissional de sistema solar fotovoltaica">
+  <defs>
+    <linearGradient id="inst-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#142840"/><stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="inst-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="250" fill="url(#inst-sky)" rx="8"/>
+
+  <!-- Telhado inclinado -->
+  <polygon points="50,150 200,80 350,150 350,200 50,200" fill="url(#inst-roof)"/>
+
+  <!-- Telhas (linhas) -->
+  <g stroke="#475569" stroke-width="0.5" opacity="0.4">
+    <line x1="60" y1="145" x2="340" y2="145"/><line x1="68" y1="142" x2="332" y2="142"/><line x1="76" y1="139" x2="324" y2="139"/><line x1="84" y1="136" x2="316" y2="136"/><line x1="92" y1="133" x2="308" y2="133"/><line x1="100" y1="130" x2="300" y2="130"/><line x1="108" y1="127" x2="292" y2="127"/><line x1="116" y1="124" x2="284" y2="124"/>
+  </g>
+
+  <!-- Paineis sendo instalados (alguns no telhado, um sendo posicionado) -->
+  <g>
+    <!-- Paineis ja instalados -->
+    <rect x="80" y="110" width="50" height="28" rx="1" fill="#1e3a5f" stroke="#2a4a6f" stroke-width="0.5" transform="skewY(-8)"/>
+    <rect x="140" y="105" width="50" height="28" rx="1" fill="#1e3a5f" stroke="#2a4a6f" stroke-width="0.5" transform="skewY(-8)"/>
+    <!-- Painel sendo posicionado (segurando) -->
+    <rect x="210" y="100" width="50" height="28" rx="1" fill="#1e3a5f" stroke="#2a4a6f" stroke-width="0.5" opacity="0.8" transform="rotate(-5 235 114)"/>
+  </g>
+
+  <!-- Tecnico (silhueta estilizada com EPI) -->
+  <g transform="translate(240 120)">
+    <!-- Capacete -->
+    <ellipse cx="0" cy="-5" rx="10" ry="5" fill="#f59e0b"/>
+    <ellipse cx="0" cy="-3" rx="7" ry="3" fill="#fbbf24"/>
+    <!-- Cabeca -->
+    <circle cx="0" cy="2" r="6" fill="#e2e8f0"/>
+    <!-- Corpo (colete EPI) -->
+    <rect x="-10" y="8" width="20" height="25" rx="3" fill="#f59e0b" opacity="0.9"/>
+    <rect x="-8" y="10" width="16" height="3" fill="#fbbf24" opacity="0.6"/>
+    <!-- Bracos (posicionando painel) -->
+    <line x1="-8" y1="12" x2="-18" y2="0" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+    <line x1="8" y1="12" x2="18" y2="-5" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+    <!-- Pernas -->
+    <line x1="-5" y1="33" x2="-8" y2="50" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+    <line x1="5" y1="33" x2="8" y2="50" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Caixa de ferramentas -->
+  <g transform="translate(60 195)">
+    <rect width="40" height="20" rx="2" fill="#f59e0b" opacity="0.7"/>
+    <rect y="-5" width="40" height="8" rx="2" fill="#d97706"/>
+  </g>
+
+  <!-- Estrutura de fixacao (perfil) -->
+  <g transform="translate(100 140)" stroke="#64748b" stroke-width="1" fill="none">
+    <line x1="0" y1="0" x2="60" y2="-8"/>
+    <line x1="0" y1="3" x2="60" y2="-5"/>
+  </g>
+
+  <!-- Sol -->
+  <circle cx="350" cy="40" r="15" fill="#f59e0b" opacity="0.6"/>
+  <circle cx="350" cy="40" r="8" fill="#fbbf24" opacity="0.8"/>
+
+  <text x="200" y="235" text-anchor="middle" fill="#64748b" font-size="8" font-family="Inter, sans-serif">Instalacao profissional com EPI — cena demonstrativa</text>
+</svg>
+        <p class="text-xs text-muted mt-3 text-center">Instalacao profissional com EPI — cena demonstrativa</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: var(--space-3)">Cena: conexao do inversor</h3>
+        <svg class="inverter-render-svg" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Render do inversor solar SolMais Demo 5kW">
+  <defs>
+    <linearGradient id="inv-body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e293b"/><stop offset="50%" stop-color="#334155"/><stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="inv-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1a2a3a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Corpo -->
+  <rect x="40" y="20" width="120" height="240" rx="8" fill="url(#inv-body)" stroke="#475569" stroke-width="1"/>
+
+  <!-- Display -->
+  <rect x="55" y="40" width="90" height="60" rx="4" fill="url(#inv-screen)" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="100" y="60" text-anchor="middle" fill="#22c55e" font-size="14" font-family="monospace" font-weight="700">3.42 kW</text>
+  <text x="100" y="75" text-anchor="middle" fill="#4ade80" font-size="8" font-family="monospace">PRODUZINDO</text>
+  <text x="100" y="92" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">18,7 kWh hoje</text>
+
+  <!-- LEDs de status -->
+  <g transform="translate(60 120)">
+    <circle r="3" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+    <text x="8" y="3" fill="#64748b" font-size="7" font-family="Inter, sans-serif">Power</text>
+  </g>
+  <g transform="translate(60 135)">
+    <circle r="3" fill="#22c55e" opacity="0.7"><animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="8" y="3" fill="#64748b" font-size="7" font-family="Inter, sans-serif">Grid</text>
+  </g>
+  <g transform="translate(60 150)">
+    <circle r="3" fill="#3b82f6" opacity="0.5"><animate attributeName="opacity" values="0.5;0.8;0.5" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="8" y="3" fill="#64748b" font-size="7" font-family="Inter, sans-serif">Comms</text>
+  </g>
+
+  <!-- Logo SolMais (ficticio) -->
+  <text x="100" y="180" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="700" font-family="Sora, sans-serif">SolMais</text>
+  <text x="100" y="192" text-anchor="middle" fill="#64748b" font-size="7" font-family="Inter, sans-serif">5kW Demo</text>
+
+  <!-- Conectores inferiores -->
+  <g transform="translate(55 210)">
+    <rect width="14" height="8" rx="1" fill="#0f172a" stroke="#475569" stroke-width="0.5"/>
+    <rect x="20" width="14" height="8" rx="1" fill="#0f172a" stroke="#475569" stroke-width="0.5"/>
+    <rect x="40" width="14" height="8" rx="1" fill="#0f172a" stroke="#475569" stroke-width="0.5"/>
+    <rect x="60" width="14" height="8" rx="1" fill="#0f172a" stroke="#475569" stroke-width="0.5"/>
+  </g>
+
+  <!-- Ventilacao -->
+  <g stroke="#0f172a" stroke-width="0.5">
+    <line x1="55" y1="235" x2="145" y2="235"/>
+    <line x1="55" y1="240" x2="145" y2="240"/>
+    <line x1="55" y1="245" x2="145" y2="245"/>
+  </g>
+
+  <text x="100" y="270" text-anchor="middle" fill="#475569" font-size="7" font-family="Inter, sans-serif">Equipamento demonstrativo</text>
+</svg>
+        <p class="text-xs text-muted mt-3 text-center">Inversor 5.5 kWp — equipamento demonstrativo</p>
+      </div>
     </div>
 
+    <!-- Timeline premium -->
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-4)">Timeline de implantacao</h3>
-      <div class="timeline">
+      <h3 style="margin-bottom: var(--space-6)">Timeline de implantacao</h3>
+      <div class="timeline-premium">
         
-        <div class="timeline-item">
-          <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot done">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Simulacao</h4>
-            <p class="text-muted">Simulacao inicial concluida — sistema 5,5 kWp recomendado</p>
-            <p class="date">2026-02-01</p>
+            <div class="timeline-premium-date">2026-02-01</div>
+            <p class="timeline-premium-desc">Simulacao inicial concluida — sistema 5,5 kWp recomendado</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot done">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Analise tecnica</h4>
-            <p class="text-muted">Analise de viabilidade e irradicao local</p>
-            <p class="date">2026-02-05</p>
+            <div class="timeline-premium-date">2026-02-05</div>
+            <p class="timeline-premium-desc">Analise de viabilidade e irradicao local</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot done">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Projeto eletrico</h4>
-            <p class="text-muted">Projeto eletrico e memorial descritivo elaborados</p>
-            <p class="date">2026-02-12</p>
+            <div class="timeline-premium-date">2026-02-12</div>
+            <p class="timeline-premium-desc">Projeto eletrico e memorial descritivo elaborados</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot done">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Documentacao</h4>
-            <p class="text-muted">Documentacao tecnica preparada para envio a distribuidora</p>
-            <p class="date">2026-02-20</p>
+            <div class="timeline-premium-date">2026-02-20</div>
+            <p class="timeline-premium-desc">Documentacao tecnica preparada para envio a distribuidora</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot done">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Solicitacao de conexao</h4>
-            <p class="text-muted">Solicitacao de acesso enviada a distribuidora</p>
-            <p class="date">2026-02-22</p>
+            <div class="timeline-premium-date">2026-02-22</div>
+            <p class="timeline-premium-desc">Solicitacao de acesso enviada a distribuidora</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot done">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Instalacao</h4>
-            <p class="text-muted">Instalacao concluida em 2 dias — 10 modulos, inversor 5kW</p>
-            <p class="date">2026-03-15</p>
+            <div class="timeline-premium-date">2026-03-15</div>
+            <p class="timeline-premium-desc">Instalacao concluida em 2 dias — 10 modulos, inversor 5kW</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot done">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Vistoria da distribuidora</h4>
-            <p class="text-muted">Vistoria realizada pela distribuidora</p>
-            <p class="date">2026-03-18</p>
+            <div class="timeline-premium-date">2026-03-18</div>
+            <p class="timeline-premium-desc">Vistoria realizada pela distribuidora</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot done">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Sistema conectado</h4>
-            <p class="text-muted">Sistema conectado e em operacao</p>
-            <p class="date">2026-03-20</p>
+            <div class="timeline-premium-date">2026-03-20</div>
+            <p class="timeline-premium-desc">Sistema conectado e em operacao</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot current"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="timeline-content">
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="timeline-premium-content">
             <h4>Monitoramento ativo</h4>
-            <p class="text-muted">Monitoramento em funcionamento — sistema normal</p>
-            <p class="date">2026-03-20</p>
+            <div class="timeline-premium-date">2026-03-20</div>
+            <p class="timeline-premium-desc">Monitoramento em funcionamento — sistema normal</p>
           </div>
         </div>
       </div>
@@ -143,51 +297,67 @@
     <div class="grid grid-2">
       <div class="card">
         <h3 style="margin-bottom: var(--space-4)">Checklist de instalacao</h3>
-        <div class="timeline">
+        <div class="timeline-premium">
           
-          <div class="timeline-item">
-            <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="timeline-content"><h4>Estrutura de fixacao</h4></div>
+          <div class="timeline-premium-item">
+            <div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="timeline-premium-content">
+              <h4>Estrutura de fixacao</h4>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="timeline-content"><h4>Modulos fotovoltaicos (10x 550W)</h4></div>
+          <div class="timeline-premium-item">
+            <div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="timeline-premium-content">
+              <h4>Modulos fotovoltaicos (10x 550W)</h4>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="timeline-content"><h4>Inversor 5kW</h4></div>
+          <div class="timeline-premium-item">
+            <div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="timeline-premium-content">
+              <h4>Inversor 5kW</h4>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="timeline-content"><h4>Cabeamento CC e CA</h4></div>
+          <div class="timeline-premium-item">
+            <div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="timeline-premium-content">
+              <h4>Cabeamento CC e CA</h4>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="timeline-content"><h4>Protecoes (DC, AC, SPDA)</h4></div>
+          <div class="timeline-premium-item">
+            <div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="timeline-premium-content">
+              <h4>Protecoes (DC, AC, SPDA)</h4>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="timeline-content"><h4>Testes de comunicacao</h4></div>
+          <div class="timeline-premium-item">
+            <div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="timeline-premium-content">
+              <h4>Testes de comunicacao</h4>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="timeline-content"><h4>Ligacao e energizacao</h4></div>
+          <div class="timeline-premium-item">
+            <div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="timeline-premium-content">
+              <h4>Ligacao e energizacao</h4>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="timeline-content"><h4>Fotos demonstrativas</h4></div>
+          <div class="timeline-premium-item">
+            <div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="timeline-premium-content">
+              <h4>Fotos demonstrativas</h4>
+            </div>
           </div>
         </div>
       </div>
       <div class="card">
         <h3 style="margin-bottom: var(--space-4)">Homologacao e conexao</h3>
         <p class="text-sm text-secondary mb-4">O processo de homologacao envolve etapas com a distribuidora local:</p>
-        <div class="timeline">
-          <div class="timeline-item"><div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-content"><h4>Documentacao preparada</h4><p class="text-muted">Projeto, memorial e documentos tecnicos</p></div></div>
-          <div class="timeline-item"><div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-content"><h4>Solicitacao enviada</h4><p class="text-muted">Envio a distribuidora</p></div></div>
-          <div class="timeline-item"><div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-content"><h4>Analise da distribuidora</h4><p class="text-muted">Pode haver pendencias — variavel conforme caso</p></div></div>
-          <div class="timeline-item"><div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-content"><h4>Vistoria realizada</h4><p class="text-muted">Inspecao tecnica</p></div></div>
-          <div class="timeline-item"><div class="timeline-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-content"><h4>Aprovacao/conexao</h4><p class="text-muted">Sistema conectado a rede</p></div></div>
+        <div class="timeline-premium">
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-premium-content"><h4>Documentacao preparada</h4><p class="timeline-premium-desc">Projeto, memorial e documentos tecnicos</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-premium-content"><h4>Solicitacao enviada</h4><p class="timeline-premium-desc">Envio a distribuidora</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-premium-content"><h4>Analise da distribuidora</h4><p class="timeline-premium-desc">Pode haver pendencias — variavel conforme caso</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-premium-content"><h4>Vistoria realizada</h4><p class="timeline-premium-desc">Inspecao tecnica</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="timeline-premium-content"><h4>Aprovacao/conexao</h4><p class="timeline-premium-desc">Sistema conectado a rede</p></div></div>
         </div>
         <p class="text-xs text-muted mt-4">Nao prometemos prazo universal — os procedimentos variam conforme distribuidora e caracteristicas do projeto.</p>
       </div>

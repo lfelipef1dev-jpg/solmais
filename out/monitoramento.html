@@ -12,12 +12,12 @@
   <meta property="og:url" content="https://solmais.expostacker.com.br/monitoramento">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SolMais">
-  <meta property="og:image" content="https://solmais.expostacker.com.br/img/hero-solar.jpg">
+  <meta property="og:image" content="https://solmais.expostacker.com.br/img/og/monitoramento.svg">
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Monitoramento Solar: Dashboard Energetico | SolMais">
   <meta name="twitter:description" content="Dashboard de monitoramento solar em tempo real. Veja geracao atual, graficos horarios e mensais, fluxo energetico, status do inversor e impacto ambiental estimado.">
-  <meta name="twitter:image" content="https://solmais.expostacker.com.br/img/hero-solar.jpg">
+  <meta name="twitter:image" content="https://solmais.expostacker.com.br/img/og/monitoramento.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   
@@ -55,125 +55,392 @@
     <section class="section">
   <div class="container">
     <nav class="breadcrumb" aria-label="Navegacao"><ol class="breadcrumb-list"><li><a href="index.html">Inicio</a></li><li aria-current="page">Monitoramento</li></ol></nav>
-    <div class="section-header">
-      <h2>Monitoramento energetico</h2>
-      <p>Dashboard demonstrativo — sistema SOL-4821 em Santos, SP</p>
+    <div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+    <h1>Monitoramento Energetico</h1>
+    <p class="page-hero-subtitle">Dashboard em tempo real — sistema SOL-4821 em Santos, SP</p>
+  </div>
+</div>
+
+    <!-- Status bar -->
+    <div class="glass-card mb-6" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-3)">
+      <div>
+        <h3 style="font-size: var(--fs-lg)">Sistema SOL-4821 — 5.5 kWp</h3>
+        <p class="text-sm text-muted">Santos, SP — 10 modulos — Inversor SolMais 5kW</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:var(--space-3)">
+        <span class="status-dot normal"></span>
+        <span class="badge badge-success">Sistema normal</span>
+        <span class="text-xs text-muted">Atualizado ha 2 min</span>
+      </div>
     </div>
 
-    <div class="card card-glow mb-6" style="padding: var(--space-6)">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-3)">
-        <div>
-          <h3 style="font-size: var(--fs-lg)">Meu sistema agora</h3>
-          <p class="text-sm text-muted">Sistema SOL-4821 — 5.5 kWp</p>
+    <!-- KPI Premium Row -->
+    <div class="grid grid-4 mb-6">
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="kpi-value text-solar">3,42 kW</div>
+        <div class="kpi-label">Gerando agora</div>
+        <div class="mini-chart-wrap"><svg class="sparkline-svg" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de tendencia">
+    <polygon points="0,30 0.0,30.0 9.2,29.4 18.5,25.0 27.7,18.8 36.9,11.9 46.2,6.3 55.4,1.9 64.6,0.0 73.8,1.3 83.1,5.0 92.3,10.0 101.5,15.6 110.8,21.3 120.0,26.3 120,30" fill="rgba(245,158,11,0.1)"/>
+    <polyline points="0.0,30.0 9.2,29.4 18.5,25.0 27.7,18.8 36.9,11.9 46.2,6.3 55.4,1.9 64.6,0.0 73.8,1.3 83.1,5.0 92.3,10.0 101.5,15.6 110.8,21.3 120.0,26.3" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
+        <div class="kpi-value text-gen">18,7</div>
+        <div class="kpi-label">kWh hoje</div>
+        <div class="mini-chart-wrap"><svg class="sparkline-svg" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de tendencia">
+    <polygon points="0,30 0.0,30.0 13.3,26.4 26.7,22.8 40.0,19.2 53.3,15.6 66.7,12.0 80.0,8.4 93.3,4.9 106.7,1.3 120.0,0.0 120,30" fill="rgba(34,197,94,0.1)"/>
+    <polyline points="0.0,30.0 13.3,26.4 26.7,22.8 40.0,19.2 53.3,15.6 66.7,12.0 80.0,8.4 93.3,4.9 106.7,1.3 120.0,0.0" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <div class="kpi-value">584</div>
+        <div class="kpi-label">kWh este mes</div>
+        <div class="mini-chart-wrap"><svg class="sparkline-svg" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de tendencia">
+    <polygon points="0,30 0.0,30.0 13.3,27.2 26.7,24.4 40.0,21.7 53.3,18.9 66.7,13.3 80.0,7.8 93.3,5.0 106.7,2.2 120.0,0.0 120,30" fill="rgba(59,130,246,0.1)"/>
+    <polyline points="0.0,30.0 13.3,27.2 26.7,24.4 40.0,21.7 53.3,18.9 66.7,13.3 80.0,7.8 93.3,5.0 106.7,2.2 120.0,0.0" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+      </div>
+      <div class="kpi-premium">
+        <div class="kpi-icon-wrap solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="kpi-value text-solar">R$ 480</div>
+        <div class="kpi-label">Economia estimada/mes</div>
+        <div class="mini-chart-wrap"><svg class="sparkline-svg" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de tendencia">
+    <polygon points="0,30 0.0,30.0 15.0,20.0 30.0,15.0 45.0,10.0 60.0,7.5 75.0,5.0 90.0,2.5 105.0,1.0 120.0,0.0 120,30" fill="rgba(245,158,11,0.1)"/>
+    <polyline points="0.0,30.0 15.0,20.0 30.0,15.0 45.0,10.0 60.0,7.5 75.0,5.0 90.0,2.5 105.0,1.0 120.0,0.0" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+      </div>
+    </div>
+
+    <!-- Main Dashboard Grid -->
+    <div class="monitor-grid">
+      <!-- Main: Energy Flow + Hourly Chart -->
+      <div class="monitor-main">
+        <h3 style="color: #e2e8f0; margin-bottom: var(--space-2)">Fluxo de energia em tempo real</h3>
+        <p style="color: #94a3b8; font-size: var(--fs-sm); margin-bottom: var(--space-4)">Sol gera nos paineis, inversor converte, casa consome e excedente vai para a rede</p>
+        <svg class="energy-flow-svg" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo de energia: sol gera nos paineis, inversor converte, casa consome e excedente vai para a rede">
+  <defs>
+    <linearGradient id="flow-sun" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="flow-panel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="flow-inv" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/><stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="flow-grid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="flow-glow"><feGaussianBlur stdDeviation="3"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Sol -->
+  <g transform="translate(60 100)">
+    <circle r="32" fill="url(#flow-sun)" filter="url(#flow-glow)" opacity="0.9"/>
+    <circle r="22" fill="#fbbf24"/>
+    <g stroke="#f59e0b" stroke-width="2" stroke-linecap="round">
+      <line x1="0" y1="-40" x2="0" y2="-48"/><line x1="0" y1="40" x2="0" y2="48"/>
+      <line x1="-40" y1="0" x2="-48" y2="0"/><line x1="40" y1="0" x2="48" y2="0"/>
+      <line x1="-28" y1="-28" x2="-34" y2="-34"/><line x1="28" y1="28" x2="34" y2="34"/>
+      <line x1="-28" y1="28" x2="-34" y2="34"/><line x1="28" y1="-28" x2="34" y2="-34"/>
+    </g>
+    <text y="65" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600" font-family="Inter, sans-serif">SOL</text>
+  </g>
+
+  <!-- Seta Sol -> Painel -->
+  <line x1="100" y1="100" x2="180" y2="100" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+  <polygon points="180,96 188,100 180,104" fill="#f59e0b" opacity="0.7"/>
+
+  <!-- Painel -->
+  <g transform="translate(220 100)">
+    <rect x="-35" y="-25" width="70" height="50" rx="3" fill="#0f2744" stroke="#1e3a5f" stroke-width="1"/>
+    <rect x="-32" y="-22" width="64" height="44" rx="2" fill="#1e3a5f" opacity="0.5"/>
+    <g stroke="#2a4a6f" stroke-width="0.5">
+      <line x1="-32" y1="-11" x2="32" y2="-11"/><line x1="-32" y1="0" x2="32" y2="0"/><line x1="-32" y1="11" x2="32" y2="11"/>
+      <line x1="-16" y1="-22" x2="-16" y2="22"/><line x1="0" y1="-22" x2="0" y2="22"/><line x1="16" y1="-22" x2="16" y2="22"/>
+    </g>
+    <rect x="-32" y="-22" width="64" height="44" rx="2" fill="url(#flow-panel)" opacity="0.1"/>
+    <text y="45" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="600" font-family="Inter, sans-serif">PAINEL</text>
+  </g>
+
+  <!-- Seta Painel -> Inversor -->
+  <line x1="260" y1="100" x2="340" y2="100" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+  <polygon points="340,96 348,100 340,104" fill="#3b82f6" opacity="0.7"/>
+
+  <!-- Inversor -->
+  <g transform="translate(390 100)">
+    <rect x="-30" y="-25" width="60" height="50" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <rect x="-25" y="-20" width="50" height="20" rx="2" fill="#0f172a"/>
+    <text x="0" y="-6" text-anchor="middle" fill="#22c55e" font-size="8" font-family="monospace" font-weight="600">3.42 kW</text>
+    <circle cx="-15" cy="12" r="3" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="0" cy="12" r="3" fill="#22c55e" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="15" cy="12" r="3" fill="#22c55e" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/></circle>
+    <text y="45" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="600" font-family="Inter, sans-serif">INVERSOR</text>
+  </g>
+
+  <!-- Seta Inversor -> Casa -->
+  <line x1="425" y1="100" x2="505" y2="100" stroke="#22c55e" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+  <polygon points="505,96 513,100 505,104" fill="#22c55e" opacity="0.7"/>
+
+  <!-- Casa -->
+  <g transform="translate(555 100)">
+    <path d="M-30 -15 L0 -35 L30 -15 L30 20 L-30 20 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+    <rect x="-15" y="-5" width="12" height="18" fill="#1e3a5f" opacity="0.6"/>
+    <rect x="5" y="-5" width="12" height="12" fill="#60a5fa" opacity="0.4"/>
+    <text y="40" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="600" font-family="Inter, sans-serif">IMÓVEL</text>
+  </g>
+
+  <!-- Seta Casa <-> Rede (bidirecional) -->
+  <line x1="590" y1="100" x2="670" y2="100" stroke="#6366f1" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+  <polygon points="670,96 678,100 670,104" fill="#6366f1" opacity="0.7"/>
+  <polygon points="590,96 582,100 590,104" fill="#6366f1" opacity="0.5"/>
+
+  <!-- Rede -->
+  <g transform="translate(720 100)">
+    <g stroke="#818cf8" stroke-width="1.5" fill="none">
+      <line x1="0" y1="-30" x2="0" y2="25"/>
+      <line x1="-20" y1="-20" x2="20" y2="-20"/>
+      <line x1="-15" y1="-10" x2="15" y2="-10"/>
+      <line x1="-10" y1="0" x2="10" y2="0"/>
+    </g>
+    <circle cx="0" cy="-25" r="3" fill="#818cf8"/>
+    <text y="45" text-anchor="middle" fill="#818cf8" font-size="11" font-weight="600" font-family="Inter, sans-serif">REDE</text>
+  </g>
+</svg>
+        <div class="section-divider"></div>
+        <h3 style="color: #e2e8f0; margin-bottom: var(--space-4)">Geracao hoje — curva solar (00h as 24h)</h3>
+        <svg class="area-chart-svg" viewBox="0 0 550 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao horaria (kW)">
+  <defs>
+    <linearGradient id="area-grad-hourly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grid -->
+  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="32" x2="550" y2="32"/><line x1="0" y1="64" x2="550" y2="64"/><line x1="0" y1="96" x2="550" y2="96"/><line x1="0" y1="128" x2="550" y2="128"/>
+  </g>
+
+  
+
+  <!-- Area -->
+  <polygon points="0,160 0.0,160.0 23.9,160.0 47.8,160.0 71.7,160.0 95.7,160.0 119.6,160.0 143.5,157.0 167.4,135.8 191.3,105.5 215.2,72.1 239.1,44.8 263.0,23.6 287.0,14.5 310.9,20.6 334.8,38.8 358.7,63.0 382.6,90.3 406.5,117.6 430.4,141.8 454.3,157.0 478.3,160.0 502.2,160.0 526.1,160.0 550.0,160.0 550,160" fill="url(#area-grad-hourly)"/>
+
+  <!-- Linha principal -->
+  <polyline points="0.0,160.0 23.9,160.0 47.8,160.0 71.7,160.0 95.7,160.0 119.6,160.0 143.5,157.0 167.4,135.8 191.3,105.5 215.2,72.1 239.1,44.8 263.0,23.6 287.0,14.5 310.9,20.6 334.8,38.8 358.7,63.0 382.6,90.3 406.5,117.6 430.4,141.8 454.3,157.0 478.3,160.0 502.2,160.0 526.1,160.0 550.0,160.0" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Pontos -->
+  <circle cx="0.0" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="23.9" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="47.8" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="71.7" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="95.7" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="119.6" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="143.5" cy="157.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="167.4" cy="135.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="191.3" cy="105.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="215.2" cy="72.1" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="239.1" cy="44.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="263.0" cy="23.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="287.0" cy="14.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="310.9" cy="20.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="334.8" cy="38.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="358.7" cy="63.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="382.6" cy="90.3" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="406.5" cy="117.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="430.4" cy="141.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="454.3" cy="157.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="478.3" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="502.2" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="526.1" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="550.0" cy="160.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="0" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">00h</text><text x="96" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">04h</text><text x="191" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">08h</text><text x="287" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">12h</text><text x="383" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">16h</text><text x="478" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">20h</text><text x="550" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">23h</text>
+</svg>
+        <p class="text-xs text-muted mt-4">Curva solar natural: zero a noite, pico ao meio-dia. Dados demonstrativos.</p>
+      </div>
+
+      <!-- Side: Gauges + System Render -->
+      <div class="monitor-side">
+        <div class="glass-card text-center">
+          <h4 style="margin-bottom: var(--space-4)">Performance</h4>
+          <div class="monitor-gauge-row">
+            <svg class="donut-chart-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eficiencia: 87% de 100%">
+  <circle cx="60" cy="60" r="45" stroke="#1a2a3a" stroke-width="8" fill="none"/>
+  <circle cx="60" cy="60" r="45" stroke="#22c55e" stroke-width="8" fill="none"
+    stroke-dasharray="282.7433388230814" stroke-dashoffset="36.75663404700058"
+    stroke-linecap="round" transform="rotate(-90 60 60)"/>
+  <text x="60" y="55" text-anchor="middle" fill="#22c55e" font-size="20" font-weight="700" font-family="Sora, sans-serif">87%</text>
+  <text x="60" y="75" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Eficiencia</text>
+</svg>
+          </div>
         </div>
-        <div style="display:flex;align-items:center;gap:var(--space-2)">
-          <span class="status-dot normal"></span>
-          <span class="badge badge-success">Sistema normal</span>
+        <div class="glass-card text-center">
+          <h4 style="margin-bottom: var(--space-4)">Sistema</h4>
+          <svg class="system-render-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Render isometrico do sistema solar com 10 modulos, inversor e medidor">
+  <defs>
+    <linearGradient id="iso-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#142840"/>
+    </linearGradient>
+    <linearGradient id="iso-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+    <linearGradient id="iso-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="250" fill="url(#iso-sky)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="40" r="18" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="340" cy="40" r="10" fill="#fbbf24"/>
+
+  <!-- Chao isometrico -->
+  <polygon points="50,200 200,160 350,200 200,240" fill="url(#iso-ground)" opacity="0.6"/>
+
+  <!-- Estrutura do telhado (isometrico) -->
+  <polygon points="80,170 200,130 320,170 200,210" fill="#1a2a3a" stroke="#334155" stroke-width="0.5"/>
+
+  <!-- Paineis no telhado (isometrico) -->
+  <g>
+    <polygon points="100,155 125,152 125,166 100,169" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,155 125,152 125,166 100,169" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="156" x2="108" y2="153" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="157" x2="116" y2="154" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,152 155,149 155,163 130,166" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,152 155,149 155,163 130,166" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="153" x2="138" y2="150" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="154" x2="146" y2="151" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,149 185,146 185,160 160,163" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,149 185,146 185,160 160,163" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="150" x2="168" y2="147" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="151" x2="176" y2="148" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,146 215,143 215,157 190,160" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,146 215,143 215,157 190,160" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="147" x2="198" y2="144" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="148" x2="206" y2="145" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,167 125,164 125,178 100,181" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,167 125,164 125,178 100,181" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="168" x2="108" y2="165" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="169" x2="116" y2="166" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,164 155,161 155,175 130,178" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,164 155,161 155,175 130,178" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="165" x2="138" y2="162" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="166" x2="146" y2="163" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,161 185,158 185,172 160,175" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,161 185,158 185,172 160,175" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="162" x2="168" y2="159" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="163" x2="176" y2="160" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,158 215,155 215,169 190,172" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,158 215,155 215,169 190,172" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="159" x2="198" y2="156" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="160" x2="206" y2="157" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,179 125,176 125,190 100,193" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,179 125,176 125,190 100,193" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="180" x2="108" y2="177" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="181" x2="116" y2="178" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,176 155,173 155,187 130,190" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,176 155,173 155,187 130,190" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="177" x2="138" y2="174" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="178" x2="146" y2="175" stroke="#1a3a5f" stroke-width="0.2"/>
+  </g>
+
+  <!-- Inversor (na parede lateral) -->
+  <g transform="translate(60 180)">
+    <rect width="22" height="30" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <rect x="2" y="3" width="18" height="10" rx="1" fill="#0f172a"/>
+    <text x="11" y="10" text-anchor="middle" fill="#22c55e" font-size="6" font-family="monospace">5kW</text>
+    <circle cx="11" cy="22" r="2.5" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Medidor -->
+  <g transform="translate(330 185)">
+    <rect width="20" height="25" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="10" cy="10" r="5" fill="#0f172a" stroke="#475569" stroke-width="0.3"/>
+    <line x1="10" y1="10" x2="13" y2="7" stroke="#22c55e" stroke-width="1"/>
+  </g>
+
+  <!-- Linhas de conexao -->
+  <path d="M75 195 Q150 210 280 195" stroke="#f59e0b" stroke-width="0.8" fill="none" opacity="0.3" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Label -->
+  <text x="200" y="245" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">10 modulos — 5.5 kWp — Inversor 5kW</text>
+</svg>
         </div>
       </div>
     </div>
 
-    <div class="grid grid-4 mb-6">
-      <div class="kpi-card"><div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="kpi-value">3,42 kW</div><div class="kpi-label">Gerando agora</div><div class="kpi-sub">Simulado</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><div class="kpi-value">18,7</div><div class="kpi-label">kWh hoje</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="kpi-value">584</div><div class="kpi-label">kWh este mes</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="kpi-value">R$ 480</div><div class="kpi-label">Economia estimada</div></div>
+    <!-- Monthly Chart Premium -->
+    <div class="chart-premium mt-6">
+      <h3>
+        <span>Geracao mensal — Estimado vs Gerado</span>
+        <span class="chart-legend">
+          <span class="chart-legend-item"><span class="chart-legend-dot" style="background:#3b82f6;opacity:0.5"></span> Estimado</span>
+          <span class="chart-legend-item"><span class="chart-legend-dot" style="background:#22c55e"></span> Gerado</span>
+        </span>
+      </h3>
+      <svg class="area-chart-svg" viewBox="0 0 600 225" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao mensal (kWh)">
+  <defs>
+    <linearGradient id="area-grad-monthly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grid -->
+  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="40" x2="600" y2="40"/><line x1="0" y1="80" x2="600" y2="80"/><line x1="0" y1="120" x2="600" y2="120"/><line x1="0" y1="160" x2="600" y2="160"/>
+  </g>
+
+  
+  <!-- Estimado (linha tracejada) -->
+  <polyline points="0.0,23.4 54.5,39.0 109.1,31.2 163.6,44.2 218.2,57.1 272.7,64.9 327.3,59.7 381.8,49.4 436.4,39.0 490.9,26.0 545.5,20.8 600.0,18.2" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 3" fill="none" opacity="0.5"/>
+  
+
+  <!-- Area -->
+  <polygon points="0,200 0.0,25.5 54.5,35.1 109.1,29.1 163.6,46.8 218.2,58.4 272.7,62.3 327.3,61.0 381.8,50.6 436.4,48.3 490.9,200.0 545.5,200.0 600.0,200.0 600,200" fill="url(#area-grad-monthly)"/>
+
+  <!-- Linha principal -->
+  <polyline points="0.0,25.5 54.5,35.1 109.1,29.1 163.6,46.8 218.2,58.4 272.7,62.3 327.3,61.0 381.8,50.6 436.4,48.3 490.9,200.0 545.5,200.0 600.0,200.0" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Pontos -->
+  <circle cx="0.0" cy="25.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="54.5" cy="35.1" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="109.1" cy="29.1" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="163.6" cy="46.8" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="218.2" cy="58.4" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="272.7" cy="62.3" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="327.3" cy="61.0" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="381.8" cy="50.6" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="436.4" cy="48.3" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="490.9" cy="200.0" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="545.5" cy="200.0" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="600.0" cy="200.0" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="0" y="218" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jan</text><text x="109" y="218" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mar</text><text x="218" y="218" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mai</text><text x="327" y="218" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jul</text><text x="436" y="218" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Set</text><text x="545" y="218" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Nov</text><text x="600" y="218" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Dez</text>
+</svg>
+      <p class="text-xs text-muted mt-4">Comparativo estimado vs realizado — dados demonstrativos. Meses futuros sem geracao registrada.</p>
     </div>
 
-    <h3 style="margin-bottom: var(--space-4)">Fluxo de energia em tempo real</h3>
-    <div class="energy-flow">
-  <div class="flow-node">
-    <div class="flow-node-icon sun"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
-    <div class="flow-node-label">SOL</div>
-    <div class="flow-node-value">4,1 kW</div>
-  </div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-node">
-    <div class="flow-node-icon panel"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div>
-    <div class="flow-node-label">PAINELS</div>
-    <div class="flow-node-value">3,4 kW</div>
-  </div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-node">
-    <div class="flow-node-icon inverter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-    <div class="flow-node-label">INVERSOR</div>
-    <div class="flow-node-value">3,2 kW</div>
-  </div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-node">
-    <div class="flow-node-icon home"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-    <div class="flow-node-label">CASA</div>
-    <div class="flow-node-value">2,7 kW</div>
-  </div>
-  <div class="flow-arrow">↔</div>
-  <div class="flow-node">
-    <div class="flow-node-icon grid"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-    <div class="flow-node-label">REDE</div>
-    <div class="flow-node-value">0,7 kW</div>
-  </div>
-</div>
-    <p class="text-xs text-muted text-center mt-4 mb-6">Animacao ilustrativa — dados simulados</p>
-
-    <div class="chart-container">
-  <h3>Geracao hoje (00h → 24h) — dados simulados</h3>
-  <div class="bar-chart">
-    <div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">00h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">01h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">02h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">03h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">04h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">05h</span></div><div class="bar-chart-item" style="height:2%"><span class="bar-chart-label">06h</span></div><div class="bar-chart-item" style="height:16%"><span class="bar-chart-label">07h</span></div><div class="bar-chart-item" style="height:36%"><span class="bar-chart-label">08h</span></div><div class="bar-chart-item" style="height:58%"><span class="bar-chart-label">09h</span></div><div class="bar-chart-item" style="height:76%"><span class="bar-chart-label">10h</span></div><div class="bar-chart-item gen" style="height:90%"><span class="bar-chart-label">11h</span></div><div class="bar-chart-item gen" style="height:96%"><span class="bar-chart-label">12h</span></div><div class="bar-chart-item gen" style="height:92%"><span class="bar-chart-label">13h</span></div><div class="bar-chart-item" style="height:80%"><span class="bar-chart-label">14h</span></div><div class="bar-chart-item" style="height:64%"><span class="bar-chart-label">15h</span></div><div class="bar-chart-item" style="height:46%"><span class="bar-chart-label">16h</span></div><div class="bar-chart-item" style="height:28%"><span class="bar-chart-label">17h</span></div><div class="bar-chart-item" style="height:12%"><span class="bar-chart-label">18h</span></div><div class="bar-chart-item" style="height:2%"><span class="bar-chart-label">19h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">20h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">21h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">22h</span></div><div class="bar-chart-item" style="height:1%"><span class="bar-chart-label">23h</span></div>
-  </div>
-  <p class="text-xs text-muted mt-4">Curva solar natural: zero a noite, pico ao meio-dia. Dados demonstrativos.</p>
-</div>
-    <div class="chart-container">
-  <h3>Geracao mensal — Estimado vs Gerado (dados demonstrativos)</h3>
-  <div class="bar-chart" style="height: 180px">
-    <div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:97%;flex:1"></div><div class="bar-chart-item gen" style="height:96%;flex:1"></div><span class="bar-chart-label">Jan</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:89%;flex:1"></div><div class="bar-chart-item gen" style="height:91%;flex:1"></div><span class="bar-chart-label">Fev</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:93%;flex:1"></div><div class="bar-chart-item gen" style="height:94%;flex:1"></div><span class="bar-chart-label">Mar</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:86%;flex:1"></div><div class="bar-chart-item gen" style="height:84%;flex:1"></div><span class="bar-chart-label">Abr</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:79%;flex:1"></div><div class="bar-chart-item gen" style="height:78%;flex:1"></div><span class="bar-chart-label">Mai</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:74%;flex:1"></div><div class="bar-chart-item gen" style="height:76%;flex:1"></div><span class="bar-chart-label">Jun</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:77%;flex:1"></div><div class="bar-chart-item gen" style="height:76%;flex:1"></div><span class="bar-chart-label">Jul</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:83%;flex:1"></div><div class="bar-chart-item gen" style="height:82%;flex:1"></div><span class="bar-chart-label">Ago</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:89%;flex:1"></div><div class="bar-chart-item gen" style="height:83%;flex:1"></div><span class="bar-chart-label">Set</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:96%;flex:1"></div><div class="bar-chart-item gen" style="height:1%;flex:1"></div><span class="bar-chart-label">Out</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:99%;flex:1"></div><div class="bar-chart-item gen" style="height:1%;flex:1"></div><span class="bar-chart-label">Nov</span></div><div style="flex:1;display:flex;gap:2px;align-items:flex-end;height:100%;position:relative"><div class="bar-chart-item estimated" style="height:100%;flex:1"></div><div class="bar-chart-item gen" style="height:1%;flex:1"></div><span class="bar-chart-label">Dez</span></div>
-  </div>
-  <div class="text-xs text-muted mt-4">
-    <span style="display:inline-block;width:12px;height:12px;background:var(--elevated);border:1px solid var(--border-strong);border-radius:2px;vertical-align:middle;margin-right:4px"></span> Estimado
-    <span style="display:inline-block;width:12px;height:12px;background:var(--gen);border-radius:2px;vertical-align:middle;margin-left:12px;margin-right:4px"></span> Gerado
-  </div>
-</div>
-
+    <!-- System Health + Weather -->
     <div class="grid grid-2 mt-6">
       <div class="card">
-  <h3 style="margin-bottom: var(--space-4)">Saude do sistema</h3>
-  <div class="grid grid-2">
-    <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
-      <span class="status-dot normal"></span>
-      <div><strong>Sistema</strong><div class="text-xs text-muted">Normal</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
-      <span class="status-dot normal"></span>
-      <div><strong>Inversor</strong><div class="text-xs text-muted">Online</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
-      <span class="status-dot normal"></span>
-      <div><strong>Modulos</strong><div class="text-xs text-muted">Normal</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
-      <span class="status-dot normal"></span>
-      <div><strong>Comunicacao</strong><div class="text-xs text-muted">Online</div></div>
-    </div>
-  </div>
-  <p class="text-xs text-muted mt-4">Ultima atualizacao: ha 2 min — dados simulados</p>
-</div>
+        <h3 style="margin-bottom: var(--space-4)">Saude do sistema</h3>
+        <div class="grid grid-2">
+          <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
+            <span class="status-dot normal"></span>
+            <div><strong>Sistema</strong><div class="text-xs text-muted">Normal</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
+            <span class="status-dot normal"></span>
+            <div><strong>Inversor</strong><div class="text-xs text-muted">Online</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
+            <span class="status-dot normal"></span>
+            <div><strong>Modulos</strong><div class="text-xs text-muted">Normal</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--elevated);border-radius:var(--radius-md)">
+            <span class="status-dot normal"></span>
+            <div><strong>Comunicacao</strong><div class="text-xs text-muted">Online</div></div>
+          </div>
+        </div>
+        <div class="mini-chart-wrap">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="text-sm text-muted">Ultima comunicacao</span>
+            <span class="badge badge-success">ha 2 min</span>
+          </div>
+        </div>
+      </div>
       <div class="card">
-  <h3 style="margin-bottom: var(--space-4)">Clima (demonstrativo)</h3>
-  <div class="grid grid-3">
-    <div class="kpi-card"><div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><div class="kpi-value">28°C</div><div class="kpi-label">Ensolarado</div></div>
-    <div class="kpi-card"><div class="kpi-card-icon info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="kpi-value">Alta</div><div class="kpi-label">Irradiacao</div></div>
-    <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="kpi-value">27,5</div><div class="kpi-label">kWh previstos</div></div>
-  </div>
-  <p class="text-xs text-muted mt-4">Condicao meteorologica demonstrativa — nao utiliza API real</p>
-</div>
+        <h3 style="margin-bottom: var(--space-4)">Clima (demonstrativo)</h3>
+        <div class="grid grid-3">
+          <div class="kpi-card"><div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><div class="kpi-value">28C</div><div class="kpi-label">Ensolarado</div></div>
+          <div class="kpi-card"><div class="kpi-card-icon info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="kpi-value">Alta</div><div class="kpi-label">Irradiacao</div></div>
+          <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="kpi-value">27,5</div><div class="kpi-label">kWh previstos</div></div>
+        </div>
+        <p class="text-xs text-muted mt-4">Condicao meteorologica demonstrativa — nao utiliza API real</p>
+      </div>
     </div>
-    <div class="mt-6"><div class="card card-glow">
-  <h3 style="margin-bottom: var(--space-4)">Impacto ambiental (estimativa)</h3>
-  <div class="grid grid-3">
-    <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="kpi-value">6,2 MWh</div><div class="kpi-label">Energia produzida/ano</div></div>
-    <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><div class="kpi-value">5,2 t</div><div class="kpi-label">CO₂ evitado/ano</div></div>
-    <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><div class="kpi-value">240</div><div class="kpi-label">Arvores equiv.</div></div>
-  </div>
-  <p class="text-xs text-muted mt-4">Estimativa demonstrativa — metodologia ilustrativa</p>
-</div></div>
+
+    <!-- Environmental Impact -->
+    <div class="card card-glow mt-6">
+      <h3 style="margin-bottom: var(--space-4)">Impacto ambiental (estimativa)</h3>
+      <div class="grid grid-3">
+        <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="kpi-value">6,2 MWh</div><div class="kpi-label">Energia produzida/ano</div></div>
+        <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><div class="kpi-value">5,2 t</div><div class="kpi-label">CO2 evitado/ano</div></div>
+        <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><div class="kpi-value">240</div><div class="kpi-label">Arvores equiv.</div></div>
+      </div>
+      <p class="text-xs text-muted mt-4">Estimativa demonstrativa — metodologia ilustrativa</p>
+    </div>
 
     <p class="text-xs text-muted text-center mt-6">Plataforma demonstrativa — todos os dados de geracao, clima e status sao ficticios. Nao utiliza API real de concessionaria ou equipamento.</p>
   </div>

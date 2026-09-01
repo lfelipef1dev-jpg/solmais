@@ -80,8 +80,112 @@
       <div class="kpi-card"><div class="kpi-card-icon info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="kpi-value">79.8 MWh</div><div class="kpi-label">MWh este ano</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="kpi-value">R$ 6.070</div><div class="kpi-label">Economia estimada/mes</div></div>
     </div>
+    <div class="grid grid-2 mb-6">
+      <div class="card">
+        <h3 style="margin-bottom: var(--space-4)">Geracao por sistema (hoje)</h3>
+        <svg class="area-chart-svg" viewBox="0 0 350 205" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao kWh">
+  <defs>
+    <linearGradient id="area-grad-admin-mon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grid -->
+  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="36" x2="350" y2="36"/><line x1="0" y1="72" x2="350" y2="72"/><line x1="0" y1="108" x2="350" y2="108"/><line x1="0" y1="144" x2="350" y2="144"/>
+  </g>
+
+  
+
+  <!-- Area -->
+  <polygon points="0,180 0.0,155.6 87.5,98.7 175.0,16.4 262.5,169.3 350.0,151.2 350,180" fill="url(#area-grad-admin-mon)"/>
+
+  <!-- Linha principal -->
+  <polyline points="0.0,155.6 87.5,98.7 175.0,16.4 262.5,169.3 350.0,151.2" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Pontos -->
+  <circle cx="0.0" cy="155.6" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="87.5" cy="98.7" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="175.0" cy="16.4" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="262.5" cy="169.3" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="350.0" cy="151.2" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="0" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">4821</text><text x="88" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">2091</text><text x="175" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">1038</text><text x="263" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">3012</text><text x="350" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">5520</text>
+</svg>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: var(--space-4)">Mapa de sistemas</h3>
+        <svg class="map-demo-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa demonstrativo com localizacoes ficticias dos sistemas">
+  <defs>
+    <linearGradient id="map-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1520"/><stop offset="100%" stop-color="#0f1e30"/>
+    </linearGradient>
+    <filter id="map-glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#map-bg)" rx="8"/>
+
+  <!-- Linhas de costa (estilizada Baixada Santista) -->
+  <path d="M50 50 Q120 60 180 80 Q250 70 320 90 L350 120 Q300 140 250 135 Q180 150 120 130 Q80 140 50 120 Z" fill="#0a1e36" stroke="#1e3a5f" stroke-width="0.5" opacity="0.6"/>
+  <path d="M50 50 Q120 60 180 80 Q250 70 320 90" stroke="#3b82f6" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- Grid sutil -->
+  <g stroke="#1a2a3a" stroke-width="0.3" opacity="0.3">
+    <line x1="0" y1="0" x2="0" y2="300"/><line x1="50" y1="0" x2="50" y2="300"/><line x1="100" y1="0" x2="100" y2="300"/><line x1="150" y1="0" x2="150" y2="300"/><line x1="200" y1="0" x2="200" y2="300"/><line x1="250" y1="0" x2="250" y2="300"/><line x1="300" y1="0" x2="300" y2="300"/><line x1="350" y1="0" x2="350" y2="300"/>
+    <line x1="0" y1="0" x2="400" y2="0"/><line x1="0" y1="50" x2="400" y2="50"/><line x1="0" y1="100" x2="400" y2="100"/><line x1="0" y1="150" x2="400" y2="150"/><line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="250" x2="400" y2="250"/>
+  </g>
+
+  <!-- Pins dos sistemas -->
+  <g transform="translate(150 100)">
+      <circle r="12" fill="#22c55e" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#22c55e" opacity="0.8"/>
+      <circle r="3" fill="#22c55e"/>
+      <text y="-18" text-anchor="middle" fill="#22c55e" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-4821</text>
+    </g><g transform="translate(200 110)">
+      <circle r="12" fill="#f59e0b" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#f59e0b" opacity="0.8"/>
+      <circle r="3" fill="#f59e0b"/>
+      <text y="-18" text-anchor="middle" fill="#f59e0b" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-2091</text>
+    </g><g transform="translate(250 120)">
+      <circle r="12" fill="#22c55e" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#22c55e" opacity="0.8"/>
+      <circle r="3" fill="#22c55e"/>
+      <text y="-18" text-anchor="middle" fill="#22c55e" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-1038</text>
+    </g><g transform="translate(180 140)">
+      <circle r="12" fill="#ef4444" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#ef4444" opacity="0.8"/>
+      <circle r="3" fill="#ef4444"/>
+      <text y="-18" text-anchor="middle" fill="#ef4444" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-3012</text>
+    </g><g transform="translate(220 160)">
+      <circle r="12" fill="#22c55e" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#22c55e" opacity="0.8"/>
+      <circle r="3" fill="#22c55e"/>
+      <text y="-18" text-anchor="middle" fill="#22c55e" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-5520</text>
+    </g>
+
+  <!-- Legenda -->
+  <g transform="translate(15 260)">
+    <circle cx="6" cy="0" r="4" fill="#22c55e"/>
+    <text x="14" y="3" fill="#64748b" font-size="8" font-family="Inter, sans-serif">Normal</text>
+    <circle cx="66" cy="0" r="4" fill="#f59e0b"/>
+    <text x="74" y="3" fill="#64748b" font-size="8" font-family="Inter, sans-serif">Atencao</text>
+    <circle cx="126" cy="0" r="4" fill="#ef4444"/>
+    <text x="134" y="3" fill="#64748b" font-size="8" font-family="Inter, sans-serif">Alerta</text>
+  </g>
+  <text x="385" y="280" text-anchor="end" fill="#475569" font-size="7" font-family="Inter, sans-serif">Localizacoes demonstrativas</text>
+</svg>
+      </div>
+    </div>
     <div class="card">
-      <h3 style="margin-bottom: var(--space-4)">Geracao por sistema (hoje)</h3>
+      <h3 style="margin-bottom: var(--space-4)">Geracao por sistema (barras)</h3>
       <div class="bar-chart" style="height: 200px">
         <div class="bar-chart-item gen" style="height:15%"><span class="bar-chart-label">4821</span></div><div class="bar-chart-item gen" style="height:50%"><span class="bar-chart-label">2091</span></div><div class="bar-chart-item gen" style="height:100%"><span class="bar-chart-label">1038</span></div><div class="bar-chart-item gen" style="height:7%"><span class="bar-chart-label">3012</span></div><div class="bar-chart-item gen" style="height:18%"><span class="bar-chart-label">5520</span></div>
       </div>

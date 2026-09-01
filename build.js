@@ -93,6 +93,21 @@ function build() {
   fs.writeFileSync(path.join(OUT, 'robots.txt'), robots);
   console.log('  \u2713 sitemap.xml, robots.txt');
 
+  // Gerar OG images (SVG 1200x630)
+  const V = require(path.join(SRC, 'templates', 'visuals.js'));
+  const ogDir = path.join(OUT, 'img', 'og');
+  if (!fs.existsSync(ogDir)) fs.mkdirSync(ogDir, { recursive: true });
+  const ogPages = [
+    { file: 'home.svg', title: 'Energia Solar', subtitle: 'Simulador e Monitoramento' },
+    { file: 'simulador.svg', title: 'Simulador Solar', subtitle: '6 etapas — kWp, geracao e economia' },
+    { file: 'monitoramento.svg', title: 'Monitoramento', subtitle: 'Dashboard energetico em tempo real' },
+    { file: 'projetos.svg', title: 'Projetos', subtitle: 'Cases demonstrativos de energia solar' }
+  ];
+  ogPages.forEach(p => {
+    fs.writeFileSync(path.join(ogDir, p.file), V.ogImage({ title: p.title, subtitle: p.subtitle }));
+    console.log('  \u2713 img/og/' + p.file);
+  });
+
   const count = fs.readdirSync(OUT, { recursive: true }).filter(f => !fs.statSync(path.join(OUT, f), { throwIfNoEntry: false })?.isDirectory()).length;
   console.log('Build concluido \u2014 ' + count + ' arquivos em out/');
 }

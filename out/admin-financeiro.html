@@ -80,6 +80,36 @@
       <div class="kpi-card"><div class="kpi-card-icon info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="kpi-value">R$ 156.000</div><div class="kpi-label">Financiamento ativo</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="kpi-value">R$ 6.070</div><div class="kpi-label">Economia clientes/mes</div></div>
     </div>
+    <div class="chart-premium mb-6">
+      <h3>Receita mensal projetada</h3>
+      <svg class="area-chart-svg" viewBox="0 0 500 205" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao R$ / mes">
+  <defs>
+    <linearGradient id="area-grad-fin-rev" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grid -->
+  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="36" x2="500" y2="36"/><line x1="0" y1="72" x2="500" y2="72"/><line x1="0" y1="108" x2="500" y2="108"/><line x1="0" y1="144" x2="500" y2="144"/>
+  </g>
+
+  
+
+  <!-- Area -->
+  <polygon points="0,180 0.0,54.8 45.5,48.1 90.9,45.9 136.4,41.4 181.8,36.9 227.3,32.5 272.7,28.0 318.2,23.5 363.6,21.3 409.1,19.0 454.5,16.8 500.0,16.4 500,180" fill="url(#area-grad-fin-rev)"/>
+
+  <!-- Linha principal -->
+  <polyline points="0.0,54.8 45.5,48.1 90.9,45.9 136.4,41.4 181.8,36.9 227.3,32.5 272.7,28.0 318.2,23.5 363.6,21.3 409.1,19.0 454.5,16.8 500.0,16.4" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Pontos -->
+  <circle cx="0.0" cy="54.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="45.5" cy="48.1" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="90.9" cy="45.9" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="136.4" cy="41.4" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="181.8" cy="36.9" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="227.3" cy="32.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="272.7" cy="28.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="318.2" cy="23.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="363.6" cy="21.3" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="409.1" cy="19.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="454.5" cy="16.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="500.0" cy="16.4" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="0" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jan</text><text x="91" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mar</text><text x="182" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mai</text><text x="273" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jul</text><text x="364" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Set</text><text x="455" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Nov</text><text x="500" y="198" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Dez</text>
+</svg>
+    </div>
     <div class="card">
       <h3 style="margin-bottom: var(--space-4)">Receita por modalidade</h3>
       <table class="data-table">

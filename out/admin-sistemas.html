@@ -80,6 +80,504 @@
       <div class="kpi-card"><div class="kpi-card-icon warn" style="background:var(--danger-soft);color:var(--danger)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><div class="kpi-value">1</div><div class="kpi-label">Alerta</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div><div class="kpi-value">69.5 kWp</div><div class="kpi-label">Potencia total</div></div>
     </div>
+
+    <!-- Cards visuais de sistemas -->
+    <div class="grid grid-3 mb-6">
+      
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:var(--space-3)">
+          <div>
+            <h4 style="margin-bottom:var(--space-1)">SOL-4821</h4>
+            <p class="text-xs text-muted">Rafael Demonstracao — Santos, SP</p>
+          </div>
+          <span class="status-dot normal"></span>
+        </div>
+        <svg class="system-render-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Render isometrico do sistema solar com 10 modulos, inversor e medidor">
+  <defs>
+    <linearGradient id="iso-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#142840"/>
+    </linearGradient>
+    <linearGradient id="iso-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+    <linearGradient id="iso-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="250" fill="url(#iso-sky)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="40" r="18" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="340" cy="40" r="10" fill="#fbbf24"/>
+
+  <!-- Chao isometrico -->
+  <polygon points="50,200 200,160 350,200 200,240" fill="url(#iso-ground)" opacity="0.6"/>
+
+  <!-- Estrutura do telhado (isometrico) -->
+  <polygon points="80,170 200,130 320,170 200,210" fill="#1a2a3a" stroke="#334155" stroke-width="0.5"/>
+
+  <!-- Paineis no telhado (isometrico) -->
+  <g>
+    <polygon points="100,155 125,152 125,166 100,169" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,155 125,152 125,166 100,169" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="156" x2="108" y2="153" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="157" x2="116" y2="154" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,152 155,149 155,163 130,166" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,152 155,149 155,163 130,166" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="153" x2="138" y2="150" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="154" x2="146" y2="151" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,149 185,146 185,160 160,163" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,149 185,146 185,160 160,163" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="150" x2="168" y2="147" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="151" x2="176" y2="148" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,146 215,143 215,157 190,160" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,146 215,143 215,157 190,160" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="147" x2="198" y2="144" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="148" x2="206" y2="145" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,167 125,164 125,178 100,181" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,167 125,164 125,178 100,181" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="168" x2="108" y2="165" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="169" x2="116" y2="166" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,164 155,161 155,175 130,178" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,164 155,161 155,175 130,178" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="165" x2="138" y2="162" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="166" x2="146" y2="163" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,161 185,158 185,172 160,175" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,161 185,158 185,172 160,175" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="162" x2="168" y2="159" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="163" x2="176" y2="160" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,158 215,155 215,169 190,172" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,158 215,155 215,169 190,172" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="159" x2="198" y2="156" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="160" x2="206" y2="157" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,179 125,176 125,190 100,193" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,179 125,176 125,190 100,193" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="180" x2="108" y2="177" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="181" x2="116" y2="178" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,176 155,173 155,187 130,190" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,176 155,173 155,187 130,190" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="177" x2="138" y2="174" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="178" x2="146" y2="175" stroke="#1a3a5f" stroke-width="0.2"/>
+  </g>
+
+  <!-- Inversor (na parede lateral) -->
+  <g transform="translate(60 180)">
+    <rect width="22" height="30" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <rect x="2" y="3" width="18" height="10" rx="1" fill="#0f172a"/>
+    <text x="11" y="10" text-anchor="middle" fill="#22c55e" font-size="6" font-family="monospace">5kW</text>
+    <circle cx="11" cy="22" r="2.5" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Medidor -->
+  <g transform="translate(330 185)">
+    <rect width="20" height="25" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="10" cy="10" r="5" fill="#0f172a" stroke="#475569" stroke-width="0.3"/>
+    <line x1="10" y1="10" x2="13" y2="7" stroke="#22c55e" stroke-width="1"/>
+  </g>
+
+  <!-- Linhas de conexao -->
+  <path d="M75 195 Q150 210 280 195" stroke="#f59e0b" stroke-width="0.8" fill="none" opacity="0.3" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Label -->
+  <text x="200" y="245" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">10 modulos — 5.5 kWp — Inversor 5kW</text>
+</svg>
+        <div class="grid grid-2 mt-3">
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">5.5</div><div class="kpi-label">kWp</div></div>
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">18.7</div><div class="kpi-label">kWh hoje</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:var(--space-3)">
+          <div>
+            <h4 style="margin-bottom:var(--space-1)">SOL-2091</h4>
+            <p class="text-xs text-muted">Comercial Sao Vicente — Sao Vicente, SP</p>
+          </div>
+          <span class="status-dot atencao"></span>
+        </div>
+        <svg class="system-render-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Render isometrico do sistema solar com 33 modulos, inversor e medidor">
+  <defs>
+    <linearGradient id="iso-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#142840"/>
+    </linearGradient>
+    <linearGradient id="iso-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+    <linearGradient id="iso-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="250" fill="url(#iso-sky)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="40" r="18" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="340" cy="40" r="10" fill="#fbbf24"/>
+
+  <!-- Chao isometrico -->
+  <polygon points="50,200 200,160 350,200 200,240" fill="url(#iso-ground)" opacity="0.6"/>
+
+  <!-- Estrutura do telhado (isometrico) -->
+  <polygon points="80,170 200,130 320,170 200,210" fill="#1a2a3a" stroke="#334155" stroke-width="0.5"/>
+
+  <!-- Paineis no telhado (isometrico) -->
+  <g>
+    <polygon points="100,155 125,152 125,166 100,169" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,155 125,152 125,166 100,169" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="156" x2="108" y2="153" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="157" x2="116" y2="154" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,152 155,149 155,163 130,166" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,152 155,149 155,163 130,166" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="153" x2="138" y2="150" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="154" x2="146" y2="151" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,149 185,146 185,160 160,163" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,149 185,146 185,160 160,163" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="150" x2="168" y2="147" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="151" x2="176" y2="148" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,146 215,143 215,157 190,160" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,146 215,143 215,157 190,160" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="147" x2="198" y2="144" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="148" x2="206" y2="145" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,167 125,164 125,178 100,181" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,167 125,164 125,178 100,181" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="168" x2="108" y2="165" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="169" x2="116" y2="166" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,164 155,161 155,175 130,178" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,164 155,161 155,175 130,178" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="165" x2="138" y2="162" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="166" x2="146" y2="163" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,161 185,158 185,172 160,175" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,161 185,158 185,172 160,175" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="162" x2="168" y2="159" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="163" x2="176" y2="160" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,158 215,155 215,169 190,172" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,158 215,155 215,169 190,172" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="159" x2="198" y2="156" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="160" x2="206" y2="157" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,179 125,176 125,190 100,193" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,179 125,176 125,190 100,193" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="180" x2="108" y2="177" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="181" x2="116" y2="178" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,176 155,173 155,187 130,190" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,176 155,173 155,187 130,190" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="177" x2="138" y2="174" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="178" x2="146" y2="175" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,173 185,170 185,184 160,187" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,173 185,170 185,184 160,187" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="174" x2="168" y2="171" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="175" x2="176" y2="172" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,170 215,167 215,181 190,184" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,170 215,167 215,181 190,184" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="171" x2="198" y2="168" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="172" x2="206" y2="169" stroke="#1a3a5f" stroke-width="0.2"/>
+  </g>
+
+  <!-- Inversor (na parede lateral) -->
+  <g transform="translate(60 180)">
+    <rect width="22" height="30" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <rect x="2" y="3" width="18" height="10" rx="1" fill="#0f172a"/>
+    <text x="11" y="10" text-anchor="middle" fill="#22c55e" font-size="6" font-family="monospace">5kW</text>
+    <circle cx="11" cy="22" r="2.5" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Medidor -->
+  <g transform="translate(330 185)">
+    <rect width="20" height="25" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="10" cy="10" r="5" fill="#0f172a" stroke="#475569" stroke-width="0.3"/>
+    <line x1="10" y1="10" x2="13" y2="7" stroke="#22c55e" stroke-width="1"/>
+  </g>
+
+  <!-- Linhas de conexao -->
+  <path d="M75 195 Q150 210 280 195" stroke="#f59e0b" stroke-width="0.8" fill="none" opacity="0.3" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Label -->
+  <text x="200" y="245" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">33 modulos — 18 kWp — Inversor 17kW</text>
+</svg>
+        <div class="grid grid-2 mt-3">
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">18</div><div class="kpi-label">kWp</div></div>
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">62.3</div><div class="kpi-label">kWh hoje</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:var(--space-3)">
+          <div>
+            <h4 style="margin-bottom:var(--space-1)">SOL-1038</h4>
+            <p class="text-xs text-muted">Condominio Praia Grande — Praia Grande, SP</p>
+          </div>
+          <span class="status-dot normal"></span>
+        </div>
+        <svg class="system-render-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Render isometrico do sistema solar com 64 modulos, inversor e medidor">
+  <defs>
+    <linearGradient id="iso-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#142840"/>
+    </linearGradient>
+    <linearGradient id="iso-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+    <linearGradient id="iso-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="250" fill="url(#iso-sky)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="40" r="18" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="340" cy="40" r="10" fill="#fbbf24"/>
+
+  <!-- Chao isometrico -->
+  <polygon points="50,200 200,160 350,200 200,240" fill="url(#iso-ground)" opacity="0.6"/>
+
+  <!-- Estrutura do telhado (isometrico) -->
+  <polygon points="80,170 200,130 320,170 200,210" fill="#1a2a3a" stroke="#334155" stroke-width="0.5"/>
+
+  <!-- Paineis no telhado (isometrico) -->
+  <g>
+    <polygon points="100,155 125,152 125,166 100,169" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,155 125,152 125,166 100,169" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="156" x2="108" y2="153" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="157" x2="116" y2="154" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,152 155,149 155,163 130,166" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,152 155,149 155,163 130,166" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="153" x2="138" y2="150" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="154" x2="146" y2="151" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,149 185,146 185,160 160,163" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,149 185,146 185,160 160,163" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="150" x2="168" y2="147" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="151" x2="176" y2="148" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,146 215,143 215,157 190,160" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,146 215,143 215,157 190,160" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="147" x2="198" y2="144" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="148" x2="206" y2="145" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,167 125,164 125,178 100,181" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,167 125,164 125,178 100,181" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="168" x2="108" y2="165" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="169" x2="116" y2="166" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,164 155,161 155,175 130,178" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,164 155,161 155,175 130,178" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="165" x2="138" y2="162" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="166" x2="146" y2="163" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,161 185,158 185,172 160,175" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,161 185,158 185,172 160,175" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="162" x2="168" y2="159" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="163" x2="176" y2="160" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,158 215,155 215,169 190,172" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,158 215,155 215,169 190,172" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="159" x2="198" y2="156" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="160" x2="206" y2="157" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,179 125,176 125,190 100,193" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,179 125,176 125,190 100,193" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="180" x2="108" y2="177" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="181" x2="116" y2="178" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,176 155,173 155,187 130,190" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,176 155,173 155,187 130,190" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="177" x2="138" y2="174" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="178" x2="146" y2="175" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,173 185,170 185,184 160,187" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,173 185,170 185,184 160,187" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="174" x2="168" y2="171" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="175" x2="176" y2="172" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,170 215,167 215,181 190,184" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,170 215,167 215,181 190,184" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="171" x2="198" y2="168" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="172" x2="206" y2="169" stroke="#1a3a5f" stroke-width="0.2"/>
+  </g>
+
+  <!-- Inversor (na parede lateral) -->
+  <g transform="translate(60 180)">
+    <rect width="22" height="30" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <rect x="2" y="3" width="18" height="10" rx="1" fill="#0f172a"/>
+    <text x="11" y="10" text-anchor="middle" fill="#22c55e" font-size="6" font-family="monospace">5kW</text>
+    <circle cx="11" cy="22" r="2.5" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Medidor -->
+  <g transform="translate(330 185)">
+    <rect width="20" height="25" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="10" cy="10" r="5" fill="#0f172a" stroke="#475569" stroke-width="0.3"/>
+    <line x1="10" y1="10" x2="13" y2="7" stroke="#22c55e" stroke-width="1"/>
+  </g>
+
+  <!-- Linhas de conexao -->
+  <path d="M75 195 Q150 210 280 195" stroke="#f59e0b" stroke-width="0.8" fill="none" opacity="0.3" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Label -->
+  <text x="200" y="245" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">64 modulos — 35 kWp — Inversor 30kW</text>
+</svg>
+        <div class="grid grid-2 mt-3">
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">35</div><div class="kpi-label">kWp</div></div>
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">125.4</div><div class="kpi-label">kWh hoje</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:var(--space-3)">
+          <div>
+            <h4 style="margin-bottom:var(--space-1)">SOL-3012</h4>
+            <p class="text-xs text-muted">Sitio Cubatao — Cubatao, SP</p>
+          </div>
+          <span class="status-dot alerta"></span>
+        </div>
+        <svg class="system-render-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Render isometrico do sistema solar com 8 modulos, inversor e medidor">
+  <defs>
+    <linearGradient id="iso-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#142840"/>
+    </linearGradient>
+    <linearGradient id="iso-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+    <linearGradient id="iso-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="250" fill="url(#iso-sky)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="40" r="18" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="340" cy="40" r="10" fill="#fbbf24"/>
+
+  <!-- Chao isometrico -->
+  <polygon points="50,200 200,160 350,200 200,240" fill="url(#iso-ground)" opacity="0.6"/>
+
+  <!-- Estrutura do telhado (isometrico) -->
+  <polygon points="80,170 200,130 320,170 200,210" fill="#1a2a3a" stroke="#334155" stroke-width="0.5"/>
+
+  <!-- Paineis no telhado (isometrico) -->
+  <g>
+    <polygon points="100,155 125,152 125,166 100,169" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,155 125,152 125,166 100,169" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="156" x2="108" y2="153" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="157" x2="116" y2="154" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,152 155,149 155,163 130,166" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,152 155,149 155,163 130,166" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="153" x2="138" y2="150" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="154" x2="146" y2="151" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,149 185,146 185,160 160,163" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,149 185,146 185,160 160,163" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="150" x2="168" y2="147" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="151" x2="176" y2="148" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,146 215,143 215,157 190,160" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,146 215,143 215,157 190,160" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="147" x2="198" y2="144" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="148" x2="206" y2="145" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,167 125,164 125,178 100,181" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,167 125,164 125,178 100,181" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="168" x2="108" y2="165" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="169" x2="116" y2="166" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,164 155,161 155,175 130,178" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,164 155,161 155,175 130,178" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="165" x2="138" y2="162" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="166" x2="146" y2="163" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,161 185,158 185,172 160,175" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,161 185,158 185,172 160,175" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="162" x2="168" y2="159" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="163" x2="176" y2="160" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,158 215,155 215,169 190,172" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,158 215,155 215,169 190,172" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="159" x2="198" y2="156" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="160" x2="206" y2="157" stroke="#1a3a5f" stroke-width="0.2"/>
+  </g>
+
+  <!-- Inversor (na parede lateral) -->
+  <g transform="translate(60 180)">
+    <rect width="22" height="30" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <rect x="2" y="3" width="18" height="10" rx="1" fill="#0f172a"/>
+    <text x="11" y="10" text-anchor="middle" fill="#22c55e" font-size="6" font-family="monospace">5kW</text>
+    <circle cx="11" cy="22" r="2.5" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Medidor -->
+  <g transform="translate(330 185)">
+    <rect width="20" height="25" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="10" cy="10" r="5" fill="#0f172a" stroke="#475569" stroke-width="0.3"/>
+    <line x1="10" y1="10" x2="13" y2="7" stroke="#22c55e" stroke-width="1"/>
+  </g>
+
+  <!-- Linhas de conexao -->
+  <path d="M75 195 Q150 210 280 195" stroke="#f59e0b" stroke-width="0.8" fill="none" opacity="0.3" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Label -->
+  <text x="200" y="245" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">8 modulos — 4.4 kWp — Inversor 4kW</text>
+</svg>
+        <div class="grid grid-2 mt-3">
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">4.4</div><div class="kpi-label">kWp</div></div>
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">8.2</div><div class="kpi-label">kWh hoje</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:var(--space-3)">
+          <div>
+            <h4 style="margin-bottom:var(--space-1)">SOL-5520</h4>
+            <p class="text-xs text-muted">Residencial Guaruja — Guaruja, SP</p>
+          </div>
+          <span class="status-dot normal"></span>
+        </div>
+        <svg class="system-render-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Render isometrico do sistema solar com 12 modulos, inversor e medidor">
+  <defs>
+    <linearGradient id="iso-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#142840"/>
+    </linearGradient>
+    <linearGradient id="iso-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+    <linearGradient id="iso-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="250" fill="url(#iso-sky)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="40" r="18" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="340" cy="40" r="10" fill="#fbbf24"/>
+
+  <!-- Chao isometrico -->
+  <polygon points="50,200 200,160 350,200 200,240" fill="url(#iso-ground)" opacity="0.6"/>
+
+  <!-- Estrutura do telhado (isometrico) -->
+  <polygon points="80,170 200,130 320,170 200,210" fill="#1a2a3a" stroke="#334155" stroke-width="0.5"/>
+
+  <!-- Paineis no telhado (isometrico) -->
+  <g>
+    <polygon points="100,155 125,152 125,166 100,169" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,155 125,152 125,166 100,169" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="156" x2="108" y2="153" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="157" x2="116" y2="154" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,152 155,149 155,163 130,166" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,152 155,149 155,163 130,166" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="153" x2="138" y2="150" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="154" x2="146" y2="151" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,149 185,146 185,160 160,163" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,149 185,146 185,160 160,163" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="150" x2="168" y2="147" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="151" x2="176" y2="148" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,146 215,143 215,157 190,160" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,146 215,143 215,157 190,160" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="147" x2="198" y2="144" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="148" x2="206" y2="145" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,167 125,164 125,178 100,181" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,167 125,164 125,178 100,181" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="168" x2="108" y2="165" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="169" x2="116" y2="166" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,164 155,161 155,175 130,178" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,164 155,161 155,175 130,178" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="165" x2="138" y2="162" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="166" x2="146" y2="163" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,161 185,158 185,172 160,175" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,161 185,158 185,172 160,175" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="162" x2="168" y2="159" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="163" x2="176" y2="160" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,158 215,155 215,169 190,172" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,158 215,155 215,169 190,172" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="159" x2="198" y2="156" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="160" x2="206" y2="157" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="100,179 125,176 125,190 100,193" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="100,179 125,176 125,190 100,193" fill="#3b82f6" opacity="0.08"/>
+      <line x1="108" y1="180" x2="108" y2="177" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="116" y1="181" x2="116" y2="178" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="130,176 155,173 155,187 130,190" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="130,176 155,173 155,187 130,190" fill="#3b82f6" opacity="0.08"/>
+      <line x1="138" y1="177" x2="138" y2="174" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="146" y1="178" x2="146" y2="175" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="160,173 185,170 185,184 160,187" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="160,173 185,170 185,184 160,187" fill="#3b82f6" opacity="0.08"/>
+      <line x1="168" y1="174" x2="168" y2="171" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="176" y1="175" x2="176" y2="172" stroke="#1a3a5f" stroke-width="0.2"/><polygon points="190,170 215,167 215,181 190,184" fill="url(#iso-panel)" stroke="#2a4a6f" stroke-width="0.3"/>
+      <polygon points="190,170 215,167 215,181 190,184" fill="#3b82f6" opacity="0.08"/>
+      <line x1="198" y1="171" x2="198" y2="168" stroke="#1a3a5f" stroke-width="0.2"/>
+      <line x1="206" y1="172" x2="206" y2="169" stroke="#1a3a5f" stroke-width="0.2"/>
+  </g>
+
+  <!-- Inversor (na parede lateral) -->
+  <g transform="translate(60 180)">
+    <rect width="22" height="30" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <rect x="2" y="3" width="18" height="10" rx="1" fill="#0f172a"/>
+    <text x="11" y="10" text-anchor="middle" fill="#22c55e" font-size="6" font-family="monospace">5kW</text>
+    <circle cx="11" cy="22" r="2.5" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Medidor -->
+  <g transform="translate(330 185)">
+    <rect width="20" height="25" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="10" cy="10" r="5" fill="#0f172a" stroke="#475569" stroke-width="0.3"/>
+    <line x1="10" y1="10" x2="13" y2="7" stroke="#22c55e" stroke-width="1"/>
+  </g>
+
+  <!-- Linhas de conexao -->
+  <path d="M75 195 Q150 210 280 195" stroke="#f59e0b" stroke-width="0.8" fill="none" opacity="0.3" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Label -->
+  <text x="200" y="245" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">12 modulos — 6.6 kWp — Inversor 6kW</text>
+</svg>
+        <div class="grid grid-2 mt-3">
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">6.6</div><div class="kpi-label">kWp</div></div>
+          <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">22.1</div><div class="kpi-label">kWh hoje</div></div>
+        </div>
+      </div>
+    </div>
+
     <div class="card">
       <table class="data-table">
         <tr><th>Sistema</th><th>Cliente</th><th>Local</th><th>Potencia</th><th>Geracao hoje</th><th>Status</th><th>Ultima comun.</th></tr>

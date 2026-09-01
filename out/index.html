@@ -12,15 +12,15 @@
   <meta property="og:url" content="https://solmais.expostacker.com.br/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SolMais">
-  <meta property="og:image" content="https://solmais.expostacker.com.br/img/hero-solar.jpg">
+  <meta property="og:image" content="https://solmais.expostacker.com.br/img/og/home.svg">
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Energia Solar: Simulador e Monitoramento | SolMais">
   <meta name="twitter:description" content="Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geracao e economia estimadas e acompanhe o projeto ate o monitoramento.">
-  <meta name="twitter:image" content="https://solmais.expostacker.com.br/img/hero-solar.jpg">
+  <meta name="twitter:image" content="https://solmais.expostacker.com.br/img/og/home.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="img/hero-solar-mobile.jpg" fetchpriority="high">
+  
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/components.css">
   <link rel="stylesheet" href="styles/pages.css">
@@ -55,6 +55,7 @@
     <section class="hero">
   <div class="container hero-inner">
     <div class="hero-content">
+      <span class="badge-premium mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Plataforma demonstrativa — dados ficticios</span>
       <h1>Energia solar <span>calculada</span> para a sua realidade</h1>
       <p>Simule seu sistema, visualize geracao e economia estimadas e acompanhe cada etapa do projeto — da analise ao monitoramento.</p>
       <div class="hero-cta">
@@ -62,30 +63,385 @@
         <a href="monitoramento.html" class="btn btn-secondary btn-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Explorar demonstracao</a>
       </div>
     </div>
-    <div class="quick-sim">
+    <div class="hero-visual-wrap">
+      <svg class="hero-arch-svg" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Residencia contemporanea com sistema solar fotovoltaico integrado ao telhado">
+  <defs>
+    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="35%" stop-color="#142840"/>
+      <stop offset="65%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#2a4a6f"/>
+    </linearGradient>
+    <linearGradient id="sun-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="panel-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="50%" stop-color="#0f2744"/>
+      <stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+    <linearGradient id="panel-sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="house-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="glass-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1e3a5f" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="ground-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/>
+      <stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ceu -->
+  <rect width="1200" height="600" fill="url(#sky-grad)"/>
+
+  <!-- Sol / brilho -->
+  <circle cx="983.9999999999999" cy="108" r="60" fill="url(#sun-glow)"/>
+  <circle cx="983.9999999999999" cy="108" r="25" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="983.9999999999999" cy="108" r="15" fill="#fbbf24" opacity="0.95"/>
+
+  <!-- Montanhas distantes -->
+  <path d="M0 330 L180 252 L360 300 L540 228 L720 288 L900 240 L1080 276 L1200 252 L1200 360 L0 360 Z" fill="#0f1e30" opacity="0.6"/>
+  <path d="M0 360 L240 300 L480 330 L660 288 L840 312 L1020 276 L1200 300 L1200 390 L0 390 Z" fill="#0a1828" opacity="0.8"/>
+
+  <!-- Chao -->
+  <rect y="468" width="1200" height="132" fill="url(#ground-grad)"/>
+
+  <!-- Casa contemporanea - estrutura base -->
+  <!-- Volume principal (retangular moderno) -->
+  <rect x="180" y="270" width="420" height="198" fill="url(#house-wall)" filter="url(#soft-shadow)"/>
+
+  <!-- Segundo volume (mais baixo, a direita) -->
+  <rect x="576" y="312" width="264" height="156" fill="#cbd5e1" filter="url(#soft-shadow)"/>
+
+  <!-- Telhado inclinado com paineis (volume principal) -->
+  <!-- Telhado -->
+  <polygon points="144,270 600,270 600,210 240,210" fill="#1a2a3a"/>
+  <!-- Paineis no telhado (grade) -->
+  <g transform="translate(168.00000000000003 216)">
+    <g transform="translate(0 0)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(55 2)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(110 4)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(165 6)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(220 8)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(275 10)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(0 18)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(55 20)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(110 22)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(165 24)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(220 26)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(275 28)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(0 36)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(55 38)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(110 40)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(165 42)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(220 44)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(275 46)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(0 54)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(55 56)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(110 58)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(165 60)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(220 62)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(275 64)">
+          <rect width="50" height="16" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="50" height="16" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="12.5" y1="0" x2="12.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="25" y1="0" x2="25" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="37.5" y1="0" x2="37.5" y2="16" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="0" y1="8" x2="50" y2="8" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g>
+  </g>
+
+  <!-- Telhado volume secundario (plano com paineis) -->
+  <rect x="576" y="294" width="264" height="24" fill="#1a2a3a"/>
+  <g transform="translate(588 297)">
+    <g transform="translate(0 0)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(48 0)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(96 0)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(144 0)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(192 0)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(0 14)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(48 14)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(96 14)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(144 14)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g><g transform="translate(192 14)">
+          <rect width="44" height="12" rx="1" fill="url(#panel-grad)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="44" height="12" rx="1" fill="url(#panel-sheen)"/>
+          <line x1="11" y1="0" x2="11" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="22" y1="0" x2="22" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+          <line x1="33" y1="0" x2="33" y2="12" stroke="#1a3a5f" stroke-width="0.3"/>
+        </g>
+  </g>
+
+  <!-- Janelas (vidro grande - arquitetura contemporanea) -->
+  <rect x="216" y="330" width="96" height="90" fill="url(#glass-grad)" opacity="0.7"/>
+  <rect x="336.00000000000006" y="330" width="96" height="90" fill="url(#glass-grad)" opacity="0.7"/>
+  <rect x="456" y="330" width="72" height="90" fill="url(#glass-grad)" opacity="0.6"/>
+
+  <!-- Porta -->
+  <rect x="540" y="372" width="48" height="96" fill="#1e293b"/>
+
+  <!-- Janelas volume secundario -->
+  <rect x="612" y="348" width="72" height="72" fill="url(#glass-grad)" opacity="0.7"/>
+  <rect x="708" y="348" width="72" height="72" fill="url(#glass-grad)" opacity="0.7"/>
+
+  <!-- Linhas arquitetonicas (detalhes) -->
+  <line x1="180" y1="270" x2="600" y2="270" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+  <line x1="576" y1="312" x2="840" y2="312" stroke="#475569" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Inversor na parede (detalhe tecnico) -->
+  <g transform="translate(624 360)">
+    <rect width="18" height="24" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <rect x="2" y="3" width="14" height="8" rx="1" fill="#0f172a"/>
+    <circle cx="9" cy="18" r="2" fill="#22c55e" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="9" cy="18" r="1" fill="#4ade80"/>
+  </g>
+
+  <!-- Linhas de energia (do telhado para o inversor) -->
+  <path d="M660 300 L660 348 L636 360" stroke="#f59e0b" stroke-width="1" opacity="0.4" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Vegetacao sutil (nao exagerar) -->
+  <ellipse cx="120" cy="474" rx="30" ry="8" fill="#0f1e1a" opacity="0.6"/>
+  <ellipse cx="900" cy="474" rx="25" ry="6" fill="#0f1e1a" opacity="0.6"/>
+
+  <!-- Grade de energia ao fundo (poste sutil) -->
+  <line x1="1104" y1="300" x2="1104" y2="468" stroke="#334155" stroke-width="1" opacity="0.4"/>
+  <line x1="1056" y1="330" x2="1152" y2="330" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Particulas de energia (pontos luminosos) -->
+  <circle cx="360" cy="180" r="1.5" fill="#f59e0b" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="150" r="1" fill="#60a5fa" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="780" cy="192" r="1.2" fill="#f59e0b" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: var(--space-8)">
+  <div class="container">
+    <div class="quick-sim" style="max-width: 600px; margin: 0 auto;">
       <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> Simulacao rapida</h3>
-      <div class="field">
-        <label class="label">Minha conta media</label>
-        <input type="number" class="input" id="qs-bill" placeholder="R$ 650" value="650">
-      </div>
-      <div class="field">
-        <label class="label">Minha cidade</label>
-        <select class="select" id="qs-city">
-          <option value="santos">Santos/SP</option>
-          <option value="saovicente">Sao Vicente/SP</option>
-          <option value="praiagrande">Praia Grande/SP</option>
-          <option value="guaruja">Guaruja/SP</option>
-          <option value="cubatao">Cubatao/SP</option>
-        </select>
-      </div>
-      <div class="field">
-        <label class="label">Tipo de imovel</label>
-        <select class="select" id="qs-type">
-          <option value="residencial">Residencial</option>
-          <option value="comercial">Comercial</option>
-          <option value="condominio">Condominio</option>
-          <option value="rural">Rural</option>
-        </select>
+      <div class="grid grid-2">
+        <div class="field">
+          <label class="label">Minha conta media</label>
+          <input type="number" class="input" id="qs-bill" placeholder="R$ 650" value="650">
+        </div>
+        <div class="field">
+          <label class="label">Tipo de imovel</label>
+          <select class="select" id="qs-type">
+            <option value="residencial">Residencial</option>
+            <option value="comercial">Comercial</option>
+            <option value="condominio">Condominio</option>
+            <option value="rural">Rural</option>
+          </select>
+        </div>
       </div>
       <button class="btn btn-primary btn-block" onclick="SolMais.quickSim()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Calcular potencial solar</button>
       <div class="quick-sim-result hidden" id="qs-result">
@@ -96,6 +452,114 @@
         <a href="simulador.html" class="btn btn-secondary btn-block mt-4">Fazer simulacao completa <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <p class="text-xs text-muted mt-4 text-center">Estimativa demonstrativa — dados ficticios</p>
+    </div>
+  </div>
+</section><section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Como funciona a energia solar</h2>
+      <p>Do sol a sua conta de luz — o fluxo energetico completo</p>
+    </div>
+    <div class="energy-flow-wrap">
+      <svg class="energy-flow-svg" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo de energia: sol gera nos paineis, inversor converte, casa consome e excedente vai para a rede">
+  <defs>
+    <linearGradient id="flow-sun" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="flow-panel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="flow-inv" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/><stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="flow-grid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="flow-glow"><feGaussianBlur stdDeviation="3"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Sol -->
+  <g transform="translate(60 100)">
+    <circle r="32" fill="url(#flow-sun)" filter="url(#flow-glow)" opacity="0.9"/>
+    <circle r="22" fill="#fbbf24"/>
+    <g stroke="#f59e0b" stroke-width="2" stroke-linecap="round">
+      <line x1="0" y1="-40" x2="0" y2="-48"/><line x1="0" y1="40" x2="0" y2="48"/>
+      <line x1="-40" y1="0" x2="-48" y2="0"/><line x1="40" y1="0" x2="48" y2="0"/>
+      <line x1="-28" y1="-28" x2="-34" y2="-34"/><line x1="28" y1="28" x2="34" y2="34"/>
+      <line x1="-28" y1="28" x2="-34" y2="34"/><line x1="28" y1="-28" x2="34" y2="-34"/>
+    </g>
+    <text y="65" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600" font-family="Inter, sans-serif">SOL</text>
+  </g>
+
+  <!-- Seta Sol -> Painel -->
+  <line x1="100" y1="100" x2="180" y2="100" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+  <polygon points="180,96 188,100 180,104" fill="#f59e0b" opacity="0.7"/>
+
+  <!-- Painel -->
+  <g transform="translate(220 100)">
+    <rect x="-35" y="-25" width="70" height="50" rx="3" fill="#0f2744" stroke="#1e3a5f" stroke-width="1"/>
+    <rect x="-32" y="-22" width="64" height="44" rx="2" fill="#1e3a5f" opacity="0.5"/>
+    <g stroke="#2a4a6f" stroke-width="0.5">
+      <line x1="-32" y1="-11" x2="32" y2="-11"/><line x1="-32" y1="0" x2="32" y2="0"/><line x1="-32" y1="11" x2="32" y2="11"/>
+      <line x1="-16" y1="-22" x2="-16" y2="22"/><line x1="0" y1="-22" x2="0" y2="22"/><line x1="16" y1="-22" x2="16" y2="22"/>
+    </g>
+    <rect x="-32" y="-22" width="64" height="44" rx="2" fill="url(#flow-panel)" opacity="0.1"/>
+    <text y="45" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="600" font-family="Inter, sans-serif">PAINEL</text>
+  </g>
+
+  <!-- Seta Painel -> Inversor -->
+  <line x1="260" y1="100" x2="340" y2="100" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+  <polygon points="340,96 348,100 340,104" fill="#3b82f6" opacity="0.7"/>
+
+  <!-- Inversor -->
+  <g transform="translate(390 100)">
+    <rect x="-30" y="-25" width="60" height="50" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <rect x="-25" y="-20" width="50" height="20" rx="2" fill="#0f172a"/>
+    <text x="0" y="-6" text-anchor="middle" fill="#22c55e" font-size="8" font-family="monospace" font-weight="600">3.42 kW</text>
+    <circle cx="-15" cy="12" r="3" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="0" cy="12" r="3" fill="#22c55e" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="15" cy="12" r="3" fill="#22c55e" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/></circle>
+    <text y="45" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="600" font-family="Inter, sans-serif">INVERSOR</text>
+  </g>
+
+  <!-- Seta Inversor -> Casa -->
+  <line x1="425" y1="100" x2="505" y2="100" stroke="#22c55e" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+  <polygon points="505,96 513,100 505,104" fill="#22c55e" opacity="0.7"/>
+
+  <!-- Casa -->
+  <g transform="translate(555 100)">
+    <path d="M-30 -15 L0 -35 L30 -15 L30 20 L-30 20 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+    <rect x="-15" y="-5" width="12" height="18" fill="#1e3a5f" opacity="0.6"/>
+    <rect x="5" y="-5" width="12" height="12" fill="#60a5fa" opacity="0.4"/>
+    <text y="40" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="600" font-family="Inter, sans-serif">IMÓVEL</text>
+  </g>
+
+  <!-- Seta Casa <-> Rede (bidirecional) -->
+  <line x1="590" y1="100" x2="670" y2="100" stroke="#6366f1" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"><animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/></line>
+  <polygon points="670,96 678,100 670,104" fill="#6366f1" opacity="0.7"/>
+  <polygon points="590,96 582,100 590,104" fill="#6366f1" opacity="0.5"/>
+
+  <!-- Rede -->
+  <g transform="translate(720 100)">
+    <g stroke="#818cf8" stroke-width="1.5" fill="none">
+      <line x1="0" y1="-30" x2="0" y2="25"/>
+      <line x1="-20" y1="-20" x2="20" y2="-20"/>
+      <line x1="-15" y1="-10" x2="15" y2="-10"/>
+      <line x1="-10" y1="0" x2="10" y2="0"/>
+    </g>
+    <circle cx="0" cy="-25" r="3" fill="#818cf8"/>
+    <text y="45" text-anchor="middle" fill="#818cf8" font-size="11" font-weight="600" font-family="Inter, sans-serif">REDE</text>
+  </g>
+</svg>
+    </div>
+    <div class="grid grid-4 mt-6">
+      <div class="card text-center"><div class="kpi-card-icon solar" style="margin: 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><h4>Sol</h4><p class="text-sm text-muted">Luz solar atinge os modulos fotovoltaicos</p></div>
+      <div class="card text-center"><div class="kpi-card-icon info" style="margin: 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div><h4>Paineis</h4><p class="text-sm text-muted">Convertem luz em corrente continua (CC)</p></div>
+      <div class="card text-center"><div class="kpi-card-icon gen" style="margin: 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h4>Inversor</h4><p class="text-sm text-muted">Transforma CC em corrente alternada (CA)</p></div>
+      <div class="card text-center"><div class="kpi-card-icon warn" style="margin: 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h4>Imovel</h4><p class="text-sm text-muted">Consome e excedente vai para a rede</p></div>
+    </div>
+    <div class="text-center mt-6">
+      <a href="como-funciona.html" class="btn btn-secondary">Entenda o processo completo <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
   </div>
 </section><section class="section">
@@ -140,12 +604,42 @@
     <div class="grid grid-3">
       
       <div class="case-card">
-        <div class="case-card-header">
+        <svg class="case-thumb-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Projeto Residencial demonstrativo">
+  <defs>
+    <linearGradient id="ct-sky-residencial" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#142840"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+    <linearGradient id="ct-panel-residencial" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="220" fill="url(#ct-sky-residencial)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="44" r="20" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="340" cy="44" r="12" fill="#fbbf24" opacity="0.7"/>
+
+  <!-- Estrutura (varia por tipo) -->
+  
+    <polygon points="40,121.00000000000001 200,121.00000000000001 200,77 80,77" fill="#334155"/>
+    <rect x="48" y="121.00000000000001" width="144" height="66" fill="#cbd5e1" opacity="0.8"/>
+    <g transform="translate(56.00000000000001 81.4)">
+      <rect x="0" y="0" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="50" y="2" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="100" y="4" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="150" y="6" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="200" y="8" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="250" y="10" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="0" y="16" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="50" y="18" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="100" y="20" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="150" y="22" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="200" y="24" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="250" y="26" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="0" y="32" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="50" y="34" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="100" y="36" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="150" y="38" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="200" y="40" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="250" y="42" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="0" y="48" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="50" y="50" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="100" y="52" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="150" y="54" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="200" y="56" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/><rect x="250" y="58" width="46" height="14" rx="1" fill="url(#ct-panel-residencial)" stroke="#2a4a6f" stroke-width="0.3"/>
+    </g>
+  
+
+  <!-- Demo badge -->
+  <rect x="320" y="10" width="70" height="18" rx="9" fill="#f59e0b" opacity="0.9"/>
+  <text x="355" y="22" text-anchor="middle" fill="#0a1520" font-size="9" font-weight="700" font-family="Inter, sans-serif">DEMO</text>
+
+  <text x="15" y="210" fill="#64748b" font-size="10" font-family="Inter, sans-serif">Residencial — 10 modulos</text>
+</svg>
+        <div class="case-card-header" style="margin-top: var(--space-4)">
           <div>
             <h3>Residencial Santos — DEMO</h3>
             <p class="text-xs text-muted">Santos, SP &middot; residencial</p>
           </div>
-          <span class="demo-badge">DEMO</span>
         </div>
         <div class="case-card-stats">
           <div class="case-stat"><div class="val">5.5 kWp</div><div class="lbl">Potencia</div></div>
@@ -156,12 +650,44 @@
         <a href="projeto-residencial-santos-demo.html" class="btn btn-secondary btn-sm">Ver detalhes <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div class="case-card">
-        <div class="case-card-header">
+        <svg class="case-thumb-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Projeto Comercial demonstrativo">
+  <defs>
+    <linearGradient id="ct-sky-comercial" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+    <linearGradient id="ct-panel-comercial" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="220" fill="url(#ct-sky-comercial)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="44" r="20" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="340" cy="44" r="12" fill="#fbbf24" opacity="0.7"/>
+
+  <!-- Estrutura (varia por tipo) -->
+  
+    <rect x="20" y="88" width="360" height="99" fill="#1e293b"/>
+    <rect x="20" y="83.6" width="360" height="8.8" fill="#1a2a3a"/>
+    <g transform="translate(32 85.8)">
+      <rect x="0" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="32" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="64" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="96" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="128" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="160" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="192" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="224" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="256" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="288" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="320" y="0" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="32" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="64" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="96" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="128" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="160" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="192" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="224" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="256" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="288" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="320" y="10" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="32" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="64" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="96" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="128" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="160" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="192" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="224" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="256" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="288" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="320" y="20" width="30" height="8" rx="1" fill="url(#ct-panel-comercial)" stroke="#2a4a6f" stroke-width="0.2"/>
+    </g>
+    <rect x="40" y="132" width="60" height="44" fill="#60a5fa" opacity="0.3"/>
+    <rect x="120" y="132" width="60" height="44" fill="#60a5fa" opacity="0.3"/>
+  
+
+  <!-- Demo badge -->
+  <rect x="320" y="10" width="70" height="18" rx="9" fill="#f59e0b" opacity="0.9"/>
+  <text x="355" y="22" text-anchor="middle" fill="#0a1520" font-size="9" font-weight="700" font-family="Inter, sans-serif">DEMO</text>
+
+  <text x="15" y="210" fill="#64748b" font-size="10" font-family="Inter, sans-serif">Comercial — 33 modulos</text>
+</svg>
+        <div class="case-card-header" style="margin-top: var(--space-4)">
           <div>
             <h3>Comercial Sao Vicente — DEMO</h3>
             <p class="text-xs text-muted">Sao Vicente, SP &middot; comercial</p>
           </div>
-          <span class="demo-badge">DEMO</span>
         </div>
         <div class="case-card-stats">
           <div class="case-stat"><div class="val">18 kWp</div><div class="lbl">Potencia</div></div>
@@ -172,12 +698,46 @@
         <a href="projeto-comercial-sao-vicente-demo.html" class="btn btn-secondary btn-sm">Ver detalhes <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div class="case-card">
-        <div class="case-card-header">
+        <svg class="case-thumb-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Projeto Condominio demonstrativo">
+  <defs>
+    <linearGradient id="ct-sky-condominio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+    <linearGradient id="ct-panel-condominio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0a1e36"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="220" fill="url(#ct-sky-condominio)" rx="8"/>
+
+  <!-- Sol -->
+  <circle cx="340" cy="44" r="20" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="340" cy="44" r="12" fill="#fbbf24" opacity="0.7"/>
+
+  <!-- Estrutura (varia por tipo) -->
+  
+    <rect x="20" y="77" width="100" height="110" fill="#475569"/>
+    <rect x="140" y="66" width="100" height="121.00000000000001" fill="#475569"/>
+    <rect x="260" y="83.6" width="120" height="103.39999999999999" fill="#475569"/>
+    <g transform="translate(28.000000000000004 79.2)">
+      <rect x="0" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/>
+    </g>
+    <g transform="translate(148 68.2)">
+      <rect x="0" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="0" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="5" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="10" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="15" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="20" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="25" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="30" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="0" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="18" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="36" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/><rect x="54" y="35" width="16" height="4" rx="0.5" fill="url(#ct-panel-condominio)" stroke="#2a4a6f" stroke-width="0.2"/>
+    </g>
+  
+
+  <!-- Demo badge -->
+  <rect x="320" y="10" width="70" height="18" rx="9" fill="#f59e0b" opacity="0.9"/>
+  <text x="355" y="22" text-anchor="middle" fill="#0a1520" font-size="9" font-weight="700" font-family="Inter, sans-serif">DEMO</text>
+
+  <text x="15" y="210" fill="#64748b" font-size="10" font-family="Inter, sans-serif">Condominio — 64 modulos</text>
+</svg>
+        <div class="case-card-header" style="margin-top: var(--space-4)">
           <div>
             <h3>Condominio Praia Grande — DEMO</h3>
             <p class="text-xs text-muted">Praia Grande, SP &middot; condominio</p>
           </div>
-          <span class="demo-badge">DEMO</span>
         </div>
         <div class="case-card-stats">
           <div class="case-stat"><div class="val">35 kWp</div><div class="lbl">Potencia</div></div>
@@ -194,9 +754,9 @@
   </div>
 </section><section class="section">
   <div class="container">
-    <div class="card card-elevated card-glow text-center" style="padding: var(--space-10) var(--space-6)">
-      <h2 style="font-size: var(--fs-3xl); margin-bottom: var(--space-3)">Pronto para simular?</h2>
-      <p class="text-lg text-secondary mb-6" style="max-width: 500px; margin: 0 auto var(--space-6)">Faca uma simulacao completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
+    <div class="visual-section">
+      <h2 style="font-size: var(--fs-3xl); color: #e2e8f0; margin-bottom: var(--space-3)">Pronto para simular?</h2>
+      <p style="font-size: var(--fs-lg); color: #94a3b8; max-width: 500px; margin: 0 auto var(--space-6)">Faca uma simulacao completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
       <a href="simulador.html" class="btn btn-primary btn-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Iniciar simulacao</a>
       <p class="text-xs text-muted mt-4">Plataforma demonstrativa — todos os dados sao ficticios</p>
     </div>

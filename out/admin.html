@@ -92,9 +92,93 @@
         </div>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: var(--space-4)">Geração hoje por sistema</h3>
+        <h3 style="margin-bottom: var(--space-4)">Geracao hoje por sistema</h3>
         <div class="bar-chart" style="height: 180px">
           <div class="bar-chart-item gen" style="height:15%"><span class="bar-chart-label">4821</span></div><div class="bar-chart-item gen" style="height:50%"><span class="bar-chart-label">2091</span></div><div class="bar-chart-item gen" style="height:100%"><span class="bar-chart-label">1038</span></div><div class="bar-chart-item gen" style="height:7%"><span class="bar-chart-label">3012</span></div><div class="bar-chart-item gen" style="height:18%"><span class="bar-chart-label">5520</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mapa demonstrativo -->
+    <div class="admin-map-card mt-6">
+      <h3 style="margin-bottom: var(--space-4)">Mapa de sistemas</h3>
+      <div class="grid grid-2">
+        <div><svg class="map-demo-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa demonstrativo com localizacoes ficticias dos sistemas">
+  <defs>
+    <linearGradient id="map-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1520"/><stop offset="100%" stop-color="#0f1e30"/>
+    </linearGradient>
+    <filter id="map-glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#map-bg)" rx="8"/>
+
+  <!-- Linhas de costa (estilizada Baixada Santista) -->
+  <path d="M50 50 Q120 60 180 80 Q250 70 320 90 L350 120 Q300 140 250 135 Q180 150 120 130 Q80 140 50 120 Z" fill="#0a1e36" stroke="#1e3a5f" stroke-width="0.5" opacity="0.6"/>
+  <path d="M50 50 Q120 60 180 80 Q250 70 320 90" stroke="#3b82f6" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- Grid sutil -->
+  <g stroke="#1a2a3a" stroke-width="0.3" opacity="0.3">
+    <line x1="0" y1="0" x2="0" y2="300"/><line x1="50" y1="0" x2="50" y2="300"/><line x1="100" y1="0" x2="100" y2="300"/><line x1="150" y1="0" x2="150" y2="300"/><line x1="200" y1="0" x2="200" y2="300"/><line x1="250" y1="0" x2="250" y2="300"/><line x1="300" y1="0" x2="300" y2="300"/><line x1="350" y1="0" x2="350" y2="300"/>
+    <line x1="0" y1="0" x2="400" y2="0"/><line x1="0" y1="50" x2="400" y2="50"/><line x1="0" y1="100" x2="400" y2="100"/><line x1="0" y1="150" x2="400" y2="150"/><line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="250" x2="400" y2="250"/>
+  </g>
+
+  <!-- Pins dos sistemas -->
+  <g transform="translate(150 100)">
+      <circle r="12" fill="#22c55e" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#22c55e" opacity="0.8"/>
+      <circle r="3" fill="#22c55e"/>
+      <text y="-18" text-anchor="middle" fill="#22c55e" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-4821</text>
+    </g><g transform="translate(200 110)">
+      <circle r="12" fill="#f59e0b" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#f59e0b" opacity="0.8"/>
+      <circle r="3" fill="#f59e0b"/>
+      <text y="-18" text-anchor="middle" fill="#f59e0b" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-2091</text>
+    </g><g transform="translate(250 120)">
+      <circle r="12" fill="#22c55e" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#22c55e" opacity="0.8"/>
+      <circle r="3" fill="#22c55e"/>
+      <text y="-18" text-anchor="middle" fill="#22c55e" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-1038</text>
+    </g><g transform="translate(180 140)">
+      <circle r="12" fill="#ef4444" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#ef4444" opacity="0.8"/>
+      <circle r="3" fill="#ef4444"/>
+      <text y="-18" text-anchor="middle" fill="#ef4444" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-3012</text>
+    </g><g transform="translate(220 160)">
+      <circle r="12" fill="#22c55e" opacity="0.2" filter="url(#map-glow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#22c55e" opacity="0.8"/>
+      <circle r="3" fill="#22c55e"/>
+      <text y="-18" text-anchor="middle" fill="#22c55e" font-size="8" font-family="Inter, sans-serif" font-weight="600">SOL-5520</text>
+    </g>
+
+  <!-- Legenda -->
+  <g transform="translate(15 260)">
+    <circle cx="6" cy="0" r="4" fill="#22c55e"/>
+    <text x="14" y="3" fill="#64748b" font-size="8" font-family="Inter, sans-serif">Normal</text>
+    <circle cx="66" cy="0" r="4" fill="#f59e0b"/>
+    <text x="74" y="3" fill="#64748b" font-size="8" font-family="Inter, sans-serif">Atencao</text>
+    <circle cx="126" cy="0" r="4" fill="#ef4444"/>
+    <text x="134" y="3" fill="#64748b" font-size="8" font-family="Inter, sans-serif">Alerta</text>
+  </g>
+  <text x="385" y="280" text-anchor="end" fill="#475569" font-size="7" font-family="Inter, sans-serif">Localizacoes demonstrativas</text>
+</svg></div>
+        <div>
+          <div class="grid grid-3">
+            <div class="kpi-card"><div class="kpi-card-icon gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div><div class="kpi-value">3</div><div class="kpi-label">Normal</div></div>
+            <div class="kpi-card"><div class="kpi-card-icon warn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><div class="kpi-value">1</div><div class="kpi-label">Atencao</div></div>
+            <div class="kpi-card"><div class="kpi-card-icon solar" style="background:rgba(239,68,68,0.1);color:#ef4444"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><div class="kpi-value">1</div><div class="kpi-label">Alerta</div></div>
+          </div>
+          <p class="text-xs text-muted mt-4">Localizacoes demonstrativas — status simulado</p>
         </div>
       </div>
     </div>

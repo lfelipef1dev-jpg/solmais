@@ -34,24 +34,57 @@ function render(data, T) {
   <p class="text-secondary mb-6">Sistema ${system.projectId} — ${system.power} kWp — ${T.escapeHtml(system.location)}</p>
 
   <div class="grid grid-4 mb-6">
-    <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${system.power}</div><div class="kpi-label">kWp instalado</div></div>
-    <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.bolt}</div><div class="kpi-value">584</div><div class="kpi-label">kWh este mes</div></div>
-    <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(customer.monthlySavings)}</div><div class="kpi-label">Economia/mes</div></div>
-    <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.chart}</div><div class="kpi-value">${T.formatBRL(customer.totalSavings)}</div><div class="kpi-label">Economia total</div></div>
+    <div class="kpi-premium">
+      <div class="kpi-icon-wrap solar">${T.ICONS.panel}</div>
+      <div class="kpi-value">${system.power}</div>
+      <div class="kpi-label">kWp instalado</div>
+      <div class="mini-chart-wrap">${T.sparkline([4.8, 5.0, 5.2, 5.3, 5.4, 5.5], {color:'#f59e0b', fill:'rgba(245,158,11,0.1)'})}</div>
+    </div>
+    <div class="kpi-premium">
+      <div class="kpi-icon-wrap gen">${T.ICONS.bolt}</div>
+      <div class="kpi-value">584</div>
+      <div class="kpi-label">kWh este mes</div>
+      <div class="mini-chart-wrap">${T.sparkline([520, 540, 550, 560, 570, 580, 584], {color:'#22c55e', fill:'rgba(34,197,94,0.1)'})}</div>
+    </div>
+    <div class="kpi-premium">
+      <div class="kpi-icon-wrap solar">${T.ICONS.cash}</div>
+      <div class="kpi-value text-solar">${T.formatBRL(customer.monthlySavings)}</div>
+      <div class="kpi-label">Economia/mes</div>
+      <div class="mini-chart-wrap">${T.sparkline([420, 440, 450, 460, 470, 480], {color:'#f59e0b', fill:'rgba(245,158,11,0.1)'})}</div>
+    </div>
+    <div class="kpi-premium">
+      <div class="kpi-icon-wrap info">${T.ICONS.chart}</div>
+      <div class="kpi-value">${T.formatBRL(customer.totalSavings)}</div>
+      <div class="kpi-label">Economia total</div>
+      <div class="mini-chart-wrap">${T.sparkline([5000, 10000, 15000, 20000, 25000, customer.totalSavings], {color:'#3b82f6', fill:'rgba(59,130,246,0.1)'})}</div>
+    </div>
   </div>
 
-  <div class="card mb-6">
-    <h3 style="margin-bottom: var(--space-4)">Status do projeto</h3>
-    <div class="timeline">
-      ${project.timeline.map(t => `
-      <div class="timeline-item">
-        <div class="timeline-dot ${t.status}">${t.status === 'done' ? T.ICONS.check : t.status === 'current' ? T.ICONS.clock : ''}</div>
-        <div class="timeline-content">
-          <h4>${T.escapeHtml(t.label)}</h4>
-          <p class="text-muted">${T.escapeHtml(t.desc)}</p>
-          ${t.date ? '<p class="date">' + t.date + '</p>' : ''}
-        </div>
-      </div>`).join('')}
+  <!-- System render + status -->
+  <div class="grid grid-2 mb-6">
+    <div class="card">
+      <h3 style="margin-bottom: var(--space-3)">Meu sistema</h3>
+      ${T.systemRender({ panels: system.panels, power: system.power, inverter: system.inverterPower + 'kW' })}
+      <div class="grid grid-2 mt-3">
+        <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.panels}</div><div class="kpi-label">Modulos</div></div>
+        <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.area} m2</div><div class="kpi-label">Area</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom: var(--space-4)">Status do projeto</h3>
+      <div class="timeline-premium">
+        ${project.timeline.map((t, i) => `
+        <div class="timeline-premium-item">
+          <div class="timeline-premium-dot ${t.status === 'done' ? 'done' : t.status === 'current' ? 'active' : 'pending'}">
+            ${t.status === 'done' ? T.ICONS.check : t.status === 'current' ? T.ICONS.clock : (i + 1)}
+          </div>
+          <div class="timeline-premium-content">
+            <h4>${T.escapeHtml(t.label)}</h4>
+            ${t.date ? '<div class="timeline-premium-date">' + t.date + '</div>' : ''}
+            <p class="timeline-premium-desc">${T.escapeHtml(t.desc)}</p>
+          </div>
+        </div>`).join('')}
+      </div>
     </div>
   </div>
 

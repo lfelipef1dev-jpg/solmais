@@ -7,8 +7,7 @@ function render(data, T) {
   const privContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Privacidade' }])}
-    <h1 style="margin-bottom: var(--space-4)">Politica de Privacidade</h1>
-    <p class="text-secondary mb-6">Plataforma demonstrativa — atualizado em setembro 2026</p>
+    ${T.pageHero('Politica de Privacidade', 'Plataforma demonstrativa — atualizado em setembro 2026', { icon: T.ICONS.doc })}
 
     <div class="card mb-4"><h3>1. Natureza demonstrativa</h3><p class="text-secondary mt-2">O SolMais e uma plataforma demonstrativa. Nao coletamos dados pessoais reais, nao processamos pagamentos e nao celebramos contratos comerciais.</p></div>
     <div class="card mb-4"><h3>2. Dados locais</h3><p class="text-secondary mt-2">Dados inseridos no simulador, portal e admin sao armazenados apenas no seu navegador (localStorage). Nao sao enviados a nenhum servidor.</p></div>
@@ -31,8 +30,7 @@ function render(data, T) {
   const termosContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Termos' }])}
-    <h1 style="margin-bottom: var(--space-4)">Termos de Uso</h1>
-    <p class="text-secondary mb-6">Plataforma demonstrativa — atualizado em setembro 2026</p>
+    ${T.pageHero('Termos de Uso', 'Plataforma demonstrativa — atualizado em setembro 2026', { icon: T.ICONS.doc })}
 
     <div class="card mb-4"><h3>1. Natureza do servico</h3><p class="text-secondary mt-2">O SolMais e uma plataforma demonstrativa. Nao constitui proposta comercial, projeto eletrico, orcamento, oferta de credito ou garantia de economia.</p></div>
     <div class="card mb-4"><h3>2. Dados ficticios</h3><p class="text-secondary mt-2">Todos os clientes, sistemas, projetos, metricas, valores, documentos e localizacoes sao ficticios e identificados como demonstrativos.</p></div>

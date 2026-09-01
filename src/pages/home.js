@@ -1,5 +1,5 @@
 /* SolMais — Home page renderer
-   Hero + simulacao rapida + features + como funciona + cases + CTA */
+   Hero arquitetonico + simulacao rapida + fluxo energetico + features + cases + CTA */
 
 function render(data, T) {
   const store = data.store;
@@ -9,6 +9,7 @@ function render(data, T) {
   const heroSection = `<section class="hero">
   <div class="container hero-inner">
     <div class="hero-content">
+      <span class="badge-premium mb-4">${T.ICONS.sun} Plataforma demonstrativa — dados ficticios</span>
       <h1>Energia solar <span>calculada</span> para a sua realidade</h1>
       <p>Simule seu sistema, visualize geracao e economia estimadas e acompanhe cada etapa do projeto — da analise ao monitoramento.</p>
       <div class="hero-cta">
@@ -16,30 +17,30 @@ function render(data, T) {
         <a href="monitoramento.html" class="btn btn-secondary btn-lg">${T.ICONS.chart} Explorar demonstracao</a>
       </div>
     </div>
-    <div class="quick-sim">
+    <div class="hero-visual-wrap">
+      ${T.heroArchitectural()}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: var(--space-8)">
+  <div class="container">
+    <div class="quick-sim" style="max-width: 600px; margin: 0 auto;">
       <h3>${T.ICONS.sun} Simulacao rapida</h3>
-      <div class="field">
-        <label class="label">Minha conta media</label>
-        <input type="number" class="input" id="qs-bill" placeholder="R$ 650" value="650">
-      </div>
-      <div class="field">
-        <label class="label">Minha cidade</label>
-        <select class="select" id="qs-city">
-          <option value="santos">Santos/SP</option>
-          <option value="saovicente">Sao Vicente/SP</option>
-          <option value="praiagrande">Praia Grande/SP</option>
-          <option value="guaruja">Guaruja/SP</option>
-          <option value="cubatao">Cubatao/SP</option>
-        </select>
-      </div>
-      <div class="field">
-        <label class="label">Tipo de imovel</label>
-        <select class="select" id="qs-type">
-          <option value="residencial">Residencial</option>
-          <option value="comercial">Comercial</option>
-          <option value="condominio">Condominio</option>
-          <option value="rural">Rural</option>
-        </select>
+      <div class="grid grid-2">
+        <div class="field">
+          <label class="label">Minha conta media</label>
+          <input type="number" class="input" id="qs-bill" placeholder="R$ 650" value="650">
+        </div>
+        <div class="field">
+          <label class="label">Tipo de imovel</label>
+          <select class="select" id="qs-type">
+            <option value="residencial">Residencial</option>
+            <option value="comercial">Comercial</option>
+            <option value="condominio">Condominio</option>
+            <option value="rural">Rural</option>
+          </select>
+        </div>
       </div>
       <button class="btn btn-primary btn-block" onclick="SolMais.quickSim()">${T.ICONS.bolt} Calcular potencial solar</button>
       <div class="quick-sim-result hidden" id="qs-result">
@@ -50,6 +51,27 @@ function render(data, T) {
         <a href="simulador.html" class="btn btn-secondary btn-block mt-4">Fazer simulacao completa ${T.ICONS.arrow}</a>
       </div>
       <p class="text-xs text-muted mt-4 text-center">Estimativa demonstrativa — dados ficticios</p>
+    </div>
+  </div>
+</section>`;
+
+  const flowSection = `<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Como funciona a energia solar</h2>
+      <p>Do sol a sua conta de luz — o fluxo energetico completo</p>
+    </div>
+    <div class="energy-flow-wrap">
+      ${T.energyFlow()}
+    </div>
+    <div class="grid grid-4 mt-6">
+      <div class="card text-center"><div class="kpi-card-icon solar" style="margin: 0 auto">${T.ICONS.sun}</div><h4>Sol</h4><p class="text-sm text-muted">Luz solar atinge os modulos fotovoltaicos</p></div>
+      <div class="card text-center"><div class="kpi-card-icon info" style="margin: 0 auto">${T.ICONS.panel}</div><h4>Paineis</h4><p class="text-sm text-muted">Convertem luz em corrente continua (CC)</p></div>
+      <div class="card text-center"><div class="kpi-card-icon gen" style="margin: 0 auto">${T.ICONS.bolt}</div><h4>Inversor</h4><p class="text-sm text-muted">Transforma CC em corrente alternada (CA)</p></div>
+      <div class="card text-center"><div class="kpi-card-icon warn" style="margin: 0 auto">${T.ICONS.home}</div><h4>Imovel</h4><p class="text-sm text-muted">Consome e excedente vai para a rede</p></div>
+    </div>
+    <div class="text-center mt-6">
+      <a href="como-funciona.html" class="btn btn-secondary">Entenda o processo completo ${T.ICONS.arrow}</a>
     </div>
   </div>
 </section>`;
@@ -98,12 +120,12 @@ function render(data, T) {
     <div class="grid grid-3">
       ${cases.slice(0, 3).map(c => `
       <div class="case-card">
-        <div class="case-card-header">
+        ${T.caseThumbnail(c.type, { power: c.power })}
+        <div class="case-card-header" style="margin-top: var(--space-4)">
           <div>
             <h3>${T.escapeHtml(c.title)}</h3>
             <p class="text-xs text-muted">${T.escapeHtml(c.location)} &middot; ${T.escapeHtml(c.type)}</p>
           </div>
-          <span class="demo-badge">DEMO</span>
         </div>
         <div class="case-card-stats">
           <div class="case-stat"><div class="val">${c.power} kWp</div><div class="lbl">Potencia</div></div>
@@ -122,16 +144,16 @@ function render(data, T) {
 
   const ctaSection = `<section class="section">
   <div class="container">
-    <div class="card card-elevated card-glow text-center" style="padding: var(--space-10) var(--space-6)">
-      <h2 style="font-size: var(--fs-3xl); margin-bottom: var(--space-3)">Pronto para simular?</h2>
-      <p class="text-lg text-secondary mb-6" style="max-width: 500px; margin: 0 auto var(--space-6)">Faca uma simulacao completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
+    <div class="visual-section">
+      <h2 style="font-size: var(--fs-3xl); color: #e2e8f0; margin-bottom: var(--space-3)">Pronto para simular?</h2>
+      <p style="font-size: var(--fs-lg); color: #94a3b8; max-width: 500px; margin: 0 auto var(--space-6)">Faca uma simulacao completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
       <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Iniciar simulacao</a>
       <p class="text-xs text-muted mt-4">Plataforma demonstrativa — todos os dados sao ficticios</p>
     </div>
   </div>
 </section>`;
 
-  const content = heroSection + featuresSection + casesSection + ctaSection;
+  const content = heroSection + flowSection + featuresSection + casesSection + ctaSection;
 
   const orgSchema = T.renderOrganizationSchema(store);
   const siteSchema = T.renderWebSiteSchema(store);
@@ -149,7 +171,7 @@ function render(data, T) {
       canonical: '/',
       active: 'index',
       structuredData: graphSchema,
-      preload: 'img/hero-solar-mobile.jpg',
+      ogImage: store.url.replace(/\/$/, '') + '/img/og/home.svg',
       content
     })
   }];

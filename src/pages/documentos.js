@@ -8,10 +8,7 @@ function render(data, T) {
   const content = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    <div class="section-header">
-      <h2>Central de documentos</h2>
-      <p>Todos os documentos sao ficticios — demonstracao</p>
-    </div>
+    ${T.pageHero('Central de Documentos', 'Todos os documentos sao ficticios — demonstracao', { icon: T.ICONS.doc })}
 
     <div class="card mb-6">
       <div class="doc-list">

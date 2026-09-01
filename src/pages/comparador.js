@@ -13,10 +13,7 @@ function render(data, T) {
   const content = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    <div class="section-header">
-      <h2>Comparador de sistemas</h2>
-      <p>Tres configuracoes para diferentes objetivos — dados demonstrativos</p>
-    </div>
+    ${T.pageHero('Comparador de Sistemas', 'Tres configuracoes para diferentes objetivos — dados demonstrativos', { icon: T.ICONS.chart })}
 
     <div class="grid grid-3 mb-6">
       ${systems.map(s => `

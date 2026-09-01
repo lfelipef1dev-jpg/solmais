@@ -80,6 +80,68 @@
       <div class="kpi-card"><div class="kpi-card-icon info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="kpi-value">R$ 32.000</div><div class="kpi-label">Ticket demo</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div><div class="kpi-value">69.5 kWp</div><div class="kpi-label">Potencia projetada</div></div>
     </div>
+    <div class="grid grid-2 mb-6">
+      <div class="chart-premium">
+        <h3>Simulacoes por mes (12 meses)</h3>
+        <svg class="area-chart-svg" viewBox="0 0 350 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao simulacoes">
+  <defs>
+    <linearGradient id="area-grad-ana-sim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grid -->
+  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="32" x2="350" y2="32"/><line x1="0" y1="64" x2="350" y2="64"/><line x1="0" y1="96" x2="350" y2="96"/><line x1="0" y1="128" x2="350" y2="128"/>
+  </g>
+
+  
+
+  <!-- Area -->
+  <polygon points="0,160 0.0,59.6 31.8,52.4 63.6,45.3 95.5,37.1 127.3,32.0 159.1,26.8 190.9,21.7 222.7,18.6 254.5,16.6 286.4,14.5 318.2,14.5 350.0,14.5 350,160" fill="url(#area-grad-ana-sim)"/>
+
+  <!-- Linha principal -->
+  <polyline points="0.0,59.6 31.8,52.4 63.6,45.3 95.5,37.1 127.3,32.0 159.1,26.8 190.9,21.7 222.7,18.6 254.5,16.6 286.4,14.5 318.2,14.5 350.0,14.5" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Pontos -->
+  <circle cx="0.0" cy="59.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="31.8" cy="52.4" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="63.6" cy="45.3" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="95.5" cy="37.1" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="127.3" cy="32.0" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="159.1" cy="26.8" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="190.9" cy="21.7" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="222.7" cy="18.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="254.5" cy="16.6" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="286.4" cy="14.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="318.2" cy="14.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/><circle cx="350.0" cy="14.5" r="3" fill="#f59e0b" stroke="#0a1520" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="0" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jan</text><text x="64" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mar</text><text x="127" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mai</text><text x="191" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jul</text><text x="255" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Set</text><text x="318" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Nov</text><text x="350" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Dez</text>
+</svg>
+      </div>
+      <div class="chart-premium">
+        <h3>Conversao mensal</h3>
+        <svg class="area-chart-svg" viewBox="0 0 350 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafico de geracao % conversao">
+  <defs>
+    <linearGradient id="area-grad-ana-conv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grid -->
+  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="32" x2="350" y2="32"/><line x1="0" y1="64" x2="350" y2="64"/><line x1="0" y1="96" x2="350" y2="96"/><line x1="0" y1="128" x2="350" y2="128"/>
+  </g>
+
+  
+
+  <!-- Area -->
+  <polygon points="0,160 0.0,52.8 31.8,45.2 63.6,37.5 95.5,33.7 127.3,29.9 159.1,26.0 190.9,22.2 222.7,18.4 254.5,18.4 286.4,14.5 318.2,14.5 350.0,14.5 350,160" fill="url(#area-grad-ana-conv)"/>
+
+  <!-- Linha principal -->
+  <polyline points="0.0,52.8 31.8,45.2 63.6,37.5 95.5,33.7 127.3,29.9 159.1,26.0 190.9,22.2 222.7,18.4 254.5,18.4 286.4,14.5 318.2,14.5 350.0,14.5" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Pontos -->
+  <circle cx="0.0" cy="52.8" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="31.8" cy="45.2" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="63.6" cy="37.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="95.5" cy="33.7" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="127.3" cy="29.9" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="159.1" cy="26.0" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="190.9" cy="22.2" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="222.7" cy="18.4" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="254.5" cy="18.4" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="286.4" cy="14.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="318.2" cy="14.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/><circle cx="350.0" cy="14.5" r="3" fill="#22c55e" stroke="#0a1520" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="0" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jan</text><text x="64" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mar</text><text x="127" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Mai</text><text x="191" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Jul</text><text x="255" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Set</text><text x="318" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Nov</text><text x="350" y="178" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter, sans-serif">Dez</text>
+</svg>
+      </div>
+    </div>
     <div class="grid grid-2">
       <div class="card">
         <h3 style="margin-bottom: var(--space-4)">Origem de leads</h3>

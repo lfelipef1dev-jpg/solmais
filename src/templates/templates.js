@@ -258,9 +258,25 @@ function renderLayout(opts) {
 </html>`;
 }
 
+const V = require('./visuals.js');
+
 module.exports = {
   escapeHtml, formatBRL, formatKWh, formatNum, ICONS,
   renderHead, renderAnnouncement, renderHeader, renderFooter,
   renderBreadcrumb, renderBreadcrumbSchema, renderLayout,
-  renderGraphSchema, renderOrganizationSchema, renderWebSiteSchema
+  renderGraphSchema, renderOrganizationSchema, renderWebSiteSchema,
+  // Visuais premium
+  heroArchitectural: V.heroArchitectural,
+  energyFlow: V.energyFlow,
+  roofLayout: V.roofLayout,
+  systemRender: V.systemRender,
+  inverterRender: V.inverterRender,
+  installationScene: V.installationScene,
+  mapDemo: V.mapDemo,
+  sparkline: V.sparkline,
+  areaChart: V.areaChart,
+  donutChart: V.donutChart,
+  caseThumbnail: V.caseThumbnail,
+  ogImage: V.ogImage,
+  pageHero: V.pageHero
 };

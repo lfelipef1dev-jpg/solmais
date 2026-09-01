@@ -9,10 +9,7 @@ function render(data, T) {
   const content = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    <div class="section-header">
-      <h2>Economia estimada</h2>
-      <p>Sistema ${sys.projectId} — ${sys.power} kWp</p>
-    </div>
+    ${T.pageHero('Economia Estimada', 'Sistema ' + sys.projectId + ' — ' + sys.power + ' kWp', { icon: T.ICONS.cash })}
 
     <div class="grid grid-4 mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(customer.monthlySavings)}</div><div class="kpi-label">Economia/mes</div></div>

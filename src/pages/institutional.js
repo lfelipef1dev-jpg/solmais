@@ -11,20 +11,12 @@ function render(data, T) {
   const howContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Como funciona' }])}
-    <h1 style="margin-bottom: var(--space-4)">Como funciona a energia solar fotovoltaica</h1>
-    <p class="text-secondary mb-6">Sistemas fotovoltaicos convertem luz solar em eletricidade. O processo envolve paineis, inversor, medidor e rede de distribuicao.</p>
+    ${T.pageHero('Como Funciona a Energia Solar', 'Sistemas fotovoltaicos convertem luz solar em eletricidade — do painel a compensacao na rede', { icon: T.ICONS.sun })}
 
-    <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-4)">O processo em 4 etapas</h3>
-      <div class="energy-flow">
-        <div class="flow-node"><div class="flow-node-icon sun">${T.ICONS.sun}</div><div class="flow-node-label">1. SOL</div></div>
-        <div class="flow-arrow">\u2193</div>
-        <div class="flow-node"><div class="flow-node-icon panel">${T.ICONS.panel}</div><div class="flow-node-label">2. PAINELS</div></div>
-        <div class="flow-arrow">\u2193</div>
-        <div class="flow-node"><div class="flow-node-icon inverter">${T.ICONS.bolt}</div><div class="flow-node-label">3. INVERSOR</div></div>
-        <div class="flow-arrow">\u2193</div>
-        <div class="flow-node"><div class="flow-node-icon home">${T.ICONS.home}</div><div class="flow-node-label">4. IMÓVEL</div></div>
-      </div>
+    <div class="energy-flow-wrap mb-6">
+      <h3 style="text-align:center;color:#e2e8f0;margin-bottom:var(--space-2)">O fluxo energetico completo</h3>
+      <p style="text-align:center;color:#94a3b8;margin-bottom:var(--space-4)">Sol -> Paineis -> Inversor -> Imovel <-> Rede</p>
+      ${T.energyFlow()}
     </div>
 
     <div class="card mb-6">
@@ -44,9 +36,9 @@ function render(data, T) {
       <p class="text-secondary">A energia injetada vira creditos que abatem o consumo nos periodos em que o sistema nao gera (noite, por exemplo). A compensacao segue as regras da Lei 14.300 e do marco da MMGD.</p>
     </div>
 
-    <div class="card card-glow text-center">
+    <div class="visual-section">
       <h3>Quer simular seu sistema?</h3>
-      <p class="text-secondary mb-4">Faca uma simulacao completa em 6 etapas.</p>
+      <p>Faca uma simulacao completa em 6 etapas.</p>
       <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Iniciar simulacao</a>
     </div>
   </div>
@@ -67,19 +59,12 @@ function render(data, T) {
   const compContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: 'Compensacao' }])}
-    <h1 style="margin-bottom: var(--space-4)">Compensacao de energia</h1>
-    <p class="text-secondary mb-6">Como funciona o Sistema de Compensacao de Energia Eletrica (SCEE) e os creditos de energia.</p>
+    ${T.pageHero('Compensacao de Energia', 'Como funciona o Sistema de Compensacao de Energia Eletrica (SCEE) e os creditos de energia', { icon: T.ICONS.grid })}
 
     <div class="card mb-6">
       <h3 style="margin-bottom: var(--space-4)">Fluxo da compensacao</h3>
-      <div class="energy-flow">
-        <div class="flow-node"><div class="flow-node-icon panel">${T.ICONS.panel}</div><div class="flow-node-label">PRODUÇÃO</div></div>
-        <div class="flow-arrow">\u2193</div>
-        <div class="flow-node"><div class="flow-node-icon home">${T.ICONS.home}</div><div class="flow-node-label">CONSUMO</div></div>
-        <div class="flow-arrow">\u2193</div>
-        <div class="flow-node"><div class="flow-node-icon grid">${T.ICONS.grid}</div><div class="flow-node-label">REDE</div></div>
-        <div class="flow-arrow">\u2193</div>
-        <div class="flow-node"><div class="flow-node-icon solar">${T.ICONS.check}</div><div class="flow-node-label">CRÉDITOS</div></div>
+      <div class="energy-flow-wrap">
+        ${T.energyFlow()}
       </div>
     </div>
 
@@ -117,8 +102,7 @@ function render(data, T) {
   const modContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: 'Modalidades GD' }])}
-    <h1 style="margin-bottom: var(--space-4)">Modalidades de geracao distribuida</h1>
-    <p class="text-secondary mb-6">A ANEEL reconhece diferentes modalidades de autoconsumo por meio de geracao distribuida.</p>
+    ${T.pageHero('Modalidades de Geracao Distribuida', 'A ANEEL reconhece diferentes modalidades de autoconsumo por meio de geracao distribuida', { icon: T.ICONS.bolt })}
 
     <div class="card mb-6"><h3>Autoconsumo local</h3><p class="text-secondary mt-2">Geracao e consumo na mesma unidade consumidora. A energia produzida e consumida no proprio imovel onde o sistema esta instalado.</p></div>
     <div class="card mb-6"><h3>Autoconsumo remoto</h3><p class="text-secondary mt-2">Geracao em uma unidade e consumo em outra, dentro da mesma area de concessao da distribuidora. Permite instalar paineis em um imovel e abater a conta de outro.</p></div>
@@ -144,8 +128,7 @@ function render(data, T) {
   const glossContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: 'Glossario' }])}
-    <h1 style="margin-bottom: var(--space-4)">Glossario solar</h1>
-    <p class="text-secondary mb-6">Termos tecnicos do universo fotovoltaico explicados de forma simples.</p>
+    ${T.pageHero('Glossario Solar', 'Termos tecnicos do universo fotovoltaico explicados de forma simples', { icon: T.ICONS.doc })}
     <div class="glossary-list">
       ${glossary.map(g => `<div class="glossary-item"><div class="glossary-term">${T.escapeHtml(g.term)}</div><div class="glossary-def">${T.escapeHtml(g.definition)}</div></div>`).join('')}
     </div>
@@ -167,7 +150,7 @@ function render(data, T) {
   const contContent = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo' }])}
-    <div class="section-header"><h2>Central de conhecimento</h2><p>Artigos demonstrativos sobre energia solar</p></div>
+    ${T.pageHero('Central de Conhecimento', 'Artigos demonstrativos sobre energia solar', { icon: T.ICONS.doc })}
     <div class="grid grid-3">
       ${articles.map(a => `
       <a href="artigo-${a.slug}.html" class="card" style="text-decoration: none; color: inherit">
@@ -196,13 +179,12 @@ function render(data, T) {
     const artContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: a.title }])}
-    <span class="badge badge-neutral mb-2">${T.escapeHtml(a.category)}</span>
-    <h1 style="margin-bottom: var(--space-2)">${T.escapeHtml(a.title)}</h1>
-    <div class="article-meta"><span>${a.readTime}</span><span>${a.date}</span></div>
+    ${T.pageHero(a.title, a.category + ' — ' + a.readTime, { icon: T.ICONS.doc })}
+    <div class="article-meta" style="margin-bottom:var(--space-6)"><span>${a.readTime}</span><span>${a.date}</span></div>
     <div class="article-body"><p>${T.escapeHtml(a.content)}</p></div>
-    <div class="card card-glow mt-6 text-center">
-      <p class="text-secondary">Quer simular seu proprio sistema?</p>
-      <a href="simulador.html" class="btn btn-primary mt-3">${T.ICONS.bolt} Iniciar simulacao</a>
+    <div class="visual-section mt-6">
+      <h3>Quer simular seu proprio sistema?</h3>
+      <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Iniciar simulacao</a>
     </div>
   </div>
 </section>`;
@@ -232,11 +214,12 @@ function render(data, T) {
   const projContent = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }])}
-    <div class="section-header"><h2>Projetos demonstrativos</h2><p>Cases ficticios para ilustrar diferentes perfis de sistema</p></div>
+    ${T.pageHero('Projetos Demonstrativos', 'Cases ficticios para ilustrar diferentes perfis de sistema solar', { icon: T.ICONS.panel })}
     <div class="grid grid-3">
       ${cases.map(c => `
       <div class="case-card">
-        <div class="case-card-header"><div><h3>${T.escapeHtml(c.title)}</h3><p class="text-xs text-muted">${T.escapeHtml(c.location)} — ${T.escapeHtml(c.type)}</p></div><span class="demo-badge">DEMO</span></div>
+        ${T.caseThumbnail(c.type, { power: c.power })}
+        <div class="case-card-header" style="margin-top: var(--space-4)"><div><h3>${T.escapeHtml(c.title)}</h3><p class="text-xs text-muted">${T.escapeHtml(c.location)} — ${T.escapeHtml(c.type)}</p></div></div>
         <div class="case-card-stats">
           <div class="case-stat"><div class="val">${c.power} kWp</div><div class="lbl">Potencia</div></div>
           <div class="case-stat"><div class="val">${c.panels}</div><div class="lbl">Modulos</div></div>
@@ -256,6 +239,7 @@ function render(data, T) {
       store, data, title: 'Projetos Demonstrativos',
       description: 'Cases demonstrativos de sistemas solares fotovoltaicos: residencial, comercial, condominio e rural. Veja potencia, modulos, geracao e payback de cada projeto.',
       canonical: '/projetos.html', active: 'projetos',
+      ogImage: store.url.replace(/\/$/, '') + '/img/og/projetos.svg',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }], store.url),
       content: projContent
     })
@@ -263,18 +247,26 @@ function render(data, T) {
 
   /* ----- Cases individuais ----- */
   cases.forEach(c => {
+    // Geracao mensal estimada para o grafico
+    const monthlyGen = Array(12).fill(0).map((_, i) => Math.round(c.annualGeneration / 12 * (0.85 + Math.sin(i / 12 * Math.PI * 2) * 0.15)));
+    const monthLabels = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+
     const caseContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos', href: 'projetos.html' }, { label: c.title }])}
     <span class="demo-badge mb-4">PROJETO FICTICIO PARA DEMONSTRACAO</span>
-    <h1 style="margin-bottom: var(--space-2)">${T.escapeHtml(c.title)}</h1>
+
+    <!-- Hero visual do case -->
+    ${T.caseThumbnail(c.type, { power: c.power, width: 800, height: 300 })}
+
+    <h1 style="margin: var(--space-6) 0 var(--space-2)">${T.escapeHtml(c.title)}</h1>
     <p class="text-secondary mb-6">${T.escapeHtml(c.location)} — ${T.escapeHtml(c.type)} — ${T.escapeHtml(c.roofType)}</p>
 
     <div class="grid grid-4 mb-6">
       <div class="kpi-card"><div class="kpi-value">${c.power}</div><div class="kpi-label">kWp</div></div>
       <div class="kpi-card"><div class="kpi-value">${c.panels}</div><div class="kpi-label">Modulos</div></div>
       <div class="kpi-card"><div class="kpi-value">${c.inverter}</div><div class="kpi-label">Inversor</div></div>
-      <div class="kpi-card"><div class="kpi-value">${c.area} m²</div><div class="kpi-label">Area</div></div>
+      <div class="kpi-card"><div class="kpi-value">${c.area} m2</div><div class="kpi-label">Area</div></div>
     </div>
     <div class="grid grid-3 mb-6">
       <div class="kpi-card"><div class="kpi-value">${T.formatKWh(c.annualGeneration)}</div><div class="kpi-label">Geracao/ano</div></div>
@@ -288,12 +280,30 @@ function render(data, T) {
       <p class="text-xs text-muted mt-4">Instalado em ${c.installedAt} — Projeto ficticio para demonstracao da plataforma.</p>
     </div>
 
-    <div class="roof-layout mb-6">
-      <h4 style="margin-bottom: var(--space-3)">Layout dos modulos</h4>
-      <div class="roof-grid" style="grid-template-columns: repeat(${Math.ceil(c.panels / 2)}, 60px)">
-        ${Array.from({ length: c.panels }).map(() => '<div class="roof-panel"></div>').join('')}
+    <!-- Render + Roof Layout -->
+    <div class="grid grid-2 mb-6">
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-3)">Render do sistema</h4>
+        ${T.systemRender({ panels: c.panels, power: c.power, inverter: c.inverter })}
       </div>
-      <div class="roof-compass"><strong>N</strong> &uarr; Orientacao ${T.escapeHtml(c.orientation)} — ${T.escapeHtml(c.roofType)}</div>
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-3)">Layout do telhado</h4>
+        ${T.roofLayout({ panels: c.panels, orientation: c.orientation, roofType: c.roofType })}
+      </div>
+    </div>
+
+    <!-- Grafico de geracao -->
+    <div class="chart-premium mb-6">
+      <h3>Geracao mensal estimada</h3>
+      ${T.areaChart(monthlyGen, { width: 600, height: 200, color: '#f59e0b', labels: monthLabels, id: 'case-' + c.slug, label: 'kWh/mes' })}
+      <p class="text-xs text-muted mt-3">Distribuicao sazonal estimada — dados demonstrativos</p>
+    </div>
+
+    <!-- Energy Flow -->
+    <div class="visual-section mb-6">
+      <h3>Fluxo energetico</h3>
+      <p>Sol -> Paineis -> Inversor -> Imovel <-> Rede</p>
+      ${T.energyFlow()}
     </div>
 
     <div class="card card-glow text-center">
@@ -318,8 +328,7 @@ function render(data, T) {
   const aboutContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Sobre' }])}
-    <h1 style="margin-bottom: var(--space-4)">Sobre o SolMais</h1>
-    <p class="text-lg text-secondary mb-6">Plataforma digital end-to-end para energia solar fotovoltaica — da simulacao ao monitoramento.</p>
+    ${T.pageHero('Sobre o SolMais', 'Plataforma digital end-to-end para energia solar fotovoltaica — da simulacao ao monitoramento', { icon: T.ICONS.sun })}
 
     <div class="card mb-6">
       <h3 style="margin-bottom: var(--space-3)">O que e</h3>
@@ -365,8 +374,7 @@ function render(data, T) {
   const contactContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Contato' }])}
-    <h1 style="margin-bottom: var(--space-4)">Contato</h1>
-    <p class="text-secondary mb-6">Plataforma demonstrativa — nao atendemos clientes reais.</p>
+    ${T.pageHero('Contato', 'Plataforma demonstrativa — nao atendemos clientes reais', { icon: T.ICONS.support })}
     <div class="card mb-6">
       <div class="grid grid-2">
         <div class="field"><label class="label">Nome</label><input type="text" class="input" placeholder="Seu nome"></div>
@@ -396,7 +404,7 @@ function render(data, T) {
   const faqContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }])}
-    <h1 style="margin-bottom: var(--space-4)">Perguntas frequentes</h1>
+    ${T.pageHero('Perguntas Frequentes', 'Duvidas comuns sobre energia solar fotovoltaica', { icon: T.ICONS.support })}
     <div class="card mb-4"><h3>Quanto posso economizar?</h3><p class="text-secondary mt-2">Sistemas fotovoltaicos podem reduzir significativamente a energia faturada da rede, mas o resultado depende do perfil de consumo, dimensionamento, tarifa, distribuidora e regras aplicaveis.</p></div>
     <div class="card mb-4"><h3>Quanto tempo leva a homologacao?</h3><p class="text-secondary mt-2">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexao previstas na regulamentacao vigem. Nao prometemos prazo universal.</p></div>
     <div class="card mb-4"><h3>Qual a garantia dos paineis?</h3><p class="text-secondary mt-2">Garantias variam conforme fabricante, modelo e componente. Os periodos apresentados nesta demonstracao sao ilustrativos.</p></div>
