@@ -52,71 +52,82 @@
   </div>
 </header>
   <main id="conteudo" role="main">
-    <section class="section">
-  <div class="container">
+    
+<div class="sm-mon-page">
+  <section style="max-width:var(--container-max);margin:0 auto;padding:var(--space-6) var(--space-6) 0">
     <nav class="breadcrumb" aria-label="Navegacao"><ol class="breadcrumb-list"><li><a href="index.html">Inicio</a></li><li><a href="conta.html">Portal</a></li><li aria-current="page">Monitoramento</li></ol></nav>
-  </div>
-</section>
-<div class="monitor-hero">
-  <div class="monitor-hero-visual">
-    <svg class="digital-twin-svg" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Digital twin: residencia contemporanea com sistema fotovoltaico integrado">
+  </section>
+
+  <!-- HERO: Gerando agora -->
+  <section class="sm-mon-hero">
+    <div class="sm-mon-hero-head">
+      <div>
+        <span class="sm-eyebrow">Monitoramento</span>
+        <h1 class="sm-headline dark" style="margin-top:var(--space-3)">Veja sua energia<br>acontecer.</h1>
+      </div>
+      <div class="sm-monitor-status" style="font-size:var(--fs-sm)">Sistema operando normal</div>
+    </div>
+
+    <!-- Digital Twin com dados sobrepostos -->
+    <div style="position:relative;max-width:800px;margin:var(--space-6) auto 0">
+      <svg class="digital-twin-svg" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Digital twin: residencia contemporanea com sistema fotovoltaico integrado">
   <defs>
-    <linearGradient id="mon-hero-sky" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#0a0f1a"/>
       <stop offset="60%" stop-color="#0f1623"/>
       <stop offset="100%" stop-color="#141d2e"/>
     </linearGradient>
-    <linearGradient id="mon-hero-wall" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-wall" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#2a2f3e"/>
       <stop offset="100%" stop-color="#232838"/>
     </linearGradient>
-    <linearGradient id="mon-hero-wall-side" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-wall-side" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#232838"/>
       <stop offset="100%" stop-color="#1a1f2e"/>
     </linearGradient>
-    <linearGradient id="mon-hero-roof" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-roof" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e2330"/>
       <stop offset="100%" stop-color="#161a26"/>
     </linearGradient>
-    <linearGradient id="mon-hero-panel" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-panel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e3a5f"/>
       <stop offset="50%" stop-color="#0a1525"/>
       <stop offset="100%" stop-color="#050a15"/>
     </linearGradient>
-    <linearGradient id="mon-hero-panel-sheen" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="mon-v3-panel-sheen" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="rgba(96,165,250,0.25)"/>
       <stop offset="50%" stop-color="rgba(96,165,250,0.05)"/>
       <stop offset="100%" stop-color="rgba(59,130,246,0)"/>
     </linearGradient>
-    <linearGradient id="mon-hero-glass" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-glass" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="rgba(96,165,250,0.2)"/>
       <stop offset="100%" stop-color="rgba(30,58,95,0.5)"/>
     </linearGradient>
-    <linearGradient id="mon-hero-ground" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-ground" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#0d1420"/>
       <stop offset="100%" stop-color="#080d16"/>
     </linearGradient>
-    <radialGradient id="mon-hero-sun-glow" cx="0.5" cy="0.5" r="0.5">
+    <radialGradient id="mon-v3-sun-glow" cx="0.5" cy="0.5" r="0.5">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
     </radialGradient>
-    <filter id="mon-hero-shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <filter id="mon-v3-shadow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
       <feOffset dx="0" dy="8"/>
       <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="mon-hero-soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <filter id="mon-v3-soft-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="4"/>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
   <!-- Ceu / background -->
-  <rect width="800" height="450" fill="url(#mon-hero-sky)"/>
+  <rect width="800" height="450" fill="url(#mon-v3-sky)"/>
 
   <!-- Sol com brilho -->
-  <circle cx="680" cy="67.5" r="80" fill="url(#mon-hero-sun-glow)"/>
+  <circle cx="680" cy="67.5" r="80" fill="url(#mon-v3-sun-glow)"/>
   <circle cx="680" cy="67.5" r="22" fill="#f59e0b" opacity="0.85"/>
   <circle cx="680" cy="67.5" r="14" fill="#fbbf24" opacity="0.95"/>
 
@@ -127,26 +138,26 @@
   </g>
 
   <!-- Chao isometrico -->
-  <polygon points="80,324 720,324 760,351 40,351" fill="url(#mon-hero-ground)"/>
+  <polygon points="80,324 720,324 760,351 40,351" fill="url(#mon-v3-ground)"/>
   <polygon points="40,351 760,351 736,382.5 64,382.5" fill="#080d16" opacity="0.6"/>
 
   <!-- ===== CASA ISOMETRICA ===== -->
   <!-- A casa e composta por 2 volumes: principal (maior) + anexo -->
 
   <!-- Sombra da casa no chao -->
-  <ellipse cx="400" cy="342" rx="256" ry="18" fill="rgba(0,0,0,0.4)" filter="url(#mon-hero-shadow)"/>
+  <ellipse cx="400" cy="342" rx="256" ry="18" fill="rgba(0,0,0,0.4)" filter="url(#mon-v3-shadow)"/>
 
   <!-- Volume principal - face frontal (esquerda) -->
-  <polygon points="176,202.5 416,202.5 416,324 176,324" fill="url(#mon-hero-wall)"/>
+  <polygon points="176,202.5 416,202.5 416,324 176,324" fill="url(#mon-v3-wall)"/>
 
   <!-- Volume principal - face lateral (direita, mais escura) -->
-  <polygon points="416,202.5 520,171 520,292.5 416,324" fill="url(#mon-hero-wall-side)"/>
+  <polygon points="416,202.5 520,171 520,292.5 416,324" fill="url(#mon-v3-wall-side)"/>
 
   <!-- Volume anexo (mais baixo, a direita) -->
   <polygon points="416,247.50000000000003 576,216 576,306 416,324" fill="#1a1f2e" opacity="0.85"/>
 
   <!-- Telhado - volume principal (inclinado, face superior) -->
-  <polygon points="176,202.5 416,202.5 520,171 280,171" fill="url(#mon-hero-roof)"/>
+  <polygon points="176,202.5 416,202.5 520,171 280,171" fill="url(#mon-v3-roof)"/>
 
   <!-- Telhado - beirada -->
   <polygon points="160,202.5 176,202.5 280,171 264,171" fill="#161a26"/>
@@ -156,80 +167,80 @@
   <!-- Os paineis sao posicionados na face superior do telhado do volume principal -->
   <g transform="translate(192 189) skewY(-15)">
     <g transform="translate(0 0)" class="twin-panel" data-panel="1">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0s"/></rect>
         </g><g transform="translate(42 0)" class="twin-panel" data-panel="2">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.2s"/></rect>
         </g><g transform="translate(84 0)" class="twin-panel" data-panel="3">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.4s"/></rect>
         </g><g transform="translate(126 0)" class="twin-panel" data-panel="4">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.6000000000000001s"/></rect>
         </g><g transform="translate(168 0)" class="twin-panel" data-panel="5">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="0.8s"/></rect>
         </g><g transform="translate(0 26)" class="twin-panel" data-panel="6">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1s"/></rect>
         </g><g transform="translate(42 26)" class="twin-panel" data-panel="7">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.2000000000000002s"/></rect>
         </g><g transform="translate(84 26)" class="twin-panel" data-panel="8">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.4000000000000001s"/></rect>
         </g><g transform="translate(126 26)" class="twin-panel" data-panel="9">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="0" y1="11" x2="38" y2="11" stroke="#1a3a5f" stroke-width="0.3"/>
           <rect width="38" height="22" rx="1.5" fill="#f59e0b" opacity="0.08"><animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite" begin="1.6s"/></rect>
         </g><g transform="translate(168 26)" class="twin-panel" data-panel="10">
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
-          <rect width="38" height="22" rx="1.5" fill="url(#mon-hero-panel-sheen)"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel)" stroke="#2a4a6f" stroke-width="0.5"/>
+          <rect width="38" height="22" rx="1.5" fill="url(#mon-v3-panel-sheen)"/>
           <line x1="9.5" y1="0" x2="9.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="19" y1="0" x2="19" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
           <line x1="28.5" y1="0" x2="28.5" y2="22" stroke="#1a3a5f" stroke-width="0.3"/>
@@ -243,15 +254,15 @@
 
   <!-- Janelas grandes (arquitetura contemporanea - vidro) -->
   <!-- Janela frontal 1 -->
-  <rect x="208" y="234" width="48" height="54" rx="1" fill="url(#mon-hero-glass)"/>
+  <rect x="208" y="234" width="48" height="54" rx="1" fill="url(#mon-v3-glass)"/>
   <line x1="231.99999999999997" y1="234" x2="231.99999999999997" y2="288" stroke="#1a1f2e" stroke-width="0.5"/>
   <!-- Janela frontal 2 -->
-  <rect x="280" y="234" width="48" height="54" rx="1" fill="url(#mon-hero-glass)"/>
+  <rect x="280" y="234" width="48" height="54" rx="1" fill="url(#mon-v3-glass)"/>
   <line x1="304" y1="234" x2="304" y2="288" stroke="#1a1f2e" stroke-width="0.5"/>
   <!-- Porta -->
   <rect x="352" y="261" width="32" height="63.00000000000001" rx="0.5" fill="#1a1f2e"/>
   <!-- Janela lateral -->
-  <polygon points="432,225 504,193.5 504,247.50000000000003 432,279" fill="url(#mon-hero-glass)" opacity="0.7"/>
+  <polygon points="432,225 504,193.5 504,247.50000000000003 432,279" fill="url(#mon-v3-glass)" opacity="0.7"/>
 
   <!-- Inversor na parede lateral (pequeno detalhe tecnico) -->
   <rect x="448.00000000000006" y="270" width="14" height="20" rx="1" fill="#161a26" stroke="#f59e0b" stroke-width="0.5"/>
@@ -309,43 +320,47 @@
     <rect x="701.6" y="315" width="2" height="8" fill="#1a1f2e"/>
   </g>
 </svg>
-  </div>
-  <div class="monitor-hero-overlay">
-    <div class="monitor-hero-status">
-      <div class="monitor-hero-status-dot"></div>
-      <span class="monitor-hero-status-text">SISTEMA OPERANDO NORMAL</span>
-    </div>
-    <div class="monitor-hero-generating">
-      <div class="monitor-hero-generating-label">Gerando agora</div>
-      <div class="monitor-hero-generating-value">3,42<span class="monitor-hero-generating-unit"> kW</span></div>
-    </div>
-    <div class="monitor-hero-kpis">
-      <div class="monitor-hero-kpi">
-        <div class="monitor-hero-kpi-value">18,7 kWh</div>
-        <div class="monitor-hero-kpi-label">Hoje</div>
+      <div class="sm-twin-data sm-twin-data-tl">
+        <div class="sm-twin-data-value solar">3,42 kW</div>
+        <div class="sm-twin-data-label">Gerando agora</div>
       </div>
-      <div class="monitor-hero-kpi">
-        <div class="monitor-hero-kpi-value">584 kWh</div>
-        <div class="monitor-hero-kpi-label">Mes</div>
+      <div class="sm-twin-data sm-twin-data-tr">
+        <div class="sm-twin-data-value info">2,7 kW</div>
+        <div class="sm-twin-data-label">Consumo</div>
       </div>
-      <div class="monitor-hero-kpi">
-        <div class="monitor-hero-kpi-value">R$ 480</div>
-        <div class="monitor-hero-kpi-label">Economia</div>
-      </div>
-      <div class="monitor-hero-kpi">
-        <div class="monitor-hero-kpi-value">5.5 kWp</div>
-        <div class="monitor-hero-kpi-label">Potencia</div>
+      <div class="sm-twin-data sm-twin-data-bl">
+        <div class="sm-twin-data-value gen">+1,4 kW</div>
+        <div class="sm-twin-data-label">Exportando</div>
       </div>
     </div>
-  </div>
-</div>
-<section class="section">
-  <div class="container">
-    <p class="text-xs text-muted text-center" style="margin-bottom:var(--space-6)">Dados demonstrativos — sistema ficticio SOL-4821</p>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
+
+    <!-- Numero protagonista -->
+    <div class="sm-mon-now-block">
+      <div class="sm-mega-number">3,42<span class="unit">kW</span></div>
+      <div class="sm-mon-now-label">Gerando agora · SOL-4821</div>
+      <div class="sm-mon-kpis">
+        <div class="sm-mon-kpi">
+          <div class="sm-mon-kpi-value">18,7 kWh</div>
+          <div class="sm-mon-kpi-label">Hoje</div>
+        </div>
+        <div class="sm-mon-kpi">
+          <div class="sm-mon-kpi-value">584 kWh</div>
+          <div class="sm-mon-kpi-label">Mes</div>
+        </div>
+        <div class="sm-mon-kpi">
+          <div class="sm-mon-kpi-value" style="color:var(--solar)">R$ 480</div>
+          <div class="sm-mon-kpi-label">Economia</div>
+        </div>
+        <div class="sm-mon-kpi">
+          <div class="sm-mon-kpi-value" style="color:var(--gen)">Normal</div>
+          <div class="sm-mon-kpi-label">Status</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURVA SOLAR GRANDE -->
+  <section class="sm-mon-chart">
     <div class="solar-curve-wrap">
       <div class="solar-curve-header">
         <div>
@@ -353,17 +368,17 @@
           <div class="solar-curve-subtitle">Curva solar com pico destacado e linha de consumo</div>
         </div>
         <div style="text-align:right">
-          <div class="big-number big-number-amber" style="font-size:var(--fs-xl)">18,7<span class="big-number-unit">kWh</span></div>
-          <div class="big-number-label">Total do dia</div>
+          <div class="sm-big-number" style="font-size:var(--fs-xl);color:var(--solar)">18,7<span style="font-size:0.4em;color:var(--text-dark-muted)">kWh</span></div>
+          <div class="sm-number-label">Total do dia</div>
         </div>
       </div>
       <svg class="solar-curve-svg" viewBox="0 0 800 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curva de geracao solar ao longo do dia com pico de 4,82 kW as 12:38">
   <defs>
-    <linearGradient id="mon-curve-area" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-curve-area" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.02"/>
     </linearGradient>
-    <linearGradient id="mon-curve-line" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="mon-v3-curve-line" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
       <stop offset="50%" stop-color="#fbbf24"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/>
@@ -376,17 +391,17 @@
   </g>
 
   <!-- Area de geracao -->
-  <path d="M 40,230 L 70,230 L 100,230 L 130,230 L 160,230 L 190,230 L 220,230 L 250,183.41257188154628 L 280,140 L 310,102.72077938642146 L 340,74.11542731880104 L 370,56.1333512679677 L 400,50 L 430,56.1333512679677 L 460,74.11542731880104 L 490,102.72077938642144 L 520,140 L 550,183.41257188154623 L 580,229.99999999999997 L 610,230 L 640,230 L 670,230 L 700,230 L 730,230 L 760,230 L 760,230 L 40,230 Z" fill="url(#mon-curve-area)"/>
+  <path d="M 40,230 L 70,230 L 100,230 L 130,230 L 160,230 L 190,230 L 220,230 L 250,183.41257188154628 L 280,140 L 310,102.72077938642146 L 340,74.11542731880104 L 370,56.1333512679677 L 400,50 L 430,56.1333512679677 L 460,74.11542731880104 L 490,102.72077938642144 L 520,140 L 550,183.41257188154623 L 580,229.99999999999997 L 610,230 L 640,230 L 670,230 L 700,230 L 730,230 L 760,230 L 760,230 L 40,230 Z" fill="url(#mon-v3-curve-area)"/>
 
   <!-- Curva de geracao -->
-  <path d="M 40,230 L 70,230 L 100,230 L 130,230 L 160,230 L 190,230 L 220,230 L 250,183.41257188154628 L 280,140 L 310,102.72077938642146 L 340,74.11542731880104 L 370,56.1333512679677 L 400,50 L 430,56.1333512679677 L 460,74.11542731880104 L 490,102.72077938642144 L 520,140 L 550,183.41257188154623 L 580,229.99999999999997 L 610,230 L 640,230 L 670,230 L 700,230 L 730,230 L 760,230" stroke="url(#mon-curve-line)" stroke-width="2.5" fill="none"/>
+  <path d="M 40,230 L 70,230 L 100,230 L 130,230 L 160,230 L 190,230 L 220,230 L 250,183.41257188154628 L 280,140 L 310,102.72077938642146 L 340,74.11542731880104 L 370,56.1333512679677 L 400,50 L 430,56.1333512679677 L 460,74.11542731880104 L 490,102.72077938642144 L 520,140 L 550,183.41257188154623 L 580,229.99999999999997 L 610,230 L 640,230 L 670,230 L 700,230 L 730,230 L 760,230" stroke="url(#mon-v3-curve-line)" stroke-width="2.5" fill="none"/>
 
   <!-- Linha de consumo -->
   <path d="M 40,197.6 L 70,203 L 100,208.4 L 130,208.4 L 160,203 L 190,192.2 L 220,176 L 250,165.2 L 280,170.6 L 310,176 L 340,181.4 L 370,186.8 L 400,186.8 L 430,184.64000000000001 L 460,181.4 L 490,176 L 520,165.2 L 550,149 L 580,138.2 L 610,143.60000000000002 L 640,154.4 L 670,170.6 L 700,181.4 L 730,192.2" stroke="#3b82f6" stroke-width="1.5" fill="none" stroke-dasharray="5,4" opacity="0.6"/>
 
   <!-- Pico destacado -->
   <line x1="418" y1="50" x2="418" y2="230" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
-  <circle cx="418" cy="50" r="6" fill="#fbbf24" filter="url(#mon-curve-glow)"/>
+  <circle cx="418" cy="50" r="6" fill="#fbbf24" filter="url(#mon-v3-curve-glow)"/>
   <circle cx="418" cy="50" r="3" fill="#fff"/>
   <g transform="translate(430 30)">
     <rect width="80" height="36" rx="4" fill="#1e2330" stroke="#f59e0b" stroke-width="0.5"/>
@@ -416,13 +431,13 @@
   <text x="15" y="45" fill="#94a3b8" font-size="9" font-family="monospace">kW</text>
 </svg>
     </div>
-  </div>
-</section>
-<section class="section" style="padding-top:0">
-  <div class="container">
+  </section>
+
+  <!-- GAUGES -->
+  <section style="max-width:var(--container-max);margin:0 auto var(--space-8);padding:0 var(--space-6)">
     <div class="grid grid-4">
-      <div class="chart-premium text-center">
-        <h3>Performance</h3>
+      <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
+        <h3 style="color:var(--text-dark)">Performance</h3>
         <svg class="gauge-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eficiencia: 92%">
   <circle cx="80" cy="80" r="68" stroke="rgba(148,163,184,0.15)" stroke-width="8" fill="none" stroke-dasharray="427.2566008882119" stroke-dashoffset="106.81415022205297" stroke-linecap="round" transform="rotate(135 80 80)"/>
   <circle cx="80" cy="80" r="68" stroke="#22c55e" stroke-width="8" fill="none" stroke-dasharray="427.2566008882119" stroke-dashoffset="132.44954627534565" stroke-linecap="round" transform="rotate(135 80 80)" filter="url(#g1-glow)"/>
@@ -431,8 +446,8 @@
   <text x="80" y="112" text-anchor="middle" fill="#64748b" font-size="11.200000000000001" font-family="Inter, sans-serif">Eficiencia</text>
 </svg>
       </div>
-      <div class="chart-premium text-center">
-        <h3>Irradiacao</h3>
+      <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
+        <h3 style="color:var(--text-dark)">Irradiacao</h3>
         <svg class="gauge-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="W/m²: 78%">
   <circle cx="80" cy="80" r="68" stroke="rgba(148,163,184,0.15)" stroke-width="8" fill="none" stroke-dasharray="427.2566008882119" stroke-dashoffset="106.81415022205297" stroke-linecap="round" transform="rotate(135 80 80)"/>
   <circle cx="80" cy="80" r="68" stroke="#f59e0b" stroke-width="8" fill="none" stroke-dasharray="427.2566008882119" stroke-dashoffset="177.31148936860794" stroke-linecap="round" transform="rotate(135 80 80)" filter="url(#g2-glow)"/>
@@ -441,8 +456,8 @@
   <text x="80" y="112" text-anchor="middle" fill="#64748b" font-size="11.200000000000001" font-family="Inter, sans-serif">W/m²</text>
 </svg>
       </div>
-      <div class="chart-premium text-center">
-        <h3>Consumo</h3>
+      <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
+        <h3 style="color:var(--text-dark)">Consumo</h3>
         <svg class="gauge-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carga: 65%">
   <circle cx="80" cy="80" r="68" stroke="rgba(148,163,184,0.15)" stroke-width="8" fill="none" stroke-dasharray="427.2566008882119" stroke-dashoffset="106.81415022205297" stroke-linecap="round" transform="rotate(135 80 80)"/>
   <circle cx="80" cy="80" r="68" stroke="#3b82f6" stroke-width="8" fill="none" stroke-dasharray="427.2566008882119" stroke-dashoffset="218.96900795520858" stroke-linecap="round" transform="rotate(135 80 80)" filter="url(#g3-glow)"/>
@@ -451,8 +466,8 @@
   <text x="80" y="112" text-anchor="middle" fill="#64748b" font-size="11.200000000000001" font-family="Inter, sans-serif">Carga</text>
 </svg>
       </div>
-      <div class="chart-premium text-center">
-        <h3>Saude</h3>
+      <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
+        <h3 style="color:var(--text-dark)">Saude</h3>
         <svg class="gauge-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sistema: 98%">
   <circle cx="80" cy="80" r="68" stroke="rgba(148,163,184,0.15)" stroke-width="8" fill="none" stroke-dasharray="427.2566008882119" stroke-dashoffset="106.81415022205297" stroke-linecap="round" transform="rotate(135 80 80)"/>
   <circle cx="80" cy="80" r="68" stroke="#22c55e" stroke-width="8" fill="none" stroke-dasharray="427.2566008882119" stroke-dashoffset="113.22299923537615" stroke-linecap="round" transform="rotate(135 80 80)" filter="url(#g4-glow)"/>
@@ -462,16 +477,16 @@
 </svg>
       </div>
     </div>
-  </div>
-</section>
-<section class="section" style="padding-top:0">
-  <div class="container">
+  </section>
+
+  <!-- HISTORICO MENSAL -->
+  <section style="max-width:var(--container-max);margin:0 auto var(--space-8);padding:0 var(--space-6)">
     <div class="grid grid-2">
-      <div class="chart-premium">
-        <h3>Geracao mensal — Estimado vs Realizado</h3>
+      <div class="chart-premium" style="background:var(--surface-dark);border-color:var(--border-dark)">
+        <h3 style="color:var(--text-dark)">Geracao mensal</h3>
         <svg class="area-chart-svg" viewBox="0 0 450 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="kWh/mes">
   <defs>
-    <linearGradient id="mon-monthly-grad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-monthly-grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.02"/>
     </linearGradient>
@@ -479,7 +494,7 @@
   <g stroke="rgba(148,163,184,0.1)" stroke-width="0.5">
     <line x1="40" y1="40" x2="430" y2="40"/><line x1="40" y1="83.33333333333334" x2="430" y2="83.33333333333334"/><line x1="40" y1="126.66666666666667" x2="430" y2="126.66666666666667"/><line x1="40" y1="170" x2="430" y2="170"/>
   </g>
-  <path d="M 40,44 L 75.45454545454545,42 L 110.9090909090909,40 L 146.36363636363637,38 L 181.8181818181818,36 L 217.27272727272728,34 L 252.72727272727272,32 L 288.1818181818182,30 L 323.6363636363636,32 L 359.0909090909091,34 L 394.54545454545456,40 L 430,44 L 430,160 L 40,160 Z" fill="url(#mon-monthly-grad)"/>
+  <path d="M 40,44 L 75.45454545454545,42 L 110.9090909090909,40 L 146.36363636363637,38 L 181.8181818181818,36 L 217.27272727272728,34 L 252.72727272727272,32 L 288.1818181818182,30 L 323.6363636363636,32 L 359.0909090909091,34 L 394.54545454545456,40 L 430,44 L 430,160 L 40,160 Z" fill="url(#mon-v3-monthly-grad)"/>
   <path d="M 40,44 L 75.45454545454545,42 L 110.9090909090909,40 L 146.36363636363637,38 L 181.8181818181818,36 L 217.27272727272728,34 L 252.72727272727272,32 L 288.1818181818182,30 L 323.6363636363636,32 L 359.0909090909091,34 L 394.54545454545456,40 L 430,44" stroke="#f59e0b" stroke-width="2" fill="none"/>
   <circle cx="40" cy="44" r="2.5" fill="#f59e0b"/><circle cx="75.45454545454545" cy="42" r="2.5" fill="#f59e0b"/><circle cx="110.9090909090909" cy="40" r="2.5" fill="#f59e0b"/><circle cx="146.36363636363637" cy="38" r="2.5" fill="#f59e0b"/><circle cx="181.8181818181818" cy="36" r="2.5" fill="#f59e0b"/><circle cx="217.27272727272728" cy="34" r="2.5" fill="#f59e0b"/><circle cx="252.72727272727272" cy="32" r="2.5" fill="#f59e0b"/><circle cx="288.1818181818182" cy="30" r="2.5" fill="#f59e0b"/><circle cx="323.6363636363636" cy="32" r="2.5" fill="#f59e0b"/><circle cx="359.0909090909091" cy="34" r="2.5" fill="#f59e0b"/><circle cx="394.54545454545456" cy="40" r="2.5" fill="#f59e0b"/><circle cx="430" cy="44" r="2.5" fill="#f59e0b"/>
   <g fill="#64748b" font-size="8" font-family="monospace">
@@ -487,11 +502,11 @@
   </g>
 </svg>
       </div>
-      <div class="chart-premium">
-        <h3>Economia acumulada</h3>
+      <div class="chart-premium" style="background:var(--surface-dark);border-color:var(--border-dark)">
+        <h3 style="color:var(--text-dark)">Economia acumulada</h3>
         <svg class="area-chart-svg" viewBox="0 0 450 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="R$ acumulado">
   <defs>
-    <linearGradient id="mon-savings-grad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="mon-v3-savings-grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#22c55e" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#22c55e" stop-opacity="0.02"/>
     </linearGradient>
@@ -499,7 +514,7 @@
   <g stroke="rgba(148,163,184,0.1)" stroke-width="0.5">
     <line x1="40" y1="40" x2="430" y2="40"/><line x1="40" y1="83.33333333333334" x2="430" y2="83.33333333333334"/><line x1="40" y1="126.66666666666667" x2="430" y2="126.66666666666667"/><line x1="40" y1="170" x2="430" y2="170"/>
   </g>
-  <path d="M 40,149.16666666666666 L 75.45454545454545,138.33333333333334 L 110.9090909090909,127.5 L 146.36363636363637,116.66666666666667 L 181.8181818181818,105.83333333333333 L 217.27272727272728,95 L 252.72727272727272,84.16666666666666 L 288.1818181818182,73.33333333333334 L 323.6363636363636,62.5 L 359.0909090909091,51.66666666666666 L 394.54545454545456,40.83333333333334 L 430,30 L 430,160 L 40,160 Z" fill="url(#mon-savings-grad)"/>
+  <path d="M 40,149.16666666666666 L 75.45454545454545,138.33333333333334 L 110.9090909090909,127.5 L 146.36363636363637,116.66666666666667 L 181.8181818181818,105.83333333333333 L 217.27272727272728,95 L 252.72727272727272,84.16666666666666 L 288.1818181818182,73.33333333333334 L 323.6363636363636,62.5 L 359.0909090909091,51.66666666666666 L 394.54545454545456,40.83333333333334 L 430,30 L 430,160 L 40,160 Z" fill="url(#mon-v3-savings-grad)"/>
   <path d="M 40,149.16666666666666 L 75.45454545454545,138.33333333333334 L 110.9090909090909,127.5 L 146.36363636363637,116.66666666666667 L 181.8181818181818,105.83333333333333 L 217.27272727272728,95 L 252.72727272727272,84.16666666666666 L 288.1818181818182,73.33333333333334 L 323.6363636363636,62.5 L 359.0909090909091,51.66666666666666 L 394.54545454545456,40.83333333333334 L 430,30" stroke="#22c55e" stroke-width="2" fill="none"/>
   <circle cx="40" cy="149.16666666666666" r="2.5" fill="#22c55e"/><circle cx="75.45454545454545" cy="138.33333333333334" r="2.5" fill="#22c55e"/><circle cx="110.9090909090909" cy="127.5" r="2.5" fill="#22c55e"/><circle cx="146.36363636363637" cy="116.66666666666667" r="2.5" fill="#22c55e"/><circle cx="181.8181818181818" cy="105.83333333333333" r="2.5" fill="#22c55e"/><circle cx="217.27272727272728" cy="95" r="2.5" fill="#22c55e"/><circle cx="252.72727272727272" cy="84.16666666666666" r="2.5" fill="#22c55e"/><circle cx="288.1818181818182" cy="73.33333333333334" r="2.5" fill="#22c55e"/><circle cx="323.6363636363636" cy="62.5" r="2.5" fill="#22c55e"/><circle cx="359.0909090909091" cy="51.66666666666666" r="2.5" fill="#22c55e"/><circle cx="394.54545454545456" cy="40.83333333333334" r="2.5" fill="#22c55e"/><circle cx="430" cy="30" r="2.5" fill="#22c55e"/>
   <g fill="#64748b" font-size="8" font-family="monospace">
@@ -508,82 +523,31 @@
 </svg>
       </div>
     </div>
-  </div>
-</section>
-<section class="section" style="padding-top:0">
-  <div class="container">
-    <div class="grid grid-2">
-      <div class="chart-premium">
-        <h3>Saude do sistema</h3>
-        <div class="grid grid-2">
-          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
-            <div class="kpi-icon-wrap gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="kpi-value" style="font-size:var(--fs-lg)">Normal</div>
-            <div class="kpi-label">Status geral</div>
-          </div>
-          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
-            <div class="kpi-icon-wrap solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-            <div class="kpi-value" style="font-size:var(--fs-lg)">98%</div>
-            <div class="kpi-label">Disponibilidade</div>
-          </div>
-          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
-            <div class="kpi-icon-wrap info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 8h18M3 12h18M9 4v12M15 4v12M12 16v4M8 20h8"/></svg></div>
-            <div class="kpi-value" style="font-size:var(--fs-lg)">10</div>
-            <div class="kpi-label">Modulos ativos</div>
-          </div>
-          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
-            <div class="kpi-icon-wrap warn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <div class="kpi-value" style="font-size:var(--fs-lg)">12:38</div>
-            <div class="kpi-label">Ultima atualizacao</div>
-          </div>
-        </div>
-      </div>
-      <div class="chart-premium">
-        <h3>Condicoes climaticas</h3>
-        <div class="grid grid-2">
-          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
-            <div class="kpi-icon-wrap solar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
-            <div class="kpi-value" style="font-size:var(--fs-lg)">78%</div>
-            <div class="kpi-label">Irradiacao</div>
-          </div>
-          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
-            <div class="kpi-icon-wrap info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-            <div class="kpi-value" style="font-size:var(--fs-lg)">28°C</div>
-            <div class="kpi-label">Temp. modulo</div>
-          </div>
-          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
-            <div class="kpi-icon-wrap gen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="kpi-value" style="font-size:var(--fs-lg)">Ensolarado</div>
-            <div class="kpi-label">Condicao</div>
-          </div>
-          <div class="kpi-premium" style="border:none;padding:var(--space-3)">
-            <div class="kpi-icon-wrap warn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <div class="kpi-value" style="font-size:var(--fs-lg)">5,2 h</div>
-            <div class="kpi-label">Horas de sol</div>
-          </div>
-        </div>
-      </div>
+  </section>
+
+  <!-- IMPACTO AMBIENTAL -->
+  <section style="max-width:var(--container-max);margin:0 auto var(--space-10);padding:0 var(--space-6)">
+    <div style="text-align:center;margin-bottom:var(--space-6)">
+      <span class="sm-eyebrow">Impacto ambiental</span>
     </div>
-  </div>
-</section>
-<section class="section" style="padding-top:0">
-  <div class="container">
     <div class="grid grid-3">
-      <div class="kpi-premium text-center">
-        <div class="big-number big-number-green" style="font-size:var(--fs-2xl)">2,1<span class="big-number-unit">t CO²</span></div>
-        <div class="big-number-label">Evitado/mes</div>
+      <div class="text-center">
+        <div class="sm-big-number" style="color:var(--gen)">2,1<span style="font-size:0.3em;color:var(--text-dark-muted)">t CO²</span></div>
+        <div class="sm-number-label">Evitado/mes</div>
       </div>
-      <div class="kpi-premium text-center">
-        <div class="big-number big-number-amber" style="font-size:var(--fs-2xl)">38<span class="big-number-unit">arvores</span></div>
-        <div class="big-number-label">Equivalente/ano</div>
+      <div class="text-center">
+        <div class="sm-big-number" style="color:var(--solar)">38<span style="font-size:0.3em;color:var(--text-dark-muted)">arvores</span></div>
+        <div class="sm-number-label">Equivalente/ano</div>
       </div>
-      <div class="kpi-premium text-center">
-        <div class="big-number big-number-light" style="font-size:var(--fs-2xl)">7,8<span class="big-number-unit">MWh</span></div>
-        <div class="big-number-label">Geracao/ano</div>
+      <div class="text-center">
+        <div class="sm-big-number" style="color:var(--text-dark)">7,8<span style="font-size:0.3em;color:var(--text-dark-muted)">MWh</span></div>
+        <div class="sm-number-label">Geracao/ano</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <p class="text-xs text-muted text-center" style="color:var(--text-dark-muted);padding-bottom:var(--space-8)">Dados demonstrativos — sistema ficticio SOL-4821</p>
+</div>
   </main>
   <footer class="site-footer">
   <div class="container">

@@ -1,173 +1,214 @@
-/* SolMais — Home 3.0
-   CINEMATIC HERO com Digital Twin + widgets integrados
-   Secoes editoriais (nao cardizadas) + cases premium */
+/* SolMais — Home V3
+   EDITORIAL ENERGY-TECH + PRODUCT SHOWCASE
+   Apple × Tesla Energy × Aurora Solar
+   Ritmo: HERO dark → PRODUCT light → SIM light → TWIN dark → MONITOR light → PROJECTS light → CTA dark */
 
 function render(data, T) {
   const store = data.store;
-  const systems = data.systems || [];
   const cases = data.cases || [];
 
-  /* === HERO CINEMATOGRAFICO === */
-  const heroSection = T.cinematicHero({
-    title: 'Energia solar sem complicacao',
-    subtitle: 'Simule, projete, acompanhe e monitore seu sistema fotovoltaico em uma plataforma unica.',
-    cta: 'Iniciar simulacao',
-    ctaHref: 'simulador.html',
-    secondaryCta: 'Ver projetos',
-    secondaryHref: 'projetos.html'
-  });
-
-  /* === SIMULACAO RAPIDA (editorial, sem card) === */
-  const quickSimSection = `<section class="section" style="padding-top: var(--space-10)">
-  <div class="container">
-    <div class="editorial-grid">
-      <div class="editorial-text">
-        <span class="cinematic-hero-eyebrow">Simulacao rapida</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-bottom:var(--space-3)">Descubra seu potencial solar em 10 segundos</h2>
-        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-5)">Informe sua conta media e tipo de imovel. O algoritmo estima potencia, geracao mensal, economia e payback.</p>
-        <div class="field mb-3">
-          <label class="label">Minha conta media</label>
-          <input type="number" class="input" id="qs-bill" placeholder="R$ 650" value="650">
+  /* === 01 — HERO CINEMATOGRAFICO (full viewport) === */
+  const hero = `<section class="sm-hero">
+  <div class="sm-hero-visual">
+    ${T.digitalTwin({ width: 1600, height: 1000, panels: 10, showFlow: true, generating: true, id: 'hero-v3', theme: 'dark' })}
+  </div>
+  <div class="sm-hero-overlay">
+    <div class="sm-hero-content">
+      <h1 class="sm-hero-title">Sua energia.<br><span class="accent">Projetada</span> para voce.</h1>
+      <p class="sm-hero-sub">Simule, acompanhe e monitore seu sistema solar em uma unica plataforma.</p>
+      <a href="simulador.html" class="sm-hero-cta">Simular meu sistema &rarr;</a>
+      <div class="sm-hero-meta">
+        <div class="sm-hero-meta-item">
+          <div class="sm-hero-meta-value">5,5 kWp</div>
+          <div class="sm-hero-meta-label">Sistema demonstrativo</div>
         </div>
-        <div class="field mb-4">
-          <label class="label">Tipo de imovel</label>
-          <select class="select" id="qs-type">
-            <option value="residencial">Residencial</option>
-            <option value="comercial">Comercial</option>
-            <option value="condominio">Condominio</option>
-            <option value="rural">Rural</option>
-          </select>
+        <div class="sm-hero-meta-item">
+          <div class="sm-hero-meta-value">650 kWh/mes</div>
+          <div class="sm-hero-meta-label">Geracao estimada</div>
         </div>
-        <button class="btn btn-primary btn-lg" onclick="SolMais.quickSim()">${T.ICONS.bolt} Calcular potencial solar</button>
-        <div class="quick-sim-result hidden" id="qs-result" style="margin-top:var(--space-5)">
-          <div class="grid grid-4">
-            <div><div class="big-number big-number-amber" id="qs-power">5,5<span class="big-number-unit">kWp</span></div><div class="big-number-label">Sistema</div></div>
-            <div><div class="big-number big-number-light" id="qs-gen">650<span class="big-number-unit">kWh</span></div><div class="big-number-label">Geracao/mes</div></div>
-            <div><div class="big-number big-number-green" id="qs-save">R$ 480</div><div class="big-number-label">Economia/mes</div></div>
-            <div><div class="big-number big-number-light" id="qs-payback">4,8<span class="big-number-unit">anos</span></div><div class="big-number-label">Payback</div></div>
-          </div>
-          <a href="simulador.html" class="btn btn-secondary btn-block mt-4">Fazer simulacao completa ${T.ICONS.arrow}</a>
+        <div class="sm-hero-meta-item">
+          <div class="sm-hero-meta-value">R$ 480/mes</div>
+          <div class="sm-hero-meta-label">Economia</div>
         </div>
-        <p class="text-xs text-muted mt-4">Estimativa demonstrativa — dados ficticios</p>
       </div>
+    </div>
+  </div>
+</section>`;
+
+  /* === 02 — PRODUTO: "Do telhado aos dados" (light editorial) === */
+  const productSection = `<section class="sm-product-section">
+  <div class="sm-product-grid">
+    <div class="sm-product-text">
+      <span class="sm-eyebrow">A plataforma</span>
+      <h2 class="sm-headline">Do telhado<br>aos dados.</h2>
+      <p class="sm-lede">O SolMais une modelagem do telhado, dimensionamento do sistema, acompanhamento do projeto e monitoramento energetico em uma so interface. Nao e um site de empresa solar. E software de energia.</p>
+      <a href="projeto.html" class="sm-hero-cta" style="color:var(--solar)">Ver produto em acao &rarr;</a>
+    </div>
+    <div class="sm-product-visual">
       <div class="digital-twin-wrap">
-        ${T.digitalTwin({ width: 500, height: 400, panels: 10, showFlow: true, generating: true, id: 'home-quick', theme: 'dark' })}
+        ${T.digitalTwin({ width: 600, height: 420, panels: 10, showFlow: false, generating: false, id: 'prod-v3', theme: 'dark' })}
+      </div>
+      <div class="sm-float-ui sm-float-ui-tr">
+        <div class="sm-float-ui-title">Sistema</div>
+        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Potencia</span><span class="sm-float-ui-value">5,5 kWp</span></div>
+        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Modulos</span><span class="sm-float-ui-value">10</span></div>
+        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Area</span><span class="sm-float-ui-value">26 m²</span></div>
+      </div>
+      <div class="sm-float-ui sm-float-ui-bl">
+        <div class="sm-float-ui-title">Geracao estimada</div>
+        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Mensal</span><span class="sm-float-ui-value" style="color:var(--solar)">650 kWh</span></div>
+        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Anual</span><span class="sm-float-ui-value" style="color:var(--solar)">7.800 kWh</span></div>
       </div>
     </div>
   </div>
 </section>`;
 
-  /* === COMO FUNCIONA (fluxo energetico editorial) === */
-  const flowSection = `<section class="section">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:var(--space-8)">
-      <span class="cinematic-hero-eyebrow">Como funciona</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Do sol a sua conta de luz</h2>
-      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">O fluxo energetico completo — sol, paineis, inversor, imovel e rede</p>
+  /* === 03 — SIMULADOR PREVIEW (light editorial 50/50) === */
+  const simSection = `<section class="sm-sim-preview">
+  <div class="sm-sim-preview-grid">
+    <div>
+      <span class="sm-eyebrow">Simulador</span>
+      <h2 class="sm-headline">Descubra o<br>sistema ideal.</h2>
+      <p class="sm-lede" style="margin-top:var(--space-4)">Seis etapas. Do CEP ao payback. O wizard pergunta o que importa e devolve um projeto completo.</p>
+      <div class="sm-sim-steps">
+        <div class="sm-sim-step"><span class="sm-sim-step-num">01</span><span class="sm-sim-step-label">Localizacao</span></div>
+        <div class="sm-sim-step"><span class="sm-sim-step-num">02</span><span class="sm-sim-step-label">Consumo</span></div>
+        <div class="sm-sim-step"><span class="sm-sim-step-num">03</span><span class="sm-sim-step-label">Telhado</span></div>
+        <div class="sm-sim-step"><span class="sm-sim-step-num">04</span><span class="sm-sim-step-label">Objetivo</span></div>
+        <div class="sm-sim-step"><span class="sm-sim-step-num">05</span><span class="sm-sim-step-label">Sistema</span></div>
+        <div class="sm-sim-step"><span class="sm-sim-step-num">06</span><span class="sm-sim-step-label">Resultado</span></div>
+      </div>
+      <a href="simulador.html" class="sm-hero-cta" style="color:var(--solar);margin-top:var(--space-6)">Iniciar simulacao &rarr;</a>
     </div>
-    <div style="max-width:700px;margin:0 auto var(--space-8)">
-      ${T.energyFlow()}
-    </div>
-    <div class="grid grid-4">
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap solar">${T.ICONS.sun}</div>
-        <h4 style="margin-bottom:var(--space-2)">Sol</h4>
-        <p class="text-sm text-muted">Luz solar atinge os modulos fotovoltaicos</p>
+    <div class="sm-sim-mockup">
+      <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-5)">
+        <div style="width:10px;height:10px;border-radius:50%;background:#ef4444"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:#f59e0b"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:#22c55e"></div>
+        <span style="font-family:var(--font-mono);font-size:var(--fs-xs);color:var(--text-dark-muted);margin-left:var(--space-2)">simulador · etapa 03</span>
       </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap info">${T.ICONS.panel}</div>
-        <h4 style="margin-bottom:var(--space-2)">Paineis</h4>
-        <p class="text-sm text-muted">Convertem luz em corrente continua (CC)</p>
-      </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap gen">${T.ICONS.bolt}</div>
-        <h4 style="margin-bottom:var(--space-2)">Inversor</h4>
-        <p class="text-sm text-muted">Transforma CC em corrente alternada (CA)</p>
-      </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap warn">${T.ICONS.home}</div>
-        <h4 style="margin-bottom:var(--space-2)">Imovel</h4>
-        <p class="text-sm text-muted">Consome e excedente vai para a rede</p>
-      </div>
-    </div>
-    <div class="text-center mt-6">
-      <a href="como-funciona.html" class="btn btn-secondary">Entenda o processo completo ${T.ICONS.arrow}</a>
-    </div>
-  </div>
-</section>`;
-
-  /* === 4 PRODUTOS (editorial, nao cardizado) === */
-  const featuresSection = `<section class="section">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:var(--space-8)">
-      <span class="cinematic-hero-eyebrow">Plataforma end-to-end</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Simular. Projetar. Acompanhar. Monitorar.</h2>
-      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">Quatro experiencias integradas em uma plataforma unica</p>
-    </div>
-    <div class="grid grid-4">
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap solar">${T.ICONS.bolt}</div>
-        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Simular</h3>
-        <p class="text-sm text-muted mb-4">Wizard de 6 etapas com localizacao, consumo, telhado e objetivo. Resultado com kWp, geracao e payback.</p>
-        <a href="simulador.html" class="btn btn-ghost btn-sm">Iniciar simulacao ${T.ICONS.arrow}</a>
-      </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap info">${T.ICONS.panel}</div>
-        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Projetar</h3>
-        <p class="text-sm text-muted mb-4">Projeto tecnico com diagrama energetico, layout do telhado, dimensionamento e documentos.</p>
-        <a href="projeto.html" class="btn btn-ghost btn-sm">Ver projeto demo ${T.ICONS.arrow}</a>
-      </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap warn">${T.ICONS.clock}</div>
-        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Acompanhar</h3>
-        <p class="text-sm text-muted mb-4">Timeline de implantacao: simulacao, analise, projeto, documentacao, instalacao e conexao.</p>
-        <a href="conta.html" class="btn btn-ghost btn-sm">Portal do cliente ${T.ICONS.arrow}</a>
-      </div>
-      <div class="kpi-premium">
-        <div class="kpi-icon-wrap gen">${T.ICONS.chart}</div>
-        <h3 style="font-family:'Sora',sans-serif;font-size:var(--fs-lg);margin-bottom:var(--space-2)">Monitorar</h3>
-        <p class="text-sm text-muted mb-4">Dashboard energetico em tempo real: geracao atual, graficos diarios e mensais, status do sistema.</p>
-        <a href="monitoramento.html" class="btn btn-ghost btn-sm">Ver monitoramento ${T.ICONS.arrow}</a>
-      </div>
-    </div>
-  </div>
-</section>`;
-
-  /* === CASES PREMIUM === */
-  const casesSection = `<section class="section">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:var(--space-8)">
-      <span class="cinematic-hero-eyebrow">Projetos demonstrativos</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Sistemas dimensionados para diferentes perfis</h2>
-      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">Exemplos ficticios com hero arquitetonico exclusivo por tipo</p>
-    </div>
-    <div class="grid grid-3">
-      ${cases.slice(0, 3).map(c => `
-      <a href="projeto-${c.slug}.html" style="text-decoration:none;color:inherit">
-        <div class="case-hero" style="min-height:280px;border-radius:16px;overflow:hidden;margin-bottom:var(--space-4)">
-          ${T.caseHero(c.type, { title: c.title, power: c.power + ' kWp', modules: c.panels + ' modulos', annual: T.formatKWh(c.annualGeneration) + '/ano', id: 'home-' + c.slug })}
+      <div style="font-family:var(--font-display);font-size:var(--fs-lg);color:var(--text-dark);margin-bottom:var(--space-4)">Telhado</div>
+      <div style="background:var(--bg-dark);border-radius:var(--radius-md);padding:var(--space-3);margin-bottom:var(--space-4)">
+        <div style="font-size:var(--fs-xs);color:var(--text-dark-muted);margin-bottom:var(--space-2)">ORIENTACAO</div>
+        <div style="display:flex;gap:var(--space-2)">
+          <div style="flex:1;padding:var(--space-2);text-align:center;background:var(--solar);color:var(--white);border-radius:var(--radius-sm);font-size:var(--fs-xs);font-weight:600">Norte</div>
+          <div style="flex:1;padding:var(--space-2);text-align:center;background:var(--elevated-dark);color:var(--text-dark-secondary);border-radius:var(--radius-sm);font-size:var(--fs-xs)">Sul</div>
+          <div style="flex:1;padding:var(--space-2);text-align:center;background:var(--elevated-dark);color:var(--text-dark-secondary);border-radius:var(--radius-sm);font-size:var(--fs-xs)">Leste</div>
         </div>
-      </a>`).join('')}
-    </div>
-    <div class="text-center mt-6">
-      <a href="projetos.html" class="btn btn-secondary">Ver todos os projetos ${T.ICONS.arrow}</a>
+      </div>
+      ${T.roofCAD({ panels: 10, panelCols: 5, id: 'sim-mockup', areaUsed: '26 m²', areaTotal: '48 m²' })}
     </div>
   </div>
 </section>`;
 
-  /* === CTA === */
-  const ctaSection = `<section class="section">
-  <div class="container">
-    <div class="visual-section">
-      <h2 style="font-size: var(--fs-3xl); color: #e2e8f0; margin-bottom: var(--space-3)">Pronto para simular?</h2>
-      <p style="font-size: var(--fs-lg); color: #94a3b8; max-width: 500px; margin: 0 auto var(--space-6)">Faca uma simulacao completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
-      <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Iniciar simulacao</a>
-      <p class="text-xs text-muted mt-4">Plataforma demonstrativa — todos os dados sao ficticios</p>
+  /* === 04 — DIGITAL TWIN WOW (dark) === */
+  const twinWow = `<section class="sm-twin-wow">
+  <div class="sm-twin-wow-grid">
+    <div class="sm-twin-wow-header">
+      <span class="sm-eyebrow">Digital Twin</span>
+      <h2 class="sm-headline dark" style="margin-top:var(--space-3)">A mesma casa.<br>Em todo lugar.</h2>
+      <p class="sm-lede dark" style="margin:var(--space-3) auto 0">O Digital Twin do SolMais aparece na simulacao, no projeto e no monitoramento. Continuidade visual. Identidade de produto.</p>
+    </div>
+    <div class="sm-twin-wow-stage">
+      ${T.digitalTwin({ width: 800, height: 500, panels: 10, showFlow: true, generating: true, id: 'twin-wow', theme: 'dark' })}
+      <div class="sm-twin-data sm-twin-data-tl">
+        <div class="sm-twin-data-value solar">3,42 kW</div>
+        <div class="sm-twin-data-label">Gerando agora</div>
+      </div>
+      <div class="sm-twin-data sm-twin-data-tr">
+        <div class="sm-twin-data-value info">2,7 kW</div>
+        <div class="sm-twin-data-label">Consumo</div>
+      </div>
+      <div class="sm-twin-data sm-twin-data-bl">
+        <div class="sm-twin-data-value gen">+1,4 kW</div>
+        <div class="sm-twin-data-label">Exportando</div>
+      </div>
+      <div class="sm-twin-data sm-twin-data-br">
+        <div class="sm-twin-data-value light">5,5 kWp</div>
+        <div class="sm-twin-data-label">Sistema</div>
+      </div>
     </div>
   </div>
 </section>`;
 
-  const content = heroSection + quickSimSection + flowSection + featuresSection + casesSection + ctaSection;
+  /* === 05 — MONITORAMENTO PREVIEW (light) === */
+  const monitorSection = `<section class="sm-monitor-preview">
+  <div class="sm-monitor-preview-grid">
+    <div class="sm-monitor-head">
+      <div>
+        <span class="sm-eyebrow">Monitoramento</span>
+        <h2 class="sm-headline" style="margin-top:var(--space-3)">Veja sua energia<br>acontecer.</h2>
+      </div>
+      <a href="monitoramento.html" class="sm-hero-cta" style="color:var(--solar)">Abrir dashboard &rarr;</a>
+    </div>
+    <div class="sm-monitor-main">
+      <div class="sm-monitor-now">
+        <div class="sm-mega-number">3,42<span class="unit">kW</span></div>
+        <div class="sm-monitor-now-label">Gerando agora</div>
+        <div class="sm-monitor-status">Sistema operando normal</div>
+      </div>
+      <div class="sm-monitor-side">
+        <div class="sm-monitor-side-row">
+          <span class="sm-monitor-side-label">Hoje</span>
+          <span class="sm-monitor-side-value">18,7 kWh</span>
+        </div>
+        <div class="sm-monitor-side-row">
+          <span class="sm-monitor-side-label">Mes</span>
+          <span class="sm-monitor-side-value">584 kWh</span>
+        </div>
+        <div class="sm-monitor-side-row">
+          <span class="sm-monitor-side-label">Economia/mes</span>
+          <span class="sm-monitor-side-value" style="color:var(--solar)">R$ 480</span>
+        </div>
+        <div class="sm-monitor-side-row">
+          <span class="sm-monitor-side-label">CO² evitado</span>
+          <span class="sm-monitor-side-value" style="color:var(--gen)">2,1 t/mes</span>
+        </div>
+        <div style="margin-top:var(--space-4)">
+          ${T.solarCurve({ id: 'mon-preview', width: 500, height: 180, showConsumption: true, peak: '4,82 kW', peakTime: '12:38' })}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>`;
+
+  /* === 06 — PROJETOS: MOSAICO EDITORIAL === */
+  const mosaicItems = cases.slice(0, 5).map((c, i) => {
+    const isLarge = i === 0;
+    return `<a href="projeto-${c.slug}.html" class="sm-mosaic-item${isLarge ? ' large' : ''}" style="text-decoration:none">
+    ${T.caseHero(c.type, { title: '', power: '', modules: '', annual: '', id: 'mosaic-' + c.slug })}
+    <div class="sm-mosaic-overlay">
+      <div class="sm-mosaic-type">${T.escapeHtml(c.type)}</div>
+      <div class="sm-mosaic-title">${T.escapeHtml(c.title)}</div>
+      <div class="sm-mosaic-meta">${c.power} kWp · ${c.panels} modulos · ${T.escapeHtml(c.location)}</div>
+    </div>
+  </a>`;
+  }).join('');
+
+  const projectsSection = `<section class="sm-projects-mosaic">
+  <div style="max-width:var(--container-max);margin:0 auto var(--space-8);padding:0 var(--space-6)">
+    <span class="sm-eyebrow">Projetos</span>
+    <h2 class="sm-headline" style="margin-top:var(--space-3)">Arquitetura como<br>protagonista.</h2>
+  </div>
+  <div class="sm-mosaic">
+    ${mosaicItems}
+  </div>
+  <div style="text-align:center;margin-top:var(--space-8)">
+    <a href="projetos.html" class="sm-hero-cta" style="color:var(--solar)">Ver todos os projetos &rarr;</a>
+  </div>
+</section>`;
+
+  /* === 07 — CTA FINAL (dark) === */
+  const cta = `<section class="sm-cta">
+  <div class="sm-cta-inner">
+    <h2 class="sm-headline dark">Pronto para<br>simular?</h2>
+    <p class="sm-lede dark">Faca uma simulacao completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
+    <a href="simulador.html" class="sm-hero-cta">Iniciar simulacao &rarr;</a>
+    <p style="font-size:var(--fs-xs);color:var(--text-dark-muted);margin-top:var(--space-5)">Plataforma demonstrativa — todos os dados sao ficticios</p>
+  </div>
+</section>`;
+
+  const content = hero + productSection + simSection + twinWow + monitorSection + projectsSection + cta;
 
   const orgSchema = T.renderOrganizationSchema(store);
   const siteSchema = T.renderWebSiteSchema(store);
@@ -178,8 +219,7 @@ function render(data, T) {
     slug: 'index',
     noindex: false,
     html: T.renderLayout({
-      store,
-      data,
+      store, data,
       title: 'Energia Solar: Simulador e Monitoramento',
       description: 'Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geracao e economia estimadas e acompanhe o projeto ate o monitoramento.',
       canonical: '/',

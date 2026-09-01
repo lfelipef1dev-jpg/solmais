@@ -108,11 +108,11 @@
 .btn svg { flex-shrink: 0; }
 .btn-primary {
   background: var(--solar);
-  color: var(--bg);
+  color: var(--white);
 }
 .btn-primary:hover {
   background: var(--solar-bright);
-  color: var(--bg);
+  color: var(--white);
   box-shadow: var(--shadow-solar);
 }
 .btn-secondary {
@@ -123,6 +123,24 @@
 .btn-secondary:hover {
   background: var(--surface);
   border-color: var(--solar);
+  color: var(--solar);
+}
+/* Dark section button variants */
+.section-dark .btn-secondary, .page-dark .btn-secondary {
+  background: var(--elevated-dark);
+  color: var(--text-dark);
+  border-color: var(--border-dark-strong);
+}
+.section-dark .btn-secondary:hover, .page-dark .btn-secondary:hover {
+  background: var(--surface-dark);
+  border-color: var(--solar);
+  color: var(--solar);
+}
+.section-dark .btn-ghost, .page-dark .btn-ghost {
+  color: var(--text-dark-secondary);
+}
+.section-dark .btn-ghost:hover, .page-dark .btn-ghost:hover {
+  background: var(--elevated-dark);
   color: var(--solar);
 }
 .btn-ghost {

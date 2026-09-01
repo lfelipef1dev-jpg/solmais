@@ -34,38 +34,52 @@
 }
 
 :root {
-  /* Cores — energy-tech premium */
-  --bg: #0A0E1A;
-  --surface: #131825;
-  --elevated: #1C2333;
-  --border: rgba(255,255,255,0.08);
-  --border-strong: rgba(255,255,255,0.16);
-  --text: #F0F4F8;
-  --text-secondary: rgba(240,244,248,0.70);
-  --text-muted: rgba(240,244,248,0.45);
+  /* === SOLMAIS V3 — Paleta editorial energy-tech === */
+  /* Base light (off-white) */
+  --bg: #F4F3EE;
+  --surface: #FFFFFF;
+  --elevated: #FAFAF7;
+  --border: rgba(16,19,17,0.08);
+  --border-strong: rgba(16,19,17,0.16);
+  --text: #101311;
+  --text-secondary: rgba(16,19,17,0.65);
+  --text-muted: rgba(16,19,17,0.40);
 
-  /* Solar/energy */
-  --solar: #FBBF24;
-  --solar-bright: #FCD34D;
-  --solar-soft: rgba(251,191,36,0.12);
-  --solar-glow: rgba(251,191,36,0.25);
+  /* Dark sections (charcoal) */
+  --bg-dark: #101311;
+  --surface-dark: #191D1A;
+  --elevated-dark: #232826;
+  --border-dark: rgba(255,255,255,0.08);
+  --border-dark-strong: rgba(255,255,255,0.16);
+  --text-dark: #F4F3EE;
+  --text-dark-secondary: rgba(244,243,238,0.70);
+  --text-dark-muted: rgba(244,243,238,0.40);
 
-  /* Generation/positive */
-  --gen: #22C55E;
-  --gen-soft: rgba(34,197,94,0.12);
-  --gen-glow: rgba(34,197,94,0.20);
+  /* Solar/energy — amber como cor energetica principal */
+  --solar: #E8920C;
+  --solar-bright: #F5A623;
+  --solar-soft: rgba(232,146,12,0.10);
+  --solar-glow: rgba(232,146,12,0.20);
+
+  /* Generation/positive — tech green somente para status */
+  --gen: #16A34A;
+  --gen-soft: rgba(22,163,74,0.10);
+  --gen-glow: rgba(22,163,74,0.15);
 
   /* Alert/warning */
-  --warn: #F59E0B;
-  --warn-soft: rgba(245,158,11,0.12);
-  --danger: #EF4444;
-  --danger-soft: rgba(239,68,68,0.12);
-  --info: #3B82F6;
-  --info-soft: rgba(59,130,246,0.12);
+  --warn: #D97706;
+  --warn-soft: rgba(217,119,6,0.10);
+  --danger: #DC2626;
+  --danger-soft: rgba(220,38,38,0.10);
+  --info: #2563EB;
+  --info-soft: rgba(37,99,235,0.10);
 
   --white: #FFFFFF;
+  --offwhite: #F4F3EE;
+  --graphite: #101311;
+  --charcoal: #191D1A;
 
-  /* Tipografia */
+  /* Tipografia — escala editorial */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-display: 'Sora', 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
@@ -77,6 +91,10 @@
   --fs-2xl: 1.5rem;
   --fs-3xl: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
   --fs-4xl: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+  /* Editorial scale — headlines e numeros protagonistas */
+  --fs-editorial: clamp(2.5rem, 6vw, 5rem);
+  --fs-display: clamp(3rem, 8vw, 7rem);
+  --fs-mega: clamp(4rem, 12vw, 10rem);
 
   /* Espacamento */
   --space-1: 0.25rem;
@@ -137,6 +155,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Dark section override — para seções charcoal no site light */
+.section-dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 { color: var(--text-dark); }
+.section-dark .text-secondary { color: var(--text-dark-secondary); }
+.section-dark .text-muted { color: var(--text-dark-muted); }
+
+/* Dark page override — para paginas de software (portal, admin, simulador) */
+.page-dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+.page-dark h1, .page-dark h2, .page-dark h3, .page-dark h4 { color: var(--text-dark); }
+.page-dark .text-secondary { color: var(--text-dark-secondary); }
+.page-dark .text-muted { color: var(--text-dark-muted); }
 img, svg, video { display: block; max-width: 100%; height: auto; }
 a { color: var(--solar); text-decoration: none; transition: color var(--transition); }
 a:hover { color: var(--solar-bright); }

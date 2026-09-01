@@ -210,30 +210,32 @@ function render(data, T) {
     });
   });
 
-  /* ----- Projetos (lista de cases) ----- */
-  const projContent = `<section class="section">
-  <div class="container">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }])}
-    ${T.pageHero('Projetos Demonstrativos', 'Cases ficticios para ilustrar diferentes perfis de sistema solar', { icon: T.ICONS.panel })}
-    <div class="grid grid-3">
-      ${cases.map(c => `
-      <a href="projeto-${c.slug}.html" style="text-decoration:none;color:inherit">
-      <div class="case-hero" style="min-height:240px;border-radius:16px;overflow:hidden;margin-bottom:var(--space-3)">
-        ${T.caseHero(c.type, { title: c.title, power: c.power + ' kWp', modules: c.panels + ' mod', annual: T.formatKWh(c.annualGeneration) + '/ano', id: 'list-' + c.slug })}
-      </div>
-      </a>
-        <div class="case-card-header" style="margin-top: var(--space-4)"><div><h3>${T.escapeHtml(c.title)}</h3><p class="text-xs text-muted">${T.escapeHtml(c.location)} — ${T.escapeHtml(c.type)}</p></div></div>
-        <div class="case-card-stats">
-          <div class="case-stat"><div class="val">${c.power} kWp</div><div class="lbl">Potencia</div></div>
-          <div class="case-stat"><div class="val">${c.panels}</div><div class="lbl">Modulos</div></div>
-          <div class="case-stat"><div class="val">${T.formatKWh(c.annualGeneration)}</div><div class="lbl">Geracao/ano</div></div>
-          <div class="case-stat"><div class="val">${T.formatBRL(c.monthlySavings)}</div><div class="lbl">Economia/mes</div></div>
-        </div>
-        <p class="text-sm text-secondary">${T.escapeHtml(c.description)}</p>
-        <a href="projeto-${c.slug}.html" class="btn btn-secondary btn-sm">Ver detalhes ${T.ICONS.arrow}</a>
-      </div>`).join('')}
+  /* ----- Projetos (mosaico editorial V3) ----- */
+  const mosaicItems = cases.map((c, i) => {
+    const isLarge = i === 0;
+    return `<a href="projeto-${c.slug}.html" class="sm-mosaic-item${isLarge ? ' large' : ''}" style="text-decoration:none">
+    ${T.caseHero(c.type, { title: '', power: '', modules: '', annual: '', id: 'mosaic-' + c.slug })}
+    <div class="sm-mosaic-overlay">
+      <div class="sm-mosaic-type">${T.escapeHtml(c.type)}</div>
+      <div class="sm-mosaic-title">${T.escapeHtml(c.title)}</div>
+      <div class="sm-mosaic-meta">${c.power} kWp · ${c.panels} modulos · ${T.escapeHtml(c.location)}</div>
     </div>
+  </a>`;
+  }).join('');
+
+  const projContent = `<section class="sm-projects-mosaic">
+  <div style="max-width:var(--container-max);margin:0 auto var(--space-4);padding:var(--space-6) var(--space-6) 0">
+    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }])}
   </div>
+  <div style="max-width:var(--container-max);margin:0 auto var(--space-8);padding:0 var(--space-6)">
+    <span class="sm-eyebrow">Projetos demonstrativos</span>
+    <h2 class="sm-headline" style="margin-top:var(--space-3)">Arquitetura como<br>protagonista.</h2>
+    <p class="sm-lede" style="margin-top:var(--space-3)">Cases ficticios para ilustrar diferentes perfis de sistema solar. Cada projeto com tratamento visual exclusivo por tipo.</p>
+  </div>
+  <div class="sm-mosaic">
+    ${mosaicItems}
+  </div>
+  <p class="text-xs text-muted text-center" style="padding:var(--space-6) 0">Projetos ficticios para demonstracao da plataforma</p>
 </section>`;
 
   pages.push({
