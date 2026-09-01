@@ -1,4 +1,4 @@
-/* SolMais — Financeiro (comparador compra/financiamento/assinatura) */
+﻿/* SolMais — Financeiro (comparador compra/financiamento/assinatura) */
 
 function render(data, T) {
   const store = data.store;
@@ -74,8 +74,8 @@ function render(data, T) {
   return [{
     filename: 'financeiro.html', slug: 'financeiro', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Cenarios Financeiros | SolMais',
-      description: 'Compare aquisicao a vista, financiamento e assinatura — cenarios demonstrativos.',
+      store, data, title: 'Cenarios Financeiros',
+      description: 'Compare formas de aquisicao de energia solar: a vista, financiamento e assinatura. Veja investimento, parcelas, payback e economia acumulada projetada em 25 anos.',
       canonical: '/financeiro.html', active: 'simulador',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

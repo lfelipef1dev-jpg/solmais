@@ -1,7 +1,7 @@
 {
   "name": "SolMais",
   "tagline": "Energia solar calculada para a sua realidade",
-  "description": "Plataforma digital para simulacao, projeto, implantacao e monitoramento de energia solar fotovoltaica.",
+  "description": "Plataforma digital para simulacao, projeto, implantacao e monitoramento de energia solar fotovoltaica. Simule seu sistema em 6 etapas e acompanhe cada etapa do projeto.",
   "url": "https://solmais.expostacker.com.br",
   "email": "contato@demo.solmais.com.br",
   "phone": "(13) 4000-0000",
@@ -9,6 +9,10 @@
   "state": "SP",
   "region": "Baixada Santista",
   "founded": "2024",
+  "sameAs": [
+    "https://expostacker.com.br",
+    "https://github.com/lfelipef1dev-jpg/solmais"
+  ],
   "demoNotice": "Plataforma demonstrativa — todos os dados sao ficticios. Nao constitui proposta comercial, projeto eletrico, orcamento, oferta de credito ou garantia de economia.",
   "nav": [
     { "label": "Inicio", "href": "index.html", "slug": "index" },

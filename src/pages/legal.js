@@ -1,4 +1,4 @@
-/* SolMais — Privacidade + Termos */
+﻿/* SolMais — Privacidade + Termos */
 
 function render(data, T) {
   const store = data.store;
@@ -21,7 +21,7 @@ function render(data, T) {
   pages.push({
     filename: 'privacidade.html', slug: 'privacidade', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Politica de Privacidade | SolMais', description: 'Politica de privacidade da plataforma demonstrativa SolMais.',
+      store, data, title: 'Politica de Privacidade', description: 'Politica de privacidade da plataforma demonstrativa SolMais.',
       canonical: '/privacidade.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Privacidade' }], store.url),
       content: privContent
@@ -45,7 +45,7 @@ function render(data, T) {
   pages.push({
     filename: 'termos.html', slug: 'termos', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Termos de Uso | SolMais', description: 'Termos de uso da plataforma demonstrativa SolMais.',
+      store, data, title: 'Termos de Uso', description: 'Termos de uso da plataforma demonstrativa SolMais.',
       canonical: '/termos.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Termos' }], store.url),
       content: termosContent

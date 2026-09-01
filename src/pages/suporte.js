@@ -1,4 +1,4 @@
-/* SolMais — Suporte (central + categorias + abrir chamado) */
+﻿/* SolMais — Suporte (central + categorias + abrir chamado) */
 
 function render(data, T) {
   const store = data.store;
@@ -88,7 +88,7 @@ function render(data, T) {
   return [{
     filename: 'suporte.html', slug: 'suporte', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Central de Suporte | SolMais', description: 'Central de suporte demonstrativa.',
+      store, data, title: 'Central de Suporte', description: 'Central de suporte demonstrativa.',
       canonical: '/suporte.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

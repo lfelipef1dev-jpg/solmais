@@ -1,4 +1,4 @@
-/* SolMais — Instalacao (timeline de implantacao + checklist) */
+﻿/* SolMais — Instalacao (timeline de implantacao + checklist) */
 
 function render(data, T) {
   const store = data.store;
@@ -70,8 +70,8 @@ function render(data, T) {
   return [{
     filename: 'instalacao.html', slug: 'instalacao', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Instalacao e Implanted | SolMais',
-      description: 'Timeline de implantacao solar: simulacao, analise, projeto, documentacao, instalacao, vistoria e conexao.',
+      store, data, title: 'Instalacao e Implantacao Solar',
+      description: 'Timeline de implantacao de energia solar fotovoltaica: simulacao, analise tecnica, projeto eletrico, documentacao, instalacao, vistoria e sistema conectado.',
       canonical: '/instalacao.html', active: '',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

@@ -50,11 +50,13 @@ function renderHead(opts) {
   const store = opts.store;
   const title = opts.title ? opts.title + ' | ' + store.name : store.name + ' — ' + store.tagline;
   const desc = opts.description || store.description;
-  const canonical = store.url.replace(/\/$/, '') + (opts.canonical && opts.canonical !== '/' ? opts.canonical.replace(/\.html$/, '') : '');
+  const canonical = store.url.replace(/\/$/, '') + (opts.canonical && opts.canonical !== '/' ? opts.canonical.replace(/\.html$/, '') : '/');
   const noindex = opts.noindex ? '<meta name="robots" content="noindex, nofollow">' : '<meta name="robots" content="index, follow">';
   const ogType = opts.ogType || 'website';
+  const ogImage = opts.ogImage || (store.url.replace(/\/$/, '') + '/img/hero-solar.jpg');
   const cssFiles = (opts.cssFiles || ['base.css', 'components.css', 'pages.css']).map(f => '<link rel="stylesheet" href="styles/' + f + '">').join('\n  ');
   const structuredData = opts.structuredData ? (Array.isArray(opts.structuredData) ? opts.structuredData : [opts.structuredData]).map(s => '<script type="application/ld+json">' + JSON.stringify(s) + '</script>').join('\n  ') : '';
+  const preload = opts.preload ? '<link rel="preload" as="image" href="' + opts.preload + '" fetchpriority="high">' : '';
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -70,9 +72,15 @@ function renderHead(opts) {
   <meta property="og:url" content="${canonical}">
   <meta property="og:type" content="${ogType}">
   <meta property="og:site_name" content="${escapeHtml(store.name)}">
+  <meta property="og:image" content="${ogImage}">
+  <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(desc)}">
+  <meta name="twitter:image" content="${ogImage}">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  ${preload}
   ${cssFiles}
   ${structuredData}
 </head>`;
@@ -170,6 +178,51 @@ function renderBreadcrumbSchema(items, storeUrl) {
   return { '@type': 'BreadcrumbList', itemListElement };
 }
 
+/* ---------- Schema @graph helper (Fase 4.8) ---------- */
+function renderGraphSchema(entities, store) {
+  const base = store.url.replace(/\/$/, '');
+  return {
+    '@context': 'https://schema.org',
+    '@graph': entities.map(e => {
+      if (!e['@id']) e['@id'] = base;
+      return e;
+    })
+  };
+}
+
+/* ---------- Organization schema with sameAs (Fase 4.3) ---------- */
+function renderOrganizationSchema(store) {
+  const base = store.url.replace(/\/$/, '');
+  return {
+    '@type': 'Organization',
+    '@id': base + '/#organization',
+    name: store.name,
+    url: base,
+    description: store.description,
+    email: store.email,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: store.city,
+      addressRegion: store.state,
+      addressCountry: 'BR'
+    },
+    sameAs: store.sameAs || []
+  };
+}
+
+/* ---------- WebSite schema (Fase 4.2 — somente na home) ---------- */
+function renderWebSiteSchema(store) {
+  const base = store.url.replace(/\/$/, '');
+  return {
+    '@type': 'WebSite',
+    '@id': base + '/#website',
+    name: store.name,
+    url: base,
+    description: store.description,
+    publisher: { '@id': base + '/#organization' }
+  };
+}
+
 /* ---------- Layout ---------- */
 function renderLayout(opts) {
   const store = opts.store;
@@ -193,6 +246,14 @@ function renderLayout(opts) {
   ${opts.scripts || ''}
   ${dataScript}
   ${jsFiles}
+  <!-- GA4 — Google Analytics 4 (Ordem Tecnica SEO 2026, Fase 5.2) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
 </body>
 </html>`;
 }
@@ -200,5 +261,6 @@ function renderLayout(opts) {
 module.exports = {
   escapeHtml, formatBRL, formatKWh, formatNum, ICONS,
   renderHead, renderAnnouncement, renderHeader, renderFooter,
-  renderBreadcrumb, renderBreadcrumbSchema, renderLayout
+  renderBreadcrumb, renderBreadcrumbSchema, renderLayout,
+  renderGraphSchema, renderOrganizationSchema, renderWebSiteSchema
 };

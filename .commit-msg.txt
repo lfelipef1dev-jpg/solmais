@@ -1,18 +1,37 @@
-feat: SolMais 2.0 — plataforma energy-tech end-to-end
+feat(seo): Ordem Tecnica SEO 2026 — 5 fases aplicadas
 
-Transforma landing page em plataforma digital completa:
-- 54 paginas geradas (home, simulador, resultado, projeto, portal, monitoramento, admin, conteudo)
-- Simulador wizard de 6 etapas (localizacao, consumo, imovel, objetivo, configuracao, resultado)
-- Dashboard de monitoramento com fluxo energetico, graficos e status
-- Portal do cliente com 8 secoes (visao geral, projeto, instalacao, monitoramento, economia, documentos, suporte, perfil)
-- Admin com 12 modulos (dashboard, pipeline kanban, projetos, instalacoes, sistemas, monitoramento, alertas, clientes, financeiro, documentos, analytics, config)
-- Comparador de 3 sistemas + cenarios financeiros (a vista, financiamento, assinatura)
-- 10 artigos educativos + glossario + 5 cases demonstrativos
-- Compensacao de energia + modalidades GD (Lei 14.300/SCEE)
-- Claims tecnicamente responsaveis (sem 95% universal, sem payback fixo, sem homologacao 60 dias)
-- Demo badges em todas as paginas
-- Build: node build.js -> out/
-- Deploy: GitHub Actions -> Cloudflare Pages (directory: out)
+Fase 1 - Fundamentos:
+- HSTS header ativo (_headers)
+- fetchpriority="high" no preload do hero (home)
+- font-display: swap em todas as fontes (ja existia)
+- viewport mobile-first (ja existia)
+- HTML servido sem depender de JS (ja existia)
+
+Fase 2 - Crawl e indexacao:
+- robots.txt com Sitemap absoluto (ja existia)
+- sitemap.xml sem priority/changefreq (ja existia)
+- Canonical absoluta com barra final em todas as paginas
+- noindex em admin, portal, contato, privacidade, termos
+
+Fase 3 - On-page:
+- Title 50-60 chars em todas as 15 paginas indexaveis
+- Meta description 140-165 chars em todas as paginas indexaveis
+- Removido duplicacao "SolMais | SolMais" (template ja adiciona sufixo)
+- H1 unico por pagina (ja existia)
+- Twitter Cards completo (twitter:title, twitter:description, twitter:image)
+- Open Graph completo (og:image, og:locale)
+- dateModified adicionado nos artigos
+
+Fase 4 - Schema:
+- Removido FAQPage (extinto 07/05/2026)
+- Adicionado @graph + @id na home (Organization + WebSite)
+- Adicionado sameAs na Organization (expostacker.com.br, github)
+- Article schema com author, publisher, dateModified
+- BreadcrumbList em todas as subpaginas
+
+Fase 5 - Cadastro e autoridade:
+- GA4 instalado (G-XXXXXXXXXX placeholder para substituir)
+- E-E-A-T: autor Organization identificado nos artigos
 
 Generated with [Devin](https://devin.ai)
 

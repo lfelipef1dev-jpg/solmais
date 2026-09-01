@@ -1,4 +1,4 @@
-/* SolMais — Perfil (dados do cliente + preferencias) */
+﻿/* SolMais — Perfil (dados do cliente + preferencias) */
 
 function render(data, T) {
   const store = data.store;
@@ -65,7 +65,7 @@ function render(data, T) {
   return [{
     filename: 'perfil.html', slug: 'perfil', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Meu Perfil | SolMais', description: 'Perfil do cliente demonstrativo.',
+      store, data, title: 'Meu Perfil', description: 'Perfil do cliente demonstrativo.',
       canonical: '/perfil.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

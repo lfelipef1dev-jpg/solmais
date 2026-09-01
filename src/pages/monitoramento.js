@@ -164,8 +164,8 @@ function render(data, T) {
     html: T.renderLayout({
       store,
       data,
-      title: 'Monitoramento Solar — Dashboard Energetico | SolMais',
-      description: 'Dashboard demonstrativo de monitoramento solar: geracao em tempo real, graficos, status do sistema e impacto ambiental.',
+      title: 'Monitoramento Solar: Dashboard Energetico',
+      description: 'Dashboard de monitoramento solar em tempo real. Veja geracao atual, graficos horarios e mensais, fluxo energetico, status do inversor e impacto ambiental estimado.',
       canonical: '/monitoramento.html',
       active: '',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url),

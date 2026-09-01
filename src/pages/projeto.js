@@ -90,8 +90,8 @@ function render(data, T) {
     slug: 'projeto',
     noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Meu Projeto — ' + project.id + ' | SolMais',
-      description: 'Projeto solar demonstrativo: diagrama energetico, layout do telhado, dimensionamento tecnico e equipe.',
+      store, data, title: 'Meu Projeto — ' + project.id,
+      description: 'Projeto solar demonstrativo com diagrama energetico, layout dos modulos no telhado e especificacoes de potencia, inversor e producao estimada.',
       canonical: '/projeto.html', active: '',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url),
       content

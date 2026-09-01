@@ -1,4 +1,4 @@
-/* SolMais — Como funciona + Compensacao + Modalidades GD + Conteudo + Glossario + Projetos + Cases + Sobre + Contato + FAQ */
+﻿/* SolMais — Como funciona + Compensacao + Modalidades GD + Conteudo + Glossario + Projetos + Cases + Sobre + Contato + FAQ */
 
 function render(data, T) {
   const store = data.store;
@@ -55,8 +55,8 @@ function render(data, T) {
   pages.push({
     filename: 'como-funciona.html', slug: 'como-funciona', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Como Funciona a Energia Solar | SolMais',
-      description: 'Entenda o processo de geracao de eletricidade a partir da luz solar — dos paineis a compensacao na rede.',
+      store, data, title: 'Como Funciona Energia Solar Fotovoltaica',
+      description: 'Entenda como funciona a energia solar fotovoltaica: do painel a compensacao na rede. Conheca o processo de geracao de eletricidade a partir da luz solar em 4 etapas.',
       canonical: '/como-funciona.html', active: 'como-funciona',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Como funciona' }], store.url),
       content: howContent
@@ -105,8 +105,8 @@ function render(data, T) {
   pages.push({
     filename: 'compensacao.html', slug: 'compensacao', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Compensacao de Energia — SCEE | SolMais',
-      description: 'Como funciona o sistema de compensacao de energia eletrica, creditos e o marco legal da microgeracao distribuida.',
+      store, data, title: 'Compensacao de Energia — SCEE',
+      description: 'Como funciona o sistema de compensacao de energia eletrica (SCEE), os creditos de energia e o marco legal da microgeracao distribuida (Lei 14.300).',
       canonical: '/compensacao.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: 'Compensacao' }], store.url),
       content: compContent
@@ -132,8 +132,8 @@ function render(data, T) {
   pages.push({
     filename: 'modalidades-gd.html', slug: 'modalidades-gd', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Modalidades de Geracao Distribuida | SolMais',
-      description: 'Autoconsumo local, remoto, multiplas unidades e geracao compartilhada — modalidades reconhecidas pela ANEEL.',
+      store, data, title: 'Modalidades de Geracao Distribuida',
+      description: 'Conheca as modalidades de geracao distribuida reconhecidas pela ANEEL: autoconsumo local, remoto, multiplas unidades e geracao compartilhada.',
       canonical: '/modalidades-gd.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: 'Modalidades GD' }], store.url),
       content: modContent
@@ -155,8 +155,8 @@ function render(data, T) {
   pages.push({
     filename: 'glossario.html', slug: 'glossario', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Glossario Solar — Termos Tecnicos | SolMais',
-      description: 'Glossario com termos tecnicos do universo fotovoltaico: kW, kWh, kWp, irradiacao, inversor, SCEE e mais.',
+      store, data, title: 'Glossario Solar — Termos Tecnicos',
+      description: 'Glossario solar com termos tecnicos do universo fotovoltaico: kW, kWh, kWp, irradiacao, inversor, string, SCEE, MMGD, compensacao, degradacao e payback.',
       canonical: '/glossario.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: 'Glossario' }], store.url),
       content: glossContent
@@ -183,8 +183,8 @@ function render(data, T) {
   pages.push({
     filename: 'conteudo.html', slug: 'conteudo', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Central de Conhecimento | SolMais',
-      description: 'Artigos demonstrativos sobre energia solar fotovoltaica: fundamentos, equipamentos, regulamentacao e pratico.',
+      store, data, title: 'Central de Conhecimento',
+      description: 'Central de conhecimento sobre energia solar fotovoltaica. Artigos sobre fundamentos, equipamentos, regulamentacao, dimensionamento e manutencao.',
       canonical: '/conteudo.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo' }], store.url),
       content: contContent
@@ -209,11 +209,19 @@ function render(data, T) {
     pages.push({
       filename: 'artigo-' + a.slug + '.html', slug: 'artigo-' + a.slug, noindex: false,
       html: T.renderLayout({
-        store, data, title: a.title + ' | SolMais', description: a.description,
+        store, data, title: a.title, description: a.description,
         canonical: '/artigo-' + a.slug + '.html', active: 'conteudo', ogType: 'article',
         structuredData: [
           T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: a.title }], store.url),
-          { '@type': 'Article', headline: a.title, description: a.description, datePublished: a.date, author: { '@type': 'Organization', name: store.name } }
+          {
+            '@type': 'Article',
+            headline: a.title,
+            description: a.description,
+            datePublished: a.date,
+            dateModified: a.date,
+            author: { '@type': 'Organization', name: store.name, url: store.url },
+            publisher: { '@type': 'Organization', name: store.name, url: store.url }
+          }
         ],
         content: artContent
       })
@@ -245,8 +253,8 @@ function render(data, T) {
   pages.push({
     filename: 'projetos.html', slug: 'projetos', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Projetos Demonstrativos | SolMais',
-      description: 'Cases demonstrativos de sistemas solares: residencial, comercial, condominio e rural — dados ficticios.',
+      store, data, title: 'Projetos Demonstrativos',
+      description: 'Cases demonstrativos de sistemas solares fotovoltaicos: residencial, comercial, condominio e rural. Veja potencia, modulos, geracao e payback de cada projeto.',
       canonical: '/projetos.html', active: 'projetos',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }], store.url),
       content: projContent
@@ -298,7 +306,7 @@ function render(data, T) {
     pages.push({
       filename: 'projeto-' + c.slug + '.html', slug: 'projeto-' + c.slug, noindex: false,
       html: T.renderLayout({
-        store, data, title: c.title + ' | SolMais', description: c.description,
+        store, data, title: c.title, description: c.description,
         canonical: '/projeto-' + c.slug + '.html', active: 'projetos',
         structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos', href: 'projetos.html' }, { label: c.title }], store.url),
         content: caseContent
@@ -346,7 +354,7 @@ function render(data, T) {
     filename: 'sobre.html', slug: 'sobre', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Sobre o SolMais | Plataforma Solar',
-      description: 'Plataforma digital end-to-end para energia solar fotovoltaica — da simulacao ao monitoramento.',
+      description: 'SolMais e uma plataforma digital end-to-end para energia solar: simulacao, projeto, implantacao, monitoramento, documentos, suporte e administracao.',
       canonical: '/sobre.html', active: 'sobre',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Sobre' }], store.url),
       content: aboutContent
@@ -377,7 +385,7 @@ function render(data, T) {
   pages.push({
     filename: 'contato.html', slug: 'contato', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Contato | SolMais', description: 'Contato demonstrativo.',
+      store, data, title: 'Contato', description: 'Entre em contato com a plataforma demonstrativa SolMais. Formulario de contato disponivel. Plataforma demo: nao atendemos clientes reais nem coletamos dados.',
       canonical: '/contato.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Contato' }], store.url),
       content: contactContent
@@ -400,17 +408,11 @@ function render(data, T) {
   pages.push({
     filename: 'faq.html', slug: 'faq', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'FAQ — Perguntas Frequentes | SolMais',
-      description: 'Perguntas frequentes sobre energia solar fotovoltaica — economia, homologacao, garantia e funcionamento.',
+      store, data, title: 'FAQ — Perguntas Frequentes',
+      description: 'Perguntas frequentes sobre energia solar: quanto economizar, tempo de homologacao, garantia dos paineis, dias nublados e compensacao de energia.',
       canonical: '/faq.html', active: '',
       structuredData: [
-        T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }], store.url),
-        { '@type': 'FAQPage', mainEntity: [
-          { '@type': 'Question', name: 'Quanto posso economizar?', acceptedAnswer: { '@type': 'Answer', text: 'Sistemas fotovoltaicos podem reduzir significativamente a energia faturada da rede, mas o resultado depende do perfil de consumo, dimensionamento, tarifa, distribuidora e regras aplicaveis.' } },
-          { '@type': 'Question', name: 'Quanto tempo leva a homologacao?', acceptedAnswer: { '@type': 'Answer', text: 'Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexao previstas na regulamentacao vigente.' } },
-          { '@type': 'Question', name: 'Qual a garantia dos paineis?', acceptedAnswer: { '@type': 'Answer', text: 'Garantias variam conforme fabricante, modelo e componente. Os periodos apresentados nesta demonstracao sao ilustrativos.' } },
-          { '@type': 'Question', name: 'Funciona em dias nublados?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Paineis fotovoltaicos geram eletricidade com luz difusa, nao apenas com sol direto.' } }
-        ]}
+        T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }], store.url)
       ],
       content: faqContent
     })

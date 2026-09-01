@@ -1,4 +1,4 @@
-/* SolMais — Admin
+﻿/* SolMais — Admin
    Login gate + Dashboard + Pipeline + Projetos + Instalacoes + Sistemas + Monitoramento + Alertas + Clientes + Financeiro + Documentos + Analytics + Config */
 
 function render(data, T) {
@@ -91,7 +91,7 @@ function render(data, T) {
   pages.push({
     filename: 'admin.html', slug: 'admin', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Admin Dashboard | SolMais', description: 'Painel administrativo demonstrativo.',
+      store, data, title: 'Admin Dashboard', description: 'Painel administrativo demonstrativo.',
       canonical: '/admin.html', active: '', noindex: true,
       cssFiles: ['base.css', 'components.css', 'pages.css'],
       content: dashContent
@@ -103,7 +103,7 @@ function render(data, T) {
     return {
       filename, slug: filename.replace('.html', ''), noindex: true,
       html: T.renderLayout({
-        store, data, title: title + ' | SolMais Admin', description: 'Painel administrativo demonstrativo.',
+        store, data, title: title + ' Admin', description: 'Painel administrativo demonstrativo.',
         canonical: '/' + filename, active: '', noindex: true,
         content: '<div class="admin-layout">' + sidebar + '<div class="admin-content">' + content + '</div></div>'
       })

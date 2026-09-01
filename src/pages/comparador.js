@@ -1,4 +1,4 @@
-/* SolMais — Comparador de sistemas (3 configuracoes) */
+﻿/* SolMais — Comparador de sistemas (3 configuracoes) */
 
 function render(data, T) {
   const store = data.store;
@@ -58,8 +58,8 @@ function render(data, T) {
   return [{
     filename: 'comparador.html', slug: 'comparador', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Comparador de Sistemas Solares | SolMais',
-      description: 'Compare tres configuracoes de sistemas solares: economico, recomendado e performance.',
+      store, data, title: 'Comparador de Sistemas Solares',
+      description: 'Compare tres configuracoes de sistemas solares: economico, recomendado e performance. Veja potencia, modulos, geracao, cobertura, area, investimento e payback.',
       canonical: '/comparador.html', active: 'simulador',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

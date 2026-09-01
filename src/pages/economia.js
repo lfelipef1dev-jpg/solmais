@@ -1,4 +1,4 @@
-/* SolMais — Economia (dashboard financeiro do cliente) */
+﻿/* SolMais — Economia (dashboard financeiro do cliente) */
 
 function render(data, T) {
   const store = data.store;
@@ -63,7 +63,7 @@ function render(data, T) {
   return [{
     filename: 'economia.html', slug: 'economia', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Economia Estimada | SolMais', description: 'Dashboard de economia demonstrativo.',
+      store, data, title: 'Economia Estimada', description: 'Dashboard de economia demonstrativo.',
       canonical: '/economia.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

@@ -1,4 +1,4 @@
-/* SolMais — Documentos (central de documentos demo) */
+﻿/* SolMais — Documentos (central de documentos demo) */
 
 function render(data, T) {
   const store = data.store;
@@ -37,7 +37,7 @@ function render(data, T) {
   return [{
     filename: 'documentos.html', slug: 'documentos', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Documentos | SolMais', description: 'Central de documentos demonstrativos.',
+      store, data, title: 'Documentos', description: 'Central de documentos demonstrativos.',
       canonical: '/documentos.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

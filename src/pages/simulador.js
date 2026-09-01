@@ -282,8 +282,8 @@ function render(data, T) {
     html: T.renderLayout({
       store,
       data,
-      title: 'Simulador Solar — 6 Etapas | SolMais',
-      description: 'Simule seu sistema solar fotovoltaico em 6 etapas: localizacao, consumo, imovel, objetivo, configuracao e resultado.',
+      title: 'Simulador Solar Fotovoltaico: 6 Etapas',
+      description: 'Simule seu sistema solar em 6 etapas: localizacao, consumo, imovel, telhado, objetivo e configuracao. Veja resultado com kWp, geracao, economia e payback estimados.',
       canonical: '/simulador.html',
       active: 'simulador',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url),

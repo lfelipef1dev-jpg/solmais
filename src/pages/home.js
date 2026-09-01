@@ -133,19 +133,9 @@ function render(data, T) {
 
   const content = heroSection + featuresSection + casesSection + ctaSection;
 
-  const orgSchema = {
-    '@type': 'Organization',
-    name: store.name,
-    url: store.url,
-    description: store.description,
-    email: store.email,
-    address: { '@type': 'PostalAddress', addressLocality: store.city, addressRegion: store.state, addressCountry: 'BR' }
-  };
-  const siteSchema = {
-    '@type': 'WebSite',
-    name: store.name,
-    url: store.url
-  };
+  const orgSchema = T.renderOrganizationSchema(store);
+  const siteSchema = T.renderWebSiteSchema(store);
+  const graphSchema = T.renderGraphSchema([orgSchema, siteSchema], store);
 
   return [{
     filename: 'index.html',
@@ -154,11 +144,12 @@ function render(data, T) {
     html: T.renderLayout({
       store,
       data,
-      title: store.name + ' — ' + store.tagline,
-      description: store.description,
+      title: 'Energia Solar: Simulador e Monitoramento',
+      description: 'Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geracao e economia estimadas e acompanhe o projeto ate o monitoramento.',
       canonical: '/',
       active: 'index',
-      structuredData: [orgSchema, siteSchema],
+      structuredData: graphSchema,
+      preload: 'img/hero-solar-mobile.jpg',
       content
     })
   }];
