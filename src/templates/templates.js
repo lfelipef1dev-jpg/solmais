@@ -53,7 +53,7 @@ function renderHead(opts) {
   const canonical = store.url.replace(/\/$/, '') + (opts.canonical && opts.canonical !== '/' ? opts.canonical.replace(/\.html$/, '') : '/');
   const noindex = opts.noindex ? '<meta name="robots" content="noindex, nofollow">' : '<meta name="robots" content="index, follow">';
   const ogType = opts.ogType || 'website';
-  const ogImage = opts.ogImage || (store.url.replace(/\/$/, '') + '/img/hero-solar.jpg');
+  const ogImage = opts.ogImage || (store.url.replace(/\/$/, '') + '/og-image.png');
   const cssFiles = (opts.cssFiles || ['base.css', 'components.css', 'pages.css']).map(f => '<link rel="stylesheet" href="styles/' + f + '">').join('\n  ');
   const structuredData = opts.structuredData ? (Array.isArray(opts.structuredData) ? opts.structuredData : [opts.structuredData]).map(s => '<script type="application/ld+json">' + JSON.stringify(s) + '</script>').join('\n  ') : '';
   const preload = opts.preload ? '<link rel="preload" as="image" href="' + opts.preload + '" fetchpriority="high">' : '';
@@ -79,7 +79,7 @@ function renderHead(opts) {
   <meta name="twitter:description" content="${escapeHtml(desc)}">
   <meta name="twitter:image" content="${ogImage}">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="1254x1254">
   ${preload}
   ${cssFiles}
   ${structuredData}
@@ -105,8 +105,7 @@ function renderHeader(store, nav, opts) {
   return `<header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo" aria-label="${escapeHtml(store.name)}">
-      <span class="logo-icon">${ICONS.sun}</span>
-      <span class="logo-text">${escapeHtml(store.name)}</span>
+      <img src="brand/solmais-logo.png" alt="SolMais" width="160" height="53" class="logo-img" />
     </a>
     <nav class="main-nav" aria-label="Navegacao principal">
       <ul class="nav-list">${navItems}</ul>
@@ -139,8 +138,7 @@ function renderFooter(store) {
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="logo-icon">${ICONS.sun}</span>
-        <span class="logo-text">${escapeHtml(store.name)}</span>
+        <img src="brand/solmais-logo.png" alt="SolMais" width="150" height="50" class="logo-img logo-img-footer" />
         <p class="footer-desc">${escapeHtml(store.tagline)}.</p>
         <p class="footer-demo">${escapeHtml(store.demoNotice)}</p>
       </div>

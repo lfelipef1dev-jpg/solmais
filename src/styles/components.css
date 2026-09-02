@@ -35,7 +35,13 @@
   white-space: nowrap;
 }
 .logo-icon { color: var(--solar); display: flex; }
+.logo-img { height: 40px; width: auto; display: block; }
+.logo-img-footer { height: 44px; }
 .logo:hover { color: var(--text); }
+@media (max-width: 768px) {
+  .logo-img { height: 34px; }
+  .logo-img-footer { height: 38px; }
+}
 .main-nav { flex: 1; }
 .nav-list {
   display: flex;

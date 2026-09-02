@@ -82,10 +82,16 @@ function build() {
   copyDir(path.join(SRC, 'scripts'), path.join(OUT, 'scripts'));
 
   // Copiar arquivos raiz
-  ['favicon.svg', '_headers'].forEach(f => {
+  ['favicon.svg', 'favicon.png', 'og-image.png', '_headers'].forEach(f => {
     const src = path.join(__dirname, f);
     if (fs.existsSync(src)) fs.copyFileSync(src, path.join(OUT, f));
   });
+
+  // Copiar brand assets
+  const brandDir = path.join(__dirname, 'brand');
+  if (fs.existsSync(brandDir)) {
+    copyDir(brandDir, path.join(OUT, 'brand'));
+  }
 
   // Sitemap e robots
   generateSitemap(allPages, data);

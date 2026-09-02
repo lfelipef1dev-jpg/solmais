@@ -225,7 +225,7 @@ function render(data, T) {
       canonical: '/',
       active: 'index',
       structuredData: graphSchema,
-      ogImage: store.url.replace(/\/$/, '') + '/img/og/home.svg',
+      ogImage: store.url.replace(/\/$/, '') + '/og-image.png',
       content
     })
   }];
