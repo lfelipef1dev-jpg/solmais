@@ -4,7 +4,7 @@ function render(data, T) {
   const store = data.store;
   const sys = (data.systems || [])[0];
   const customer = (data.customers || [])[0];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Economia' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Economia' }];
 
   const content = `<section class="section">
   <div class="container">

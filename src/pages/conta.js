@@ -8,7 +8,7 @@ function render(data, T) {
   const project = (data.projects || [])[0];
   const documents = data.documents || [];
   const tickets = data.tickets || [];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal do cliente' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Portal do cliente' }];
 
   const sidebar = `<div class="portal-sidebar">
   <div class="portal-user">

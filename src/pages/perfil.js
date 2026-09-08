@@ -3,7 +3,7 @@
 function render(data, T) {
   const store = data.store;
   const customer = (data.customers || [])[0];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Perfil' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Perfil' }];
 
   const content = `<section class="section">
   <div class="container container-narrow">

@@ -6,7 +6,7 @@ function render(data, T) {
   const store = data.store;
   const sys = (data.systems || [])[0];
   const project = (data.projects || [])[0];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Meu projeto' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Meu projeto' }];
 
   /* === HERO: DIGITAL TWIN COM HOTSPOTS === */
   const twinHero = `<section class="section">

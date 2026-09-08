@@ -3,7 +3,7 @@
 function render(data, T) {
   const store = data.store;
   const financial = data.financial || [];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Simulador', href: 'simulador.html' }, { label: 'Financeiro' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Simulador', href: 'simulador.html' }, { label: 'Financeiro' }];
 
   const content = `<section class="section">
   <div class="container">

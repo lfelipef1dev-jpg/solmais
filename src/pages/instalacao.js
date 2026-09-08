@@ -3,7 +3,7 @@
 function render(data, T) {
   const store = data.store;
   const project = (data.projects || [])[0];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'instalação' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'instalação' }];
 
   const checklist = [
     { item: 'Estrutura de fixação', done: true },

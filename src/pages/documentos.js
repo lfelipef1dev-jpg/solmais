@@ -3,7 +3,7 @@
 function render(data, T) {
   const store = data.store;
   const documents = data.documents || [];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Documentos' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Documentos' }];
 
   const content = `<section class="section">
   <div class="container">

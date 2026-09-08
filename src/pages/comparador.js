@@ -2,7 +2,7 @@
 
 function render(data, T) {
   const store = data.store;
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Simulador', href: 'simulador.html' }, { label: 'Comparador' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Simulador', href: 'simulador.html' }, { label: 'Comparador' }];
 
   const systems = [
     { name: 'Econômico', power: 4.4, panels: 8, inverter: 4, area: 21, gen: 480, genYear: 5760, coverage: '65%', invest: 26000, payback: 5.2, prod25: 138000, recommended: false },

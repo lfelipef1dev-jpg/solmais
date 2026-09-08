@@ -1,4 +1,4 @@
-﻿/* SolMais — Como funciona + compensação + Modalidades GD + Conteúdo + Glossario + Projetos + Cases + Sobre + Contato + FAQ */
+﻿/* SolMais — Como funciona + compensação + Modalidades GD + Conteúdo + Glossário + Projetos + Cases + Sobre + Contato + FAQ */
 
 function render(data, T) {
   const store = data.store;
@@ -10,7 +10,7 @@ function render(data, T) {
   /* ----- Como funciona ----- */
   const howContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Como funciona' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Como funciona' }])}
     ${T.pageHero('Como Funciona a Energia Solar', 'Sistemas fotovoltaicos convertem luz solar em eletricidade — do painel a compensação na rede', { icon: T.ICONS.sun })}
 
     <div class="energy-flow-wrap mb-6">
@@ -50,7 +50,7 @@ function render(data, T) {
       store, data, title: 'Como Funciona Energia Solar Fotovoltaica',
       description: 'Entenda como funciona a energia solar fotovoltaica: do painel a compensação na rede. Conheca o processo de geração de eletricidade a partir da luz solar em 4 etapas.',
       canonical: '/como-funciona.html', active: 'como-funciona',
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Como funciona' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Como funciona' }], store.url),
       content: howContent
     })
   });
@@ -58,7 +58,7 @@ function render(data, T) {
   /* ----- compensação ----- */
   const compContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'compensação' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'compensação' }])}
     ${T.pageHero('compensação de Energia', 'Como funciona o Sistema de compensação de Energia Elétrica (SCEE) e os créditos de energia', { icon: T.ICONS.grid })}
 
     <div class="card mb-6">
@@ -93,7 +93,7 @@ function render(data, T) {
       store, data, title: 'compensação de Energia — SCEE',
       description: 'Como funciona o sistema de compensação de energia elétrica (SCEE), os créditos de energia e o marco legal da microgeração distribuída (Lei 14.300).',
       canonical: '/compensação.html', active: 'conteudo',
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'compensação' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'compensação' }], store.url),
       content: compContent
     })
   });
@@ -101,7 +101,7 @@ function render(data, T) {
   /* ----- Modalidades GD ----- */
   const modContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Modalidades GD' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Modalidades GD' }])}
     ${T.pageHero('Modalidades de geração distribuída', 'A ANEEL reconhece diferentes modalidades de autoconsumo por meio de geração distribuída', { icon: T.ICONS.bolt })}
 
     <div class="card mb-6"><h2>Autoconsumo local</h2><p class="text-secondary mt-2">geração e consumo na mesma unidade consumidora. A energia produzida é consumida no próprio imóvel onde o sistema está instalado.</p></div>
@@ -119,16 +119,16 @@ function render(data, T) {
       store, data, title: 'Modalidades de geração distribuída',
       description: 'Conheca as modalidades de geração distribuída reconhecidas pela ANEEL: autoconsumo local, remoto, multiplas unidades e geração compartilhada.',
       canonical: '/modalidades-gd.html', active: 'conteudo',
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Modalidades GD' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Modalidades GD' }], store.url),
       content: modContent
     })
   });
 
-  /* ----- Glossario ----- */
+  /* ----- Glossário ----- */
   const glossContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Glossario' }])}
-    ${T.pageHero('Glossario Solar', 'Termos técnicos do universo fotovoltaico explicados de forma simples', { icon: T.ICONS.doc })}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Glossário' }])}
+    ${T.pageHero('Glossário Solar', 'Termos técnicos do universo fotovoltaico explicados de forma simples', { icon: T.ICONS.doc })}
     <div class="glossary-list">
       ${glossary.map(g => `<div class="glossary-item"><div class="glossary-term">${T.escapeHtml(g.term)}</div><div class="glossary-def">${T.escapeHtml(g.definition)}</div></div>`).join('')}
     </div>
@@ -138,10 +138,10 @@ function render(data, T) {
   pages.push({
     filename: 'glossario.html', slug: 'glossario', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Glossario Solar — Termos Técnicos',
-      description: 'Glossario solar com termos técnicos do universo fotovoltaico: kW, kWh, kWp, irradiação, inversor, string, SCEE, MMGD, compensação, degradacao e payback.',
+      store, data, title: 'Glossário Solar — Termos Técnicos',
+      description: 'Glossário solar com termos técnicos do universo fotovoltaico: kW, kWh, kWp, irradiação, inversor, string, SCEE, MMGD, compensação, degradacao e payback.',
       canonical: '/glossario.html', active: 'conteudo',
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Glossario' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Glossário' }], store.url),
       content: glossContent
     })
   });
@@ -149,7 +149,7 @@ function render(data, T) {
   /* ----- Conteúdo (lista de artigos) ----- */
   const contContent = `<section class="section">
   <div class="container">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo' }])}
     ${T.pageHero('Central de Conhecimento', 'Artigos demonstrativos sobre energia solar', { icon: T.ICONS.doc })}
     <div class="grid grid-3">
       ${articles.map(a => `
@@ -169,7 +169,7 @@ function render(data, T) {
       store, data, title: 'Central de Conhecimento',
       description: 'Central de conhecimento sobre energia solar fotovoltaica. Artigos sobre fundamentos, equipamentos, regulamentação, dimensionamento e manutenção.',
       canonical: '/conteudo.html', active: 'conteudo',
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo' }], store.url),
       content: contContent
     })
   });
@@ -178,7 +178,7 @@ function render(data, T) {
   articles.forEach(a => {
     const artContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: a.title }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: a.title }])}
     ${T.pageHero(a.title, a.category + ' — ' + a.readTime, { icon: T.ICONS.doc })}
     <div class="article-meta" style="margin-bottom:var(--space-6)"><span>${a.readTime}</span><span>${a.date}</span></div>
     <div class="article-body"><p>${T.escapeHtml(a.content)}</p></div>
@@ -194,7 +194,7 @@ function render(data, T) {
         store, data, title: a.title, description: a.description,
         canonical: '/artigo-' + a.slug + '.html', active: 'conteudo', ogType: 'article',
         structuredData: [
-          T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: a.title }], store.url),
+          T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: a.title }], store.url),
           {
             '@type': 'Article',
             headline: a.title,
@@ -225,7 +225,7 @@ function render(data, T) {
 
   const projContent = `<section class="sm-projects-mosaic">
   <div style="max-width:var(--container-max);margin:0 auto var(--space-4);padding:var(--space-6) var(--space-6) 0">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Projetos' }])}
   </div>
   <div style="max-width:var(--container-max);margin:0 auto var(--space-8);padding:0 var(--space-6)">
     <span class="sm-eyebrow">Projetos demonstrativos</span>
@@ -245,7 +245,7 @@ function render(data, T) {
       description: 'Cases demonstrativos de sistemas solares fotovoltaicos: residencial, comercial, condomínio e rural. Veja potência, módulos, geração e payback de cada projeto.',
       canonical: '/projetos.html', active: 'projetos',
       ogImage: store.url.replace(/\/$/, '') + '/img/og/projetos.svg',
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Projetos' }], store.url),
       content: projContent
     })
   });
@@ -262,7 +262,7 @@ function render(data, T) {
 
     <section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos', href: 'projetos.html' }, { label: c.title }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Projetos', href: 'projetos.html' }, { label: c.title }])}
 
     <!-- VISAO GERAL -->
     <div class="editorial-grid" style="margin:var(--space-8) 0">
@@ -351,7 +351,7 @@ function render(data, T) {
       html: T.renderLayout({
         store, data, title: c.title, description: c.description,
         canonical: '/projeto-' + c.slug + '.html', active: 'projetos',
-        structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos', href: 'projetos.html' }, { label: c.title }], store.url),
+        structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Projetos', href: 'projetos.html' }, { label: c.title }], store.url),
         content: caseContent
       })
     });
@@ -360,7 +360,7 @@ function render(data, T) {
   /* ----- Sobre ----- */
   const aboutContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Sobre' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Sobre' }])}
     ${T.pageHero('Sobre o SolMais', 'Plataforma digital end-to-end para energia solar fotovoltaica — da simulação ao monitoramento', { icon: T.ICONS.sun })}
 
     <div class="card mb-6">
@@ -398,7 +398,7 @@ function render(data, T) {
       store, data, title: 'Sobre o SolMais | Plataforma Solar',
       description: 'SolMais e uma plataforma digital end-to-end para energia solar: simulação, projeto, implantacao, monitoramento, documentos, suporte e administracao.',
       canonical: '/sobre.html', active: 'sobre',
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Sobre' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Sobre' }], store.url),
       content: aboutContent
     })
   });
@@ -406,7 +406,7 @@ function render(data, T) {
   /* ----- Contato ----- */
   const contactContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Contato' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Contato' }])}
     ${T.pageHero('Contato', 'Plataforma demonstrativa — não atendemos clientes reais', { icon: T.ICONS.support })}
     <div class="card mb-6">
       <div class="grid grid-2">
@@ -428,7 +428,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data, title: 'Contato', description: 'Entre em contato com a plataforma demonstrativa SolMais. Formulário de contato disponível. Plataforma demo: não atendemos clientes reais nem coletamos dados.',
       canonical: '/contato.html', active: '', noindex: true,
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Contato' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Contato' }], store.url),
       content: contactContent
     })
   });
@@ -436,7 +436,7 @@ function render(data, T) {
   /* ----- FAQ ----- */
   const faqContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'FAQ' }])}
     ${T.pageHero('Perguntas Frequentes', 'Duvidas comuns sobre energia solar fotovoltaica', { icon: T.ICONS.support })}
     <div class="card mb-4"><h2>Quanto posso economizar?</h2><p class="text-secondary mt-2">Sistemas fotovoltaicos podem reduzir significativamente a energia faturada da rede, mas o resultado depende do perfil de consumo, dimensionamento, tarifa, distribuidora e regras aplicáveis.</p></div>
     <div class="card mb-4"><h2>Quanto tempo leva a homologação?</h2><p class="text-secondary mt-2">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexão previstas na regulamentação vigem. não prometemos prazo universal.</p></div>
@@ -453,7 +453,7 @@ function render(data, T) {
       description: 'Perguntas frequentes sobre energia solar: quanto economizar, tempo de homologação, garantia dos módulos fotovoltaicos, dias nublados e compensação de energia.',
       canonical: '/faq.html', active: '',
       structuredData: [
-        T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }], store.url)
+        T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'FAQ' }], store.url)
       ],
       content: faqContent
     })

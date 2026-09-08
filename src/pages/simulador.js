@@ -3,7 +3,7 @@
 
 function render(data, T) {
   const store = data.store;
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Simulador' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Simulador' }];
 
   // Dados para gráficos do resultado
   const genData = [680, 620, 650, 600, 550, 520, 540, 580, 620, 670, 690, 700];
@@ -375,7 +375,7 @@ function render(data, T) {
       </div>
 
       <div class="wizard-nav">
-        <button class="btn btn-secondary" id="wizard-prev" onclick="SolMais.wizardPrev()" disabled>Voltar</button>
+        <button class="btn btn-secondary" id="wizard-prev" onclick="SolMais.wizardPrev()" disabled>Voltar</button><span style="width:var(--space-2);display:inline-block"></span>
         <button class="btn btn-primary" id="wizard-next" onclick="SolMais.wizardNext()">Próximo ${T.ICONS.arrow}</button>
       </div>
     </div>

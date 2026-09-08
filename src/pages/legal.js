@@ -6,7 +6,7 @@ function render(data, T) {
 
   const privContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Privacidade' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Privacidade' }])}
     ${T.pageHero('Política de Privacidade', 'Plataforma demonstrativa — atualizado em setembro 2026', { icon: T.ICONS.doc })}
 
     <div class="card mb-4"><h3>1. Natureza demonstrativa</h3><p class="text-secondary mt-2">O SolMais e uma plataforma demonstrativa. não coletamos dados pessoais reais, não processamos pagamentos e não celebramos contratos comerciais.</p></div>
@@ -22,14 +22,14 @@ function render(data, T) {
     html: T.renderLayout({
       store, data, title: 'Política de Privacidade', description: 'Política de privacidade da plataforma demonstrativa SolMais.',
       canonical: '/privacidade.html', active: '', noindex: true,
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Privacidade' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Privacidade' }], store.url),
       content: privContent
     })
   });
 
   const termosContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Termos' }])}
+    ${T.renderBreadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Termos' }])}
     ${T.pageHero('Termos de Uso', 'Plataforma demonstrativa — atualizado em setembro 2026', { icon: T.ICONS.doc })}
 
     <div class="card mb-4"><h3>1. Natureza do servico</h3><p class="text-secondary mt-2">O SolMais e uma plataforma demonstrativa. não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.</p></div>
@@ -45,7 +45,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data, title: 'Termos de Uso', description: 'Termos de uso da plataforma demonstrativa SolMais.',
       canonical: '/termos.html', active: '', noindex: true,
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Termos' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Início', href: 'index.html' }, { label: 'Termos' }], store.url),
       content: termosContent
     })
   });

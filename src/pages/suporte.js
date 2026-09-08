@@ -3,7 +3,7 @@
 function render(data, T) {
   const store = data.store;
   const tickets = data.tickets || [];
-  const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Suporte' }];
+  const bcItems = [{ label: 'Início', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Suporte' }];
 
   const categories = [
     { icon: 'bolt', label: 'Sistema não está gerando', desc: 'Produção zero ou abaixo do esperado' },
