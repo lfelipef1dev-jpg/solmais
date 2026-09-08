@@ -1,7 +1,7 @@
 {
   "name": "SolMais",
   "tagline": "Energia solar calculada para a sua realidade",
-  "description": "Plataforma digital para simulação, projeto, implantação é monitoramento de energia solar fotovoltaica. Simule seu sistema em 6 etapas é acompanhe cada etapa do projeto.",
+  "description": "Plataforma digital para simulação, projeto, implantacao e monitoramento de energia solar fotovoltaica. Simule seu sistema em 6 etapas e acompanhe cada etapa do projeto.",
   "url": "https://solmais.expostacker.com.br",
   "email": "contato@demo.solmais.com.br",
   "phone": "(13) 4000-0000",
@@ -19,7 +19,7 @@
     { "label": "Simulador", "href": "simulador.html", "slug": "simulador" },
     { "label": "Como funciona", "href": "como-funciona.html", "slug": "como-funciona" },
     { "label": "Projetos", "href": "projetos.html", "slug": "projetos" },
-    { "label": "Conteúdo", "href": "conteudo.html", "slug": "conteúdo" },
+    { "label": "Conteúdo", "href": "conteudo.html", "slug": "conteudo" },
     { "label": "Sobre", "href": "sobre.html", "slug": "sobre" }
   ],
   "footerLinks": {
@@ -33,7 +33,7 @@
       { "label": "Como funciona", "href": "como-funciona.html" },
       { "label": "compensação de energia", "href": "compensacao.html" },
       { "label": "Modalidades de GD", "href": "modalidades-gd.html" },
-      { "label": "Glossário solar", "href": "glossario.html" }
+      { "label": "Glossario solar", "href": "glossario.html" }
     ],
     "institucional": [
       { "label": "Sobre", "href": "sobre.html" },

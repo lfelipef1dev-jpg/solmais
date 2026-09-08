@@ -137,7 +137,7 @@
     const prio = document.getElementById('ticket-prio')?.value;
 
     if (!subject || !desc) {
-      SolMais.toast('Preenchá assunto é descricao', 'warn');
+      SolMais.toast('Preencha assunto e descricao', 'warn');
       return;
     }
 

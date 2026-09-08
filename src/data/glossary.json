@@ -6,12 +6,12 @@
   { "term": "Inversor", "definition": "Dispositivo que converte corrente contínua (CC) dos módulos fotovoltaicos em corrente alternada (CA) da rede." },
   { "term": "String", "definition": "Conjunto de módulos conectados em serie que alimenta uma entrada do inversor." },
   { "term": "SCEE", "definition": "Sistema de compensação de Energia Elétrica — mecanismo que permite abater o excedente injetado na rede." },
-  { "term": "MMGD", "definition": "Micro é Minigeração distribuída — geração de energia em pequena escala proximo ao consumo." },
+  { "term": "MMGD", "definition": "Micro e Minigeração distribuída — geração de energia em pequena escala proximo ao consumo." },
   { "term": "geração distribuída", "definition": "Produção de eletricidade proxima ao ponto de consumo, conectada a rede de distribuição." },
-  { "term": "compensação", "definition": "Sistema onde o excedente injetado na rede é abatido do consumo em outros períodos." },
+  { "term": "compensação", "definition": "Sistema onde o excedente injetado na rede e abatido do consumo em outros períodos." },
   { "term": "Modulo fotovoltaico", "definition": "Painel que converte luz solar em eletricidade pelo efeito fotovoltaico." },
   { "term": "Degradação", "definition": "Redução gradual da capacidade de geração do módulo ao longo dos anos." },
   { "term": "Payback", "definition": "Tempo necessário para que a economia gerada pague o investimento inicial." },
-  { "term": "CAPEX", "definition": "Capital Expenditure — investimento inicial na implantação do sistema." },
-  { "term": "O&M", "definition": "Operação é manutenção — custos de manter o sistema funcionando ao longo da vida util." }
+  { "term": "CAPEX", "definition": "Capital Expenditure — investimento inicial na implantacao do sistema." },
+  { "term": "O&M", "definition": "Operação e manutenção — custos de manter o sistema funcionando ao longo da vida util." }
 ]

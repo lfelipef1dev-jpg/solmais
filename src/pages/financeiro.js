@@ -72,7 +72,7 @@ function render(data, T) {
     filename: 'financeiro.html', slug: 'financeiro', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Cenários Financeiros',
-      description: 'Compare formas de aquisição de energia solar: a vista, financiamento é assinatura. Veja investimento, parcelas, payback é economia acumulada projetada em 25 anos.',
+      description: 'Compare formas de aquisicao de energia solar: a vista, financiamento e assinatura. Veja investimento, parcelas, payback e economia acumulada projetada em 25 anos.',
       canonical: '/financeiro.html', active: 'simulador',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

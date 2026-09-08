@@ -15,13 +15,13 @@
     "connectedAt": "2026-03-20",
     "timeline": [
       { "step": "simulação", "label": "simulação", "status": "done", "date": "2026-02-01", "desc": "simulação inicial concluída — sistema 5,5 kWp recomendado" },
-      { "step": "análise", "label": "Análise técnica", "status": "done", "date": "2026-02-05", "desc": "Análise de viabilidade é irradiação local" },
-      { "step": "projeto", "label": "Projeto elétrico", "status": "done", "date": "2026-02-12", "desc": "Projeto elétrico é memorial descritivo elaborados" },
+      { "step": "análise", "label": "Análise técnica", "status": "done", "date": "2026-02-05", "desc": "Análise de viabilidade e irradiação local" },
+      { "step": "projeto", "label": "Projeto elétrico", "status": "done", "date": "2026-02-12", "desc": "Projeto elétrico e memorial descritivo elaborados" },
       { "step": "documentação", "label": "Documentação", "status": "done", "date": "2026-02-20", "desc": "Documentação técnica preparada para envio a distribuidora" },
       { "step": "solicitação", "label": "Solicitação de conexão", "status": "done", "date": "2026-02-22", "desc": "Solicitação de acesso enviada a distribuidora" },
       { "step": "instalação", "label": "instalação", "status": "done", "date": "2026-03-15", "desc": "instalação concluída em 2 dias — 10 módulos, inversor 5kW" },
       { "step": "vistoria", "label": "Vistoria da distribuidora", "status": "done", "date": "2026-03-18", "desc": "Vistoria realizada pela distribuidora" },
-      { "step": "conexão", "label": "Sistema conectado", "status": "done", "date": "2026-03-20", "desc": "Sistema conectado é em operação" },
+      { "step": "conexão", "label": "Sistema conectado", "status": "done", "date": "2026-03-20", "desc": "Sistema conectado e em operação" },
       { "step": "monitoramento", "label": "Monitoramento ativo", "status": "current", "date": "2026-03-20", "desc": "Monitoramento em funcionamento — sistema normal" }
     ],
     "documents": ["doc-projeto-elétrico", "doc-diagrama-unifilar", "doc-memorial", "doc-termo-conexão", "doc-manual", "doc-nota-fiscal"],

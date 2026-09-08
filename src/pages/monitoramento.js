@@ -71,7 +71,7 @@ function render(data, T) {
       <div class="solar-curve-header">
         <div>
           <div class="solar-curve-title">geração hoje</div>
-          <div class="solar-curve-subtitle">Curva solar com pico destacado é linhá de consumo</div>
+          <div class="solar-curve-subtitle">Curva solar com pico destacado e linha de consumo</div>
         </div>
         <div style="text-align:right">
           <div class="sm-big-number" style="font-size:var(--fs-xl);color:var(--solar)">18,7<span style="font-size:0.4em;color:var(--text-dark-muted)">kWh</span></div>
@@ -149,7 +149,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data,
       title: 'Monitoramento Energético',
-      description: 'Dashboard de monitoramento em tempo real — geração, consumo, economia é saúde do sistema.',
+      description: 'Dashboard de monitoramento em tempo real — geração, consumo, economia e saúde do sistema.',
       canonical: '/monitoramento.html', active: '',
       noindex: true,
       ogImage: store.url.replace(/\/$/, '') + '/img/og/monitoramento.svg',

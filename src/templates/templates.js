@@ -239,10 +239,10 @@ function renderLayout(opts) {
 
   return `${head}
 <body>
-  <a href="#conteudo" class="skip-link">Pular para o conteudo</a>
+  <a href="#conteúdo" class="skip-link">Pular para o conteúdo</a>
   ${announcement}
   ${header}
-  <main id="conteudo" role="main">
+  <main id="conteúdo" role="main">
     ${opts.content}
   </main>
   ${footer}

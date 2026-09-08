@@ -14,7 +14,7 @@ function render(data, T) {
   const wizard = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    ${T.pageHero('Simulador Solar', 'Wizard de 6 etapas — localização, consumo, imóvel, objetivo, configuração é resultado', { icon: T.ICONS.bolt })}
+    ${T.pageHero('Simulador Solar', 'Wizard de 6 etapas — localização, consumo, imóvel, objetivo, configuração e resultado', { icon: T.ICONS.bolt })}
 
     <div class="wizard" id="wizard">
       <div class="wizard-steps" id="wizard-steps">
@@ -88,7 +88,7 @@ function render(data, T) {
         <!-- Step 2: Consumo (com gráfico) -->
         <div class="wizard-panel hidden" data-panel="2">
           <h2 style="margin-bottom: var(--space-4)">Consumo de energia</h2>
-          <p class="text-secondary mb-6">Escolhá como prefere informar seu consumo.</p>
+          <p class="text-secondary mb-6">Escolha como prefere informar seu consumo.</p>
           <div class="grid grid-2">
             <div>
               <div class="option-grid" id="sim-consumo-type">
@@ -142,7 +142,7 @@ function render(data, T) {
         <!-- Step 3: Imóvel (com thumbnails de telhado) -->
         <div class="wizard-panel hidden" data-panel="3">
           <h2 style="margin-bottom: var(--space-4)">Características do imóvel</h2>
-          <p class="text-secondary mb-6">Informações sobre o telhado é área disponível.</p>
+          <p class="text-secondary mb-6">Informações sobre o telhado e área disponível.</p>
           <div class="field">
             <label class="label">Tipo de telhado</label>
             <div class="grid grid-5" id="sim-roof">
@@ -274,7 +274,7 @@ function render(data, T) {
               </div>
             </div>
           </div>
-          <p class="text-xs text-muted mt-4">Estimativa demonstrativa — os resultados dependem de tarifa, distribuidora, consumo, modalidade, dimensionamento, irradiação é regras vigentes do SCEE.</p>
+          <p class="text-xs text-muted mt-4">Estimativa demonstrativa — os resultados dependem de tarifa, distribuidora, consumo, modalidade, dimensionamento, irradiação e regras vigentes do SCEE.</p>
         </div>
 
         <!-- Step 6: Resultado (WOW) -->
@@ -316,7 +316,7 @@ function render(data, T) {
               </span>
             </h3>
             ${T.areaChart(genData, { width: 600, height: 220, color: '#f59e0b', color2: '#3b82f6', estimated: consData, labels: monthLabels, id: 'result-gen', label: 'kWh/mês' })}
-            <p class="text-xs text-muted mt-4">Linhá laranja: geração estimada. Linhá azul tracejada: consumo médio. Dados demonstrativos.</p>
+            <p class="text-xs text-muted mt-4">Linha laranja: geração estimada. Linha azul tracejada: consumo médio. Dados demonstrativos.</p>
           </div>
 
           <!-- Gauges -->
@@ -375,7 +375,8 @@ function render(data, T) {
       </div>
 
       <div class="wizard-nav">
-        <button class="btn btn-secondary" id="wizard-prev" onclick="SolMais.wizardPrev()" disabled>Voltar</button><span style="width:var(--space-2);display:inline-block"></span><button class="btn btn-primary" id="wizard-next" onclick="SolMais.wizardNext()">Próximo ${T.ICONS.arrow}</button>
+        <button class="btn btn-secondary" id="wizard-prev" onclick="SolMais.wizardPrev()" disabled>Voltar</button>
+        <button class="btn btn-primary" id="wizard-next" onclick="SolMais.wizardNext()">Próximo ${T.ICONS.arrow}</button>
       </div>
     </div>
   </div>
@@ -389,7 +390,7 @@ function render(data, T) {
       store,
       data,
       title: 'Simulador Solar Fotovoltaico: 6 Etapas',
-      description: 'Simule seu sistema solar em 6 etapas: localização, consumo, imóvel, telhado, objetivo é configuração. Veja resultado com kWp, geração, economia é payback estimados.',
+      description: 'Simule seu sistema solar em 6 etapas: localização, consumo, imóvel, telhado, objetivo e configuração. Veja resultado com kWp, geração, economia e payback estimados.',
       canonical: '/simulador.html',
       active: 'simulador',
       ogImage: store.url.replace(/\/$/, '') + '/img/og/simulador.svg',

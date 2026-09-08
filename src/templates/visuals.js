@@ -3,7 +3,7 @@
 
    Elemento proprietário: DIGITAL TWIN
    A mesma casa isometrica premium reaparece em simulação, Resultado,
-   Projeto é Monitoramento — criando identidade visual reconhecivel.
+   Projeto e Monitoramento — criando identidade visual reconhecivel.
 
    Paleta:
    - base: off-white #faf9f6 / branco quente
@@ -144,7 +144,7 @@ function digitalTwin(opts) {
   <polygon points="${w*0.05},${h*0.78} ${w*0.95},${h*0.78} ${w*0.92},${h*0.85} ${w*0.08},${h*0.85}" fill="${C.groundDark}" opacity="0.6"/>
 
   <!-- ===== CASA ISOMETRICA ===== -->
-  <!-- A casa é composta por 2 volumes: principal (maior) + anexo -->
+  <!-- A casa e composta por 2 volumes: principal (maior) + anexo -->
 
   <!-- Sombra da casa no chao -->
   <ellipse cx="${w*0.5}" cy="${h*0.76}" rx="${w*0.32}" ry="${h*0.04}" fill="${C.shadow}" filter="url(#${id}-shadow)"/>
@@ -207,7 +207,7 @@ function digitalTwin(opts) {
     ${generating ? '<animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>' : ''}
   </circle>
 
-  <!-- Linhá de conexão painel -> inversor (sutil) -->
+  <!-- Linha de conexão painel -> inversor (sutil) -->
   <path d="M ${w*0.35} ${h*0.42} L ${w*0.56} ${h*0.60}" stroke="${C.accent}" stroke-width="0.8" opacity="0.3" stroke-dasharray="2,2"/>
 
   <!-- ===== FLUXO ENERGETICO ANIMADO ===== -->
@@ -297,7 +297,7 @@ function digitalTwin(opts) {
 function cinematicHero(opts) {
   opts = opts || {};
   const title = opts.title || 'Energia solar sem complicação';
-  const subtitle = opts.subtitle || 'Simule, projete, acompanhe é monitore seu sistema fotovoltaico em uma plataforma única.';
+  const subtitle = opts.subtitle || 'Simule, projete, acompanhe e monitore seu sistema fotovoltaico em uma plataforma única.';
   const cta = opts.cta || 'Iniciar simulação';
   const ctaHref = opts.ctaHref || 'simulador.html';
   const secondaryCta = opts.secondaryCta || 'Ver projetos';
@@ -632,7 +632,7 @@ function solarCurve(opts) {
   const genPath = 'M ' + genPoints.join(' L ');
   const genArea = genPath + ` L ${w - 40},${h - 50} L 40,${h - 50} Z`;
 
-  // Consumo (linhá mais plana)
+  // Consumo (linha mais plana)
   const consPoints = [];
   const consPattern = [0.3, 0.25, 0.2, 0.2, 0.25, 0.35, 0.5, 0.6, 0.55, 0.5, 0.45, 0.4, 0.4, 0.42, 0.45, 0.5, 0.6, 0.75, 0.85, 0.8, 0.7, 0.55, 0.45, 0.35, 0.3];
   for (let i = 0; i < 24; i++) {
@@ -670,7 +670,7 @@ function solarCurve(opts) {
   <!-- Curva de geração -->
   <path d="${genPath}" stroke="url(#${id}-line)" stroke-width="2.5" fill="none"/>
 
-  <!-- Linhá de consumo -->
+  <!-- Linha de consumo -->
   ${showConsumption ? `<path d="${consPath}" stroke="#3b82f6" stroke-width="1.5" fill="none" stroke-dasharray="5,4" opacity="0.6"/>` : ''}
 
   <!-- Pico destacado -->
@@ -940,7 +940,7 @@ function caseHero(type, opts) {
     <rect width="1200" height="500" fill="url(#${id}-sky)"/>
     <circle cx="1000" cy="100" r="120" fill="url(#${id}-sun)"/>
     <circle cx="1000" cy="100" r="30" fill="${t.accent}" opacity="0.7"/>
-    <!-- Edificio escalado é centralizado -->
+    <!-- Edificio escalado e centralizado -->
     <g transform="translate(450 100) scale(1.8)">
       ${building}
     </g>

@@ -9,10 +9,10 @@ function render(data, T) {
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Privacidade' }])}
     ${T.pageHero('Política de Privacidade', 'Plataforma demonstrativa — atualizado em setembro 2026', { icon: T.ICONS.doc })}
 
-    <div class="card mb-4"><h3>1. Natureza demonstrativa</h3><p class="text-secondary mt-2">O SolMais é uma plataforma demonstrativa. não coletamos dados pessoais reais, não processamos pagamentos é não celebramos contratos comerciais.</p></div>
-    <div class="card mb-4"><h3>2. Dados locais</h3><p class="text-secondary mt-2">Dados inseridos no simulador, portal é admin são armazenados apenas no seu navegador (localStorage). não são enviados a nenhum servidor.</p></div>
+    <div class="card mb-4"><h3>1. Natureza demonstrativa</h3><p class="text-secondary mt-2">O SolMais e uma plataforma demonstrativa. não coletamos dados pessoais reais, não processamos pagamentos e não celebramos contratos comerciais.</p></div>
+    <div class="card mb-4"><h3>2. Dados locais</h3><p class="text-secondary mt-2">Dados inseridos no simulador, portal e admin são armazenados apenas no seu navegador (localStorage). não são enviados a nenhum servidor.</p></div>
     <div class="card mb-4"><h3>3. Cookies</h3><p class="text-secondary mt-2">Esta plataforma não utiliza cookies de rastreamento. Apenas armazenamento local para persistencia de dados demonstrativos.</p></div>
-    <div class="card mb-4"><h3>4. Analytics</h3><p class="text-secondary mt-2">Podemos utilizar analytics anonimizados para entender o uso da plataforma. Nenhum dado pessoal é coletado.</p></div>
+    <div class="card mb-4"><h3>4. Analytics</h3><p class="text-secondary mt-2">Podemos utilizar analytics anonimizados para entender o uso da plataforma. Nenhum dado pessoal e coletado.</p></div>
     <div class="card mb-4"><h3>5. Contato</h3><p class="text-secondary mt-2">Para questoes sobre esta política: ${T.escapeHtml(store.email)} (email demonstrativo).</p></div>
   </div>
 </section>`;
@@ -32,11 +32,11 @@ function render(data, T) {
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Termos' }])}
     ${T.pageHero('Termos de Uso', 'Plataforma demonstrativa — atualizado em setembro 2026', { icon: T.ICONS.doc })}
 
-    <div class="card mb-4"><h3>1. Natureza do serviço</h3><p class="text-secondary mt-2">O SolMais é uma plataforma demonstrativa. não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.</p></div>
-    <div class="card mb-4"><h3>2. Dados fictícios</h3><p class="text-secondary mt-2">Todos os clientes, sistemas, projetos, métricas, valores, documentos é localizações são fictícios é identificados como demonstrativos.</p></div>
+    <div class="card mb-4"><h3>1. Natureza do servico</h3><p class="text-secondary mt-2">O SolMais e uma plataforma demonstrativa. não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.</p></div>
+    <div class="card mb-4"><h3>2. Dados fictícios</h3><p class="text-secondary mt-2">Todos os clientes, sistemas, projetos, métricas, valores, documentos e localizações são fictícios e identificados como demonstrativos.</p></div>
     <div class="card mb-4"><h3>3. não é aconselhamento</h3><p class="text-secondary mt-2">O conteúdo desta plataforma não constitui aconselhamento regulatório, financeiro, jurídico ou técnico. Consulte profissionais qualificados para projetos reais.</p></div>
-    <div class="card mb-4"><h3>4. Limitação de responsabilidade</h3><p class="text-secondary mt-2">O SolMais não se responsabiliza por decisões tomadas com base nos dados demonstrativos apresentados.</p></div>
-    <div class="card mb-4"><h3>5. Marco legal</h3><p class="text-secondary mt-2">As informações sobre compensação de energia é modalidades de GD seguem a Lei 14.300 é as regras vigentes do SCEE/MMGD. Consulte a ANEEL para detalhes atualizados.</p></div>
+    <div class="card mb-4"><h3>4. Limitacao de responsabilidade</h3><p class="text-secondary mt-2">O SolMais não se responsabiliza por decisoes tomadas com base nos dados demonstrativos apresentados.</p></div>
+    <div class="card mb-4"><h3>5. Marco legal</h3><p class="text-secondary mt-2">As informações sobre compensação de energia e modalidades de GD seguem a Lei 14.300 e as regras vigentes do SCEE/MMGD. Consulte a ANEEL para detalhes atualizados.</p></div>
   </div>
 </section>`;
 

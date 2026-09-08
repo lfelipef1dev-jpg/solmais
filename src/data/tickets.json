@@ -14,7 +14,7 @@
     "timeline": [
       { "time": "2026-09-01 07:00", "action": "Chamado aberto pelo sistema (alerta automatico)", "author": "Sistema" },
       { "time": "2026-09-01 07:15", "action": "Chamado atribuido a equipe técnica", "author": "Admin Demo" },
-      { "time": "2026-09-01 07:30", "action": "Tentativa de reinicialização remota — sem sucesso", "author": "Técnico Demo" }
+      { "time": "2026-09-01 07:30", "action": "Tentativa de reinicializacao remota — sem sucesso", "author": "Técnico Demo" }
     ]
   },
   {

@@ -27,7 +27,7 @@ function render(data, T) {
         <div class="field"><label class="label">Cidade</label><input type="text" class="input" value="${T.escapeHtml(customer.city) + '/' + T.escapeHtml(customer.state)}" disabled></div>
         <div class="field"><label class="label">CEP</label><input type="text" class="input" value="${T.escapeHtml(customer.cep)}" disabled></div>
       </div>
-      <p class="text-xs text-muted mt-4">Dados demonstrativos — edição desativada na plataforma demo</p>
+      <p class="text-xs text-muted mt-4">Dados demonstrativos — edicao desativada na plataforma demo</p>
     </div>
 
     <div class="card mb-6">
@@ -50,7 +50,7 @@ function render(data, T) {
     <div class="card">
       <h3 style="margin-bottom: var(--space-4)">Contrato</h3>
       <table class="data-table">
-        <tr><td>Tipo de aquisição</td><td><strong>${T.escapeHtml(customer.contractType)}</strong></td></tr>
+        <tr><td>Tipo de aquisicao</td><td><strong>${T.escapeHtml(customer.contractType)}</strong></td></tr>
         <tr><td>Sistema</td><td>${(data.systems||[])[0].power} kWp</td></tr>
         <tr><td>Projeto</td><td>${customer.projectId}</td></tr>
         <tr><td>Cliente desde</td><td>${customer.since}</td></tr>
