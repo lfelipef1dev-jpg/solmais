@@ -79,7 +79,6 @@ function renderHead(opts) {
   <meta name="twitter:description" content="${escapeHtml(desc)}">
   <meta name="twitter:image" content="${ogImage}">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="favicon-180.png">
   ${preload}
   ${cssFiles}
   ${structuredData}
