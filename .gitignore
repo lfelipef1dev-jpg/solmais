@@ -1,5 +1,8 @@
 node_modules/
 dist/
+out/
+test-results/
+test-results.json
 .env
 .env.*
 !.env.example

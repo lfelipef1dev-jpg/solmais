@@ -4,9 +4,17 @@
   "description": "SolMais - Demonstracao de energia solar fotovoltaica com simulador ilustrativo",
   "private": true,
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "dev": "npm run build && npx serve out",
+    "test": "playwright test",
+    "lint": "eslint src build.js"
   },
   "devDependencies": {
-    "fs-extra": "^11.2.0"
+    "@playwright/test": "^1.63.0",
+    "clean-css": "^5.3.3",
+    "eslint": "^10.10.0",
+    "fs-extra": "^11.2.0",
+    "globals": "^17.12.0",
+    "terser": "^5.51.2"
   }
 }

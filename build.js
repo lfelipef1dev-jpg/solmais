@@ -3,6 +3,8 @@
 
 const fs = require('fs');
 const path = require('path');
+const CleanCSS = require('clean-css');
+const Terser = require('terser');
 
 const OUT = path.join(__dirname, 'out');
 const SRC = path.join(__dirname, 'src');
@@ -48,7 +50,7 @@ function generateSitemap(pages, data) {
 }
 
 /* ---------- Build ---------- */
-function build() {
+async function build() {
   // Limpar out
   if (fs.existsSync(OUT)) {
     fs.rmSync(OUT, { recursive: true, force: true });
@@ -78,11 +80,11 @@ function build() {
   // Copiar assets
   copyDir(path.join(__dirname, 'fonts'), path.join(OUT, 'fonts'));
   copyDir(path.join(__dirname, 'img'), path.join(OUT, 'img'));
-  copyDir(path.join(SRC, 'styles'), path.join(OUT, 'styles'));
-  copyDir(path.join(SRC, 'scripts'), path.join(OUT, 'scripts'));
+  copyMinifiedCss(path.join(SRC, 'styles'), path.join(OUT, 'styles'));
+  await copyMinifiedJs(path.join(SRC, 'scripts'), path.join(OUT, 'scripts'));
 
   // Copiar arquivos raiz
-  ['favicon.svg', 'favicon.png', 'og-image.png', '_headers'].forEach(f => {
+  ['favicon.svg', 'favicon-32.png', 'favicon-180.png', 'og-image.jpg', '_headers'].forEach(f => {
     const src = path.join(__dirname, f);
     if (fs.existsSync(src)) fs.copyFileSync(src, path.join(OUT, f));
   });
@@ -95,7 +97,7 @@ function build() {
 
   // Sitemap e robots
   generateSitemap(allPages, data);
-  const robots = 'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nSitemap: ' + data.store.url.replace(/\/$/, '') + '/sitemap.xml\n';
+  const robots = 'User-agent: *\nDisallow:\n\nSitemap: ' + data.store.url.replace(/\/$/, '') + '/sitemap.xml\n';
   fs.writeFileSync(path.join(OUT, 'robots.txt'), robots);
   console.log('  \u2713 sitemap.xml, robots.txt');
 
@@ -132,4 +134,40 @@ function copyDir(src, dest) {
   });
 }
 
-build();
+function copyMinifiedCss(src, dest) {
+  if (!fs.existsSync(src)) return;
+  if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+  const cc = new CleanCSS({ level: 2 });
+  fs.readdirSync(src).forEach(f => {
+    const s = path.join(src, f);
+    const d = path.join(dest, f);
+    if (fs.statSync(s).isDirectory()) {
+      copyMinifiedCss(s, d);
+    } else if (/\.css$/i.test(f)) {
+      const out = cc.minify(fs.readFileSync(s, 'utf8'));
+      fs.writeFileSync(d, out.styles);
+    } else {
+      fs.copyFileSync(s, d);
+    }
+  });
+}
+
+async function copyMinifiedJs(src, dest) {
+  if (!fs.existsSync(src)) return;
+  if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+  const files = fs.readdirSync(src);
+  for (const f of files) {
+    const s = path.join(src, f);
+    const d = path.join(dest, f);
+    if (fs.statSync(s).isDirectory()) {
+      await copyMinifiedJs(s, d);
+    } else if (/\.js$/i.test(f)) {
+      const out = await Terser.minify(fs.readFileSync(s, 'utf8'), { format: { comments: false } });
+      fs.writeFileSync(d, out.code || fs.readFileSync(s, 'utf8'));
+    } else {
+      fs.copyFileSync(s, d);
+    }
+  }
+}
+
+build().catch(function (e) { console.error(e); process.exit(1); });

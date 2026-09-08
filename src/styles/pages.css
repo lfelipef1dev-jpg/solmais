@@ -2153,15 +2153,25 @@
   font-family: var(--font-display);
   font-size: var(--fs-base);
   font-weight: 600;
-  color: var(--solar);
+  color: var(--solar-dark);
   padding: var(--space-3) 0;
   border-bottom: 2px solid var(--solar);
   transition: all var(--transition);
 }
 .sm-hero-cta:hover {
-  color: var(--solar-bright);
+  color: var(--solar-dark);
   border-bottom-color: var(--solar-bright);
   gap: var(--space-3);
+}
+.sm-hero .sm-hero-cta,
+.sm-twin-wow .sm-hero-cta,
+.sm-cta .sm-hero-cta {
+  color: var(--solar);
+}
+.sm-hero .sm-hero-cta:hover,
+.sm-twin-wow .sm-hero-cta:hover,
+.sm-cta .sm-hero-cta:hover {
+  color: var(--solar-bright);
 }
 .sm-hero-meta {
   display: flex;

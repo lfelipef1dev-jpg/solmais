@@ -86,19 +86,19 @@ function render(data, T) {
   <section style="max-width:var(--container-max);margin:0 auto var(--space-8);padding:0 var(--space-6)">
     <div class="grid grid-4">
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h3 style="color:var(--text-dark)">Performance</h3>
+        <h2 style="color:var(--text-dark)">Performance</h2>
         ${T.gauge(92, { id: 'g1', label: 'Eficiencia', unit: '%', max: 100, color: '#22c55e', size: 160 })}
       </div>
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h3 style="color:var(--text-dark)">Irradiacao</h3>
+        <h2 style="color:var(--text-dark)">Irradiacao</h2>
         ${T.gauge(78, { id: 'g2', label: 'W/m²', unit: '%', max: 100, color: '#f59e0b', size: 160 })}
       </div>
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h3 style="color:var(--text-dark)">Consumo</h3>
+        <h2 style="color:var(--text-dark)">Consumo</h2>
         ${T.gauge(65, { id: 'g3', label: 'Carga', unit: '%', max: 100, color: '#3b82f6', size: 160 })}
       </div>
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h3 style="color:var(--text-dark)">Saude</h3>
+        <h2 style="color:var(--text-dark)">Saude</h2>
         ${T.gauge(98, { id: 'g4', label: 'Sistema', unit: '%', max: 100, color: '#22c55e', size: 160 })}
       </div>
     </div>
@@ -108,11 +108,11 @@ function render(data, T) {
   <section style="max-width:var(--container-max);margin:0 auto var(--space-8);padding:0 var(--space-6)">
     <div class="grid grid-2">
       <div class="chart-premium" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h3 style="color:var(--text-dark)">Geracao mensal</h3>
+        <h2 style="color:var(--text-dark)">Geracao mensal</h2>
         ${T.areaChart([580, 590, 600, 610, 620, 630, 640, 650, 640, 630, 600, 580], { width: 450, height: 200, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'mon-v3-monthly', label: 'kWh/mes' })}
       </div>
       <div class="chart-premium" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h3 style="color:var(--text-dark)">Economia acumulada</h3>
+        <h2 style="color:var(--text-dark)">Economia acumulada</h2>
         ${T.areaChart([480, 960, 1440, 1920, 2400, 2880, 3360, 3840, 4320, 4800, 5280, 5760], { width: 450, height: 200, color: '#22c55e', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'mon-v3-savings', label: 'R$ acumulado' })}
       </div>
     </div>

@@ -58,6 +58,7 @@
   /* Solar/energy — amber como cor energetica principal */
   --solar: #E8920C;
   --solar-bright: #F5A623;
+  --solar-dark: #B45D00;
   --solar-soft: rgba(232,146,12,0.10);
   --solar-glow: rgba(232,146,12,0.20);
 
@@ -180,6 +181,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 input, select, textarea { font-family: inherit; font-size: inherit; }
 ul, ol { list-style: none; }
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
+h2 { font-size: var(--fs-lg); }
+h3 { font-size: var(--fs-base); }
 
 /* Container */
 .container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-4); }

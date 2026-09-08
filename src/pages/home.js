@@ -42,7 +42,7 @@ function render(data, T) {
       <span class="sm-eyebrow">A plataforma</span>
       <h2 class="sm-headline">Do telhado<br>aos dados.</h2>
       <p class="sm-lede">O SolMais une modelagem do telhado, dimensionamento do sistema, acompanhamento do projeto e monitoramento energetico em uma so interface. Nao e um site de empresa solar. E software de energia.</p>
-      <a href="projeto.html" class="sm-hero-cta" style="color:var(--solar)">Ver produto em acao &rarr;</a>
+      <a href="projeto.html" class="sm-hero-cta">Ver produto em acao &rarr;</a>
     </div>
     <div class="sm-product-visual">
       <div class="digital-twin-wrap">
@@ -78,7 +78,7 @@ function render(data, T) {
         <div class="sm-sim-step"><span class="sm-sim-step-num">05</span><span class="sm-sim-step-label">Sistema</span></div>
         <div class="sm-sim-step"><span class="sm-sim-step-num">06</span><span class="sm-sim-step-label">Resultado</span></div>
       </div>
-      <a href="simulador.html" class="sm-hero-cta" style="color:var(--solar);margin-top:var(--space-6)">Iniciar simulacao &rarr;</a>
+      <a href="simulador.html" class="sm-hero-cta" style="margin-top:var(--space-6)">Iniciar simulacao &rarr;</a>
     </div>
     <div class="sm-sim-mockup">
       <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-5)">
@@ -139,7 +139,7 @@ function render(data, T) {
         <span class="sm-eyebrow">Monitoramento</span>
         <h2 class="sm-headline" style="margin-top:var(--space-3)">Veja sua energia<br>acontecer.</h2>
       </div>
-      <a href="monitoramento.html" class="sm-hero-cta" style="color:var(--solar)">Abrir dashboard &rarr;</a>
+      <a href="monitoramento.html" class="sm-hero-cta">Abrir dashboard &rarr;</a>
     </div>
     <div class="sm-monitor-main">
       <div class="sm-monitor-now">
@@ -158,7 +158,7 @@ function render(data, T) {
         </div>
         <div class="sm-monitor-side-row">
           <span class="sm-monitor-side-label">Economia/mes</span>
-          <span class="sm-monitor-side-value" style="color:var(--solar)">R$ 480</span>
+          <span class="sm-monitor-side-value" style="color:var(--solar-dark)">R$ 480</span>
         </div>
         <div class="sm-monitor-side-row">
           <span class="sm-monitor-side-label">CO² evitado</span>
@@ -194,7 +194,7 @@ function render(data, T) {
     ${mosaicItems}
   </div>
   <div style="text-align:center;margin-top:var(--space-8)">
-    <a href="projetos.html" class="sm-hero-cta" style="color:var(--solar)">Ver todos os projetos &rarr;</a>
+    <a href="projetos.html" class="sm-hero-cta">Ver todos os projetos &rarr;</a>
   </div>
 </section>`;
 
@@ -225,7 +225,7 @@ function render(data, T) {
       canonical: '/',
       active: 'index',
       structuredData: graphSchema,
-      ogImage: store.url.replace(/\/$/, '') + '/og-image.png',
+      ogImage: store.url.replace(/\/$/, '') + '/og-image.jpg',
       content
     })
   }];

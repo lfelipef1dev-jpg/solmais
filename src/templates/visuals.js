@@ -841,7 +841,7 @@ function caseHero(type, opts) {
   if (type === 'residencial') {
     building = `
       <!-- Casa contemporanea -->
-      <polygon points="${id}-wall" fill="#2a2f3e"/>
+      <rect x="0" y="80" width="300" height="120" fill="#2a2f3e"/>
       <rect x="${300*0.2}" y="${200*0.4}" width="${300*0.4}" height="${200*0.35}" fill="#2a2f3e"/>
       <polygon points="${300*0.15},${200*0.4} ${300*0.6},${200*0.4} ${300*0.55},${200*0.28} ${300*0.22},${200*0.28}" fill="#1e2330"/>
       <g transform="translate(${300*0.18} ${200*0.30}) skewY(-12)">

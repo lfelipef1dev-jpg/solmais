@@ -53,7 +53,7 @@ function renderHead(opts) {
   const canonical = store.url.replace(/\/$/, '') + (opts.canonical && opts.canonical !== '/' ? opts.canonical.replace(/\.html$/, '') : '/');
   const noindex = opts.noindex ? '<meta name="robots" content="noindex, nofollow">' : '<meta name="robots" content="index, follow">';
   const ogType = opts.ogType || 'website';
-  const ogImage = opts.ogImage || (store.url.replace(/\/$/, '') + '/og-image.png');
+  const ogImage = opts.ogImage || (store.url.replace(/\/$/, '') + '/og-image.jpg');
   const cssFiles = (opts.cssFiles || ['base.css', 'components.css', 'pages.css']).map(f => '<link rel="stylesheet" href="styles/' + f + '">').join('\n  ');
   const structuredData = opts.structuredData ? (Array.isArray(opts.structuredData) ? opts.structuredData : [opts.structuredData]).map(s => '<script type="application/ld+json">' + JSON.stringify(s) + '</script>').join('\n  ') : '';
   const preload = opts.preload ? '<link rel="preload" as="image" href="' + opts.preload + '" fetchpriority="high">' : '';
@@ -78,8 +78,8 @@ function renderHead(opts) {
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(desc)}">
   <meta name="twitter:image" content="${ogImage}">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="icon" href="favicon.png" type="image/png" sizes="1254x1254">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon-180.png">
   ${preload}
   ${cssFiles}
   ${structuredData}
@@ -105,7 +105,7 @@ function renderHeader(store, nav, opts) {
   return `<header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo" aria-label="${escapeHtml(store.name)}">
-      <img src="brand/solmais-logo.png" alt="SolMais" width="160" height="53" class="logo-img" />
+      <img src="brand/solmais-logo-300.png" alt="SolMais" width="159" height="53" class="logo-img" srcset="brand/solmais-logo-300.webp 300w, brand/solmais-logo-600.webp 600w" sizes="160px" />
     </a>
     <nav class="main-nav" aria-label="Navegacao principal">
       <ul class="nav-list">${navItems}</ul>
@@ -138,7 +138,7 @@ function renderFooter(store) {
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="brand/solmais-logo.png" alt="SolMais" width="150" height="50" class="logo-img logo-img-footer" />
+        <img src="brand/solmais-logo-300.png" alt="SolMais" width="150" height="50" class="logo-img logo-img-footer" srcset="brand/solmais-logo-300.webp 300w" sizes="150px" />
         <p class="footer-desc">${escapeHtml(store.tagline)}.</p>
         <p class="footer-demo">${escapeHtml(store.demoNotice)}</p>
       </div>
@@ -224,13 +224,12 @@ function renderWebSiteSchema(store) {
 /* ---------- Layout ---------- */
 function renderLayout(opts) {
   const store = opts.store;
-  const data = opts.data;
   const head = renderHead(opts);
   const announcement = renderAnnouncement(store);
   const header = renderHeader(store, store.nav || [], opts);
   const footer = renderFooter(store);
   const jsFiles = (opts.jsFiles || ['app.js']).map(f => '<script src="scripts/' + f + '" defer></script>').join('\n  ');
-  const dataScript = '<script>window.SOLMAIS_STORE = ' + JSON.stringify(store).replace(/</g, '\\u003c') + '; window.SOLMAIS_SYSTEMS = ' + JSON.stringify(data.systems || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_PROJECTS = ' + JSON.stringify(data.projects || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_CUSTOMERS = ' + JSON.stringify(data.customers || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_ALERTS = ' + JSON.stringify(data.alerts || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_TICKETS = ' + JSON.stringify(data.tickets || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_FINANCIAL = ' + JSON.stringify(data.financial || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_ARTICLES = ' + JSON.stringify(data.articles || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_GLOSSARY = ' + JSON.stringify(data.glossary || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_CASES = ' + JSON.stringify(data.cases || []).replace(/</g, '\\u003c') + '; window.SOLMAIS_DOCUMENTS = ' + JSON.stringify(data.documents || []).replace(/</g, '\\u003c') + ';</script>';
+  const dataScript = '<script>window.SOLMAIS_STORE = ' + JSON.stringify(store).replace(/</g, '\\u003c') + ';</script>';
 
   return `${head}
 <body>
@@ -244,14 +243,6 @@ function renderLayout(opts) {
   ${opts.scripts || ''}
   ${dataScript}
   ${jsFiles}
-  <!-- GA4 — Google Analytics 4 (Ordem Tecnica SEO 2026, Fase 5.2) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
-  </script>
 </body>
 </html>`;
 }

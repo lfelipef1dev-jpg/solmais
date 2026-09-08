@@ -14,30 +14,30 @@ function render(data, T) {
     ${T.pageHero('Como Funciona a Energia Solar', 'Sistemas fotovoltaicos convertem luz solar em eletricidade — do painel a compensacao na rede', { icon: T.ICONS.sun })}
 
     <div class="energy-flow-wrap mb-6">
-      <h3 style="text-align:center;color:#e2e8f0;margin-bottom:var(--space-2)">O fluxo energetico completo</h3>
+      <h2 style="text-align:center;color:#e2e8f0;margin-bottom:var(--space-2)">O fluxo energetico completo</h2>
       <p style="text-align:center;color:#94a3b8;margin-bottom:var(--space-4)">Sol -> Paineis -> Inversor -> Imovel <-> Rede</p>
       ${T.energyFlow()}
     </div>
 
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">1. Luz solar nos paineis</h3>
+      <h2 style="margin-bottom: var(--space-3)">1. Luz solar nos paineis</h2>
       <p class="text-secondary">A luz solar atinge as celulas fotovoltaicas dos modulos. Os fotos excitam eletrons, gerando corrente continua (CC).</p>
     </div>
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">2. Inversor converte CC em CA</h3>
+      <h2 style="margin-bottom: var(--space-3)">2. Inversor converte CC em CA</h2>
       <p class="text-secondary">O inversor transforma a corrente continua em corrente alternada (CA), compativel com a rede eletrica e os aparelhos da sua casa.</p>
     </div>
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">3. Consumo e excedente</h3>
+      <h2 style="margin-bottom: var(--space-3)">3. Consumo e excedente</h2>
       <p class="text-secondary">A energia gerada e primeiro consumida pelo imovel. O excedente e injetado na rede e compensado conforme as regras vigentes do SCEE.</p>
     </div>
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">4. Compensacao na conta</h3>
+      <h2 style="margin-bottom: var(--space-3)">4. Compensacao na conta</h2>
       <p class="text-secondary">A energia injetada vira creditos que abatem o consumo nos periodos em que o sistema nao gera (noite, por exemplo). A compensacao segue as regras da Lei 14.300 e do marco da MMGD.</p>
     </div>
 
     <div class="visual-section">
-      <h3>Quer simular seu sistema?</h3>
+      <h2>Quer simular seu sistema?</h2>
       <p>Faca uma simulacao completa em 6 etapas.</p>
       <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Iniciar simulacao</a>
     </div>
@@ -62,26 +62,26 @@ function render(data, T) {
     ${T.pageHero('Compensacao de Energia', 'Como funciona o Sistema de Compensacao de Energia Eletrica (SCEE) e os creditos de energia', { icon: T.ICONS.grid })}
 
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-4)">Fluxo da compensacao</h3>
+      <h2 style="margin-bottom: var(--space-4)">Fluxo da compensacao</h2>
       <div class="energy-flow-wrap">
         ${T.energyFlow()}
       </div>
     </div>
 
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">O que sao creditos de energia?</h3>
+      <h2 style="margin-bottom: var(--space-3)">O que sao creditos de energia?</h2>
       <p class="text-secondary">Quando o sistema gera mais energia do que o imovel consome, o excedente e injetado na rede de distribuicao. Esse excedente vira creditos que podem ser abatidos do consumo em outros periodos.</p>
     </div>
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">Validade dos creditos</h3>
+      <h2 style="margin-bottom: var(--space-3)">Validade dos creditos</h2>
       <p class="text-secondary">Conforme as regras atuais, os creditos tem validade de 60 meses. Isso permite acumular geracao do verao para usar no inverno, por exemplo.</p>
     </div>
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">Marco legal — Lei 14.300</h3>
+      <h2 style="margin-bottom: var(--space-3)">Marco legal — Lei 14.300</h2>
       <p class="text-secondary">A Lei 14.300/2022 instituiu o marco legal da micro e minigeracao distribuida. Para unidades sujeitas a transicao do art. 27, o percentual previsto para 2026 e de 60% sobre as componentes tarifarias especificadas na lei. A ANEEL atualiza periodicamente suas orientacoes sobre as modalidades vigentes.</p>
     </div>
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">Importante</h3>
+      <h2 style="margin-bottom: var(--space-3)">Importante</h2>
       <p class="text-secondary">Os resultados dependem de tarifa, distribuidora, consumo, modalidade, dimensionamento, irradiacao e regras vigentes do SCEE. Esta pagina e apenas informativa e nao constitui aconselhamento regulatorio.</p>
     </div>
   </div>
@@ -104,10 +104,10 @@ function render(data, T) {
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteudo', href: 'conteudo.html' }, { label: 'Modalidades GD' }])}
     ${T.pageHero('Modalidades de Geracao Distribuida', 'A ANEEL reconhece diferentes modalidades de autoconsumo por meio de geracao distribuida', { icon: T.ICONS.bolt })}
 
-    <div class="card mb-6"><h3>Autoconsumo local</h3><p class="text-secondary mt-2">Geracao e consumo na mesma unidade consumidora. A energia produzida e consumida no proprio imovel onde o sistema esta instalado.</p></div>
-    <div class="card mb-6"><h3>Autoconsumo remoto</h3><p class="text-secondary mt-2">Geracao em uma unidade e consumo em outra, dentro da mesma area de concessao da distribuidora. Permite instalar paineis em um imovel e abater a conta de outro.</p></div>
-    <div class="card mb-6"><h3>Multiplas unidades consumidoras</h3><p class="text-secondary mt-2">Um unico sistema atende a varias unidades do mesmo titular (ex: condominio). A compensacao e distribuida entre as unidades conforme regras especificas.</p></div>
-    <div class="card mb-6"><h3>Geracao compartilhada</h3><p class="text-secondary mt-2">Condominios ou grupos de consumidores se unem para investir em um sistema de geracao compartilhada. A energia e os creditos sao distribuidos entre os participantes.</p></div>
+    <div class="card mb-6"><h2>Autoconsumo local</h2><p class="text-secondary mt-2">Geracao e consumo na mesma unidade consumidora. A energia produzida e consumida no proprio imovel onde o sistema esta instalado.</p></div>
+    <div class="card mb-6"><h2>Autoconsumo remoto</h2><p class="text-secondary mt-2">Geracao em uma unidade e consumo em outra, dentro da mesma area de concessao da distribuidora. Permite instalar paineis em um imovel e abater a conta de outro.</p></div>
+    <div class="card mb-6"><h2>Multiplas unidades consumidoras</h2><p class="text-secondary mt-2">Um unico sistema atende a varias unidades do mesmo titular (ex: condominio). A compensacao e distribuida entre as unidades conforme regras especificas.</p></div>
+    <div class="card mb-6"><h2>Geracao compartilhada</h2><p class="text-secondary mt-2">Condominios ou grupos de consumidores se unem para investir em um sistema de geracao compartilhada. A energia e os creditos sao distribuidos entre os participantes.</p></div>
 
     <p class="text-xs text-muted">Conteudo informativo — nao constitui aconselhamento regulatorio. Consulte a ANEEL e a regulamentacao vigente para detalhes.</p>
   </div>
@@ -155,7 +155,7 @@ function render(data, T) {
       ${articles.map(a => `
       <a href="artigo-${a.slug}.html" class="card" style="text-decoration: none; color: inherit">
         <span class="badge badge-neutral mb-2">${T.escapeHtml(a.category)}</span>
-        <h3 style="font-size: var(--fs-base)">${T.escapeHtml(a.title)}</h3>
+        <h2 style="font-size: var(--fs-base)">${T.escapeHtml(a.title)}</h2>
         <p class="text-sm text-muted mt-2">${T.escapeHtml(a.description)}</p>
         <p class="text-xs text-muted mt-3">${a.readTime} — ${a.date}</p>
       </a>`).join('')}
@@ -183,7 +183,7 @@ function render(data, T) {
     <div class="article-meta" style="margin-bottom:var(--space-6)"><span>${a.readTime}</span><span>${a.date}</span></div>
     <div class="article-body"><p>${T.escapeHtml(a.content)}</p></div>
     <div class="visual-section mt-6">
-      <h3>Quer simular seu proprio sistema?</h3>
+      <h2>Quer simular seu proprio sistema?</h2>
       <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Iniciar simulacao</a>
     </div>
   </div>
@@ -338,7 +338,7 @@ function render(data, T) {
 
     <!-- CTA -->
     <div class="visual-section" style="margin:var(--space-8) 0">
-      <h3>Quer um projeto como este?</h3>
+      <h2>Quer um projeto como este?</h2>
       <p>Faca uma simulacao completa.</p>
       <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Simular sistema</a>
     </div>
@@ -364,15 +364,15 @@ function render(data, T) {
     ${T.pageHero('Sobre o SolMais', 'Plataforma digital end-to-end para energia solar fotovoltaica — da simulacao ao monitoramento', { icon: T.ICONS.sun })}
 
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">O que e</h3>
+      <h2 style="margin-bottom: var(--space-3)">O que e</h2>
       <p class="text-secondary">SolMais e uma plataforma demonstrativa que cobre todo o ciclo de aquisicao, implantacao e gestao de energia solar: simulacao, projeto, acompanhamento, monitoramento, documentos, suporte e administracao.</p>
     </div>
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">Para quem</h3>
+      <h2 style="margin-bottom: var(--space-3)">Para quem</h2>
       <p class="text-secondary">Para quem quer entender como funciona uma operacao solar completa — do primeiro contato ao monitoramento em producao. Para empresas do setor que precisam de uma plataforma digital para sua operacao.</p>
     </div>
     <div class="card mb-6">
-      <h3 style="margin-bottom: var(--space-3)">Caracteristicas</h3>
+      <h2 style="margin-bottom: var(--space-3)">Caracteristicas</h2>
       <ul style="padding-left: var(--space-5); list-style: disc; color: var(--text-secondary)">
         <li>Simulador em 6 etapas com resultado visual</li>
         <li>Projeto tecnico com diagrama e layout do telhado</li>
@@ -386,7 +386,7 @@ function render(data, T) {
       </ul>
     </div>
     <div class="card card-glow">
-      <h3 style="margin-bottom: var(--space-3)">Importante</h3>
+      <h2 style="margin-bottom: var(--space-3)">Importante</h2>
       <p class="text-secondary">${T.escapeHtml(store.demoNotice)}</p>
     </div>
   </div>
@@ -438,11 +438,11 @@ function render(data, T) {
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }])}
     ${T.pageHero('Perguntas Frequentes', 'Duvidas comuns sobre energia solar fotovoltaica', { icon: T.ICONS.support })}
-    <div class="card mb-4"><h3>Quanto posso economizar?</h3><p class="text-secondary mt-2">Sistemas fotovoltaicos podem reduzir significativamente a energia faturada da rede, mas o resultado depende do perfil de consumo, dimensionamento, tarifa, distribuidora e regras aplicaveis.</p></div>
-    <div class="card mb-4"><h3>Quanto tempo leva a homologacao?</h3><p class="text-secondary mt-2">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexao previstas na regulamentacao vigem. Nao prometemos prazo universal.</p></div>
-    <div class="card mb-4"><h3>Qual a garantia dos paineis?</h3><p class="text-secondary mt-2">Garantias variam conforme fabricante, modelo e componente. Os periodos apresentados nesta demonstracao sao ilustrativos.</p></div>
-    <div class="card mb-4"><h3>Funciona em dias nublados?</h3><p class="text-secondary mt-2">Sim. Paineis fotovoltaicos geram eletricidade com luz difusa, nao apenas com sol direto. A geracao reduz, mas nao para.</p></div>
-    <div class="card mb-4"><h3>Os dados sao reais?</h3><p class="text-secondary mt-2">Nao. Todos os clientes, sistemas, projetos, metricas, valores e documentos sao ficticios e claramente identificados como demonstrativos.</p></div>
+    <div class="card mb-4"><h2>Quanto posso economizar?</h2><p class="text-secondary mt-2">Sistemas fotovoltaicos podem reduzir significativamente a energia faturada da rede, mas o resultado depende do perfil de consumo, dimensionamento, tarifa, distribuidora e regras aplicaveis.</p></div>
+    <div class="card mb-4"><h2>Quanto tempo leva a homologacao?</h2><p class="text-secondary mt-2">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexao previstas na regulamentacao vigem. Nao prometemos prazo universal.</p></div>
+    <div class="card mb-4"><h2>Qual a garantia dos paineis?</h2><p class="text-secondary mt-2">Garantias variam conforme fabricante, modelo e componente. Os periodos apresentados nesta demonstracao sao ilustrativos.</p></div>
+    <div class="card mb-4"><h2>Funciona em dias nublados?</h2><p class="text-secondary mt-2">Sim. Paineis fotovoltaicos geram eletricidade com luz difusa, nao apenas com sol direto. A geracao reduz, mas nao para.</p></div>
+    <div class="card mb-4"><h2>Os dados sao reais?</h2><p class="text-secondary mt-2">Nao. Todos os clientes, sistemas, projetos, metricas, valores e documentos sao ficticios e claramente identificados como demonstrativos.</p></div>
   </div>
 </section>`;
 
