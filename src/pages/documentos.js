@@ -20,7 +20,7 @@ function render(data, T) {
             <div class="doc-meta">${d.type} — ${d.size} — ${d.uploadedAt}</div>
             <div class="text-xs text-muted mt-2">${T.escapeHtml(d.description)}</div>
           </div>
-          <button class="btn btn-ghost btn-sm" onclick="SolMais.toast('Documento demonstrativo — nao e um arquivo real', 'info')">${T.ICONS.download} Baixar</button>
+          <button class="btn btn-ghost btn-sm" onclick="SolMais.toast('Documento demonstrativo — não e um arquivo real', 'info')">${T.ICONS.download} Baixar</button>
         </div>`).join('')}
       </div>
     </div>

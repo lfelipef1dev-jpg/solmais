@@ -63,7 +63,7 @@ function render(data, T) {
         <span style="display:inline-block;width:12px;height:12px;background:var(--elevated);border:1px solid var(--border-strong);border-radius:2px;vertical-align:middle;margin-right:4px"></span> Sem solar
         <span style="display:inline-block;width:12px;height:12px;background:var(--gen);border-radius:2px;vertical-align:middle;margin-left:12px;margin-right:4px"></span> Com solar
       </div>
-      <p class="text-xs text-muted mt-4">Cenarios ficticios — nao constituem oferta de credito ou proposta comercial.</p>
+      <p class="text-xs text-muted mt-4">Cenarios ficticios — não constituem oferta de Crédito ou proposta comercial.</p>
     </div>
   </div>
 </section>`;

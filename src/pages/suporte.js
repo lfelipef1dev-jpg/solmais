@@ -6,13 +6,13 @@ function render(data, T) {
   const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Suporte' }];
 
   const categories = [
-    { icon: 'bolt', label: 'Sistema nao esta gerando', desc: 'Producao zero ou abaixo do esperado' },
+    { icon: 'bolt', label: 'Sistema não esta gerando', desc: 'Producao zero ou abaixo do esperado' },
     { icon: 'chart', label: 'App/monitoramento', desc: 'Problemas com o dashboard' },
-    { icon: 'cash', label: 'Conta de energia', desc: 'Duvidas sobre faturamento e compensacao' },
+    { icon: 'cash', label: 'Conta de energia', desc: 'Duvidas sobre faturamento e compensação' },
     { icon: 'bolt', label: 'Inversor', desc: 'Status, erros e reinicializacao' },
     { icon: 'check', label: 'Garantia', desc: 'Cobertura e solicitacao' },
     { icon: 'doc', label: 'Documentacao', desc: 'Projetos, manuais e termos' },
-    { icon: 'settings', label: 'Manutencao', desc: 'Limpeza, inspecao e reparos' }
+    { icon: 'settings', label: 'manutenção', desc: 'Limpeza, inspecao e reparos' }
   ];
 
   const content = `<section class="section">
@@ -23,7 +23,7 @@ function render(data, T) {
     <div class="card mb-6">
       <div class="field">
         <label class="label">Buscar na central de ajuda</label>
-        <input type="text" class="input" placeholder="Ex: inversor offline, compensacao, garantia..." oninput="SolMais.searchFaq(this.value)">
+        <input type="text" class="input" placeholder="Ex: inversor offline, compensação, garantia..." oninput="SolMais.searchFaq(this.value)">
       </div>
     </div>
 
@@ -44,7 +44,7 @@ function render(data, T) {
           <label class="label">Categoria</label>
           <select class="select" id="ticket-cat">
             <option>Monitoramento</option><option>Inversor</option><option>Conta de energia</option>
-            <option>Documentacao</option><option>Manutencao</option><option>Garantia</option>
+            <option>Documentacao</option><option>manutenção</option><option>Garantia</option>
           </select>
         </div>
         <div class="field">

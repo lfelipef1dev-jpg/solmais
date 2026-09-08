@@ -24,7 +24,7 @@ function render(data, T) {
         </div>
         <div class="sm-hero-meta-item">
           <div class="sm-hero-meta-value">650 kWh/mes</div>
-          <div class="sm-hero-meta-label">Geracao estimada</div>
+          <div class="sm-hero-meta-label">geração estimada</div>
         </div>
         <div class="sm-hero-meta-item">
           <div class="sm-hero-meta-value">R$ 480/mes</div>
@@ -41,7 +41,7 @@ function render(data, T) {
     <div class="sm-product-text">
       <span class="sm-eyebrow">A plataforma</span>
       <h2 class="sm-headline">Do telhado<br>aos dados.</h2>
-      <p class="sm-lede">O SolMais une modelagem do telhado, dimensionamento do sistema, acompanhamento do projeto e monitoramento energetico em uma so interface. Nao e um site de empresa solar. E software de energia.</p>
+      <p class="sm-lede">O SolMais une modelagem do telhado, dimensionamento do sistema, acompanhamento do projeto e monitoramento energético em uma so interface. não e um site de empresa solar. E software de energia.</p>
       <a href="projeto.html" class="sm-hero-cta">Ver produto em acao &rarr;</a>
     </div>
     <div class="sm-product-visual">
@@ -51,11 +51,11 @@ function render(data, T) {
       <div class="sm-float-ui sm-float-ui-tr">
         <div class="sm-float-ui-title">Sistema</div>
         <div class="sm-float-ui-row"><span class="sm-float-ui-label">Potencia</span><span class="sm-float-ui-value">5,5 kWp</span></div>
-        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Modulos</span><span class="sm-float-ui-value">10</span></div>
+        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Módulos</span><span class="sm-float-ui-value">10</span></div>
         <div class="sm-float-ui-row"><span class="sm-float-ui-label">Area</span><span class="sm-float-ui-value">26 m²</span></div>
       </div>
       <div class="sm-float-ui sm-float-ui-bl">
-        <div class="sm-float-ui-title">Geracao estimada</div>
+        <div class="sm-float-ui-title">geração estimada</div>
         <div class="sm-float-ui-row"><span class="sm-float-ui-label">Mensal</span><span class="sm-float-ui-value" style="color:var(--solar)">650 kWh</span></div>
         <div class="sm-float-ui-row"><span class="sm-float-ui-label">Anual</span><span class="sm-float-ui-value" style="color:var(--solar)">7.800 kWh</span></div>
       </div>
@@ -78,7 +78,7 @@ function render(data, T) {
         <div class="sm-sim-step"><span class="sm-sim-step-num">05</span><span class="sm-sim-step-label">Sistema</span></div>
         <div class="sm-sim-step"><span class="sm-sim-step-num">06</span><span class="sm-sim-step-label">Resultado</span></div>
       </div>
-      <a href="simulador.html" class="sm-hero-cta" style="margin-top:var(--space-6)">Iniciar simulacao &rarr;</a>
+      <a href="simulador.html" class="sm-hero-cta" style="margin-top:var(--space-6)">Iniciar simulação &rarr;</a>
     </div>
     <div class="sm-sim-mockup">
       <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-5)">
@@ -89,7 +89,7 @@ function render(data, T) {
       </div>
       <div style="font-family:var(--font-display);font-size:var(--fs-lg);color:var(--text-dark);margin-bottom:var(--space-4)">Telhado</div>
       <div style="background:var(--bg-dark);border-radius:var(--radius-md);padding:var(--space-3);margin-bottom:var(--space-4)">
-        <div style="font-size:var(--fs-xs);color:var(--text-dark-muted);margin-bottom:var(--space-2)">ORIENTACAO</div>
+        <div style="font-size:var(--fs-xs);color:var(--text-dark-muted);margin-bottom:var(--space-2)">orientação</div>
         <div style="display:flex;gap:var(--space-2)">
           <div style="flex:1;padding:var(--space-2);text-align:center;background:var(--solar);color:var(--white);border-radius:var(--radius-sm);font-size:var(--fs-xs);font-weight:600">Norte</div>
           <div style="flex:1;padding:var(--space-2);text-align:center;background:var(--elevated-dark);color:var(--text-dark-secondary);border-radius:var(--radius-sm);font-size:var(--fs-xs)">Sul</div>
@@ -107,7 +107,7 @@ function render(data, T) {
     <div class="sm-twin-wow-header">
       <span class="sm-eyebrow">Digital Twin</span>
       <h2 class="sm-headline dark" style="margin-top:var(--space-3)">A mesma casa.<br>Em todo lugar.</h2>
-      <p class="sm-lede dark" style="margin:var(--space-3) auto 0">O Digital Twin do SolMais aparece na simulacao, no projeto e no monitoramento. Continuidade visual. Identidade de produto.</p>
+      <p class="sm-lede dark" style="margin:var(--space-3) auto 0">O Digital Twin do SolMais aparece na simulação, no projeto e no monitoramento. Continuidade visual. Identidade de produto.</p>
     </div>
     <div class="sm-twin-wow-stage">
       ${T.digitalTwin({ width: 800, height: 500, panels: 10, showFlow: true, generating: true, id: 'twin-wow', theme: 'dark' })}
@@ -180,7 +180,7 @@ function render(data, T) {
     <div class="sm-mosaic-overlay">
       <div class="sm-mosaic-type">${T.escapeHtml(c.type)}</div>
       <div class="sm-mosaic-title">${T.escapeHtml(c.title)}</div>
-      <div class="sm-mosaic-meta">${c.power} kWp · ${c.panels} modulos · ${T.escapeHtml(c.location)}</div>
+      <div class="sm-mosaic-meta">${c.power} kWp · ${c.panels} módulos · ${T.escapeHtml(c.location)}</div>
     </div>
   </a>`;
   }).join('');
@@ -202,8 +202,8 @@ function render(data, T) {
   const cta = `<section class="sm-cta">
   <div class="sm-cta-inner">
     <h2 class="sm-headline dark">Pronto para<br>simular?</h2>
-    <p class="sm-lede dark">Faca uma simulacao completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
-    <a href="simulador.html" class="sm-hero-cta">Iniciar simulacao &rarr;</a>
+    <p class="sm-lede dark">Faca uma simulação completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
+    <a href="simulador.html" class="sm-hero-cta">Iniciar simulação &rarr;</a>
     <p style="font-size:var(--fs-xs);color:var(--text-dark-secondary);margin-top:var(--space-5)">Plataforma demonstrativa — todos os dados sao ficticios</p>
   </div>
 </section>`;
@@ -221,7 +221,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data,
       title: 'Energia Solar: Simulador e Monitoramento',
-      description: 'Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geracao e economia estimadas e acompanhe o projeto ate o monitoramento.',
+      description: 'Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geração e economia estimadas e acompanhe o projeto ate o monitoramento.',
       canonical: '/',
       active: 'index',
       structuredData: graphSchema,

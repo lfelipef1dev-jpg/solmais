@@ -15,7 +15,7 @@ function render(data, T) {
     <div style="text-align:center;margin:var(--space-6) 0">
       <span class="cinematic-hero-eyebrow">Projeto ${sys.projectId}</span>
       <h1 style="font-family:'Sora',sans-serif;font-size:var(--fs-3xl);font-weight:800;color:#e2e8f0;margin-top:var(--space-3)">Meu sistema fotovoltaico</h1>
-      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);margin-top:var(--space-2)">${sys.power} kWp &middot; ${sys.panels} modulos &middot; ${T.escapeHtml(sys.location)}</p>
+      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);margin-top:var(--space-2)">${sys.power} kWp &middot; ${sys.panels} módulos &middot; ${T.escapeHtml(sys.location)}</p>
     </div>
     <div class="digital-twin-wrap" style="max-width:800px;margin:0 auto var(--space-6)">
       ${T.digitalTwin({ width: 800, height: 500, panels: sys.panels, showFlow: false, generating: false, id: 'proj-twin', theme: 'dark', hotspots: true })}
@@ -25,7 +25,7 @@ function render(data, T) {
       <div class="kpi-premium">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:var(--space-2)">
           <div style="width:24px;height:24px;border-radius:50%;background:var(--sm-amber);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700">01</div>
-          <h4 style="font-size:var(--fs-sm)">Modulos</h4>
+          <h4 style="font-size:var(--fs-sm)">Módulos</h4>
         </div>
         <p class="text-sm text-muted">${sys.panels} × 550Wp</p>
       </div>
@@ -93,11 +93,11 @@ function render(data, T) {
       <div>
         <span class="cinematic-hero-eyebrow">Layout tecnico</span>
         <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Telhado — top view CAD</h2>
-        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuicao dos ${sys.panels} modulos no telhado com orientacao norte, dimensoes e area utilizada.</p>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuicao dos ${sys.panels} módulos no telhado com orientação norte, dimensões e area utilizada.</p>
         <div class="grid grid-2">
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${sys.area} m²</div><div class="kpi-label">Area utilizada</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">48 m²</div><div class="kpi-label">Area disponivel</div></div>
-          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">Norte</div><div class="kpi-label">Orientacao</div></div>
+          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">Norte</div><div class="kpi-label">orientação</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">15°</div><div class="kpi-label">Inclinacao</div></div>
         </div>
       </div>
@@ -146,7 +146,7 @@ function render(data, T) {
   const diagramSection = `<section class="section" style="padding-top:0">
   <div class="container">
     <div class="chart-premium">
-      <h3>Diagrama energetico</h3>
+      <h3>Diagrama energético</h3>
       ${T.energyFlow({ id: 'proj-flow' })}
     </div>
   </div>
@@ -161,11 +161,11 @@ function render(data, T) {
         <table class="data-table">
           <tr><th>Parametro</th><th>Valor</th></tr>
           <tr><td>Potencia nominal</td><td>${sys.power} kWp</td></tr>
-          <tr><td>Modulos</td><td>${sys.panels} × 550 Wp</td></tr>
+          <tr><td>Módulos</td><td>${sys.panels} × 550 Wp</td></tr>
           <tr><td>Inversor</td><td>${sys.inverterPower} kW</td></tr>
           <tr><td>Area</td><td>${sys.area} m²</td></tr>
-          <tr><td>Geracao estimada</td><td>650 kWh/mes</td></tr>
-          <tr><td>Geracao anual</td><td>7.800 kWh/ano</td></tr>
+          <tr><td>geração estimada</td><td>650 kWh/mes</td></tr>
+          <tr><td>geração anual</td><td>7.800 kWh/ano</td></tr>
           <tr><td>Cobertura estimada</td><td>90%</td></tr>
         </table>
       </div>
@@ -194,7 +194,7 @@ function render(data, T) {
           </div>
         </div>
         <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-2)">
-          <a href="instalacao.html" class="btn btn-secondary btn-sm">${T.ICONS.settings} Ver instalacao</a>
+          <a href="instalacao.html" class="btn btn-secondary btn-sm">${T.ICONS.settings} Ver instalação</a>
           <a href="monitoramento.html" class="btn btn-secondary btn-sm">${T.ICONS.chart} Ver monitoramento</a>
           <a href="documentos.html" class="btn btn-secondary btn-sm">${T.ICONS.doc} Documentos</a>
         </div>

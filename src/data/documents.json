@@ -1,13 +1,13 @@
 [
   {
-    "id": "doc-projeto-eletrico",
-    "name": "Projeto Eletrico — DEMO",
+    "id": "doc-projeto-elétrico",
+    "name": "Projeto Elétrico — DEMO",
     "projectId": "SOL-4821",
     "type": "PDF",
     "size": "2,4 MB",
     "uploadedAt": "2026-02-12",
     "demo": true,
-    "description": "Projeto eletrico fotovoltaico — documento demonstrativo"
+    "description": "Projeto elétrico fotovoltaico — documento demonstrativo"
   },
   {
     "id": "doc-diagrama-unifilar",

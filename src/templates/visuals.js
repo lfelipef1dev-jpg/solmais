@@ -2,7 +2,7 @@
    DIRECAO DE ARTE: PREMIUM ENERGY-TECH + DIGITAL TWIN + ARCHITECTURAL
 
    Elemento proprietario: DIGITAL TWIN
-   A mesma casa isometrica premium reaparece em Simulacao, Resultado,
+   A mesma casa isometrica premium reaparece em simulação, Resultado,
    Projeto e Monitoramento — criando identidade visual reconhecivel.
 
    Paleta:
@@ -61,7 +61,7 @@ function digitalTwin(opts) {
     shadow: 'rgba(0,0,0,0.4)'
   };
 
-  // Calcular layout dos paineis (grade 2 colunas x N linhas)
+  // Calcular layout dos módulos fotovoltaicos (grade 2 colunas x N linhas)
   const panelCols = Math.ceil(panels / 2);
   const panelRows = 2;
   const panelW = 38;
@@ -166,7 +166,7 @@ function digitalTwin(opts) {
   <polygon points="${w*0.35},${h*0.38} ${w*0.65},${h*0.38} ${w*0.67},${h*0.40} ${w*0.37},${h*0.40}" fill="${C.roofDark}" opacity="0.7"/>
 
   <!-- ===== PAINELS SOLARES NO TELHADO ===== -->
-  <!-- Os paineis sao posicionados na face superior do telhado do volume principal -->
+  <!-- Os módulos fotovoltaicos sao posicionados na face superior do telhado do volume principal -->
   <g transform="translate(${w*0.24} ${h*0.42}) skewY(-15)">
     ${Array.from({length: panelRows}).map((_, row) =>
       Array.from({length: panelCols}).map((_, col) => {
@@ -186,7 +186,7 @@ function digitalTwin(opts) {
     ).join('')}
   </g>
 
-  <!-- Telhado do anexo (plano, sem paineis) -->
+  <!-- Telhado do anexo (plano, sem módulos fotovoltaicos) -->
   <polygon points="${w*0.52},${h*0.55} ${w*0.72},${h*0.48} ${w*0.74},${h*0.49} ${w*0.54},${h*0.56}" fill="${C.roof}" opacity="0.8"/>
 
   <!-- Janelas grandes (arquitetura contemporanea - vidro) -->
@@ -244,7 +244,7 @@ function digitalTwin(opts) {
   <!-- ===== HOTSPOTS ===== -->
   ${hotspots ? `
   <g class="twin-hotspots">
-    <!-- [01] Modulos -->
+    <!-- [01] Módulos -->
     <g class="hotspot" data-id="01" transform="translate(${w*0.32} ${h*0.40})">
       <circle r="14" fill="${C.accent}" opacity="0.15"/>
       <circle r="10" fill="${C.accent}" opacity="0.3"/>
@@ -275,7 +275,7 @@ function digitalTwin(opts) {
   </g>
   ` : ''}
 
-  <!-- Poste da rede eletrica (canto direito) -->
+  <!-- Poste da rede elétrica (canto direito) -->
   <line x1="${w*0.82}" y1="${h*0.55}" x2="${w*0.82}" y2="${h*0.78}" stroke="${C.wallDark}" stroke-width="1.5"/>
   <line x1="${w*0.79}" y1="${h*0.58}" x2="${w*0.85}" y2="${h*0.58}" stroke="${C.wallDark}" stroke-width="1"/>
   <line x1="${w*0.80}" y1="${h*0.61}" x2="${w*0.84}" y2="${h*0.61}" stroke="${C.wallDark}" stroke-width="1"/>
@@ -292,13 +292,13 @@ function digitalTwin(opts) {
 
 /* ================================================================
    2. HERO CINEMATOGRAFICO — Home
-   Casa + widgets integrados sobre a imagem (nao card separado)
+   Casa + widgets integrados sobre a imagem (não card separado)
    ================================================================ */
 function cinematicHero(opts) {
   opts = opts || {};
   const title = opts.title || 'Energia solar sem complicacao';
   const subtitle = opts.subtitle || 'Simule, projete, acompanhe e monitore seu sistema fotovoltaico em uma plataforma unica.';
-  const cta = opts.cta || 'Iniciar simulacao';
+  const cta = opts.cta || 'Iniciar simulação';
   const ctaHref = opts.ctaHref || 'simulador.html';
   const secondaryCta = opts.secondaryCta || 'Ver projetos';
   const secondaryHref = opts.secondaryHref || 'projetos.html';
@@ -324,7 +324,7 @@ function cinematicHero(opts) {
       </div>
       <div class="hero-widget">
         <div class="hero-widget-value">650 <span class="hero-widget-unit">kWh</span></div>
-        <div class="hero-widget-label">Geracao mensal</div>
+        <div class="hero-widget-label">geração mensal</div>
       </div>
       <div class="hero-widget">
         <div class="hero-widget-value">R$ 480</div>
@@ -337,7 +337,7 @@ function cinematicHero(opts) {
 
 /* ================================================================
    3. ROOF LAYOUT CAD — Top-down premium
-   Textura, dimensoes, sombra, escala, orientacao
+   Textura, dimensões, sombra, escala, orientação
    ================================================================ */
 function roofCAD(opts) {
   opts = opts || {};
@@ -358,7 +358,7 @@ function roofCAD(opts) {
   const roofW = panelCols * (panelW + gapX) + 40;
   const roofH = panelRows * (panelH + gapY) + 40;
 
-  return `<svg class="roof-cad-svg" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Layout tecnico do telhado com ${panels} modulos fotovoltaicos">
+  return `<svg class="roof-cad-svg" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Layout tecnico do telhado com ${panels} módulos fotovoltaicos">
   <defs>
     <pattern id="${id}-tile" x="0" y="0" width="12" height="8" patternUnits="userSpaceOnUse">
       <rect width="12" height="8" fill="#1e2330"/>
@@ -380,7 +380,7 @@ function roofCAD(opts) {
   <rect width="500" height="380" fill="#0d1117"/>
   <rect width="500" height="380" fill="url(#${id}-grid)"/>
 
-  <!-- Bussola / orientacao -->
+  <!-- Bussola / orientação -->
   <g transform="translate(440 50)">
     <circle r="28" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
     <circle r="22" fill="none" stroke="#f59e0b" stroke-width="0.5" opacity="0.3"/>
@@ -397,7 +397,7 @@ function roofCAD(opts) {
   <!-- Borda do telhado -->
   <rect x="${startX - 20}" y="${startY - 20}" width="${roofW}" height="${roofH}" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4" rx="2"/>
 
-  <!-- Paineis -->
+  <!-- Módulos fotovoltaicos -->
   ${Array.from({length: panelRows}).map((_, row) =>
     Array.from({length: panelCols}).map((_, col) => {
       if (row * panelCols + col >= panels) return '';
@@ -491,9 +491,9 @@ function equipmentRender(type, opts) {
     <g transform="translate(50 30) skewX(-5)">
       <!-- Moldura aluminio -->
       <rect width="200" height="140" rx="3" fill="url(#${id}-frame)"/>
-      <!-- Celulas -->
+      <!-- Células -->
       <rect x="4" y="4" width="192" height="132" rx="1" fill="url(#${id}-cell)"/>
-      <!-- Grid de celulas (6x10) -->
+      <!-- Grid de células (6x10) -->
       ${Array.from({length: 6}).map((_, r) =>
         Array.from({length: 10}).map((_, c) => {
           const cw = 192/10, ch = 132/6;
@@ -621,7 +621,7 @@ function solarCurve(opts) {
   const peak = opts.peak || '4,82 kW';
   const peakTime = opts.peakTime || '12:38';
 
-  // Geracao solar (curva sino)
+  // geração solar (curva sino)
   const genPoints = [];
   for (let i = 0; i <= 24; i++) {
     const x = (i / 24) * (w - 80) + 40;
@@ -646,7 +646,7 @@ function solarCurve(opts) {
   const peakX = 40 + (12.6 / 24) * (w - 80);
   const peakY = h - 50 - 1.0 * (h - 100);
 
-  return `<svg class="solar-curve-svg" viewBox="0 0 ${w} ${h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curva de geracao solar ao longo do dia com pico de ${peak} as ${peakTime}">
+  return `<svg class="solar-curve-svg" viewBox="0 0 ${w} ${h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curva de geração solar ao longo do dia com pico de ${peak} as ${peakTime}">
   <defs>
     <linearGradient id="${id}-area" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
@@ -664,10 +664,10 @@ function solarCurve(opts) {
     ${Array.from({length: 5}).map((_, i) => `<line x1="40" y1="${50 + i * (h - 100) / 4}" x2="${w - 40}" y2="${50 + i * (h - 100) / 4}"/>`).join('')}
   </g>
 
-  <!-- Area de geracao -->
+  <!-- Area de geração -->
   <path d="${genArea}" fill="url(#${id}-area)"/>
 
-  <!-- Curva de geracao -->
+  <!-- Curva de geração -->
   <path d="${genPath}" stroke="url(#${id}-line)" stroke-width="2.5" fill="none"/>
 
   <!-- Linha de consumo -->
@@ -702,7 +702,7 @@ function solarCurve(opts) {
   <!-- Legenda -->
   <g transform="translate(${w - 200} 60)">
     <line x1="0" y1="0" x2="20" y2="0" stroke="#fbbf24" stroke-width="2"/>
-    <text x="26" y="4" fill="#e2e8f0" font-size="10" font-family="Inter, sans-serif">Geracao</text>
+    <text x="26" y="4" fill="#e2e8f0" font-size="10" font-family="Inter, sans-serif">geração</text>
     ${showConsumption ? `<line x1="90" y1="0" x2="110" y2="0" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.6"/>
     <text x="116" y="4" fill="#e2e8f0" font-size="10" font-family="Inter, sans-serif">Consumo</text>` : ''}
   </g>
@@ -856,7 +856,7 @@ function caseHero(type, opts) {
       <!-- Edificio comercial -->
       <rect x="${300*0.15}" y="${200*0.15}" width="${300*0.45}" height="${200*0.6}" fill="#2a2f3e"/>
       <rect x="${300*0.15}" y="${200*0.10}" width="${300*0.45}" height="${200*0.06}" fill="#1e2330"/>
-      <!-- Paineis no topo (plano) -->
+      <!-- Módulos fotovoltaicos no topo (plano) -->
       <g transform="translate(${300*0.17} ${200*0.115})">
         ${Array.from({length: 2}).map((_, r) => Array.from({length: 8}).map((_, c) =>
           `<rect x="${c*16}" y="${r*8}" width="14" height="6" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/>`
@@ -903,7 +903,7 @@ function caseHero(type, opts) {
       <!-- Galpao industrial -->
       <polygon points="${300*0.1},${200*0.55} ${300*0.85},${200*0.55} ${300*0.85},${200*0.75} ${300*0.1},${200*0.75}" fill="#2a2f3e"/>
       <polygon points="${300*0.1},${200*0.55} ${300*0.85},${200*0.55} ${300*0.8},${200*0.35} ${300*0.15},${200*0.35}" fill="#1e2330"/>
-      <!-- Paineis no telhado (plano grande) -->
+      <!-- Módulos fotovoltaicos no telhado (plano grande) -->
       <g transform="translate(${300*0.17} ${200*0.38})">
         ${Array.from({length: 3}).map((_, r) => Array.from({length: 10}).map((_, c) =>
           `<rect x="${c*22}" y="${r*10}" width="20" height="8" rx="0.5" fill="#0a1525" stroke="#2a4a6f" stroke-width="0.3"/>`
@@ -958,8 +958,8 @@ function caseHero(type, opts) {
     <h1 class="case-hero-title">${escapeHtml(title)}</h1>
     <div class="case-hero-stats">
       <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(power)}</span><span class="case-hero-stat-label">Potencia</span></div>
-      <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(modules)}</span><span class="case-hero-stat-label">Modulos</span></div>
-      <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(annual)}</span><span class="case-hero-stat-label">Geracao anual</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(modules)}</span><span class="case-hero-stat-label">Módulos</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(annual)}</span><span class="case-hero-stat-label">geração anual</span></div>
     </div>
   </div>
 </div>`;
@@ -1066,12 +1066,12 @@ function pageHero(title, subtitle, opts) {
 }
 
 /* ================================================================
-   13. ENERGY FLOW — Fluxo energetico animado
+   13. ENERGY FLOW — Fluxo energético animado
    ================================================================ */
 function energyFlow(opts) {
   opts = opts || {};
   const id = opts.id || 'flow';
-  return `<svg class="energy-flow-svg" viewBox="0 0 600 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo energetico: sol para paineis, paineis para casa, excedente para rede">
+  return `<svg class="energy-flow-svg" viewBox="0 0 600 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo energético: sol para módulos fotovoltaicos, módulos fotovoltaicos para casa, excedente para rede">
   <defs>
     <radialGradient id="${id}-sun" cx="0.5" cy="0.5" r="0.5">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>

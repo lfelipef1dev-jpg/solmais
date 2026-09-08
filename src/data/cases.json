@@ -16,7 +16,7 @@
     "installedAt": "2026-03-15",
     "roofType": "Ceramico",
     "orientation": "Norte",
-    "description": "Sistema residencial 5,5 kWp instalado em telhado ceramico orientado ao norte. Projeto demonstrativo com 10 modulos de 550W e inversor de 5kW.",
+    "description": "Sistema residencial 5,5 kWp instalado em telhado ceramico orientado ao norte. Projeto demonstrativo com 10 módulos de 550W e inversor de 5kW.",
     "images": ["case-santos.jpg"],
     "demo": true
   },
@@ -37,7 +37,7 @@
     "installedAt": "2026-01-20",
     "roofType": "Metalico",
     "orientation": "Norte",
-    "description": "Sistema comercial 18 kWp em telha metalica. 33 modulos e inversor 17kW. Projeto demonstrativo para estabelecimento comercial.",
+    "description": "Sistema comercial 18 kWp em telha metalica. 33 módulos e inversor 17kW. Projeto demonstrativo para estabelecimento comercial.",
     "images": ["case-svicente.jpg"],
     "demo": true
   },
@@ -58,7 +58,7 @@
     "installedAt": "2025-11-10",
     "roofType": "Laje",
     "orientation": "Norte",
-    "description": "Sistema condominial 35 kWp em laje. 64 modulos e inversor 30kW. Maior projeto demonstrativo do portfolio.",
+    "description": "Sistema condominial 35 kWp em laje. 64 módulos e inversor 30kW. Maior projeto demonstrativo do portfolio.",
     "images": ["case-praia-grande.jpg"],
     "demo": true
   },
@@ -79,7 +79,7 @@
     "installedAt": "2026-06-22",
     "roofType": "Ceramico",
     "orientation": "Norte",
-    "description": "Sistema residencial 6,6 kWp com 12 modulos. Projeto demonstrativo em telhado ceramico.",
+    "description": "Sistema residencial 6,6 kWp com 12 módulos. Projeto demonstrativo em telhado ceramico.",
     "images": ["case-guaruja.jpg"],
     "demo": true
   },
@@ -100,7 +100,7 @@
     "installedAt": "2026-05-08",
     "roofType": "Fibrocimento",
     "orientation": "Leste",
-    "description": "Sistema rural 4,4 kWp em fibrocimento. 8 modulos e inversor 4kW. Projeto demonstrativo em area rural.",
+    "description": "Sistema rural 4,4 kWp em fibrocimento. 8 módulos e inversor 4kW. Projeto demonstrativo em area rural.",
     "images": ["case-cubatao.jpg"],
     "demo": true
   }

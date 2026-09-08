@@ -262,7 +262,7 @@
       "modules": "normal",
       "communication": "offline",
       "lastUpdate": "2h 15min",
-      "note": "Comunicacao interrompida — inversor offline"
+      "note": "comunicação interrompida — inversor offline"
     },
     "monthlyData": [
       { "month": "Jan", "estimated": 520, "generated": 510 },

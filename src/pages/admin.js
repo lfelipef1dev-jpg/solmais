@@ -45,7 +45,7 @@ function render(data, T) {
 
     <div class="admin-kpi-grid">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${projects.length}</div><div class="kpi-label">Projetos ativos</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalacao').length}</div><div class="kpi-label">Em instalacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalação').length}</div><div class="kpi-label">Em instalação</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potencia instalada</div></div>
       <div class="kpi-card"><div class="kpi-card-icon ${activeAlerts > 0 ? 'warn' : 'gen'}">${T.ICONS.alert}</div><div class="kpi-value">${activeAlerts}</div><div class="kpi-label">Alertas abertos</div></div>
     </div>
@@ -55,9 +55,9 @@ function render(data, T) {
         <h3 style="margin-bottom: var(--space-4)">Projetos por estagio</h3>
         <div class="bar-chart" style="height: 180px">
           ${[
-            { label: 'Simulacao', count: projects.filter(p => p.stage === 'simulacao').length },
+            { label: 'simulação', count: projects.filter(p => p.stage === 'simulação').length },
             { label: 'Documentacao', count: projects.filter(p => p.stage === 'documentacao').length },
-            { label: 'Instalacao', count: projects.filter(p => p.stage === 'instalacao').length },
+            { label: 'instalação', count: projects.filter(p => p.stage === 'instalação').length },
             { label: 'Monitoramento', count: projects.filter(p => p.stage === 'monitoramento').length }
           ].map(s => {
             const max = 5;
@@ -67,7 +67,7 @@ function render(data, T) {
         </div>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: var(--space-4)">Geracao hoje por sistema</h3>
+        <h3 style="margin-bottom: var(--space-4)">geração hoje por sistema</h3>
         <div class="bar-chart" style="height: 180px">
           ${systems.map(s => {
             const max = Math.max(...systems.map(x => x.production.today));
@@ -128,18 +128,18 @@ function render(data, T) {
 
   /* ----- Pipeline (Kanban) ----- */
   const stages = [
-    { id: 'simulacao', label: 'Simulacao' },
+    { id: 'simulação', label: 'simulação' },
     { id: 'documentacao', label: 'Documentacao' },
-    { id: 'instalacao', label: 'Instalacao' },
+    { id: 'instalação', label: 'instalação' },
     { id: 'monitoramento', label: 'Conectado' }
   ];
   const pipelineContent = `
     <h1 style="margin-bottom: var(--space-2)">Pipeline</h1>
     <p class="text-secondary mb-6">Fluxo de projetos — arraste cards entre colunas (demonstrativo)</p>
     <div class="admin-kpi-grid mb-6">
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${projects.filter(p => p.stage === 'simulacao').length}</div><div class="kpi-label">Simulacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${projects.filter(p => p.stage === 'simulação').length}</div><div class="kpi-label">simulação</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.doc}</div><div class="kpi-value">${projects.filter(p => p.stage === 'documentacao').length}</div><div class="kpi-label">Documentacao</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalacao').length}</div><div class="kpi-label">Instalacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalação').length}</div><div class="kpi-label">instalação</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Conectado</div></div>
     </div>
     <div class="kanban">
@@ -166,7 +166,7 @@ function render(data, T) {
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${projects.length}</div><div class="kpi-label">Total projetos</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Conectados</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalacao').length}</div><div class="kpi-label">Em instalacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalação').length}</div><div class="kpi-label">Em instalação</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.bolt}</div><div class="kpi-value">${projects.reduce((s,p)=>s+p.power,0)} kWp</div><div class="kpi-label">Potencia total</div></div>
     </div>
     <div class="card">
@@ -192,7 +192,7 @@ function render(data, T) {
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.installedAt).length}</div><div class="kpi-label">Instalacoes</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Concluidas</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.clock}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalacao').length}</div><div class="kpi-label">Em andamento</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.clock}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalação').length}</div><div class="kpi-label">Em andamento</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.user}</div><div class="kpi-value">3</div><div class="kpi-label">Equipes</div></div>
     </div>
     <div class="card mb-6">
@@ -209,9 +209,9 @@ function render(data, T) {
       </table>
     </div>
     <div class="card">
-      <h3 style="margin-bottom: var(--space-4)">Checklist padrao de instalacao</h3>
+      <h3 style="margin-bottom: var(--space-4)">Checklist padrao de instalação</h3>
       <div class="timeline">
-        ${['Estrutura de fixacao','Modulos fotovoltaicos','Inversor','Cabeamento CC e CA','Protecoes','Testes de comunicacao','Energizacao','Fotos demonstrativas'].map((item, i) => `
+        ${['Estrutura de fixação','Módulos fotovoltaicos','Inversor','Cabeamento CC e CA','proteções','Testes de comunicação','Energizacao','Fotos demonstrativas'].map((item, i) => `
         <div class="timeline-item"><div class="timeline-dot done">${T.ICONS.check}</div><div class="timeline-content"><h4>${item}</h4></div></div>`).join('')}
       </div>
     </div>
@@ -250,7 +250,7 @@ function render(data, T) {
 
     <div class="card">
       <table class="data-table">
-        <tr><th>Sistema</th><th>Cliente</th><th>Local</th><th>Potencia</th><th>Geracao hoje</th><th>Status</th><th>Ultima comun.</th></tr>
+        <tr><th>Sistema</th><th>Cliente</th><th>Local</th><th>Potencia</th><th>geração hoje</th><th>Status</th><th>Ultima comun.</th></tr>
         ${systems.map(s => `<tr>
           <td><strong>${s.projectId}</strong></td>
           <td>${T.escapeHtml(s.customerName)}</td>
@@ -268,7 +268,7 @@ function render(data, T) {
   /* ----- Monitoramento admin ----- */
   const monContent = `
     <h1 style="margin-bottom: var(--space-2)">Monitoramento</h1>
-    <p class="text-secondary mb-6">Visao consolidada da geracao — dados demonstrativos</p>
+    <p class="text-secondary mb-6">Visao consolidada da geração — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${totalGen.toFixed(1)}</div><div class="kpi-label">kWh gerados hoje</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">${systems.reduce((s,x)=>s+x.production.month,0).toLocaleString('pt-BR')}</div><div class="kpi-label">kWh este mes</div></div>
@@ -277,7 +277,7 @@ function render(data, T) {
     </div>
     <div class="grid grid-2 mb-6">
       <div class="card">
-        <h3 style="margin-bottom: var(--space-4)">Geracao por sistema (hoje)</h3>
+        <h3 style="margin-bottom: var(--space-4)">geração por sistema (hoje)</h3>
         ${T.areaChart(systems.map(s => s.production.today), { width: 350, height: 180, color: '#22c55e', labels: systems.map(s => s.projectId.replace('SOL-','')), id: 'admin-mon', label: 'kWh' })}
       </div>
       <div class="card">
@@ -286,7 +286,7 @@ function render(data, T) {
       </div>
     </div>
     <div class="card">
-      <h3 style="margin-bottom: var(--space-4)">Geracao por sistema (barras)</h3>
+      <h3 style="margin-bottom: var(--space-4)">geração por sistema (barras)</h3>
       <div class="bar-chart" style="height: 200px">
         ${systems.map(s => {
           const max = Math.max(...systems.map(x => x.production.today));
@@ -374,7 +374,7 @@ function render(data, T) {
         <tr><td>Financiamento</td><td>${customers.filter(c=>c.contractType==='financiamento').length}</td><td>${T.formatBRL(133000)}</td></tr>
         <tr><td>Assinatura</td><td>${customers.filter(c=>c.contractType==='assinatura').length}</td><td>${T.formatBRL(200 * 12)}</td></tr>
       </table>
-      <p class="text-xs text-muted mt-4">Valores demonstrativos — nao constituem receita real.</p>
+      <p class="text-xs text-muted mt-4">Valores demonstrativos — não constituem receita real.</p>
     </div>
   `;
   pages.push(adminPage('admin-financeiro.html', 'Financeiro', finContent));
@@ -435,7 +435,7 @@ function render(data, T) {
         </div>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: var(--space-4)">Tipos de imovel</h3>
+        <h3 style="margin-bottom: var(--space-4)">Tipos de imóvel</h3>
         <div class="bar-chart" style="height: 160px">
           ${[{l:'Resid.',v:60},{l:'Comer.',v:25},{l:'Cond.',v:10},{l:'Rural',v:5}].map(s => {
             const h = (s.v * 1.5);

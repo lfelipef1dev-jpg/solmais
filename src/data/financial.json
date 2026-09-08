@@ -16,7 +16,7 @@
     },
     "pros": ["Sistema seu desde o dia 1", "Maior economia acumulada", "Sem parcelas mensais", "Payback mais rapido"],
     "cons": ["Investimento inicial alto"],
-    "disclaimer": "Valor demonstrativo — nao constitui oferta comercial."
+    "disclaimer": "Valor demonstrativo — não constitui oferta comercial."
   },
   {
     "id": "fin-financiamento",
@@ -36,7 +36,7 @@
     },
     "pros": ["Entrada reduzida", "Parcela proxima da economia gerada", "Sistema seu ao final"],
     "cons": ["Payback mais longo", "Juros sobre o financiado"],
-    "disclaimer": "Cenario demonstrativo — nao constitui oferta de credito."
+    "disclaimer": "Cenario demonstrativo — não constitui oferta de Crédito."
   },
   {
     "id": "fin-assinatura",
@@ -52,8 +52,8 @@
       "economia25anos": 84000,
       "roi": null
     },
-    "pros": ["Zero investimento inicial", "Manutencao inclusa", "Saida a qualquer momento (demo)"],
-    "cons": ["Sistema nao e seu", "Economia liquida menor", "Sem payback definido"],
-    "disclaimer": "Cenario demonstrativo — nao constitui oferta comercial."
+    "pros": ["Zero investimento inicial", "manutenção inclusa", "Saida a qualquer momento (demo)"],
+    "cons": ["Sistema não e seu", "Economia liquida menor", "Sem payback definido"],
+    "disclaimer": "Cenario demonstrativo — não constitui oferta comercial."
   }
 ]

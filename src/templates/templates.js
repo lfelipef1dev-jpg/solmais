@@ -144,7 +144,7 @@ function renderFooter(store) {
       ${colHtml}
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 ${escapeHtml(store.name)} — Demonstracao. Dados ficticios. Nao constitui proposta comercial.</p>
+      <p>&copy; 2026 ${escapeHtml(store.name)} — Demonstracao. Dados ficticios. não constitui proposta comercial.</p>
     </div>
   </div>
 </footer>`;

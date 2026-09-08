@@ -1,5 +1,5 @@
 /* SolMais — Portal do cliente
-   Visao geral, projeto, instalacao, monitoramento, economia, documentos, suporte, perfil */
+   Visao geral, projeto, instalação, monitoramento, economia, documentos, suporte, perfil */
 
 function render(data, T) {
   const store = data.store;
@@ -20,7 +20,7 @@ function render(data, T) {
   <ul class="portal-menu">
     <li><a href="conta.html" class="active">${T.ICONS.home} Visao geral</a></li>
     <li><a href="projeto.html">${T.ICONS.panel} Meu projeto</a></li>
-    <li><a href="instalacao.html">${T.ICONS.settings} Instalacao</a></li>
+    <li><a href="instalacao.html">${T.ICONS.settings} instalação</a></li>
     <li><a href="monitoramento.html">${T.ICONS.chart} Monitoramento</a></li>
     <li><a href="economia.html">${T.ICONS.cash} Economia</a></li>
     <li><a href="documentos.html">${T.ICONS.doc} Documentos</a></li>
@@ -66,7 +66,7 @@ function render(data, T) {
       <h3 style="margin-bottom: var(--space-3)">Meu sistema</h3>
       ${T.digitalTwin({ panels: system.panels, id: 'portal-twin', width: 400, height: 280, generating: true })}
       <div class="grid grid-2 mt-3">
-        <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.panels}</div><div class="kpi-label">Modulos</div></div>
+        <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.panels}</div><div class="kpi-label">Módulos</div></div>
         <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.area} m2</div><div class="kpi-label">Area</div></div>
       </div>
     </div>

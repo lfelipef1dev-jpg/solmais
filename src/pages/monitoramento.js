@@ -1,5 +1,5 @@
 /* SolMais — Monitoramento V3
-   PRODUTO COMO PROTAGONISTA, nao dashboard cards
+   PRODUTO COMO PROTAGONISTA, não dashboard cards
    "Veja sua energia acontecer." */
 
 function render(data, T) {
@@ -70,7 +70,7 @@ function render(data, T) {
     <div class="solar-curve-wrap">
       <div class="solar-curve-header">
         <div>
-          <div class="solar-curve-title">Geracao hoje</div>
+          <div class="solar-curve-title">geração hoje</div>
           <div class="solar-curve-subtitle">Curva solar com pico destacado e linha de consumo</div>
         </div>
         <div style="text-align:right">
@@ -108,7 +108,7 @@ function render(data, T) {
   <section style="max-width:var(--container-max);margin:0 auto var(--space-8);padding:0 var(--space-6)">
     <div class="grid grid-2">
       <div class="chart-premium" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h2 style="color:var(--text-dark)">Geracao mensal</h2>
+        <h2 style="color:var(--text-dark)">geração mensal</h2>
         ${T.areaChart([580, 590, 600, 610, 620, 630, 640, 650, 640, 630, 600, 580], { width: 450, height: 200, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'mon-v3-monthly', label: 'kWh/mes' })}
       </div>
       <div class="chart-premium" style="background:var(--surface-dark);border-color:var(--border-dark)">
@@ -134,7 +134,7 @@ function render(data, T) {
       </div>
       <div class="text-center">
         <div class="sm-big-number" style="color:var(--text-dark)">7,8<span style="font-size:0.3em;color:var(--text-dark-muted)">MWh</span></div>
-        <div class="sm-number-label">Geracao/ano</div>
+        <div class="sm-number-label">geração/ano</div>
       </div>
     </div>
   </section>
@@ -148,8 +148,8 @@ function render(data, T) {
     noindex: true,
     html: T.renderLayout({
       store, data,
-      title: 'Monitoramento Energetico',
-      description: 'Dashboard de monitoramento em tempo real — geracao, consumo, economia e saude do sistema.',
+      title: 'Monitoramento Energético',
+      description: 'Dashboard de monitoramento em tempo real — geração, consumo, economia e saude do sistema.',
       canonical: '/monitoramento.html', active: '',
       noindex: true,
       ogImage: store.url.replace(/\/$/, '') + '/img/og/monitoramento.svg',

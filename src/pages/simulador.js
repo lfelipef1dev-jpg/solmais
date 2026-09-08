@@ -1,5 +1,5 @@
 /* SolMais — Simulador wizard 6 etapas com feedback visual
-   Localizacao (mapa) → Consumo (grafico) → Imovel (telhados) → Objetivo (cards) → Configuracao (render) → Resultado (WOW) */
+   Localizacao (mapa) → Consumo (grafico) → Imóvel (telhados) → Objetivo (cards) → Configuracao (render) → Resultado (WOW) */
 
 function render(data, T) {
   const store = data.store;
@@ -14,13 +14,13 @@ function render(data, T) {
   const wizard = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    ${T.pageHero('Simulador Solar', 'Wizard de 6 etapas — localizacao, consumo, imovel, objetivo, configuracao e resultado', { icon: T.ICONS.bolt })}
+    ${T.pageHero('Simulador Solar', 'Wizard de 6 etapas — localizacao, consumo, imóvel, objetivo, configuracao e resultado', { icon: T.ICONS.bolt })}
 
     <div class="wizard" id="wizard">
       <div class="wizard-steps" id="wizard-steps">
         <div class="wizard-step active" data-step="1"><span class="wizard-step-num">1</span> Localizacao</div>
         <div class="wizard-step" data-step="2"><span class="wizard-step-num">2</span> Consumo</div>
-        <div class="wizard-step" data-step="3"><span class="wizard-step-num">3</span> Imovel</div>
+        <div class="wizard-step" data-step="3"><span class="wizard-step-num">3</span> Imóvel</div>
         <div class="wizard-step" data-step="4"><span class="wizard-step-num">4</span> Objetivo</div>
         <div class="wizard-step" data-step="5"><span class="wizard-step-num">5</span> Configuracao</div>
         <div class="wizard-step" data-step="6"><span class="wizard-step-num">6</span> Resultado</div>
@@ -29,7 +29,7 @@ function render(data, T) {
       <div class="wizard-content" id="wizard-content">
         <!-- Step 1: Localizacao (com mapa SVG) -->
         <div class="wizard-panel" data-panel="1">
-          <h2 style="margin-bottom: var(--space-4)">Localizacao do imovel</h2>
+          <h2 style="margin-bottom: var(--space-4)">Localizacao do imóvel</h2>
           <p class="text-secondary mb-6">Informe a regiao para estimar a irradiacao solar disponivel.</p>
           <div class="grid grid-2">
             <div>
@@ -50,7 +50,7 @@ function render(data, T) {
                 </div>
               </div>
               <div class="field">
-                <label class="label">Tipo de imovel</label>
+                <label class="label">Tipo de imóvel</label>
                 <div class="option-grid" id="sim-type">
                   <div class="option-card selected" data-value="residencial">
                     <div class="option-card-icon">${T.ICONS.home}</div>
@@ -139,9 +139,9 @@ function render(data, T) {
           </div>
         </div>
 
-        <!-- Step 3: Imovel (com thumbnails de telhado) -->
+        <!-- Step 3: Imóvel (com thumbnails de telhado) -->
         <div class="wizard-panel hidden" data-panel="3">
-          <h2 style="margin-bottom: var(--space-4)">Caracteristicas do imovel</h2>
+          <h2 style="margin-bottom: var(--space-4)">Caracteristicas do imóvel</h2>
           <p class="text-secondary mb-6">Informacoes sobre o telhado e area disponivel.</p>
           <div class="field">
             <label class="label">Tipo de telhado</label>
@@ -174,7 +174,7 @@ function render(data, T) {
               <input type="number" class="input" id="sim-area" placeholder="30" value="30">
             </div>
             <div class="field">
-              <label class="label">Orientacao</label>
+              <label class="label">orientação</label>
               <select class="select" id="sim-orientation">
                 <option value="norte">Norte (ideal)</option>
                 <option value="nordeste">Nordeste</option>
@@ -211,11 +211,11 @@ function render(data, T) {
             <div class="option-card" data-value="independencia">
               <div class="option-card-icon">${T.ICONS.bolt}</div>
               <div class="option-card-title">Independencia</div>
-              <div class="option-card-desc">Maxima geracao</div>
+              <div class="option-card-desc">Maxima geração</div>
             </div>
-            <div class="option-card" data-value="eletrico">
+            <div class="option-card" data-value="elétrico">
               <div class="option-card-icon">${T.ICONS.bolt}</div>
-              <div class="option-card-title">Carro eletrico</div>
+              <div class="option-card-title">Carro elétrico</div>
               <div class="option-card-desc">Preparar para VE</div>
             </div>
             <div class="option-card" data-value="empresarial">
@@ -252,7 +252,7 @@ function render(data, T) {
               <div class="card card-glow" style="margin-bottom: var(--space-4)">
                 <div class="grid grid-3">
                   <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">5,5</div><div class="kpi-label">kWp</div></div>
-                  <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.grid}</div><div class="kpi-value">10</div><div class="kpi-label">Modulos 550W</div></div>
+                  <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.grid}</div><div class="kpi-value">10</div><div class="kpi-label">Módulos 550W</div></div>
                   <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.bolt}</div><div class="kpi-value">5 kW</div><div class="kpi-label">Inversor</div></div>
                 </div>
               </div>
@@ -260,7 +260,7 @@ function render(data, T) {
                 <h4 class="text-sm text-muted mb-2">Dimensionamento</h4>
                 <div class="data-table" style="font-size: var(--fs-sm)">
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Potencia instalada</span><strong>5,50 kWp</strong></div>
-                  <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Modulos</span><strong>10 x 550W</strong></div>
+                  <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Módulos</span><strong>10 x 550W</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Inversor</span><strong>5 kW</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Strings</span><strong>2</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0"><span class="text-secondary">Area estimada</span><strong>~26 m2</strong></div>
@@ -296,27 +296,27 @@ function render(data, T) {
 
           <!-- KPIs Resultado -->
           <div class="result-cards">
-            <div class="result-card"><div class="val">650 kWh</div><div class="lbl">Geracao mensal</div></div>
-            <div class="result-card"><div class="val">7.800 kWh</div><div class="lbl">Geracao anual</div></div>
+            <div class="result-card"><div class="val">650 kWh</div><div class="lbl">geração mensal</div></div>
+            <div class="result-card"><div class="val">7.800 kWh</div><div class="lbl">geração anual</div></div>
             <div class="result-card"><div class="val">${T.formatBRL(480)}</div><div class="lbl">Economia/mes</div></div>
             <div class="result-card"><div class="val">${T.formatBRL(5760)}</div><div class="lbl">Economia/ano</div></div>
             <div class="result-card"><div class="val">4,8 anos</div><div class="lbl">Payback estimado</div></div>
             <div class="result-card"><div class="val">5,2 t/ano</div><div class="lbl">CO2 evitado</div></div>
-            <div class="result-card"><div class="val">10</div><div class="lbl">Modulos</div></div>
+            <div class="result-card"><div class="val">10</div><div class="lbl">Módulos</div></div>
             <div class="result-card"><div class="val">26 m2</div><div class="lbl">Area necessaria</div></div>
           </div>
 
-          <!-- Grafico premium geracao vs consumo -->
+          <!-- Grafico premium geração vs consumo -->
           <div class="chart-premium mt-6">
             <h3>
-              <span>Geracao x Consumo (12 meses)</span>
+              <span>geração x Consumo (12 meses)</span>
               <span class="chart-legend">
-                <span class="chart-legend-item"><span class="chart-legend-dot" style="background:#f59e0b"></span> Geracao</span>
+                <span class="chart-legend-item"><span class="chart-legend-dot" style="background:#f59e0b"></span> geração</span>
                 <span class="chart-legend-item"><span class="chart-legend-dot" style="background:#3b82f6;opacity:0.5"></span> Consumo</span>
               </span>
             </h3>
             ${T.areaChart(genData, { width: 600, height: 220, color: '#f59e0b', color2: '#3b82f6', estimated: consData, labels: monthLabels, id: 'result-gen', label: 'kWh/mes' })}
-            <p class="text-xs text-muted mt-4">Linha laranja: geracao estimada. Linha azul tracejada: consumo medio. Dados demonstrativos.</p>
+            <p class="text-xs text-muted mt-4">Linha laranja: geração estimada. Linha azul tracejada: consumo medio. Dados demonstrativos.</p>
           </div>
 
           <!-- Gauges -->
@@ -356,8 +356,8 @@ function render(data, T) {
 
           <!-- Energy Flow -->
           <div class="visual-section mt-6">
-            <h3>Fluxo energetico do seu sistema</h3>
-            <p>Sol -> Paineis -> Inversor -> Imovel <-> Rede</p>
+            <h3>Fluxo energético do seu sistema</h3>
+            <p>Sol -> Módulos fotovoltaicos -> Inversor -> Imóvel <-> Rede</p>
             ${T.energyFlow()}
           </div>
 
@@ -370,7 +370,7 @@ function render(data, T) {
               <a href="projeto.html" class="btn btn-secondary">${T.ICONS.panel} Ver projeto demo</a>
             </div>
           </div>
-          <p class="text-xs text-muted text-center mt-4">Estimativa demonstrativa — nao constitui proposta comercial, projeto eletrico, orcamento, oferta de credito ou garantia de economia.</p>
+          <p class="text-xs text-muted text-center mt-4">Estimativa demonstrativa — não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.</p>
         </div>
       </div>
 
@@ -390,7 +390,7 @@ function render(data, T) {
       store,
       data,
       title: 'Simulador Solar Fotovoltaico: 6 Etapas',
-      description: 'Simule seu sistema solar em 6 etapas: localizacao, consumo, imovel, telhado, objetivo e configuracao. Veja resultado com kWp, geracao, economia e payback estimados.',
+      description: 'Simule seu sistema solar em 6 etapas: localizacao, consumo, imóvel, telhado, objetivo e configuracao. Veja resultado com kWp, geração, economia e payback estimados.',
       canonical: '/simulador.html',
       active: 'simulador',
       ogImage: store.url.replace(/\/$/, '') + '/img/og/simulador.svg',
