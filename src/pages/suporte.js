@@ -58,7 +58,7 @@ function render(data, T) {
         <div class="field">
           <label class="label">Prioridade</label>
           <select class="select" id="ticket-prio">
-            <option value="baixa">Baixa</option><option value="media" selected>Media</option><option value="alta">Alta</option>
+            <option value="baixa">Baixa</option><option value="média" selected>Média</option><option value="alta">Alta</option>
           </select>
         </div>
         <button class="btn btn-primary btn-block" onclick="SolMais.createTicket()">${T.ICONS.support} Abrir chamado</button>
@@ -73,7 +73,7 @@ function render(data, T) {
             <div class="doc-icon" style="background:var(--info-soft);color:var(--info)">${T.ICONS.support}</div>
             <div class="doc-info">
               <div class="doc-name">#${T.escapeHtml(t.id)} — ${T.escapeHtml(t.subject)}</div>
-              <div class="doc-meta"><span class="badge ${t.status === 'resolvido' ? 'badge-success' : t.status === 'em-analise' ? 'badge-warn' : 'badge-info'}">${t.status}</span> ${t.priority} — ${t.createdAt}</div>
+              <div class="doc-meta"><span class="badge ${t.status === 'resolvido' ? 'badge-success' : t.status === 'em-análise' ? 'badge-warn' : 'badge-info'}">${t.status}</span> ${t.priority} — ${t.createdAt}</div>
             </div>
           </div>`).join('')}
         </div>

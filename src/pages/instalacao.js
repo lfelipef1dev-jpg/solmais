@@ -100,9 +100,9 @@ function render(data, T) {
         <h3 style="margin-bottom: var(--space-4)">homologação e conexao</h3>
         <p class="text-sm text-secondary mb-4">O processo de homologação envolve etapas com a distribuidora local:</p>
         <div class="timeline-premium">
-          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Documentacao preparada</h4><p class="timeline-premium-desc">Projeto, memorial e documentos tecnicos</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Documentacao preparada</h4><p class="timeline-premium-desc">Projeto, memorial e documentos técnicos</p></div></div>
           <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Solicitacao enviada</h4><p class="timeline-premium-desc">Envio a distribuidora</p></div></div>
-          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Analise da distribuidora</h4><p class="timeline-premium-desc">Pode haver pendencias — variavel conforme caso</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Análise da distribuidora</h4><p class="timeline-premium-desc">Pode haver pendencias — variavel conforme caso</p></div></div>
           <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Vistoria realizada</h4><p class="timeline-premium-desc">Inspecao tecnica</p></div></div>
           <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Aprovacao/conexao</h4><p class="timeline-premium-desc">Sistema conectado a rede</p></div></div>
         </div>
@@ -116,7 +116,7 @@ function render(data, T) {
     filename: 'instalacao.html', slug: 'instalacao', noindex: false,
     html: T.renderLayout({
       store, data, title: 'instalação e Implantacao Solar',
-      description: 'Timeline de implantacao de energia solar fotovoltaica: simulação, analise tecnica, projeto elétrico, documentacao, instalação, vistoria e sistema conectado.',
+      description: 'Timeline de implantacao de energia solar fotovoltaica: simulação, análise tecnica, projeto elétrico, documentacao, instalação, vistoria e sistema conectado.',
       canonical: '/instalacao.html', active: '',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

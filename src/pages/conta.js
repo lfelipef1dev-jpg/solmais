@@ -1,5 +1,5 @@
 /* SolMais — Portal do cliente
-   Visao geral, projeto, instalação, monitoramento, economia, documentos, suporte, perfil */
+   Visão geral, projeto, instalação, monitoramento, economia, documentos, suporte, perfil */
 
 function render(data, T) {
   const store = data.store;
@@ -18,7 +18,7 @@ function render(data, T) {
     <span class="demo-badge mt-2">DEMO</span>
   </div>
   <ul class="portal-menu">
-    <li><a href="conta.html" class="active">${T.ICONS.home} Visao geral</a></li>
+    <li><a href="conta.html" class="active">${T.ICONS.home} Visão geral</a></li>
     <li><a href="projeto.html">${T.ICONS.panel} Meu projeto</a></li>
     <li><a href="instalacao.html">${T.ICONS.settings} instalação</a></li>
     <li><a href="monitoramento.html">${T.ICONS.chart} Monitoramento</a></li>
@@ -30,7 +30,7 @@ function render(data, T) {
 </div>`;
 
   const overview = `<div class="portal-main">
-  <h1 style="margin-bottom: var(--space-2)">Ola, ${T.escapeHtml(customer.name.split(' ')[0])}</h1>
+  <h1 style="margin-bottom: var(--space-2)">Olá, ${T.escapeHtml(customer.name.split(' ')[0])}</h1>
   <p class="text-secondary mb-6">Sistema ${system.projectId} — ${system.power} kWp — ${T.escapeHtml(system.location)}</p>
 
   <div class="grid grid-4 mb-6">

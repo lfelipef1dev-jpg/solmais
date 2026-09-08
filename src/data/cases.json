@@ -16,16 +16,16 @@
     "installedAt": "2026-03-15",
     "roofType": "Ceramico",
     "orientation": "Norte",
-    "description": "Sistema residencial 5,5 kWp instalado em telhado ceramico orientado ao norte. Projeto demonstrativo com 10 módulos de 550W e inversor de 5kW.",
+    "description": "Sistema residencial 5,5 kWp instalado em telhado cerâmico orientado ao norte. Projeto demonstrativo com 10 módulos de 550W e inversor de 5kW.",
     "images": ["case-santos.jpg"],
     "demo": true
   },
   {
     "id": "case-002",
     "slug": "comercial-sao-vicente-demo",
-    "title": "Comercial Sao Vicente — DEMO",
+    "title": "Comercial São Vicente — DEMO",
     "type": "comercial",
-    "location": "Sao Vicente, SP",
+    "location": "São Vicente, SP",
     "power": 18.0,
     "panels": 33,
     "inverter": "17 kW",
@@ -37,7 +37,7 @@
     "installedAt": "2026-01-20",
     "roofType": "Metalico",
     "orientation": "Norte",
-    "description": "Sistema comercial 18 kWp em telha metalica. 33 módulos e inversor 17kW. Projeto demonstrativo para estabelecimento comercial.",
+    "description": "Sistema comercial 18 kWp em telha metálica. 33 módulos e inversor 17kW. Projeto demonstrativo para estabelecimento comercial.",
     "images": ["case-svicente.jpg"],
     "demo": true
   },
@@ -79,7 +79,7 @@
     "installedAt": "2026-06-22",
     "roofType": "Ceramico",
     "orientation": "Norte",
-    "description": "Sistema residencial 6,6 kWp com 12 módulos. Projeto demonstrativo em telhado ceramico.",
+    "description": "Sistema residencial 6,6 kWp com 12 módulos. Projeto demonstrativo em telhado cerâmico.",
     "images": ["case-guaruja.jpg"],
     "demo": true
   },

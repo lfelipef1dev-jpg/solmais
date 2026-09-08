@@ -13,13 +13,13 @@
     "https://expostacker.com.br",
     "https://github.com/lfelipef1dev-jpg/solmais"
   ],
-  "demoNotice": "Plataforma demonstrativa — todos os dados sao ficticios. não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.",
+  "demoNotice": "Plataforma demonstrativa — todos os dados são fictícios. não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.",
   "nav": [
     { "label": "Inicio", "href": "index.html", "slug": "index" },
     { "label": "Simulador", "href": "simulador.html", "slug": "simulador" },
     { "label": "Como funciona", "href": "como-funciona.html", "slug": "como-funciona" },
     { "label": "Projetos", "href": "projetos.html", "slug": "projetos" },
-    { "label": "Conteudo", "href": "conteudo.html", "slug": "conteudo" },
+    { "label": "Conteúdo", "href": "conteudo.html", "slug": "conteudo" },
     { "label": "Sobre", "href": "sobre.html", "slug": "sobre" }
   ],
   "footerLinks": {

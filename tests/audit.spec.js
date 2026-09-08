@@ -54,7 +54,7 @@ test('simulador wizard navega pelas 6 etapas', async ({ page }) => {
 
 test('monitoramento apresenta dashboard e aviso demonstrativo', async ({ page }) => {
   await page.goto(`${PUBLIC}/monitoramento.html`);
-  await expect(page.locator('text=dados ficticios').first()).toBeVisible();
+  await expect(page.locator('text=dados fictícios').first()).toBeVisible();
   await expect(page.locator('text=Gerando agora').first()).toBeVisible();
 });
 

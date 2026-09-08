@@ -91,12 +91,12 @@ function render(data, T) {
   <div class="container">
     <div class="grid grid-2" style="align-items:start">
       <div>
-        <span class="cinematic-hero-eyebrow">Layout tecnico</span>
+        <span class="cinematic-hero-eyebrow">Layout técnico</span>
         <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Telhado — top view CAD</h2>
-        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuicao dos ${sys.panels} módulos no telhado com orientação norte, dimensões e area utilizada.</p>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${sys.panels} módulos no telhado com orientação norte, dimensões e area utilizada.</p>
         <div class="grid grid-2">
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${sys.area} m²</div><div class="kpi-label">Area utilizada</div></div>
-          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">48 m²</div><div class="kpi-label">Area disponivel</div></div>
+          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">48 m²</div><div class="kpi-label">Área disponível</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">Norte</div><div class="kpi-label">orientação</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">15°</div><div class="kpi-label">Inclinacao</div></div>
         </div>
@@ -114,7 +114,7 @@ function render(data, T) {
     <div style="text-align:center;margin-bottom:var(--space-6)">
       <span class="cinematic-hero-eyebrow">Equipamentos</span>
       <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin-top:var(--space-3)">Hardware do sistema</h2>
-      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">Componentes ficticios com renders estilo industrial</p>
+      <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);max-width:500px;margin:var(--space-2) auto 0">Componentes fictícios com renders estilo industrial</p>
     </div>
     <div class="grid grid-3">
       <div class="equipment-card">
@@ -175,7 +175,7 @@ function render(data, T) {
           <div class="kpi-premium" style="border:none;padding:var(--space-3);text-align:center">
             <div class="kpi-icon-wrap solar" style="margin:0 auto var(--space-2)">${T.ICONS.user}</div>
             <div style="font-weight:600;color:#e2e8f0">Eng. Eletricista</div>
-            <div class="text-xs text-muted">Responsavel tecnico</div>
+            <div class="text-xs text-muted">Responsavel técnico</div>
           </div>
           <div class="kpi-premium" style="border:none;padding:var(--space-3);text-align:center">
             <div class="kpi-icon-wrap info" style="margin:0 auto var(--space-2)">${T.ICONS.user}</div>
@@ -200,7 +200,7 @@ function render(data, T) {
         </div>
       </div>
     </div>
-    <p class="text-xs text-muted mt-4 text-center">Projeto demonstrativo — todos os dados sao ficticios</p>
+    <p class="text-xs text-muted mt-4 text-center">Projeto demonstrativo — todos os dados são fictícios</p>
   </div>
 </section>`;
 
@@ -213,7 +213,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data,
       title: 'Meu Projeto Solar',
-      description: 'Projeto tecnico do sistema fotovoltaico — render 3D, layout do telhado, equipamentos e dimensionamento.',
+      description: 'Projeto técnico do sistema fotovoltaico — render 3D, layout do telhado, equipamentos e dimensionamento.',
       canonical: '/projeto.html', active: '',
       noindex: true,
       content

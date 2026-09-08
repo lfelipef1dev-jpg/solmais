@@ -8,7 +8,7 @@ function render(data, T) {
   const content = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    ${T.pageHero('Comparador de Aquisicao', 'Compare formas de aquisicao — cenarios demonstrativos', { icon: T.ICONS.cash })}
+    ${T.pageHero('Comparador de Aquisicao', 'Compare formas de aquisicao — cenários demonstrativos', { icon: T.ICONS.cash })}
 
     <div class="grid grid-3 mb-6">
       ${financial.map(f => `
@@ -63,7 +63,7 @@ function render(data, T) {
         <span style="display:inline-block;width:12px;height:12px;background:var(--elevated);border:1px solid var(--border-strong);border-radius:2px;vertical-align:middle;margin-right:4px"></span> Sem solar
         <span style="display:inline-block;width:12px;height:12px;background:var(--gen);border-radius:2px;vertical-align:middle;margin-left:12px;margin-right:4px"></span> Com solar
       </div>
-      <p class="text-xs text-muted mt-4">Cenarios ficticios — não constituem oferta de Crédito ou proposta comercial.</p>
+      <p class="text-xs text-muted mt-4">Cenários fictícios — não constituem oferta de Crédito ou proposta comercial.</p>
     </div>
   </div>
 </section>`;
@@ -71,7 +71,7 @@ function render(data, T) {
   return [{
     filename: 'financeiro.html', slug: 'financeiro', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Cenarios Financeiros',
+      store, data, title: 'Cenários Financeiros',
       description: 'Compare formas de aquisicao de energia solar: a vista, financiamento e assinatura. Veja investimento, parcelas, payback e economia acumulada projetada em 25 anos.',
       canonical: '/financeiro.html', active: 'simulador',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content

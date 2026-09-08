@@ -12,7 +12,7 @@ function render(data, T) {
   const pages = [];
 
   const sidebar = `<div class="admin-sidebar">
-  <h3>Operacao</h3>
+  <h3>Operação</h3>
   <ul class="admin-menu">
     <li><a href="admin.html" class="active">${T.ICONS.chart} Dashboard</a></li>
     <li><a href="admin-pipeline.html">${T.ICONS.grid} Pipeline</a></li>
@@ -41,7 +41,7 @@ function render(data, T) {
   ${sidebar}
   <div class="admin-content">
     <h1 style="margin-bottom: var(--space-2)">Dashboard</h1>
-    <p class="text-secondary mb-6">Visao geral da operacao — dados demonstrativos</p>
+    <p class="text-secondary mb-6">Visão geral da operação — dados demonstrativos</p>
 
     <div class="admin-kpi-grid">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${projects.length}</div><div class="kpi-label">Projetos ativos</div></div>
@@ -89,7 +89,7 @@ function render(data, T) {
             <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'atencao').length}</div><div class="kpi-label">Atencao</div></div>
             <div class="kpi-card"><div class="kpi-card-icon solar" style="background:rgba(239,68,68,0.1);color:#ef4444">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'alerta').length}</div><div class="kpi-label">Alerta</div></div>
           </div>
-          <p class="text-xs text-muted mt-4">Localizacoes demonstrativas — status simulado</p>
+          <p class="text-xs text-muted mt-4">Localizações demonstrativas — status simulado</p>
         </div>
       </div>
     </div>
@@ -98,7 +98,7 @@ function render(data, T) {
       <h3 style="margin-bottom: var(--space-4)">Alertas recentes</h3>
       <table class="data-table">
         <tr><th>Sistema</th><th>Alerta</th><th>Severidade</th><th>Status</th></tr>
-        ${alerts.map(a => `<tr><td>${a.projectId}</td><td>${T.escapeHtml(a.title)}</td><td><span class="badge ${a.severity === 'alto' ? 'badge-danger' : a.severity === 'medio' ? 'badge-warn' : 'badge-info'}">${a.severity}</span></td><td><span class="badge ${a.status === 'resolvido' ? 'badge-success' : 'badge-warn'}">${a.status}</span></td></tr>`).join('')}
+        ${alerts.map(a => `<tr><td>${a.projectId}</td><td>${T.escapeHtml(a.title)}</td><td><span class="badge ${a.severity === 'alto' ? 'badge-danger' : a.severity === 'médio' ? 'badge-warn' : 'badge-info'}">${a.severity}</span></td><td><span class="badge ${a.status === 'resolvido' ? 'badge-success' : 'badge-warn'}">${a.status}</span></td></tr>`).join('')}
       </table>
     </div>
   </div>
@@ -268,7 +268,7 @@ function render(data, T) {
   /* ----- Monitoramento admin ----- */
   const monContent = `
     <h1 style="margin-bottom: var(--space-2)">Monitoramento</h1>
-    <p class="text-secondary mb-6">Visao consolidada da geração — dados demonstrativos</p>
+    <p class="text-secondary mb-6">Visão consolidada da geração — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${totalGen.toFixed(1)}</div><div class="kpi-label">kWh gerados hoje</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">${systems.reduce((s,x)=>s+x.production.month,0).toLocaleString('pt-BR')}</div><div class="kpi-label">kWh este mes</div></div>
@@ -304,7 +304,7 @@ function render(data, T) {
     <p class="text-secondary mb-6">Alertas do sistema — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar" style="background:rgba(239,68,68,0.1);color:#ef4444">${T.ICONS.alert}</div><div class="kpi-value">${alerts.filter(a => a.severity === 'alto').length}</div><div class="kpi-label">Severidade alta</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${alerts.filter(a => a.severity === 'medio').length}</div><div class="kpi-label">Severidade media</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${alerts.filter(a => a.severity === 'médio').length}</div><div class="kpi-label">Severidade média</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.alert}</div><div class="kpi-value">${alerts.filter(a => a.severity === 'baixo').length}</div><div class="kpi-label">Severidade baixa</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${alerts.filter(a => a.status === 'resolvido').length}</div><div class="kpi-label">Resolvidos</div></div>
     </div>
@@ -315,7 +315,7 @@ function render(data, T) {
           <td><strong>${a.id}</strong></td>
           <td>${a.projectId}</td>
           <td>${T.escapeHtml(a.type)}</td>
-          <td><span class="badge ${a.severity === 'alto' ? 'badge-danger' : a.severity === 'medio' ? 'badge-warn' : 'badge-info'}">${a.severity}</span></td>
+          <td><span class="badge ${a.severity === 'alto' ? 'badge-danger' : a.severity === 'médio' ? 'badge-warn' : 'badge-info'}">${a.severity}</span></td>
           <td>${T.escapeHtml(a.description)}</td>
           <td><span class="badge ${a.status === 'resolvido' ? 'badge-success' : 'badge-warn'}">${a.status}</span></td>
           <td><button class="btn btn-ghost btn-sm" onclick="SolMais.toast('Acao demonstrativa', 'info')">Ver</button></td>
@@ -355,7 +355,7 @@ function render(data, T) {
   /* ----- Financeiro admin ----- */
   const finContent = `
     <h1 style="margin-bottom: var(--space-2)">Financeiro</h1>
-    <p class="text-secondary mb-6">Visao financeira demonstrativa</p>
+    <p class="text-secondary mb-6">Visão financeira demonstrativa</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(366000)}</div><div class="kpi-label">Receita demo (a vista)</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(28800)}</div><div class="kpi-label">Mensalidades assinatura</div></div>
@@ -407,7 +407,7 @@ function render(data, T) {
   /* ----- Analytics ----- */
   const anaContent = `
     <h1 style="margin-bottom: var(--space-2)">Analytics</h1>
-    <p class="text-secondary mb-6">Metricas da operacao — dados demonstrativos</p>
+    <p class="text-secondary mb-6">Métricas da operação — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">142</div><div class="kpi-label">Simulacoes (mes)</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">38%</div><div class="kpi-label">Conversao</div></div>
@@ -420,7 +420,7 @@ function render(data, T) {
         ${T.areaChart([98, 105, 112, 120, 125, 130, 135, 138, 140, 142, 142, 142], { width: 350, height: 160, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'ana-sim', label: 'simulacoes' })}
       </div>
       <div class="chart-premium">
-        <h3>Conversao mensal</h3>
+        <h3>Conversão mensal</h3>
         ${T.areaChart([28, 30, 32, 33, 34, 35, 36, 37, 37, 38, 38, 38], { width: 350, height: 160, color: '#22c55e', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'ana-conv', label: '% conversao' })}
       </div>
     </div>
@@ -445,11 +445,11 @@ function render(data, T) {
       </div>
     </div>
     <div class="card mt-6">
-      <h3 style="margin-bottom: var(--space-4)">Distribuicao por regiao</h3>
+      <h3 style="margin-bottom: var(--space-4)">Distribuição por região</h3>
       <table class="data-table">
-        <tr><th>Regiao</th><th>Projetos</th><th>Potencia</th><th>% do total</th></tr>
+        <tr><th>Região</th><th>Projetos</th><th>Potencia</th><th>% do total</th></tr>
         <tr><td>Santos</td><td>2</td><td>9,9 kWp</td><td>15%</td></tr>
-        <tr><td>Sao Vicente</td><td>1</td><td>18 kWp</td><td>27%</td></tr>
+        <tr><td>São Vicente</td><td>1</td><td>18 kWp</td><td>27%</td></tr>
         <tr><td>Praia Grande</td><td>1</td><td>35 kWp</td><td>53%</td></tr>
         <tr><td>Guaruja</td><td>1</td><td>6,6 kWp</td><td>10%</td></tr>
         <tr><td>Cubatao</td><td>1</td><td>4,4 kWp</td><td>7%</td></tr>
@@ -474,7 +474,7 @@ function render(data, T) {
         <div class="field"><label class="label">Nome</label><input type="text" class="input" value="${T.escapeHtml(store.name)}" disabled></div>
         <div class="field"><label class="label">Email</label><input type="text" class="input" value="${T.escapeHtml(store.email)}" disabled></div>
         <div class="field"><label class="label">Cidade</label><input type="text" class="input" value="${T.escapeHtml(store.city)}" disabled></div>
-        <div class="field"><label class="label">Regiao</label><input type="text" class="input" value="${T.escapeHtml(store.region)}" disabled></div>
+        <div class="field"><label class="label">Região</label><input type="text" class="input" value="${T.escapeHtml(store.region)}" disabled></div>
       </div>
     </div>
     <div class="card mb-6">
@@ -484,7 +484,7 @@ function render(data, T) {
       <button class="btn btn-primary" onclick="SolMais.toast('Configuracoes salvas (demo)', 'success')">Salvar</button>
     </div>
     <div class="card">
-      <p class="text-xs text-muted">Plataforma demonstrativa — todas as configuracoes sao ficticias.</p>
+      <p class="text-xs text-muted">Plataforma demonstrativa — todas as configuracoes são ficticias.</p>
     </div>
   `;
   pages.push(adminPage('admin-config.html', 'Configuracoes', confContent));

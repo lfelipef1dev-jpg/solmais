@@ -90,7 +90,7 @@ function render(data, T) {
         ${T.gauge(92, { id: 'g1', label: 'Eficiencia', unit: '%', max: 100, color: '#22c55e', size: 160 })}
       </div>
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h2 style="color:var(--text-dark)">Irradiacao</h2>
+        <h2 style="color:var(--text-dark)">Irradiação</h2>
         ${T.gauge(78, { id: 'g2', label: 'W/m²', unit: '%', max: 100, color: '#f59e0b', size: 160 })}
       </div>
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
@@ -139,7 +139,7 @@ function render(data, T) {
     </div>
   </section>
 
-  <p class="text-xs text-muted text-center" style="color:var(--text-dark-muted);padding-bottom:var(--space-8)">Dados demonstrativos — sistema ficticio ${sys.projectId}</p>
+  <p class="text-xs text-muted text-center" style="color:var(--text-dark-muted);padding-bottom:var(--space-8)">Dados demonstrativos — sistema fictício ${sys.projectId}</p>
 </div>`;
 
   return [{

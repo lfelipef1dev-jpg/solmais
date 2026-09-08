@@ -8,7 +8,7 @@ function render(data, T) {
   const content = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    ${T.pageHero('Central de Documentos', 'Todos os documentos sao ficticios — demonstracao', { icon: T.ICONS.doc })}
+    ${T.pageHero('Central de Documentos', 'Todos os documentos são fictícios — demonstração', { icon: T.ICONS.doc })}
 
     <div class="card mb-6">
       <div class="doc-list">
@@ -26,7 +26,7 @@ function render(data, T) {
     </div>
 
     <div class="card card-glow text-center">
-      <p class="text-sm text-secondary">Todos os documentos listados sao ficticios e foram criados exclusivamente para demonstracao da plataforma. Nenhum arquivo real esta disponivel para download.</p>
+      <p class="text-sm text-secondary">Todos os documentos listados são fictícios e foram criados exclusivamente para demonstração da plataforma. Nenhum arquivo real esta disponível para download.</p>
     </div>
   </div>
 </section>`;

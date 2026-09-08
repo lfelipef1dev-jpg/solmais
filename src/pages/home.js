@@ -14,7 +14,7 @@ function render(data, T) {
   </div>
   <div class="sm-hero-overlay">
     <div class="sm-hero-content">
-      <h1 class="sm-hero-title">Sua energia.<br><span class="accent">Projetada</span> para voce.</h1>
+      <h1 class="sm-hero-title">Sua energia.<br><span class="accent">Projetada</span> para você.</h1>
       <p class="sm-hero-sub">Simule, acompanhe e monitore seu sistema solar em uma unica plataforma.</p>
       <a href="simulador.html" class="sm-hero-cta">Simular meu sistema &rarr;</a>
       <div class="sm-hero-meta">
@@ -71,7 +71,7 @@ function render(data, T) {
       <h2 class="sm-headline">Descubra o<br>sistema ideal.</h2>
       <p class="sm-lede" style="margin-top:var(--space-4)">Seis etapas. Do CEP ao payback. O wizard pergunta o que importa e devolve um projeto completo.</p>
       <div class="sm-sim-steps">
-        <div class="sm-sim-step"><span class="sm-sim-step-num">01</span><span class="sm-sim-step-label">Localizacao</span></div>
+        <div class="sm-sim-step"><span class="sm-sim-step-num">01</span><span class="sm-sim-step-label">Localização</span></div>
         <div class="sm-sim-step"><span class="sm-sim-step-num">02</span><span class="sm-sim-step-label">Consumo</span></div>
         <div class="sm-sim-step"><span class="sm-sim-step-num">03</span><span class="sm-sim-step-label">Telhado</span></div>
         <div class="sm-sim-step"><span class="sm-sim-step-num">04</span><span class="sm-sim-step-label">Objetivo</span></div>
@@ -202,9 +202,9 @@ function render(data, T) {
   const cta = `<section class="sm-cta">
   <div class="sm-cta-inner">
     <h2 class="sm-headline dark">Pronto para<br>simular?</h2>
-    <p class="sm-lede dark">Faca uma simulação completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
+    <p class="sm-lede dark">Faca uma simulação completa em 6 etapas e veja o resultado com gráficos, comparador e cenários financeiros.</p>
     <a href="simulador.html" class="sm-hero-cta">Iniciar simulação &rarr;</a>
-    <p style="font-size:var(--fs-xs);color:var(--text-dark-secondary);margin-top:var(--space-5)">Plataforma demonstrativa — todos os dados sao ficticios</p>
+    <p style="font-size:var(--fs-xs);color:var(--text-dark-secondary);margin-top:var(--space-5)">Plataforma demonstrativa — todos os dados são fictícios</p>
   </div>
 </section>`;
 

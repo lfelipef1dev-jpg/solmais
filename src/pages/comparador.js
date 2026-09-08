@@ -5,7 +5,7 @@ function render(data, T) {
   const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Simulador', href: 'simulador.html' }, { label: 'Comparador' }];
 
   const systems = [
-    { name: 'Economico', power: 4.4, panels: 8, inverter: 4, area: 21, gen: 480, genYear: 5760, coverage: '65%', invest: 26000, payback: 5.2, prod25: 138000, recommended: false },
+    { name: 'Econômico', power: 4.4, panels: 8, inverter: 4, area: 21, gen: 480, genYear: 5760, coverage: '65%', invest: 26000, payback: 5.2, prod25: 138000, recommended: false },
     { name: 'Recomendado', power: 5.5, panels: 10, inverter: 5, area: 26, gen: 650, genYear: 7800, coverage: '90%', invest: 32000, payback: 4.8, prod25: 180000, recommended: true },
     { name: 'Performance', power: 6.6, panels: 12, inverter: 6, area: 31, gen: 780, genYear: 9360, coverage: '100%+', invest: 38000, payback: 4.6, prod25: 216000, recommended: false }
   ];
@@ -23,7 +23,7 @@ function render(data, T) {
         <div style="font-family: var(--font-display); font-size: var(--fs-3xl); font-weight: 700; color: var(--solar); margin: var(--space-3) 0">${s.power} kWp</div>
         <p class="text-sm text-muted">${s.panels} módulos — inversor ${s.inverter} kW</p>
         <p class="text-sm text-secondary mt-2">Cobertura: ${s.coverage}</p>
-        <a href="financeiro.html" class="btn ${s.recommended ? 'btn-primary' : 'btn-secondary'} btn-block mt-4">Ver cenarios</a>
+        <a href="financeiro.html" class="btn ${s.recommended ? 'btn-primary' : 'btn-secondary'} btn-block mt-4">Ver cenários</a>
       </div>`).join('')}
     </div>
 
@@ -38,7 +38,7 @@ function render(data, T) {
           <tr><td>Potencia</td>${systems.map(s => '<td>' + s.power + ' kWp</td>').join('')}</tr>
           <tr><td>Módulos (550W)</td>${systems.map(s => '<td>' + s.panels + '</td>').join('')}</tr>
           <tr><td>Inversor</td>${systems.map(s => '<td>' + s.inverter + ' kW</td>').join('')}</tr>
-          <tr><td>Area necessaria</td>${systems.map(s => '<td>' + s.area + ' m²</td>').join('')}</tr>
+          <tr><td>Area necessária</td>${systems.map(s => '<td>' + s.area + ' m²</td>').join('')}</tr>
           <tr><td>geração mensal</td>${systems.map(s => '<td>' + s.gen + ' kWh</td>').join('')}</tr>
           <tr><td>geração anual</td>${systems.map(s => '<td>' + s.genYear.toLocaleString('pt-BR') + ' kWh</td>').join('')}</tr>
           <tr><td>Cobertura do consumo</td>${systems.map(s => '<td>' + s.coverage + '</td>').join('')}</tr>
@@ -47,7 +47,7 @@ function render(data, T) {
           <tr><td>Producao 25 anos</td>${systems.map(s => '<td>' + (s.prod25/1000).toFixed(0) + ' MWh</td>').join('')}</tr>
         </table>
       </div>
-      <p class="text-xs text-muted mt-4">Cenarios demonstrativos — não constituem proposta comercial ou orcamento.</p>
+      <p class="text-xs text-muted mt-4">Cenários demonstrativos — não constituem proposta comercial ou orcamento.</p>
     </div>
   </div>
 </section>`;
@@ -56,7 +56,7 @@ function render(data, T) {
     filename: 'comparador.html', slug: 'comparador', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Comparador de Sistemas Solares',
-      description: 'Compare tres configuracoes de sistemas solares: economico, recomendado e performance. Veja potencia, módulos, geração, cobertura, area, investimento e payback.',
+      description: 'Compare tres configuracoes de sistemas solares: econômico, recomendado e performance. Veja potencia, módulos, geração, cobertura, area, investimento e payback.',
       canonical: '/comparador.html', active: 'simulador',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

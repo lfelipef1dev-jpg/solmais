@@ -89,7 +89,7 @@ function renderHead(opts) {
 function renderAnnouncement(store) {
   return `<div class="announcement-bar">
   <div class="container">
-    <span class="demo-badge">${ICONS.alert} Plataforma demonstrativa — dados ficticios</span>
+    <span class="demo-badge">${ICONS.alert} Plataforma demonstrativa — dados fictícios</span>
   </div>
 </div>`;
 }
@@ -124,7 +124,7 @@ function renderHeader(store, nav, opts) {
 function renderFooter(store) {
   const cols = [
     { title: 'Plataforma', links: store.footerLinks.plataforma },
-    { title: 'Conteudo', links: store.footerLinks.conteudo },
+    { title: 'Conteúdo', links: store.footerLinks.conteudo },
     { title: 'Institucional', links: store.footerLinks.institucional }
   ];
   const colHtml = cols.map(col =>
@@ -144,7 +144,7 @@ function renderFooter(store) {
       ${colHtml}
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 ${escapeHtml(store.name)} — Demonstracao. Dados ficticios. não constitui proposta comercial.</p>
+      <p>&copy; 2026 ${escapeHtml(store.name)} — Demonstração. Dados fictícios. não constitui proposta comercial.</p>
     </div>
   </div>
 </footer>`;

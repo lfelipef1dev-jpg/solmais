@@ -10,7 +10,7 @@
    - texto: grafite #1a1a1a
    - superficies tecnicas: charcoal #1e2330 / graphite #2a2f3e
    - energia: solar amber #f59e0b
-   - status positivo: verde tecnico #22c55e
+   - status positivo: verde técnico #22c55e
    - azul: somente semantico
 */
 
@@ -133,7 +133,7 @@ function digitalTwin(opts) {
   <circle cx="${w*0.85}" cy="${h*0.15}" r="22" fill="${C.accent}" opacity="0.85"/>
   <circle cx="${w*0.85}" cy="${h*0.15}" r="14" fill="#fbbf24" opacity="0.95"/>
 
-  <!-- Linhas de grade sutis (estilo tecnico) -->
+  <!-- Linhas de grade sutis (estilo técnico) -->
   <g opacity="0.04" stroke="${C.text}" stroke-width="0.5">
     ${Array.from({length: 12}).map((_, i) => `<line x1="0" y1="${i * h/12}" x2="${w}" y2="${i * h/12}"/>`).join('')}
     ${Array.from({length: 16}).map((_, i) => `<line x1="${i * w/16}" y1="0" x2="${i * w/16}" y2="${h}"/>`).join('')}
@@ -166,7 +166,7 @@ function digitalTwin(opts) {
   <polygon points="${w*0.35},${h*0.38} ${w*0.65},${h*0.38} ${w*0.67},${h*0.40} ${w*0.37},${h*0.40}" fill="${C.roofDark}" opacity="0.7"/>
 
   <!-- ===== PAINELS SOLARES NO TELHADO ===== -->
-  <!-- Os módulos fotovoltaicos sao posicionados na face superior do telhado do volume principal -->
+  <!-- Os módulos fotovoltaicos são posicionados na face superior do telhado do volume principal -->
   <g transform="translate(${w*0.24} ${h*0.42}) skewY(-15)">
     ${Array.from({length: panelRows}).map((_, row) =>
       Array.from({length: panelCols}).map((_, col) => {
@@ -201,7 +201,7 @@ function digitalTwin(opts) {
   <!-- Janela lateral -->
   <polygon points="${w*0.54},${h*0.50} ${w*0.63},${h*0.43} ${w*0.63},${h*0.55} ${w*0.54},${h*0.62}" fill="url(#${id}-glass)" opacity="0.7"/>
 
-  <!-- Inversor na parede lateral (pequeno detalhe tecnico) -->
+  <!-- Inversor na parede lateral (pequeno detalhe técnico) -->
   <rect x="${w*0.56}" y="${h*0.60}" width="14" height="20" rx="1" fill="${C.roofDark}" stroke="${C.accent}" stroke-width="0.5"/>
   <circle cx="${w*0.56+7}" cy="${h*0.60+6}" r="2" fill="${generating ? '#22c55e' : '#475569'}">
     ${generating ? '<animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>' : ''}
@@ -358,7 +358,7 @@ function roofCAD(opts) {
   const roofW = panelCols * (panelW + gapX) + 40;
   const roofH = panelRows * (panelH + gapY) + 40;
 
-  return `<svg class="roof-cad-svg" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Layout tecnico do telhado com ${panels} módulos fotovoltaicos">
+  return `<svg class="roof-cad-svg" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Layout técnico do telhado com ${panels} módulos fotovoltaicos">
   <defs>
     <pattern id="${id}-tile" x="0" y="0" width="12" height="8" patternUnits="userSpaceOnUse">
       <rect width="12" height="8" fill="#1e2330"/>
@@ -376,7 +376,7 @@ function roofCAD(opts) {
     </linearGradient>
   </defs>
 
-  <!-- Fundo tecnico -->
+  <!-- Fundo técnico -->
   <rect width="500" height="380" fill="#0d1117"/>
   <rect width="500" height="380" fill="url(#${id}-grid)"/>
 
@@ -415,7 +415,7 @@ function roofCAD(opts) {
     }).join('')
   ).join('')}
 
-  <!-- Linhas de dimensao -->
+  <!-- Linhas de dimensão -->
   <!-- Horizontal (largura) -->
   <g stroke="#f59e0b" stroke-width="0.5" opacity="0.5">
     <line x1="${startX - 20}" y1="${startY - 30}" x2="${startX + roofW - 20}" y2="${startY - 30}"/>
@@ -437,7 +437,7 @@ function roofCAD(opts) {
     <rect width="8" height="8" fill="url(#${id}-panel-cad)" stroke="#3b82f6" stroke-width="0.5"/>
     <text x="14" y="7" fill="#e2e8f0" font-size="9" font-family="Inter, sans-serif">Area utilizada: ${areaUsed}</text>
     <rect x="120" width="8" height="8" fill="url(#${id}-tile)" stroke="#f59e0b" stroke-width="0.5" opacity="0.5"/>
-    <text x="134" y="7" fill="#e2e8f0" font-size="9" font-family="Inter, sans-serif">Area disponivel: ${areaTotal}</text>
+    <text x="134" y="7" fill="#e2e8f0" font-size="9" font-family="Inter, sans-serif">Área disponível: ${areaTotal}</text>
   </g>
 
   <!-- Sombra projetada (sutil) -->
@@ -609,7 +609,7 @@ function equipmentRender(type, opts) {
 }
 
 /* ================================================================
-   5. CURVA SOLAR — Grafico grande com pico destacado + consumo
+   5. CURVA SOLAR — Gráfico grande com pico destacado + consumo
    Assinatura visual da marca
    ================================================================ */
 function solarCurve(opts) {
@@ -713,7 +713,7 @@ function solarCurve(opts) {
 }
 
 /* ================================================================
-   6. AREA CHART — Grafico de area premium
+   6. AREA CHART — Gráfico de area premium
    ================================================================ */
 function areaChart(data, opts) {
   opts = opts || {};
@@ -792,7 +792,7 @@ function gauge(value, opts) {
 }
 
 /* ================================================================
-   8. SPARKLINE — Mini grafico para KPIs
+   8. SPARKLINE — Mini gráfico para KPIs
    ================================================================ */
 function sparkline(data, opts) {
   opts = opts || {};
@@ -992,7 +992,7 @@ function mapDemo(opts) {
     </linearGradient>
   </defs>
   <rect width="460" height="280" fill="url(#${id}-bg)" rx="8"/>
-  <!-- Linhas de grade (estilo mapa tecnico) -->
+  <!-- Linhas de grade (estilo mapa técnico) -->
   <g stroke="rgba(245,158,11,0.06)" stroke-width="0.5">
     ${Array.from({length: 14}).map((_, i) => `<line x1="${i * 35}" y1="0" x2="${i * 35}" y2="280"/>`).join('')}
     ${Array.from({length: 8}).map((_, i) => `<line x1="0" y1="${i * 35}" x2="460" y2="${i * 35}"/>`).join('')}
