@@ -104,7 +104,7 @@ function renderHeader(store, nav, opts) {
   return `<header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo" aria-label="${escapeHtml(store.name)}">
-      <img src="brand/solmais-logo-300.png" alt="SolMais" width="159" height="53" class="logo-img" srcset="brand/solmais-logo-300.webp 300w, brand/solmais-logo-600.webp 600w" sizes="160px" />
+      <img src="brand/solmais-logo.svg" alt="SolMais" width="159" height="53" class="logo-img" />
     </a>
     <nav class="main-nav" aria-label="Navegacao principal">
       <ul class="nav-list">${navItems}</ul>
@@ -137,7 +137,7 @@ function renderFooter(store) {
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="brand/solmais-logo-300.png" alt="SolMais" width="150" height="50" class="logo-img logo-img-footer" srcset="brand/solmais-logo-300.webp 300w" sizes="150px" />
+        <img src="brand/solmais-logo.svg" alt="SolMais" width="150" height="50" class="logo-img logo-img-footer" />
         <p class="footer-desc">${escapeHtml(store.tagline)}.</p>
         <p class="footer-demo">${escapeHtml(store.demoNotice)}</p>
       </div>
