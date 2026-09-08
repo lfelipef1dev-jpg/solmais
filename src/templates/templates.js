@@ -85,7 +85,7 @@ function renderHead(opts) {
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(desc)}">
   <meta name="twitter:image" content="${ogImage}">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
   ${preload}
   ${cssFiles}
   ${structuredData}
