@@ -13,7 +13,7 @@
     "https://expostacker.com.br",
     "https://github.com/lfelipef1dev-jpg/solmais"
   ],
-  "demoNotice": "Plataforma demonstrativa — todos os dados são fictícios. não constitui proposta comercial, projeto elétrico, orçamento, oferta de Crédito ou garantia de economia.",
+  "demoNotice": "Plataforma demonstrativa — todos os dados são fictícios. Não constitui proposta comercial, projeto elétrico, orçamento, oferta de crédito ou garantia de economia.",
   "nav": [
     { "label": "Início", "href": "index.html", "slug": "index" },
     { "label": "Simulador", "href": "simulador.html", "slug": "simulador" },
@@ -31,7 +31,7 @@
     ],
     "conteudo": [
       { "label": "Como funciona", "href": "como-funciona.html" },
-      { "label": "compensação de energia", "href": "compensacao.html" },
+      { "label": "Compensação de energia", "href": "compensacao.html" },
       { "label": "Modalidades de GD", "href": "modalidades-gd.html" },
       { "label": "Glossário solar", "href": "glossario.html" }
     ],
