@@ -67,7 +67,7 @@ function render(data, T) {
       ${T.digitalTwin({ panels: system.panels, id: 'portal-twin', width: 400, height: 280, generating: true })}
       <div class="grid grid-2 mt-3">
         <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.panels}</div><div class="kpi-label">Módulos</div></div>
-        <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.area} m2</div><div class="kpi-label">Área</div></div>
+        <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.area} m²</div><div class="kpi-label">Área</div></div>
       </div>
     </div>
     <div class="card">

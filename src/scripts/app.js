@@ -93,7 +93,7 @@
         next.textContent = 'Concluido';
         next.onclick = function () { window.location.href = 'comparador.html'; };
       } else {
-        next.innerHTML = 'Proximo \u2192';
+        next.innerHTML = 'Próximo \u2192';
         next.onclick = SolMais.wizardNext;
       }
     }
