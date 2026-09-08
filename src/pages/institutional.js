@@ -1,4 +1,4 @@
-﻿/* SolMais — Como funciona + compensação + Modalidades GD + Conteúdo + Glossario + Projetos + Cases + Sobre + Contato + FAQ */
+﻿/* SolMais — Como funciona + compensação + Modalidades GD + Conteúdo + Glossário + Projetos + Cases + Sobre + Contato + FAQ */
 
 function render(data, T) {
   const store = data.store;
@@ -25,15 +25,15 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">2. Inversor converte CC em CA</h2>
-      <p class="text-secondary">O inversor transforma a corrente contínua em corrente alternada (CA), compatível com a rede elétrica e os aparelhos da sua casa.</p>
+      <p class="text-secondary">O inversor transforma a corrente contínua em corrente alternada (CA), compatível com a rede elétrica é os aparelhos da sua casa.</p>
     </div>
     <div class="card mb-6">
-      <h2 style="margin-bottom: var(--space-3)">3. Consumo e excedente</h2>
-      <p class="text-secondary">A energia gerada é primeiro consumida pelo imóvel. O excedente é injetado na rede e compensado conforme as regras vigentes do SCEE.</p>
+      <h2 style="margin-bottom: var(--space-3)">3. Consumo é excedente</h2>
+      <p class="text-secondary">A energia gerada é primeiro consumida pelo imóvel. O excedente é injetado na rede é compensado conforme as regras vigentes do SCEE.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">4. compensação na conta</h2>
-      <p class="text-secondary">A energia injetada vira créditos que abatem o consumo nos períodos em que o sistema não gera (noite, por exemplo). A compensação segue as regras da Lei 14.300 e do marco da MMGD.</p>
+      <p class="text-secondary">A energia injetada vira créditos que abatem o consumo nos períodos em que o sistema não gera (noite, por exemplo). A compensação segue as regras da Lei 14.300 é do marco da MMGD.</p>
     </div>
 
     <div class="visual-section">
@@ -48,7 +48,7 @@ function render(data, T) {
     filename: 'como-funciona.html', slug: 'como-funciona', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Como Funciona Energia Solar Fotovoltaica',
-      description: 'Entenda como funciona a energia solar fotovoltaica: do painel a compensação na rede. Conheca o processo de geração de eletricidade a partir da luz solar em 4 etapas.',
+      description: 'Entenda como funciona a energia solar fotovoltaica: do painel a compensação na rede. Conheça o processo de geração de eletricidade a partir da luz solar em 4 etapas.',
       canonical: '/como-funciona.html', active: 'como-funciona',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Como funciona' }], store.url),
       content: howContent
@@ -59,7 +59,7 @@ function render(data, T) {
   const compContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'compensação' }])}
-    ${T.pageHero('compensação de Energia', 'Como funciona o Sistema de compensação de Energia Elétrica (SCEE) e os créditos de energia', { icon: T.ICONS.grid })}
+    ${T.pageHero('compensação de Energia', 'Como funciona o Sistema de compensação de Energia Elétrica (SCEE) é os créditos de energia', { icon: T.ICONS.grid })}
 
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-4)">Fluxo da compensação</h2>
@@ -70,7 +70,7 @@ function render(data, T) {
 
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">O que são créditos de energia?</h2>
-      <p class="text-secondary">Quando o sistema gera mais energia do que o imóvel consome, o excedente e injetado na rede de distribuição. Esse excedente vira créditos que podem ser abatidos do consumo em outros períodos.</p>
+      <p class="text-secondary">Quando o sistema gera mais energia do que o imóvel consome, o excedente é injetado na rede de distribuição. Esse excedente vira créditos que podem ser abatidos do consumo em outros períodos.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Validade dos créditos</h2>
@@ -78,11 +78,11 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Marco legal — Lei 14.300</h2>
-      <p class="text-secondary">A Lei 14.300/2022 instituiu o marco legal da micro e minigeração distribuída. Para unidades sujeitas a transição do art. 27, o percentual previsto para 2026 e de 60% sobre as componentes tarifarias especificadas na lei. A ANEEL atualiza periodicamente suas orientacoes sobre as modalidades vigentes.</p>
+      <p class="text-secondary">A Lei 14.300/2022 instituiu o marco legal da micro é minigeração distribuída. Para unidades sujeitas a transição do art. 27, o percentual previsto para 2026 é de 60% sobre as componentes tarifárias especificadas na lei. A ANEEL atualiza periodicamente suas orientações sobre as modalidades vigentes.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Importante</h2>
-      <p class="text-secondary">Os resultados dependem de tarifa, distribuidora, consumo, modalidade, dimensionamento, irradiação e regras vigentes do SCEE. Esta página é apenas informativa e não constitui aconselhamento regulatório.</p>
+      <p class="text-secondary">Os resultados dependem de tarifa, distribuidora, consumo, modalidade, dimensionamento, irradiação é regras vigentes do SCEE. Esta página é apenas informativa é não constitui aconselhamento regulatório.</p>
     </div>
   </div>
 </section>`;
@@ -91,7 +91,7 @@ function render(data, T) {
     filename: 'compensacao.html', slug: 'compensacao', noindex: false,
     html: T.renderLayout({
       store, data, title: 'compensação de Energia — SCEE',
-      description: 'Como funciona o sistema de compensação de energia elétrica (SCEE), os créditos de energia e o marco legal da microgeração distribuída (Lei 14.300).',
+      description: 'Como funciona o sistema de compensação de energia elétrica (SCEE), os créditos de energia é o marco legal da microgeração distribuída (Lei 14.300).',
       canonical: '/compensação.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'compensação' }], store.url),
       content: compContent
@@ -104,12 +104,12 @@ function render(data, T) {
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Modalidades GD' }])}
     ${T.pageHero('Modalidades de geração distribuída', 'A ANEEL reconhece diferentes modalidades de autoconsumo por meio de geração distribuída', { icon: T.ICONS.bolt })}
 
-    <div class="card mb-6"><h2>Autoconsumo local</h2><p class="text-secondary mt-2">geração e consumo na mesma unidade consumidora. A energia produzida é consumida no próprio imóvel onde o sistema está instalado.</p></div>
-    <div class="card mb-6"><h2>Autoconsumo remoto</h2><p class="text-secondary mt-2">geração em uma unidade e consumo em outra, dentro da mesma área de concessão da distribuidora. Permite instalar módulos fotovoltaicos em um imóvel e abater a conta de outro.</p></div>
-    <div class="card mb-6"><h2>Multiplas unidades consumidoras</h2><p class="text-secondary mt-2">Um unico sistema atende a varias unidades do mesmo titular (ex: condomínio). A compensação e distribuída entre as unidades conforme regras especificas.</p></div>
-    <div class="card mb-6"><h2>geração compartilhada</h2><p class="text-secondary mt-2">Condominios ou grupos de consumidores se unem para investir em um sistema de geração compartilhada. A energia e os créditos são distribuidos entre os participantes.</p></div>
+    <div class="card mb-6"><h2>Autoconsumo local</h2><p class="text-secondary mt-2">geração é consumo na mesma unidade consumidora. A energia produzida é consumida no próprio imóvel onde o sistema está instalado.</p></div>
+    <div class="card mb-6"><h2>Autoconsumo remoto</h2><p class="text-secondary mt-2">geração em uma unidade é consumo em outra, dentro da mesma área de concessão da distribuidora. Permite instalar módulos fotovoltaicos em um imóvel é abater a conta de outro.</p></div>
+    <div class="card mb-6"><h2>Multiplas unidades consumidoras</h2><p class="text-secondary mt-2">Um unico sistema atende a varias unidades do mesmo titular (ex: condomínio). A compensação é distribuída entre as unidades conforme regras específicas.</p></div>
+    <div class="card mb-6"><h2>geração compartilhada</h2><p class="text-secondary mt-2">Condominios ou grupos de consumidores se unem para investir em um sistema de geração compartilhada. A energia é os créditos são distribuidos entre os participantes.</p></div>
 
-    <p class="text-xs text-muted">Conteúdo informativo — não constitui aconselhamento regulatório. Consulte a ANEEL e a regulamentação vigente para detalhes.</p>
+    <p class="text-xs text-muted">Conteúdo informativo — não constitui aconselhamento regulatório. Consulte a ANEEL é a regulamentação vigente para detalhes.</p>
   </div>
 </section>`;
 
@@ -117,18 +117,18 @@ function render(data, T) {
     filename: 'modalidades-gd.html', slug: 'modalidades-gd', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Modalidades de geração distribuída',
-      description: 'Conheca as modalidades de geração distribuída reconhecidas pela ANEEL: autoconsumo local, remoto, multiplas unidades e geração compartilhada.',
+      description: 'Conheça as modalidades de geração distribuída reconhecidas pela ANEEL: autoconsumo local, remoto, multiplas unidades é geração compartilhada.',
       canonical: '/modalidades-gd.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Modalidades GD' }], store.url),
       content: modContent
     })
   });
 
-  /* ----- Glossario ----- */
+  /* ----- Glossário ----- */
   const glossContent = `<section class="section">
   <div class="container container-narrow">
-    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Glossario' }])}
-    ${T.pageHero('Glossario Solar', 'Termos técnicos do universo fotovoltaico explicados de forma simples', { icon: T.ICONS.doc })}
+    ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Glossário' }])}
+    ${T.pageHero('Glossário Solar', 'Termos técnicos do universo fotovoltaico explicados de forma simples', { icon: T.ICONS.doc })}
     <div class="glossary-list">
       ${glossary.map(g => `<div class="glossary-item"><div class="glossary-term">${T.escapeHtml(g.term)}</div><div class="glossary-def">${T.escapeHtml(g.definition)}</div></div>`).join('')}
     </div>
@@ -138,10 +138,10 @@ function render(data, T) {
   pages.push({
     filename: 'glossario.html', slug: 'glossario', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'Glossario Solar — Termos Técnicos',
-      description: 'Glossario solar com termos técnicos do universo fotovoltaico: kW, kWh, kWp, irradiação, inversor, string, SCEE, MMGD, compensação, degradacao e payback.',
+      store, data, title: 'Glossário Solar — Termos Técnicos',
+      description: 'Glossário solar com termos técnicos do universo fotovoltaico: kW, kWh, kWp, irradiação, inversor, string, SCEE, MMGD, compensação, degradação é payback.',
       canonical: '/glossario.html', active: 'conteudo',
-      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Glossario' }], store.url),
+      structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Glossário' }], store.url),
       content: glossContent
     })
   });
@@ -167,7 +167,7 @@ function render(data, T) {
     filename: 'conteudo.html', slug: 'conteudo', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Central de Conhecimento',
-      description: 'Central de conhecimento sobre energia solar fotovoltaica. Artigos sobre fundamentos, equipamentos, regulamentação, dimensionamento e manutenção.',
+      description: 'Central de conhecimento sobre energia solar fotovoltaica. Artigos sobre fundamentos, equipamentos, regulamentação, dimensionamento é manutenção.',
       canonical: '/conteudo.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo' }], store.url),
       content: contContent
@@ -242,7 +242,7 @@ function render(data, T) {
     filename: 'projetos.html', slug: 'projetos', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Projetos Demonstrativos',
-      description: 'Cases demonstrativos de sistemas solares fotovoltaicos: residencial, comercial, condomínio e rural. Veja potência, módulos, geração e payback de cada projeto.',
+      description: 'Cases demonstrativos de sistemas solares fotovoltaicos: residencial, comercial, condomínio é rural. Veja potência, módulos, geração é payback de cada projeto.',
       canonical: '/projetos.html', active: 'projetos',
       ogImage: store.url.replace(/\/$/, '') + '/img/og/projetos.svg',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }], store.url),
@@ -296,7 +296,7 @@ function render(data, T) {
       <div>
         <span class="cinematic-hero-eyebrow">Layout</span>
         <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Telhado — top view</h2>
-        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${c.panels} módulos com orientação ${c.orientation || 'norte'} e área de ${c.area} m².</p>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${c.panels} módulos com orientação ${c.orientation || 'norte'} é área de ${c.area} m².</p>
         <div class="grid grid-2">
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.area} m²</div><div class="kpi-label">Área utilizada</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.orientation || 'Norte'}</div><div class="kpi-label">orientação</div></div>
@@ -365,24 +365,24 @@ function render(data, T) {
 
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">O que e</h2>
-      <p class="text-secondary">SolMais e uma plataforma demonstrativa que cobre todo o ciclo de aquisicao, implantacao e gestao de energia solar: simulação, projeto, acompanhamento, monitoramento, documentos, suporte e administracao.</p>
+      <p class="text-secondary">SolMais é uma plataforma demonstrativa que cobre todo o ciclo de aquisição, implantação é gestão de energia solar: simulação, projeto, acompanhamento, monitoramento, documentos, suporte é administração.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Para quem</h2>
       <p class="text-secondary">Para quem quer entender como funciona uma operação solar completa — do primeiro contato ao monitoramento em produção. Para empresas do setor que precisam de uma plataforma digital para sua operação.</p>
     </div>
     <div class="card mb-6">
-      <h2 style="margin-bottom: var(--space-3)">Caracteristicas</h2>
+      <h2 style="margin-bottom: var(--space-3)">Características</h2>
       <ul style="padding-left: var(--space-5); list-style: disc; color: var(--text-secondary)">
         <li>Simulador em 6 etapas com resultado visual</li>
-        <li>Projeto técnico com diagrama e layout do telhado</li>
-        <li>Comparador de sistemas e cenários financeiros</li>
-        <li>Portal do cliente com 8 secoes</li>
+        <li>Projeto técnico com diagrama é layout do telhado</li>
+        <li>Comparador de sistemas é cenários financeiros</li>
+        <li>Portal do cliente com 8 seções</li>
         <li>Dashboard de monitoramento energético</li>
-        <li>Timeline de implantacao</li>
-        <li>Central de documentos e suporte</li>
-        <li>Admin operacional com pipeline, frota e alertas</li>
-        <li>Conteúdo educativo e glossario</li>
+        <li>Timeline de implantação</li>
+        <li>Central de documentos é suporte</li>
+        <li>Admin operacional com pipeline, frota é alertas</li>
+        <li>Conteúdo educativo é glossario</li>
       </ul>
     </div>
     <div class="card card-glow">
@@ -396,7 +396,7 @@ function render(data, T) {
     filename: 'sobre.html', slug: 'sobre', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Sobre o SolMais | Plataforma Solar',
-      description: 'SolMais e uma plataforma digital end-to-end para energia solar: simulação, projeto, implantacao, monitoramento, documentos, suporte e administracao.',
+      description: 'SolMais é uma plataforma digital end-to-end para energia solar: simulação, projeto, implantação, monitoramento, documentos, suporte é administração.',
       canonical: '/sobre.html', active: 'sobre',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Sobre' }], store.url),
       content: aboutContent
@@ -418,7 +418,7 @@ function render(data, T) {
       <button class="btn btn-primary" onclick="SolMais.toast('Formulário demonstrativo — mensagens não são enviadas', 'info')">Enviar mensagem</button>
     </div>
     <div class="card">
-      <p class="text-sm text-secondary">Esta e uma plataforma demonstrativa. não coletamos dados nem atendemos clientes reais. Use o simulador para explorar a experiencia completa.</p>
+      <p class="text-sm text-secondary">Esta é uma plataforma demonstrativa. não coletamos dados nem atendemos clientes reais. Use o simulador para explorar a experiencia completa.</p>
     </div>
   </div>
 </section>`;
@@ -437,12 +437,12 @@ function render(data, T) {
   const faqContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }])}
-    ${T.pageHero('Perguntas Frequentes', 'Duvidas comuns sobre energia solar fotovoltaica', { icon: T.ICONS.support })}
-    <div class="card mb-4"><h2>Quanto posso economizar?</h2><p class="text-secondary mt-2">Sistemas fotovoltaicos podem reduzir significativamente a energia faturada da rede, mas o resultado depende do perfil de consumo, dimensionamento, tarifa, distribuidora e regras aplicáveis.</p></div>
-    <div class="card mb-4"><h2>Quanto tempo leva a homologação?</h2><p class="text-secondary mt-2">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexão previstas na regulamentação vigem. não prometemos prazo universal.</p></div>
-    <div class="card mb-4"><h2>Qual a garantia dos módulos fotovoltaicos?</h2><p class="text-secondary mt-2">Garantias variam conforme fabricante, modelo e componente. Os períodos apresentados nesta demonstração são ilustrativos.</p></div>
+    ${T.pageHero('Perguntas Frequentes', 'Dúvidas comuns sobre energia solar fotovoltaica', { icon: T.ICONS.support })}
+    <div class="card mb-4"><h2>Quanto posso economizar?</h2><p class="text-secondary mt-2">Sistemas fotovoltaicos podem reduzir significativamente a energia faturada da rede, mas o resultado depende do perfil de consumo, dimensionamento, tarifa, distribuidora é regras aplicáveis.</p></div>
+    <div class="card mb-4"><h2>Quanto tempo leva a homologação?</h2><p class="text-secondary mt-2">Os prazos variam conforme distribuidora, caracteristicas do projeto é etapas de conexão previstas na regulamentação vigem. não prometemos prazo universal.</p></div>
+    <div class="card mb-4"><h2>Qual a garantia dos módulos fotovoltaicos?</h2><p class="text-secondary mt-2">Garantias variam conforme fabricante, modelo é componente. Os períodos apresentados nesta demonstração são ilustrativos.</p></div>
     <div class="card mb-4"><h2>Funciona em dias nublados?</h2><p class="text-secondary mt-2">Sim. Módulos fotovoltaicos fotovoltaicos geram eletricidade com luz difusa, não apenas com sol direto. A geração reduz, mas não para.</p></div>
-    <div class="card mb-4"><h2>Os dados são reais?</h2><p class="text-secondary mt-2">não. Todos os clientes, sistemas, projetos, métricas, valores e documentos são fictícios e claramente identificados como demonstrativos.</p></div>
+    <div class="card mb-4"><h2>Os dados são reais?</h2><p class="text-secondary mt-2">não. Todos os clientes, sistemas, projetos, métricas, valores é documentos são fictícios é claramente identificados como demonstrativos.</p></div>
   </div>
 </section>`;
 
@@ -450,7 +450,7 @@ function render(data, T) {
     filename: 'faq.html', slug: 'faq', noindex: false,
     html: T.renderLayout({
       store, data, title: 'FAQ — Perguntas Frequentes',
-      description: 'Perguntas frequentes sobre energia solar: quanto economizar, tempo de homologação, garantia dos módulos fotovoltaicos, dias nublados e compensação de energia.',
+      description: 'Perguntas frequentes sobre energia solar: quanto economizar, tempo de homologação, garantia dos módulos fotovoltaicos, dias nublados é compensação de energia.',
       canonical: '/faq.html', active: '',
       structuredData: [
         T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }], store.url)

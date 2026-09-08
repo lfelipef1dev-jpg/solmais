@@ -42,7 +42,7 @@ function render(data, T) {
           <tr><td>Com solar (estimado)</td><td>${T.formatBRL(7800 - 5760)}</td><td>${T.formatBRL(96000 - 57600)}</td><td>${T.formatBRL(240000 - 144000)}</td></tr>
           <tr><td>Economia estimada</td><td class="text-solar"><strong>${T.formatBRL(5760)}</strong></td><td class="text-solar"><strong>${T.formatBRL(57600)}</strong></td><td class="text-solar"><strong>${T.formatBRL(144000)}</strong></td></tr>
         </table>
-        <p class="text-xs text-muted mt-4">Estimativa demonstrativa — não considera depreciacao, inflacao energética, O&M nem mudancas tarifarias.</p>
+        <p class="text-xs text-muted mt-4">Estimativa demonstrativa — não considera depreciação, inflação energética, O&M nem mudanças tarifárias.</p>
       </div>
       <div class="card">
         <h3 style="margin-bottom: var(--space-4)">CO₂ evitado (estimativa)</h3>

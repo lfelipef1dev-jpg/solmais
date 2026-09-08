@@ -8,11 +8,11 @@ function render(data, T) {
   const categories = [
     { icon: 'bolt', label: 'Sistema não está gerando', desc: 'Produção zero ou abaixo do esperado' },
     { icon: 'chart', label: 'App/monitoramento', desc: 'Problemas com o dashboard' },
-    { icon: 'cash', label: 'Conta de energia', desc: 'Duvidas sobre faturamento e compensação' },
-    { icon: 'bolt', label: 'Inversor', desc: 'Status, erros e reinicializacao' },
-    { icon: 'check', label: 'Garantia', desc: 'Cobertura e solicitação' },
-    { icon: 'doc', label: 'Documentação', desc: 'Projetos, manuais e termos' },
-    { icon: 'settings', label: 'manutenção', desc: 'Limpeza, inspecao e reparos' }
+    { icon: 'cash', label: 'Conta de energia', desc: 'Dúvidas sobre faturamento é compensação' },
+    { icon: 'bolt', label: 'Inversor', desc: 'Status, erros é reinicialização' },
+    { icon: 'check', label: 'Garantia', desc: 'Cobertura é solicitação' },
+    { icon: 'doc', label: 'Documentação', desc: 'Projetos, manuais é termos' },
+    { icon: 'settings', label: 'manutenção', desc: 'Limpeza, inspeção é reparos' }
   ];
 
   const content = `<section class="section">

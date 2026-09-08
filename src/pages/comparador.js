@@ -32,7 +32,7 @@ function render(data, T) {
       <div class="compare-table">
         <table>
           <tr>
-            <th>Caracteristica</th>
+            <th>Característica</th>
             ${systems.map(s => '<th' + (s.recommended ? ' class="recommended"' : '') + '>' + s.name + '</th>').join('')}
           </tr>
           <tr><td>Potência</td>${systems.map(s => '<td>' + s.power + ' kWp</td>').join('')}</tr>
@@ -56,7 +56,7 @@ function render(data, T) {
     filename: 'comparador.html', slug: 'comparador', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Comparador de Sistemas Solares',
-      description: 'Compare tres configuracoes de sistemas solares: econômico, recomendado e performance. Veja potência, módulos, geração, cobertura, area, investimento e payback.',
+      description: 'Compare tres configuracoes de sistemas solares: econômico, recomendado é performance. Veja potência, módulos, geração, cobertura, area, investimento é payback.',
       canonical: '/comparador.html', active: 'simulador',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

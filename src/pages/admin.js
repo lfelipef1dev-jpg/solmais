@@ -1,5 +1,5 @@
 ﻿/* SolMais — Admin
-   Login gate + Dashboard + Pipeline + Projetos + Instalacoes + Sistemas + Monitoramento + Alertas + Clientes + Financeiro + Documentos + Analytics + Config */
+   Login gate + Dashboard + Pipeline + Projetos + Instalações + Sistemas + Monitoramento + Alertas + Clientes + Financeiro + Documentos + Analytics + Config */
 
 function render(data, T) {
   const store = data.store;
@@ -17,7 +17,7 @@ function render(data, T) {
     <li><a href="admin.html" class="active">${T.ICONS.chart} Dashboard</a></li>
     <li><a href="admin-pipeline.html">${T.ICONS.grid} Pipeline</a></li>
     <li><a href="admin-projetos.html">${T.ICONS.panel} Projetos</a></li>
-    <li><a href="admin-instalacoes.html">${T.ICONS.settings} Instalacoes</a></li>
+    <li><a href="admin-instalacoes.html">${T.ICONS.settings} Instalações</a></li>
     <li><a href="admin-sistemas.html">${T.ICONS.bolt} Sistemas</a></li>
     <li><a href="admin-monitoramento.html">${T.ICONS.chart} Monitoramento</a></li>
     <li><a href="admin-alertas.html">${T.ICONS.alert} Alertas</a></li>
@@ -25,7 +25,7 @@ function render(data, T) {
     <li><a href="admin-financeiro.html">${T.ICONS.cash} Financeiro</a></li>
     <li><a href="admin-documentos.html">${T.ICONS.doc} Documentos</a></li>
     <li><a href="admin-analytics.html">${T.ICONS.chart} Analytics</a></li>
-    <li><a href="admin-config.html">${T.ICONS.settings} Configuracoes</a></li>
+    <li><a href="admin-config.html">${T.ICONS.settings} Configurações</a></li>
   </ul>
   <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border)">
     <a href="index.html" class="btn btn-ghost btn-sm btn-block">${T.ICONS.logout} Sair</a>
@@ -155,14 +155,14 @@ function render(data, T) {
         </div>`;
       }).join('')}
     </div>
-    <p class="text-xs text-muted mt-4">Kanban demonstrativo — alteracoes persistem apenas no seu navegador</p>
+    <p class="text-xs text-muted mt-4">Kanban demonstrativo — alterações persistem apenas no seu navegador</p>
   `;
   pages.push(adminPage('admin-pipeline.html', 'Pipeline', pipelineContent));
 
   /* ----- Projetos ----- */
   const projContent = `
     <h1 style="margin-bottom: var(--space-2)">Projetos</h1>
-    <p class="text-secondary mb-6">Gestao de projetos — dados demonstrativos</p>
+    <p class="text-secondary mb-6">Gestão de projetos — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${projects.length}</div><div class="kpi-label">Total projetos</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Conectados</div></div>
@@ -185,12 +185,12 @@ function render(data, T) {
   `;
   pages.push(adminPage('admin-projetos.html', 'Projetos', projContent));
 
-  /* ----- Instalacoes ----- */
+  /* ----- Instalações ----- */
   const instContent = `
-    <h1 style="margin-bottom: var(--space-2)">Instalacoes</h1>
-    <p class="text-secondary mb-6">Calendario e equipes — dados demonstrativos</p>
+    <h1 style="margin-bottom: var(--space-2)">Instalações</h1>
+    <p class="text-secondary mb-6">Calendario é equipes — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.installedAt).length}</div><div class="kpi-label">Instalacoes</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.installedAt).length}</div><div class="kpi-label">Instalações</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Concluidas</div></div>
       <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.clock}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalação').length}</div><div class="kpi-label">Em andamento</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.user}</div><div class="kpi-value">3</div><div class="kpi-label">Equipes</div></div>
@@ -211,12 +211,12 @@ function render(data, T) {
     <div class="card">
       <h3 style="margin-bottom: var(--space-4)">Checklist padrão de instalação</h3>
       <div class="timeline">
-        ${['Estrutura de fixação','Módulos fotovoltaicos','Inversor','Cabeamento CC e CA','proteções','Testes de comunicação','Energização','Fotos demonstrativas'].map((item, i) => `
+        ${['Estrutura de fixação','Módulos fotovoltaicos','Inversor','Cabeamento CC é CA','proteções','Testes de comunicação','Energização','Fotos demonstrativas'].map((item, i) => `
         <div class="timeline-item"><div class="timeline-dot done">${T.ICONS.check}</div><div class="timeline-content"><h4>${item}</h4></div></div>`).join('')}
       </div>
     </div>
   `;
-  pages.push(adminPage('admin-instalacoes.html', 'Instalacoes', instContent));
+  pages.push(adminPage('admin-instalacoes.html', 'Instalações', instContent));
 
   /* ----- Sistemas (frota) ----- */
   const sysContent = `
@@ -310,7 +310,7 @@ function render(data, T) {
     </div>
     <div class="card">
       <table class="data-table">
-        <tr><th>ID</th><th>Sistema</th><th>Tipo</th><th>Severidade</th><th>Descrição</th><th>Status</th><th>Acoes</th></tr>
+        <tr><th>ID</th><th>Sistema</th><th>Tipo</th><th>Severidade</th><th>Descrição</th><th>Status</th><th>Ações</th></tr>
         ${alerts.map(a => `<tr>
           <td><strong>${a.id}</strong></td>
           <td>${a.projectId}</td>
@@ -382,7 +382,7 @@ function render(data, T) {
   /* ----- Documentos admin ----- */
   const docContent = `
     <h1 style="margin-bottom: var(--space-2)">Documentos</h1>
-    <p class="text-secondary mb-6">Gestao documental — dados demonstrativos</p>
+    <p class="text-secondary mb-6">Gestão documental — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.doc}</div><div class="kpi-value">${documents.length}</div><div class="kpi-label">Total documentos</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.check}</div><div class="kpi-value">${documents.filter(d => d.type === 'projeto').length}</div><div class="kpi-label">Projetos</div></div>
@@ -410,7 +410,7 @@ function render(data, T) {
     <p class="text-secondary mb-6">Métricas da operação — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">142</div><div class="kpi-label">Simulações (mês)</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">38%</div><div class="kpi-label">Conversao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">38%</div><div class="kpi-label">Conversão</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(32000)}</div><div class="kpi-label">Ticket demo</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potência projetada</div></div>
     </div>
@@ -421,7 +421,7 @@ function render(data, T) {
       </div>
       <div class="chart-premium">
         <h3>Conversão mensal</h3>
-        ${T.areaChart([28, 30, 32, 33, 34, 35, 36, 37, 37, 38, 38, 38], { width: 350, height: 160, color: '#22c55e', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'ana-conv', label: '% conversao' })}
+        ${T.areaChart([28, 30, 32, 33, 34, 35, 36, 37, 37, 38, 38, 38], { width: 350, height: 160, color: '#22c55e', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'ana-conv', label: '% conversão' })}
       </div>
     </div>
     <div class="grid grid-2">
@@ -460,8 +460,8 @@ function render(data, T) {
 
   /* ----- Config ----- */
   const confContent = `
-    <h1 style="margin-bottom: var(--space-2)">Configuracoes</h1>
-    <p class="text-secondary mb-6">Configuracoes da plataforma — demonstrativo</p>
+    <h1 style="margin-bottom: var(--space-2)">Configurações</h1>
+    <p class="text-secondary mb-6">Configurações da plataforma — demonstrativo</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.settings}</div><div class="kpi-value">1</div><div class="kpi-label">Plataforma</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">Ativo</div><div class="kpi-label">Status</div></div>
@@ -479,15 +479,15 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <h3 style="margin-bottom: var(--space-4)">Preferencias</h3>
-      <div class="field"><label class="label">Notificacoes de alertas</label><select class="select"><option>Ativado</option><option>Desativado</option></select></div>
+      <div class="field"><label class="label">Notificações de alertas</label><select class="select"><option>Ativado</option><option>Desativado</option></select></div>
       <div class="field"><label class="label">Relatorios automaticos</label><select class="select"><option>Ativado</option><option>Desativado</option></select></div>
-      <button class="btn btn-primary" onclick="SolMais.toast('Configuracoes salvas (demo)', 'success')">Salvar</button>
+      <button class="btn btn-primary" onclick="SolMais.toast('Configurações salvas (demo)', 'success')">Salvar</button>
     </div>
     <div class="card">
-      <p class="text-xs text-muted">Plataforma demonstrativa — todas as configuracoes são ficticias.</p>
+      <p class="text-xs text-muted">Plataforma demonstrativa — todas as configuracoes são fictícias.</p>
     </div>
   `;
-  pages.push(adminPage('admin-config.html', 'Configuracoes', confContent));
+  pages.push(adminPage('admin-config.html', 'Configurações', confContent));
 
   return pages;
 }

@@ -41,7 +41,7 @@
   {
     "id": "fin-assinatura",
     "name": "Assinatura",
-    "description": "Mensalidade fixa sem aquisicao do ativo",
+    "description": "Mensalidade fixa sem aquisição do ativo",
     "icon": "refresh",
     "investment": 0,
     "monthlySavings": 280,

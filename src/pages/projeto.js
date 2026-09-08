@@ -93,7 +93,7 @@ function render(data, T) {
       <div>
         <span class="cinematic-hero-eyebrow">Layout técnico</span>
         <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Telhado — top view CAD</h2>
-        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${sys.panels} módulos no telhado com orientação norte, dimensões e area utilizada.</p>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${sys.panels} módulos no telhado com orientação norte, dimensões é area utilizada.</p>
         <div class="grid grid-2">
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${sys.area} m²</div><div class="kpi-label">Área utilizada</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">48 m²</div><div class="kpi-label">Área disponível</div></div>
@@ -135,7 +135,7 @@ function render(data, T) {
         ${T.equipmentRender('protection', { id: 'eq-prot' })}
         <div class="equipment-card-body">
           <div class="equipment-card-name">SolMais Protection Box</div>
-          <div class="equipment-card-spec">DPS + Disjuntor &middot; CC e CA &middot; IP65</div>
+          <div class="equipment-card-spec">DPS + Disjuntor &middot; CC é CA &middot; IP65</div>
         </div>
       </div>
     </div>
@@ -213,7 +213,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data,
       title: 'Meu Projeto Solar',
-      description: 'Projeto técnico do sistema fotovoltaico — render 3D, layout do telhado, equipamentos e dimensionamento.',
+      description: 'Projeto técnico do sistema fotovoltaico — render 3D, layout do telhado, equipamentos é dimensionamento.',
       canonical: '/projeto.html', active: '',
       noindex: true,
       content

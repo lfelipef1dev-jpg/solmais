@@ -15,7 +15,7 @@ function render(data, T) {
   <div class="sm-hero-overlay">
     <div class="sm-hero-content">
       <h1 class="sm-hero-title">Sua energia.<br><span class="accent">Projetada</span> para você.</h1>
-      <p class="sm-hero-sub">Simule, acompanhe e monitore seu sistema solar em uma única plataforma.</p>
+      <p class="sm-hero-sub">Simule, acompanhe é monitore seu sistema solar em uma única plataforma.</p>
       <a href="simulador.html" class="sm-hero-cta">Simular meu sistema &rarr;</a>
       <div class="sm-hero-meta">
         <div class="sm-hero-meta-item">
@@ -41,7 +41,7 @@ function render(data, T) {
     <div class="sm-product-text">
       <span class="sm-eyebrow">A plataforma</span>
       <h2 class="sm-headline">Do telhado<br>aos dados.</h2>
-      <p class="sm-lede">O SolMais une modelagem do telhado, dimensionamento do sistema, acompanhamento do projeto e monitoramento energético em uma só interface. Não é um site de empresa solar. É software de energia.</p>
+      <p class="sm-lede">O SolMais une modelagem do telhado, dimensionamento do sistema, acompanhamento do projeto é monitoramento energético em uma só interface. Não é um site de empresa solar. É software de energia.</p>
       <a href="projeto.html" class="sm-hero-cta">Ver produto em ação &rarr;</a>
     </div>
     <div class="sm-product-visual">
@@ -69,7 +69,7 @@ function render(data, T) {
     <div>
       <span class="sm-eyebrow">Simulador</span>
       <h2 class="sm-headline">Descubra o<br>sistema ideal.</h2>
-      <p class="sm-lede" style="margin-top:var(--space-4)">Seis etapas. Do CEP ao payback. O wizard pergunta o que importa e devolve um projeto completo.</p>
+      <p class="sm-lede" style="margin-top:var(--space-4)">Seis etapas. Do CEP ao payback. O wizard pergunta o que importa é devolve um projeto completo.</p>
       <div class="sm-sim-steps">
         <div class="sm-sim-step"><span class="sm-sim-step-num">01</span><span class="sm-sim-step-label">Localização</span></div>
         <div class="sm-sim-step"><span class="sm-sim-step-num">02</span><span class="sm-sim-step-label">Consumo</span></div>
@@ -107,7 +107,7 @@ function render(data, T) {
     <div class="sm-twin-wow-header">
       <span class="sm-eyebrow">Digital Twin</span>
       <h2 class="sm-headline dark" style="margin-top:var(--space-3)">A mesma casa.<br>Em todo lugar.</h2>
-      <p class="sm-lede dark" style="margin:var(--space-3) auto 0">O Digital Twin do SolMais aparece na simulação, no projeto e no monitoramento. Continuidade visual. Identidade de produto.</p>
+      <p class="sm-lede dark" style="margin:var(--space-3) auto 0">O Digital Twin do SolMais aparece na simulação, no projeto é no monitoramento. Continuidade visual. Identidade de produto.</p>
     </div>
     <div class="sm-twin-wow-stage">
       ${T.digitalTwin({ width: 800, height: 500, panels: 10, showFlow: true, generating: true, id: 'twin-wow', theme: 'dark' })}
@@ -202,7 +202,7 @@ function render(data, T) {
   const cta = `<section class="sm-cta">
   <div class="sm-cta-inner">
     <h2 class="sm-headline dark">Pronto para<br>simular?</h2>
-    <p class="sm-lede dark">Faça uma simulação completa em 6 etapas e veja o resultado com gráficos, comparador e cenários financeiros.</p>
+    <p class="sm-lede dark">Faça uma simulação completa em 6 etapas é veja o resultado com gráficos, comparador é cenários financeiros.</p>
     <a href="simulador.html" class="sm-hero-cta">Iniciar simulação &rarr;</a>
     <p style="font-size:var(--fs-xs);color:var(--text-dark-secondary);margin-top:var(--space-5)">Plataforma demonstrativa — todos os dados são fictícios</p>
   </div>
@@ -220,8 +220,8 @@ function render(data, T) {
     noindex: false,
     html: T.renderLayout({
       store, data,
-      title: 'Energia Solar: Simulador e Monitoramento',
-      description: 'Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geração e economia estimadas e acompanhe o projeto até o monitoramento.',
+      title: 'Energia Solar: Simulador é Monitoramento',
+      description: 'Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geração é economia estimadas é acompanhe o projeto até o monitoramento.',
       canonical: '/',
       active: 'index',
       structuredData: graphSchema,

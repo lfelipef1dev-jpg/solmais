@@ -26,7 +26,7 @@ function render(data, T) {
     </div>
 
     <div class="card card-glow text-center">
-      <p class="text-sm text-secondary">Todos os documentos listados são fictícios e foram criados exclusivamente para demonstração da plataforma. Nenhum arquivo real esta disponível para download.</p>
+      <p class="text-sm text-secondary">Todos os documentos listados são fictícios é foram criados exclusivamente para demonstração da plataforma. Nenhum arquivo real esta disponível para download.</p>
     </div>
   </div>
 </section>`;
