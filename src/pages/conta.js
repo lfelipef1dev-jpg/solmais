@@ -43,7 +43,7 @@ function render(data, T) {
     <div class="kpi-premium">
       <div class="kpi-icon-wrap gen">${T.ICONS.bolt}</div>
       <div class="kpi-value">584</div>
-      <div class="kpi-label">kWh este mes</div>
+      <div class="kpi-label">kWh este mês</div>
       <div class="mini-chart-wrap">${T.sparkline([520, 540, 550, 560, 570, 580, 584], {color:'#22c55e', fill:'rgba(34,197,94,0.1)'})}</div>
     </div>
     <div class="kpi-premium">

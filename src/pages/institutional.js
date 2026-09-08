@@ -296,7 +296,7 @@ function render(data, T) {
       <div>
         <span class="cinematic-hero-eyebrow">Layout</span>
         <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Telhado — top view</h2>
-        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${c.panels} módulos com orientação ${c.orientation || 'norte'} e area de ${c.area} m².</p>
+        <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${c.panels} módulos com orientação ${c.orientation || 'norte'} e área de ${c.area} m².</p>
         <div class="grid grid-2">
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.area} m²</div><div class="kpi-label">Área utilizada</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.orientation || 'Norte'}</div><div class="kpi-label">orientação</div></div>

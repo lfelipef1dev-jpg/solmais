@@ -10,7 +10,7 @@
   { "term": "geração distribuída", "definition": "Produção de eletricidade proxima ao ponto de consumo, conectada a rede de distribuição." },
   { "term": "compensação", "definition": "Sistema onde o excedente injetado na rede e abatido do consumo em outros períodos." },
   { "term": "Modulo fotovoltaico", "definition": "Painel que converte luz solar em eletricidade pelo efeito fotovoltaico." },
-  { "term": "Degradacao", "definition": "Reducao gradual da capacidade de geração do modulo ao longo dos anos." },
+  { "term": "Degradação", "definition": "Redução gradual da capacidade de geração do módulo ao longo dos anos." },
   { "term": "Payback", "definition": "Tempo necessário para que a economia gerada pague o investimento inicial." },
   { "term": "CAPEX", "definition": "Capital Expenditure — investimento inicial na implantacao do sistema." },
   { "term": "O&M", "definition": "Operação e manutenção — custos de manter o sistema funcionando ao longo da vida util." }

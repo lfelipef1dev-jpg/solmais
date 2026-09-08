@@ -51,7 +51,7 @@ function render(data, T) {
         </div>
         <div class="sm-mon-kpi">
           <div class="sm-mon-kpi-value">584 kWh</div>
-          <div class="sm-mon-kpi-label">Mes</div>
+          <div class="sm-mon-kpi-label">Mês</div>
         </div>
         <div class="sm-mon-kpi">
           <div class="sm-mon-kpi-value" style="color:var(--solar)">R$ 480</div>
@@ -98,7 +98,7 @@ function render(data, T) {
         ${T.gauge(65, { id: 'g3', label: 'Carga', unit: '%', max: 100, color: '#3b82f6', size: 160 })}
       </div>
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
-        <h2 style="color:var(--text-dark)">Saude</h2>
+        <h2 style="color:var(--text-dark)">Saúde</h2>
         ${T.gauge(98, { id: 'g4', label: 'Sistema', unit: '%', max: 100, color: '#22c55e', size: 160 })}
       </div>
     </div>
@@ -126,7 +126,7 @@ function render(data, T) {
     <div class="grid grid-3">
       <div class="text-center">
         <div class="sm-big-number" style="color:var(--gen)">2,1<span style="font-size:0.3em;color:var(--text-dark-muted)">t CO²</span></div>
-        <div class="sm-number-label">Evitado/mes</div>
+        <div class="sm-number-label">Evitado/mês</div>
       </div>
       <div class="text-center">
         <div class="sm-big-number" style="color:var(--solar)">38<span style="font-size:0.3em;color:var(--text-dark-muted)">arvores</span></div>

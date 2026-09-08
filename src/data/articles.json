@@ -17,7 +17,7 @@
     "description": "Entenda as tres unidades mais confundidas no universo solar.",
     "readTime": "3 min",
     "date": "2026-08-16",
-    "content": "kW (quilowatt) e potência instantanea. kWh (quilowatt-hora) e energia gerada ou consumida ao longo do tempo. kWp (quilowatt-pico) e a potência nominal do painel em condições padrão de teste. Um sistema de 5,5 kWp pode gerar 650 kWh por mes dependendo da irradiação local."
+    "content": "kW (quilowatt) e potência instantanea. kWh (quilowatt-hora) e energia gerada ou consumida ao longo do tempo. kWp (quilowatt-pico) e a potência nominal do painel em condições padrão de teste. Um sistema de 5,5 kWp pode gerar 650 kWh por mês dependendo da irradiação local."
   },
   {
     "id": "art-03",
@@ -47,7 +47,7 @@
     "description": "Sistemas fotovoltaicos geram energia mesmo sem sol pleno.",
     "readTime": "3 min",
     "date": "2026-08-19",
-    "content": "Módulos fotovoltaicos fotovoltaicos geram eletricidade com luz difusa, não apenas com sol direto. Em dias nublados a geração reduz, mas não para. A reducao varia conforme a densidade das nuvens e a tecnologia do painel."
+    "content": "Módulos fotovoltaicos fotovoltaicos geram eletricidade com luz difusa, não apenas com sol direto. Em dias nublados a geração reduz, mas não para. A redução varia conforme a densidade das nuvens e a tecnologia do painel."
   },
   {
     "id": "art-06",

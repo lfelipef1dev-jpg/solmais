@@ -540,7 +540,7 @@ function equipmentRender(type, opts) {
       <!-- Display LCD -->
       <text x="50" y="28" text-anchor="middle" fill="#22c55e" font-size="11" font-family="monospace" font-weight="700">3,42 kW</text>
       <text x="50" y="42" text-anchor="middle" fill="#f59e0b" font-size="7" font-family="monospace">PRODUCING</text>
-      <text x="50" y="52" text-anchor="middle" fill="#475569" font-size="6" font-family="monospace">584 kWh / mes</text>
+      <text x="50" y="52" text-anchor="middle" fill="#475569" font-size="6" font-family="monospace">584 kWh / mês</text>
       <!-- LEDs de status -->
       <circle cx="20" cy="72" r="3" fill="#22c55e"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></circle>
       <circle cx="35" cy="72" r="3" fill="#22c55e"/>

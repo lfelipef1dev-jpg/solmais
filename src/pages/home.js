@@ -27,7 +27,7 @@ function render(data, T) {
           <div class="sm-hero-meta-label">geração estimada</div>
         </div>
         <div class="sm-hero-meta-item">
-          <div class="sm-hero-meta-value">R$ 480/mes</div>
+          <div class="sm-hero-meta-value">R$ 480/mês</div>
           <div class="sm-hero-meta-label">Economia</div>
         </div>
       </div>
@@ -106,7 +106,7 @@ function render(data, T) {
   <div class="sm-twin-wow-grid">
     <div class="sm-twin-wow-header">
       <span class="sm-eyebrow">Digital Twin</span>
-      <h2 class="sm-headline dark" style="margin-top:var(--space-3)">A mesma casa.<br>Em todo lugar.</h2>
+      <h2 class="sm-headline dark" style="margin-top:var(--space-3)">A mêsma casa.<br>Em todo lugar.</h2>
       <p class="sm-lede dark" style="margin:var(--space-3) auto 0">O Digital Twin do SolMais aparece na simulação, no projeto e no monitoramento. Continuidade visual. Identidade de produto.</p>
     </div>
     <div class="sm-twin-wow-stage">
@@ -162,7 +162,7 @@ function render(data, T) {
         </div>
         <div class="sm-monitor-side-row">
           <span class="sm-monitor-side-label">CO² evitado</span>
-          <span class="sm-monitor-side-value" style="color:var(--gen-dark)">2,1 t/mes</span>
+          <span class="sm-monitor-side-value" style="color:var(--gen-dark)">2,1 t/mês</span>
         </div>
         <div style="margin-top:var(--space-4)">
           ${T.solarCurve({ id: 'mon-preview', width: 500, height: 180, showConsumption: true, peak: '4,82 kW', peakTime: '12:38' })}

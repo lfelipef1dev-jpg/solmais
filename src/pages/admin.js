@@ -271,9 +271,9 @@ function render(data, T) {
     <p class="text-secondary mb-6">Visão consolidada da geração — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${totalGen.toFixed(1)}</div><div class="kpi-label">kWh gerados hoje</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">${systems.reduce((s,x)=>s+x.production.month,0).toLocaleString('pt-BR')}</div><div class="kpi-label">kWh este mes</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">${systems.reduce((s,x)=>s+x.production.month,0).toLocaleString('pt-BR')}</div><div class="kpi-label">kWh este mês</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.chart}</div><div class="kpi-value">${(systems.reduce((s,x)=>s+x.production.year,0)/1000).toFixed(1)} MWh</div><div class="kpi-label">MWh este ano</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(systems.reduce((s,x)=>s+x.estimatedSavings,0))}</div><div class="kpi-label">Economia estimada/mes</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(systems.reduce((s,x)=>s+x.estimatedSavings,0))}</div><div class="kpi-label">Economia estimada/mês</div></div>
     </div>
     <div class="grid grid-2 mb-6">
       <div class="card">
@@ -333,7 +333,7 @@ function render(data, T) {
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.user}</div><div class="kpi-value">${customers.length}</div><div class="kpi-label">Total clientes</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.home}</div><div class="kpi-value">${customers.filter(c => c.type === 'residencial').length}</div><div class="kpi-label">Residenciais</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.bolt}</div><div class="kpi-value">${customers.filter(c => c.type === 'comercial').length}</div><div class="kpi-label">Comerciais</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(customers.reduce((s,c)=>s+c.monthlySavings,0))}</div><div class="kpi-label">Economia total/mes</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(customers.reduce((s,c)=>s+c.monthlySavings,0))}</div><div class="kpi-label">Economia total/mês</div></div>
     </div>
     <div class="card">
       <table class="data-table">
@@ -360,11 +360,11 @@ function render(data, T) {
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(366000)}</div><div class="kpi-label">Receita demo (a vista)</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(28800)}</div><div class="kpi-label">Mensalidades assinatura</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(156000)}</div><div class="kpi-label">Financiamento ativo</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.chart}</div><div class="kpi-value">${T.formatBRL(systems.reduce((s,x)=>s+x.estimatedSavings,0))}</div><div class="kpi-label">Economia clientes/mes</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.chart}</div><div class="kpi-value">${T.formatBRL(systems.reduce((s,x)=>s+x.estimatedSavings,0))}</div><div class="kpi-label">Economia clientes/mês</div></div>
     </div>
     <div class="chart-premium mb-6">
       <h3>Receita mensal projetada</h3>
-      ${T.areaChart([28000, 29500, 30000, 31000, 32000, 33000, 34000, 35000, 35500, 36000, 36500, 36600], { width: 500, height: 180, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'fin-rev', label: 'R$ / mes' })}
+      ${T.areaChart([28000, 29500, 30000, 31000, 32000, 33000, 34000, 35000, 35500, 36000, 36500, 36600], { width: 500, height: 180, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'fin-rev', label: 'R$ / mês' })}
     </div>
     <div class="card">
       <h3 style="margin-bottom: var(--space-4)">Receita por modalidade</h3>
@@ -409,15 +409,15 @@ function render(data, T) {
     <h1 style="margin-bottom: var(--space-2)">Analytics</h1>
     <p class="text-secondary mb-6">Métricas da operação — dados demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">142</div><div class="kpi-label">Simulacoes (mes)</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">142</div><div class="kpi-label">Simulações (mês)</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">38%</div><div class="kpi-label">Conversao</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(32000)}</div><div class="kpi-label">Ticket demo</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potência projetada</div></div>
     </div>
     <div class="grid grid-2 mb-6">
       <div class="chart-premium">
-        <h3>Simulacoes por mes (12 meses)</h3>
-        ${T.areaChart([98, 105, 112, 120, 125, 130, 135, 138, 140, 142, 142, 142], { width: 350, height: 160, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'ana-sim', label: 'simulacoes' })}
+        <h3>Simulações por mês (12 mêses)</h3>
+        ${T.areaChart([98, 105, 112, 120, 125, 130, 135, 138, 140, 142, 142, 142], { width: 350, height: 160, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'ana-sim', label: 'simulações' })}
       </div>
       <div class="chart-premium">
         <h3>Conversão mensal</h3>

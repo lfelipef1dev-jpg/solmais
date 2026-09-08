@@ -187,7 +187,7 @@ function render(data, T) {
           <div class="field">
             <label class="label">Sombreamento</label>
             <div class="option-grid" id="sim-shading">
-              <div class="option-card selected" data-value="baixo"><div class="option-card-title">Baixo</div><div class="option-card-desc">Sem obstrucoes</div></div>
+              <div class="option-card selected" data-value="baixo"><div class="option-card-title">Baixo</div><div class="option-card-desc">Sem obstruções</div></div>
               <div class="option-card" data-value="médio"><div class="option-card-title">Médio</div><div class="option-card-desc">Alguma sombra</div></div>
               <div class="option-card" data-value="alto"><div class="option-card-title">Alto</div><div class="option-card-desc">Muita sombra</div></div>
             </div>
@@ -228,7 +228,7 @@ function render(data, T) {
             <div class="kpi-premium">
               <div class="kpi-icon-wrap solar">${T.ICONS.cash}</div>
               <div class="kpi-value text-solar">90%</div>
-              <div class="kpi-label">Reducao estimada</div>
+              <div class="kpi-label">Redução estimada</div>
             </div>
             <div class="kpi-premium">
               <div class="kpi-icon-wrap gen">${T.ICONS.leaf}</div>
