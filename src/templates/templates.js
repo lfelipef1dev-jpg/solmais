@@ -56,7 +56,14 @@ function renderHead(opts) {
   const ogImage = opts.ogImage || (store.url.replace(/\/$/, '') + '/og-image.jpg');
   const cssFiles = (opts.cssFiles || ['base.css', 'components.css', 'pages.css']).map(f => '<link rel="stylesheet" href="styles/' + f + '?v=2">').join('\n  ');
   const structuredData = opts.structuredData ? (Array.isArray(opts.structuredData) ? opts.structuredData : [opts.structuredData]).map(s => '<script type="application/ld+json">' + JSON.stringify(s) + '</script>').join('\n  ') : '';
-  const preload = opts.preload ? '<link rel="preload" as="image" href="' + opts.preload + '" fetchpriority="high">' : '';
+  const preloadImage = opts.preload ? '<link rel="preload" as="image" href="' + opts.preload + '" fetchpriority="high">' : '';
+  const preloadFonts = [
+    '<link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-latin.woff2" crossorigin>',
+    '<link rel="preload" as="font" type="font/woff2" href="fonts/inter-600-latin.woff2" crossorigin>',
+    '<link rel="preload" as="font" type="font/woff2" href="fonts/inter-700-latin.woff2" crossorigin>',
+    '<link rel="preload" as="font" type="font/woff2" href="fonts/sora-latin.woff2" crossorigin>'
+  ].join('\n  ');
+  const preload = preloadImage + (preloadImage ? '\n  ' : '') + preloadFonts;
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -78,7 +85,7 @@ function renderHead(opts) {
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(desc)}">
   <meta name="twitter:image" content="${ogImage}">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   ${preload}
   ${cssFiles}
   ${structuredData}
@@ -110,7 +117,7 @@ function renderHeader(store, nav, opts) {
       <ul class="nav-list">${navItems}</ul>
     </nav>
     <div class="header-actions">
-      <a href="conta.html" class="btn btn-ghost btn-sm" aria-label="Area do cliente">${ICONS.user}</a>
+      <a href="conta.html" class="btn btn-ghost btn-sm" aria-label="Área do cliente">${ICONS.user}</a>
       <a href="simulador.html" class="btn btn-primary btn-sm">${ICONS.bolt} Simular</a>
       <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -232,10 +239,10 @@ function renderLayout(opts) {
 
   return `${head}
 <body>
-  <a href="#conteudo" class="skip-link">Pular para o conteudo</a>
+  <a href="#conteúdo" class="skip-link">Pular para o conteúdo</a>
   ${announcement}
   ${header}
-  <main id="conteudo" role="main">
+  <main id="conteúdo" role="main">
     ${opts.content}
   </main>
   ${footer}

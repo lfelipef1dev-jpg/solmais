@@ -25,11 +25,11 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">2. Inversor converte CC em CA</h2>
-      <p class="text-secondary">O inversor transforma a corrente contínua em corrente alternada (CA), compativel com a rede elétrica e os aparelhos da sua casa.</p>
+      <p class="text-secondary">O inversor transforma a corrente contínua em corrente alternada (CA), compatível com a rede elétrica e os aparelhos da sua casa.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">3. Consumo e excedente</h2>
-      <p class="text-secondary">A energia gerada e primeiro consumida pelo imóvel. O excedente e injetado na rede e compensado conforme as regras vigentes do SCEE.</p>
+      <p class="text-secondary">A energia gerada é primeiro consumida pelo imóvel. O excedente é injetado na rede e compensado conforme as regras vigentes do SCEE.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">4. compensação na conta</h2>
@@ -38,7 +38,7 @@ function render(data, T) {
 
     <div class="visual-section">
       <h2>Quer simular seu sistema?</h2>
-      <p>Faca uma simulação completa em 6 etapas.</p>
+      <p>Faça uma simulação completa em 6 etapas.</p>
       <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Iniciar simulação</a>
     </div>
   </div>
@@ -74,7 +74,7 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Validade dos créditos</h2>
-      <p class="text-secondary">Conforme as regras atuais, os créditos tem validade de 60 meses. Isso permite acumular geração do verao para usar no inverno, por exemplo.</p>
+      <p class="text-secondary">Conforme as regras atuais, os créditos têm validade de 60 meses. Isso permite acumular geração do verão para usar no inverno, por exemplo.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Marco legal — Lei 14.300</h2>
@@ -82,7 +82,7 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Importante</h2>
-      <p class="text-secondary">Os resultados dependem de tarifa, distribuidora, consumo, modalidade, dimensionamento, irradiação e regras vigentes do SCEE. Esta pagina e apenas informativa e não constitui aconselhamento regulatorio.</p>
+      <p class="text-secondary">Os resultados dependem de tarifa, distribuidora, consumo, modalidade, dimensionamento, irradiação e regras vigentes do SCEE. Esta página é apenas informativa e não constitui aconselhamento regulatório.</p>
     </div>
   </div>
 </section>`;
@@ -104,12 +104,12 @@ function render(data, T) {
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'Modalidades GD' }])}
     ${T.pageHero('Modalidades de geração distribuída', 'A ANEEL reconhece diferentes modalidades de autoconsumo por meio de geração distribuída', { icon: T.ICONS.bolt })}
 
-    <div class="card mb-6"><h2>Autoconsumo local</h2><p class="text-secondary mt-2">geração e consumo na mesma unidade consumidora. A energia produzida e consumida no proprio imóvel onde o sistema esta instalado.</p></div>
-    <div class="card mb-6"><h2>Autoconsumo remoto</h2><p class="text-secondary mt-2">geração em uma unidade e consumo em outra, dentro da mesma area de concessão da distribuidora. Permite instalar módulos fotovoltaicos em um imóvel e abater a conta de outro.</p></div>
+    <div class="card mb-6"><h2>Autoconsumo local</h2><p class="text-secondary mt-2">geração e consumo na mesma unidade consumidora. A energia produzida é consumida no próprio imóvel onde o sistema está instalado.</p></div>
+    <div class="card mb-6"><h2>Autoconsumo remoto</h2><p class="text-secondary mt-2">geração em uma unidade e consumo em outra, dentro da mesma área de concessão da distribuidora. Permite instalar módulos fotovoltaicos em um imóvel e abater a conta de outro.</p></div>
     <div class="card mb-6"><h2>Multiplas unidades consumidoras</h2><p class="text-secondary mt-2">Um unico sistema atende a varias unidades do mesmo titular (ex: condomínio). A compensação e distribuída entre as unidades conforme regras especificas.</p></div>
     <div class="card mb-6"><h2>geração compartilhada</h2><p class="text-secondary mt-2">Condominios ou grupos de consumidores se unem para investir em um sistema de geração compartilhada. A energia e os créditos são distribuidos entre os participantes.</p></div>
 
-    <p class="text-xs text-muted">Conteúdo informativo — não constitui aconselhamento regulatorio. Consulte a ANEEL e a regulamentação vigente para detalhes.</p>
+    <p class="text-xs text-muted">Conteúdo informativo — não constitui aconselhamento regulatório. Consulte a ANEEL e a regulamentação vigente para detalhes.</p>
   </div>
 </section>`;
 
@@ -276,9 +276,9 @@ function render(data, T) {
         <div class="kpi-premium"><div class="kpi-value">${c.power}</div><div class="kpi-label">kWp</div></div>
         <div class="kpi-premium"><div class="kpi-value">${c.panels}</div><div class="kpi-label">Módulos</div></div>
         <div class="kpi-premium"><div class="kpi-value">${c.inverter}</div><div class="kpi-label">Inversor</div></div>
-        <div class="kpi-premium"><div class="kpi-value">${c.area} m²</div><div class="kpi-label">Area</div></div>
+        <div class="kpi-premium"><div class="kpi-value">${c.area} m²</div><div class="kpi-label">Área</div></div>
         <div class="kpi-premium"><div class="kpi-value">${T.formatKWh(c.annualGeneration)}</div><div class="kpi-label">geração/ano</div></div>
-        <div class="kpi-premium"><div class="kpi-value" style="color:var(--sm-amber)">${T.formatBRL(c.monthlySavings)}</div><div class="kpi-label">Economia/mes</div></div>
+        <div class="kpi-premium"><div class="kpi-value" style="color:var(--sm-amber)">${T.formatBRL(c.monthlySavings)}</div><div class="kpi-label">Economia/mês</div></div>
       </div>
     </div>
 
@@ -298,7 +298,7 @@ function render(data, T) {
         <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Telhado — top view</h2>
         <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${c.panels} módulos com orientação ${c.orientation || 'norte'} e area de ${c.area} m².</p>
         <div class="grid grid-2">
-          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.area} m²</div><div class="kpi-label">Area utilizada</div></div>
+          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.area} m²</div><div class="kpi-label">Área utilizada</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${c.orientation || 'Norte'}</div><div class="kpi-label">orientação</div></div>
         </div>
       </div>
@@ -312,7 +312,7 @@ function render(data, T) {
       <span class="cinematic-hero-eyebrow">Performance</span>
       <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">geração mensal estimada</h2>
       <div class="chart-premium">
-        ${T.areaChart(monthlyGen, { width: 700, height: 240, color: '#f59e0b', labels: monthLabels, id: 'case-' + c.slug, label: 'kWh/mes' })}
+        ${T.areaChart(monthlyGen, { width: 700, height: 240, color: '#f59e0b', labels: monthLabels, id: 'case-' + c.slug, label: 'kWh/mês' })}
       </div>
     </div>
 
@@ -339,7 +339,7 @@ function render(data, T) {
     <!-- CTA -->
     <div class="visual-section" style="margin:var(--space-8) 0">
       <h2>Quer um projeto como este?</h2>
-      <p>Faca uma simulação completa.</p>
+      <p>Faça uma simulação completa.</p>
       <a href="simulador.html" class="btn btn-primary btn-lg">${T.ICONS.bolt} Simular sistema</a>
     </div>
 

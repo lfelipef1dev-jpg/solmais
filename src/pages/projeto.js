@@ -67,7 +67,7 @@ function render(data, T) {
       <div class="kpi-premium">
         <div class="kpi-icon-wrap gen">${T.ICONS.bolt}</div>
         <div class="kpi-value">650</div>
-        <div class="kpi-label">kWh/mes</div>
+        <div class="kpi-label">kWh/mês</div>
         <div class="mini-chart-wrap">${T.sparkline([520, 540, 560, 580, 600, 650], {color:'#22c55e'})}</div>
       </div>
       <div class="kpi-premium">
@@ -79,7 +79,7 @@ function render(data, T) {
       <div class="kpi-premium">
         <div class="kpi-icon-wrap solar">${T.ICONS.cash}</div>
         <div class="kpi-value">R$ 480</div>
-        <div class="kpi-label">Economia/mes</div>
+        <div class="kpi-label">Economia/mês</div>
         <div class="mini-chart-wrap">${T.sparkline([420, 440, 450, 460, 470, 480], {color:'#f59e0b'})}</div>
       </div>
     </div>
@@ -95,7 +95,7 @@ function render(data, T) {
         <h2 style="font-family:'Sora',sans-serif;font-size:var(--fs-2xl);font-weight:700;margin:var(--space-3) 0 var(--space-4)">Telhado — top view CAD</h2>
         <p style="font-size:var(--fs-lg);color:var(--sm-text-soft);line-height:1.6;margin-bottom:var(--space-4)">Distribuição dos ${sys.panels} módulos no telhado com orientação norte, dimensões e area utilizada.</p>
         <div class="grid grid-2">
-          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${sys.area} m²</div><div class="kpi-label">Area utilizada</div></div>
+          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${sys.area} m²</div><div class="kpi-label">Área utilizada</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">48 m²</div><div class="kpi-label">Área disponível</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">Norte</div><div class="kpi-label">orientação</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">15°</div><div class="kpi-label">Inclinação</div></div>
@@ -163,8 +163,8 @@ function render(data, T) {
           <tr><td>Potência nominal</td><td>${sys.power} kWp</td></tr>
           <tr><td>Módulos</td><td>${sys.panels} × 550 Wp</td></tr>
           <tr><td>Inversor</td><td>${sys.inverterPower} kW</td></tr>
-          <tr><td>Area</td><td>${sys.area} m²</td></tr>
-          <tr><td>geração estimada</td><td>650 kWh/mes</td></tr>
+          <tr><td>Área</td><td>${sys.area} m²</td></tr>
+          <tr><td>geração estimada</td><td>650 kWh/mês</td></tr>
           <tr><td>geração anual</td><td>7.800 kWh/ano</td></tr>
           <tr><td>Cobertura estimada</td><td>90%</td></tr>
         </table>

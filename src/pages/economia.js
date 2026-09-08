@@ -12,7 +12,7 @@ function render(data, T) {
     ${T.pageHero('Economia Estimada', 'Sistema ' + sys.projectId + ' — ' + sys.power + ' kWp', { icon: T.ICONS.cash })}
 
     <div class="grid grid-4 mb-6">
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(customer.monthlySavings)}</div><div class="kpi-label">Economia/mes</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(customer.monthlySavings)}</div><div class="kpi-label">Economia/mês</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(customer.monthlySavings * 12)}</div><div class="kpi-label">Economia/ano</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.chart}</div><div class="kpi-value">${T.formatBRL(customer.totalSavings)}</div><div class="kpi-label">Economia total</div></div>
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.clock}</div><div class="kpi-value">${sys.estimatedPayback}</div><div class="kpi-label">Payback (anos)</div></div>

@@ -109,7 +109,7 @@ function render(data, T) {
     <div class="grid grid-2">
       <div class="chart-premium" style="background:var(--surface-dark);border-color:var(--border-dark)">
         <h2 style="color:var(--text-dark)">geração mensal</h2>
-        ${T.areaChart([580, 590, 600, 610, 620, 630, 640, 650, 640, 630, 600, 580], { width: 450, height: 200, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'mon-v3-monthly', label: 'kWh/mes' })}
+        ${T.areaChart([580, 590, 600, 610, 620, 630, 640, 650, 640, 630, 600, 580], { width: 450, height: 200, color: '#f59e0b', labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'], id: 'mon-v3-monthly', label: 'kWh/mês' })}
       </div>
       <div class="chart-premium" style="background:var(--surface-dark);border-color:var(--border-dark)">
         <h2 style="color:var(--text-dark)">Economia acumulada</h2>
@@ -149,7 +149,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data,
       title: 'Monitoramento Energético',
-      description: 'Dashboard de monitoramento em tempo real — geração, consumo, economia e saude do sistema.',
+      description: 'Dashboard de monitoramento em tempo real — geração, consumo, economia e saúde do sistema.',
       canonical: '/monitoramento.html', active: '',
       noindex: true,
       ogImage: store.url.replace(/\/$/, '') + '/img/og/monitoramento.svg',

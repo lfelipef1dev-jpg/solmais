@@ -49,7 +49,7 @@ function render(data, T) {
     <div class="kpi-premium">
       <div class="kpi-icon-wrap solar">${T.ICONS.cash}</div>
       <div class="kpi-value text-solar">${T.formatBRL(customer.monthlySavings)}</div>
-      <div class="kpi-label">Economia/mes</div>
+      <div class="kpi-label">Economia/mês</div>
       <div class="mini-chart-wrap">${T.sparkline([420, 440, 450, 460, 470, 480], {color:'#f59e0b', fill:'rgba(245,158,11,0.1)'})}</div>
     </div>
     <div class="kpi-premium">
@@ -67,7 +67,7 @@ function render(data, T) {
       ${T.digitalTwin({ panels: system.panels, id: 'portal-twin', width: 400, height: 280, generating: true })}
       <div class="grid grid-2 mt-3">
         <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.panels}</div><div class="kpi-label">Módulos</div></div>
-        <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.area} m2</div><div class="kpi-label">Area</div></div>
+        <div class="kpi-card" style="padding:var(--space-2)"><div class="kpi-value" style="font-size:var(--fs-lg)">${system.area} m2</div><div class="kpi-label">Área</div></div>
       </div>
     </div>
     <div class="card">
@@ -129,7 +129,7 @@ function render(data, T) {
     slug: 'conta',
     noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Portal do Cliente', description: 'Area do cliente SolMais — demonstrativo.',
+      store, data, title: 'Portal do Cliente', description: 'Área do cliente SolMais — demonstrativo.',
       canonical: '/conta.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url),
       content

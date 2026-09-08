@@ -6,7 +6,7 @@ function render(data, T) {
   const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Suporte' }];
 
   const categories = [
-    { icon: 'bolt', label: 'Sistema não esta gerando', desc: 'Produção zero ou abaixo do esperado' },
+    { icon: 'bolt', label: 'Sistema não está gerando', desc: 'Produção zero ou abaixo do esperado' },
     { icon: 'chart', label: 'App/monitoramento', desc: 'Problemas com o dashboard' },
     { icon: 'cash', label: 'Conta de energia', desc: 'Duvidas sobre faturamento e compensação' },
     { icon: 'bolt', label: 'Inversor', desc: 'Status, erros e reinicializacao' },

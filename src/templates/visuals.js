@@ -296,8 +296,8 @@ function digitalTwin(opts) {
    ================================================================ */
 function cinematicHero(opts) {
   opts = opts || {};
-  const title = opts.title || 'Energia solar sem complicacao';
-  const subtitle = opts.subtitle || 'Simule, projete, acompanhe e monitore seu sistema fotovoltaico em uma plataforma unica.';
+  const title = opts.title || 'Energia solar sem complicação';
+  const subtitle = opts.subtitle || 'Simule, projete, acompanhe e monitore seu sistema fotovoltaico em uma plataforma única.';
   const cta = opts.cta || 'Iniciar simulação';
   const ctaHref = opts.ctaHref || 'simulador.html';
   const secondaryCta = opts.secondaryCta || 'Ver projetos';
@@ -435,7 +435,7 @@ function roofCAD(opts) {
   <!-- Legenda de area -->
   <g transform="translate(20 340)">
     <rect width="8" height="8" fill="url(#${id}-panel-cad)" stroke="#3b82f6" stroke-width="0.5"/>
-    <text x="14" y="7" fill="#e2e8f0" font-size="9" font-family="Inter, sans-serif">Area utilizada: ${areaUsed}</text>
+    <text x="14" y="7" fill="#e2e8f0" font-size="9" font-family="Inter, sans-serif">Área utilizada: ${areaUsed}</text>
     <rect x="120" width="8" height="8" fill="url(#${id}-tile)" stroke="#f59e0b" stroke-width="0.5" opacity="0.5"/>
     <text x="134" y="7" fill="#e2e8f0" font-size="9" font-family="Inter, sans-serif">Área disponível: ${areaTotal}</text>
   </g>

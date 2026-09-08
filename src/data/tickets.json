@@ -7,7 +7,7 @@
     "customerName": "Sitio Cubatão",
     "category": "inversor",
     "subject": "Inversor offline — sem comunicação",
-    "description": "O inversor parou de comunicar ha mais de 2 horas. não ha dados de geração.",
+    "description": "O inversor parou de comunicar há mais de 2 horas. não há dados de geração.",
     "priority": "alta",
     "status": "em-análise",
     "createdAt": "2026-09-01 07:00",

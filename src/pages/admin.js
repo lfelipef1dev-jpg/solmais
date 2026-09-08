@@ -171,7 +171,7 @@ function render(data, T) {
     </div>
     <div class="card">
       <table class="data-table">
-        <tr><th>ID</th><th>Cliente</th><th>Local</th><th>Potência</th><th>Estagio</th><th>Status</th></tr>
+        <tr><th>ID</th><th>Cliente</th><th>Local</th><th>Potência</th><th>Estágio</th><th>Status</th></tr>
         ${projects.map(p => `<tr>
           <td><strong>${p.id}</strong></td>
           <td>${T.escapeHtml(p.customerName)}</td>
@@ -209,9 +209,9 @@ function render(data, T) {
       </table>
     </div>
     <div class="card">
-      <h3 style="margin-bottom: var(--space-4)">Checklist padrao de instalação</h3>
+      <h3 style="margin-bottom: var(--space-4)">Checklist padrão de instalação</h3>
       <div class="timeline">
-        ${['Estrutura de fixação','Módulos fotovoltaicos','Inversor','Cabeamento CC e CA','proteções','Testes de comunicação','Energizacao','Fotos demonstrativas'].map((item, i) => `
+        ${['Estrutura de fixação','Módulos fotovoltaicos','Inversor','Cabeamento CC e CA','proteções','Testes de comunicação','Energização','Fotos demonstrativas'].map((item, i) => `
         <div class="timeline-item"><div class="timeline-dot done">${T.ICONS.check}</div><div class="timeline-content"><h4>${item}</h4></div></div>`).join('')}
       </div>
     </div>
@@ -250,7 +250,7 @@ function render(data, T) {
 
     <div class="card">
       <table class="data-table">
-        <tr><th>Sistema</th><th>Cliente</th><th>Local</th><th>Potência</th><th>geração hoje</th><th>Status</th><th>Ultima comun.</th></tr>
+        <tr><th>Sistema</th><th>Cliente</th><th>Local</th><th>Potência</th><th>geração hoje</th><th>Status</th><th>Última comun.</th></tr>
         ${systems.map(s => `<tr>
           <td><strong>${s.projectId}</strong></td>
           <td>${T.escapeHtml(s.customerName)}</td>
@@ -337,7 +337,7 @@ function render(data, T) {
     </div>
     <div class="card">
       <table class="data-table">
-        <tr><th>ID</th><th>Nome</th><th>Tipo</th><th>Cidade</th><th>Sistema</th><th>Economia/mes</th><th>Desde</th></tr>
+        <tr><th>ID</th><th>Nome</th><th>Tipo</th><th>Cidade</th><th>Sistema</th><th>Economia/mês</th><th>Desde</th></tr>
         ${customers.map(c => `<tr>
           <td><strong>${c.id}</strong></td>
           <td>${T.escapeHtml(c.name)}</td>

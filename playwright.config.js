@@ -7,7 +7,7 @@ module.exports = defineConfig({
   workers: 1,
   reporter: [['list'], ['json', { outputFile: 'test-results.json' }]],
   use: {
-    baseURL: 'http://localhost:3002',
+    baseURL: 'http://localhost:3005',
     trace: 'on-first-retry',
   },
   projects: [

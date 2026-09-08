@@ -104,7 +104,7 @@ function render(data, T) {
                 </div>
                 <div class="option-card" data-value="historico">
                   <div class="option-card-icon">${T.ICONS.chart}</div>
-                  <div class="option-card-title">Historico 12 meses</div>
+                  <div class="option-card-title">Histórico 12 meses</div>
                   <div class="option-card-desc">Consumo mensal detalhado</div>
                 </div>
               </div>
@@ -117,7 +117,7 @@ function render(data, T) {
                 <input type="number" class="input" id="sim-kwh" placeholder="720" value="720">
               </div>
               <div class="field hidden" id="sim-historico-field">
-                <label class="label">Historico de 12 meses (kWh)</label>
+                <label class="label">Histórico de 12 meses (kWh)</label>
                 <div class="grid grid-3" id="sim-historico-inputs">
                   ${['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'].map((m, i) =>
                     '<div><label class="label text-xs">' + m + '</label><input type="number" class="input" data-month="' + m + '" placeholder="' + (600 + i * 20) + '" value="' + (600 + i * 20) + '"></div>'
@@ -128,9 +128,9 @@ function render(data, T) {
             <div>
               <div class="card" style="height:100%">
                 <h4 style="margin-bottom: var(--space-3)">Seu consumo estimado</h4>
-                ${T.areaChart([720, 740, 710, 690, 670, 650, 660, 680, 700, 720, 740, 750], { width: 350, height: 150, color: '#3b82f6', labels: monthLabels, id: 'consumo', label: 'kWh/mes' })}
+                ${T.areaChart([720, 740, 710, 690, 670, 650, 660, 680, 700, 720, 740, 750], { width: 350, height: 150, color: '#3b82f6', labels: monthLabels, id: 'consumo', label: 'kWh/mês' })}
                 <div class="grid grid-2 mt-4">
-                  <div class="kpi-card"><div class="kpi-value">720</div><div class="kpi-label">kWh/mes</div></div>
+                  <div class="kpi-card"><div class="kpi-value">720</div><div class="kpi-label">kWh/mês</div></div>
                   <div class="kpi-card"><div class="kpi-value">R$ 650</div><div class="kpi-label">Conta média</div></div>
                 </div>
                 <p class="text-xs text-muted mt-3">Estimativa baseada na conta informada — dados demonstrativos</p>
@@ -141,14 +141,14 @@ function render(data, T) {
 
         <!-- Step 3: Imóvel (com thumbnails de telhado) -->
         <div class="wizard-panel hidden" data-panel="3">
-          <h2 style="margin-bottom: var(--space-4)">Caracteristicas do imóvel</h2>
+          <h2 style="margin-bottom: var(--space-4)">Características do imóvel</h2>
           <p class="text-secondary mb-6">Informações sobre o telhado e área disponível.</p>
           <div class="field">
             <label class="label">Tipo de telhado</label>
             <div class="grid grid-5" id="sim-roof">
               <div class="option-card selected" data-value="ceramico">
                 <svg viewBox="0 0 60 40" fill="none" style="width:100%;height:auto;margin-bottom:8px"><path d="M0 30 L30 10 L60 30 L60 35 L0 35 Z" fill="#8b4513" opacity="0.7"/><g stroke="#5a2d0c" stroke-width="0.5"><line x1="0" y1="30" x2="60" y2="30"/><line x1="10" y1="22" x2="50" y2="22"/><line x1="20" y1="14" x2="40" y2="14"/></g></svg>
-                <div class="option-card-title">Ceramico</div>
+                <div class="option-card-title">Cerâmico</div>
               </div>
               <div class="option-card" data-value="fibrocimento">
                 <svg viewBox="0 0 60 40" fill="none" style="width:100%;height:auto;margin-bottom:8px"><path d="M0 30 L30 10 L60 30 L60 35 L0 35 Z" fill="#6b7280" opacity="0.7"/><g stroke="#4b5563" stroke-width="0.5"><line x1="0" y1="25" x2="60" y2="25"/><line x1="0" y1="30" x2="60" y2="30"/></g></svg>
@@ -156,7 +156,7 @@ function render(data, T) {
               </div>
               <div class="option-card" data-value="metalico">
                 <svg viewBox="0 0 60 40" fill="none" style="width:100%;height:auto;margin-bottom:8px"><path d="M0 30 L30 10 L60 30 L60 35 L0 35 Z" fill="#9ca3af" opacity="0.7"/><g stroke="#6b7280" stroke-width="0.5"><line x1="0" y1="28" x2="60" y2="28"/><line x1="15" y1="20" x2="45" y2="20"/></g></svg>
-                <div class="option-card-title">Metalico</div>
+                <div class="option-card-title">Metálico</div>
               </div>
               <div class="option-card" data-value="laje">
                 <svg viewBox="0 0 60 40" fill="none" style="width:100%;height:auto;margin-bottom:8px"><rect x="5" y="15" width="50" height="20" fill="#6b7280" opacity="0.7"/><rect x="5" y="15" width="50" height="3" fill="#9ca3af" opacity="0.5"/></svg>
@@ -170,7 +170,7 @@ function render(data, T) {
           </div>
           <div class="grid grid-2">
             <div class="field">
-              <label class="label">Area aproximada (m²)</label>
+              <label class="label">Área aproximada (m²)</label>
               <input type="number" class="input" id="sim-area" placeholder="30" value="30">
             </div>
             <div class="field">
@@ -210,8 +210,8 @@ function render(data, T) {
             </div>
             <div class="option-card" data-value="independencia">
               <div class="option-card-icon">${T.ICONS.bolt}</div>
-              <div class="option-card-title">Independencia</div>
-              <div class="option-card-desc">Maxima geração</div>
+              <div class="option-card-title">Independência</div>
+              <div class="option-card-desc">Máxima geração</div>
             </div>
             <div class="option-card" data-value="elétrico">
               <div class="option-card-icon">${T.ICONS.bolt}</div>
@@ -263,7 +263,7 @@ function render(data, T) {
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Módulos</span><strong>10 x 550W</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Inversor</span><strong>5 kW</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Strings</span><strong>2</strong></div>
-                  <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0"><span class="text-secondary">Area estimada</span><strong>~26 m2</strong></div>
+                  <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0"><span class="text-secondary">Área estimada</span><strong>~26 m2</strong></div>
                 </div>
               </div>
             </div>
@@ -298,12 +298,12 @@ function render(data, T) {
           <div class="result-cards">
             <div class="result-card"><div class="val">650 kWh</div><div class="lbl">geração mensal</div></div>
             <div class="result-card"><div class="val">7.800 kWh</div><div class="lbl">geração anual</div></div>
-            <div class="result-card"><div class="val">${T.formatBRL(480)}</div><div class="lbl">Economia/mes</div></div>
+            <div class="result-card"><div class="val">${T.formatBRL(480)}</div><div class="lbl">Economia/mês</div></div>
             <div class="result-card"><div class="val">${T.formatBRL(5760)}</div><div class="lbl">Economia/ano</div></div>
             <div class="result-card"><div class="val">4,8 anos</div><div class="lbl">Payback estimado</div></div>
             <div class="result-card"><div class="val">5,2 t/ano</div><div class="lbl">CO2 evitado</div></div>
             <div class="result-card"><div class="val">10</div><div class="lbl">Módulos</div></div>
-            <div class="result-card"><div class="val">26 m2</div><div class="lbl">Area necessária</div></div>
+            <div class="result-card"><div class="val">26 m2</div><div class="lbl">Área necessária</div></div>
           </div>
 
           <!-- Gráfico premium geração vs consumo -->
@@ -315,7 +315,7 @@ function render(data, T) {
                 <span class="chart-legend-item"><span class="chart-legend-dot" style="background:#3b82f6;opacity:0.5"></span> Consumo</span>
               </span>
             </h3>
-            ${T.areaChart(genData, { width: 600, height: 220, color: '#f59e0b', color2: '#3b82f6', estimated: consData, labels: monthLabels, id: 'result-gen', label: 'kWh/mes' })}
+            ${T.areaChart(genData, { width: 600, height: 220, color: '#f59e0b', color2: '#3b82f6', estimated: consData, labels: monthLabels, id: 'result-gen', label: 'kWh/mês' })}
             <p class="text-xs text-muted mt-4">Linha laranja: geração estimada. Linha azul tracejada: consumo médio. Dados demonstrativos.</p>
           </div>
 
@@ -362,7 +362,7 @@ function render(data, T) {
           </div>
 
           <div class="card card-glow text-center mt-6">
-            <h3 style="margin-bottom: var(--space-3)">Proximos passos</h3>
+            <h3 style="margin-bottom: var(--space-3)">Próximos passos</h3>
             <p class="text-secondary mb-6">Compare sistemas, veja cenários financeiros ou crie um projeto demonstrativo.</p>
             <div class="hero-cta" style="justify-content:center">
               <a href="comparador.html" class="btn btn-primary">${T.ICONS.chart} Comparar sistemas</a>

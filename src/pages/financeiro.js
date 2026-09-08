@@ -8,7 +8,7 @@ function render(data, T) {
   const content = `<section class="section">
   <div class="container">
     ${T.renderBreadcrumb(bcItems)}
-    ${T.pageHero('Comparador de Aquisicao', 'Compare formas de aquisicao — cenários demonstrativos', { icon: T.ICONS.cash })}
+    ${T.pageHero('Comparador de Aquisição', 'Compare formas de aquisição — cenários demonstrativos', { icon: T.ICONS.cash })}
 
     <div class="grid grid-3 mb-6">
       ${financial.map(f => `
@@ -18,7 +18,7 @@ function render(data, T) {
         <p class="text-sm text-muted mt-2">${T.escapeHtml(f.description)}</p>
         ${f.investment > 0 ? '<div class="kpi-value text-solar mt-4">' + T.formatBRL(f.investment) + '</div><div class="kpi-label">Investimento demo</div>' : '<div class="kpi-value text-solar mt-4">R$ 0</div><div class="kpi-label">Sem investimento inicial</div>'}
         ${f.payback ? '<p class="text-sm mt-3">Payback: <strong>' + f.payback + ' anos</strong></p>' : '<p class="text-sm mt-3">Sem payback definido</p>'}
-        <p class="text-sm text-secondary mt-2">Economia/mes: <strong>${T.formatBRL(f.monthlySavings)}</strong></p>
+        <p class="text-sm text-secondary mt-2">Economia/mês: <strong>${T.formatBRL(f.monthlySavings)}</strong></p>
       </div>`).join('')}
     </div>
 

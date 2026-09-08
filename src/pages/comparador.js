@@ -38,7 +38,7 @@ function render(data, T) {
           <tr><td>Potência</td>${systems.map(s => '<td>' + s.power + ' kWp</td>').join('')}</tr>
           <tr><td>Módulos (550W)</td>${systems.map(s => '<td>' + s.panels + '</td>').join('')}</tr>
           <tr><td>Inversor</td>${systems.map(s => '<td>' + s.inverter + ' kW</td>').join('')}</tr>
-          <tr><td>Area necessária</td>${systems.map(s => '<td>' + s.area + ' m²</td>').join('')}</tr>
+          <tr><td>Área necessária</td>${systems.map(s => '<td>' + s.area + ' m²</td>').join('')}</tr>
           <tr><td>geração mensal</td>${systems.map(s => '<td>' + s.gen + ' kWh</td>').join('')}</tr>
           <tr><td>geração anual</td>${systems.map(s => '<td>' + s.genYear.toLocaleString('pt-BR') + ' kWh</td>').join('')}</tr>
           <tr><td>Cobertura do consumo</td>${systems.map(s => '<td>' + s.coverage + '</td>').join('')}</tr>

@@ -30,6 +30,15 @@ const pageFiles = fs.readdirSync(pageDir).filter(f => f.endsWith('.js'));
 const renderers = pageFiles.map(f => require(path.join(pageDir, f)));
 
 /* ---------- Gerar sitemap ---------- */
+function minifyHtml(html) {
+  return html
+    .replace(/>\s+</g, '><')
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/\n\s*/g, ' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
 function generateSitemap(pages, data) {
   const base = data.store.url.replace(/\/$/, '');
   const today = new Date().toISOString().split('T')[0];
@@ -66,12 +75,12 @@ async function build() {
     const pages = renderer.render(data, T);
     if (Array.isArray(pages)) {
       pages.forEach(p => {
-        fs.writeFileSync(path.join(OUT, p.filename), p.html);
+        fs.writeFileSync(path.join(OUT, p.filename), minifyHtml(p.html));
         console.log('  \u2713 ' + p.filename);
         allPages.push(p);
       });
     } else if (pages) {
-      fs.writeFileSync(path.join(OUT, pages.filename), pages.html);
+      fs.writeFileSync(path.join(OUT, pages.filename), minifyHtml(pages.html));
       console.log('  \u2713 ' + pages.filename);
       allPages.push(pages);
     }
@@ -107,8 +116,8 @@ async function build() {
   if (!fs.existsSync(ogDir)) fs.mkdirSync(ogDir, { recursive: true });
   const ogPages = [
     { file: 'home.svg', title: 'Energia Solar', subtitle: 'Simulador e Monitoramento' },
-    { file: 'simulador.svg', title: 'Simulador Solar', subtitle: '6 etapas — kWp, geracao e economia' },
-    { file: 'monitoramento.svg', title: 'Monitoramento', subtitle: 'Dashboard energetico em tempo real' },
+    { file: 'simulador.svg', title: 'Simulador Solar', subtitle: '6 etapas — kWp, geração e economia' },
+    { file: 'monitoramento.svg', title: 'Monitoramento', subtitle: 'Dashboard energético em tempo real' },
     { file: 'projetos.svg', title: 'Projetos', subtitle: 'Cases demonstrativos de energia solar' }
   ];
   ogPages.forEach(p => {

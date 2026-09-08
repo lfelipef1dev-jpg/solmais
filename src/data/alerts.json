@@ -6,7 +6,7 @@
     "type": "inversor-offline",
     "severity": "alto",
     "title": "Inversor offline",
-    "description": "comunicação interrompida — inversor offline ha 2h 15min",
+    "description": "comunicação interrompida — inversor offline há 2h 15min",
     "createdAt": "2026-09-01 06:30",
     "status": "aberto",
     "actions": ["Ver sistema", "Criar chamado", "Marcar resolvido"]
@@ -30,7 +30,7 @@
     "type": "comunicação-restaurada",
     "severity": "info",
     "title": "comunicação restaurada",
-    "description": "Sistema SOL-4821 voltou a comunicar normalmente apos reinicializacao",
+    "description": "Sistema SOL-4821 voltou a comunicar normalmente após reinicialização",
     "createdAt": "2026-08-28 10:15",
     "status": "resolvido",
     "actions": ["Ver sistema"]

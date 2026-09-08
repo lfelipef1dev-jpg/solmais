@@ -34,7 +34,7 @@ function render(data, T) {
 
     <div class="card mb-4"><h3>1. Natureza do servico</h3><p class="text-secondary mt-2">O SolMais e uma plataforma demonstrativa. não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.</p></div>
     <div class="card mb-4"><h3>2. Dados fictícios</h3><p class="text-secondary mt-2">Todos os clientes, sistemas, projetos, métricas, valores, documentos e localizações são fictícios e identificados como demonstrativos.</p></div>
-    <div class="card mb-4"><h3>3. não e aconselhamento</h3><p class="text-secondary mt-2">O conteudo desta plataforma não constitui aconselhamento regulatorio, financeiro, jurídico ou técnico. Consulte profissionais qualificados para projetos reais.</p></div>
+    <div class="card mb-4"><h3>3. não é aconselhamento</h3><p class="text-secondary mt-2">O conteúdo desta plataforma não constitui aconselhamento regulatório, financeiro, jurídico ou técnico. Consulte profissionais qualificados para projetos reais.</p></div>
     <div class="card mb-4"><h3>4. Limitacao de responsabilidade</h3><p class="text-secondary mt-2">O SolMais não se responsabiliza por decisoes tomadas com base nos dados demonstrativos apresentados.</p></div>
     <div class="card mb-4"><h3>5. Marco legal</h3><p class="text-secondary mt-2">As informações sobre compensação de energia e modalidades de GD seguem a Lei 14.300 e as regras vigentes do SCEE/MMGD. Consulte a ANEEL para detalhes atualizados.</p></div>
   </div>

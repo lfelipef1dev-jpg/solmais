@@ -15,7 +15,7 @@ function render(data, T) {
   <div class="sm-hero-overlay">
     <div class="sm-hero-content">
       <h1 class="sm-hero-title">Sua energia.<br><span class="accent">Projetada</span> para você.</h1>
-      <p class="sm-hero-sub">Simule, acompanhe e monitore seu sistema solar em uma unica plataforma.</p>
+      <p class="sm-hero-sub">Simule, acompanhe e monitore seu sistema solar em uma única plataforma.</p>
       <a href="simulador.html" class="sm-hero-cta">Simular meu sistema &rarr;</a>
       <div class="sm-hero-meta">
         <div class="sm-hero-meta-item">
@@ -23,7 +23,7 @@ function render(data, T) {
           <div class="sm-hero-meta-label">Sistema demonstrativo</div>
         </div>
         <div class="sm-hero-meta-item">
-          <div class="sm-hero-meta-value">650 kWh/mes</div>
+          <div class="sm-hero-meta-value">650 kWh/mês</div>
           <div class="sm-hero-meta-label">geração estimada</div>
         </div>
         <div class="sm-hero-meta-item">
@@ -41,8 +41,8 @@ function render(data, T) {
     <div class="sm-product-text">
       <span class="sm-eyebrow">A plataforma</span>
       <h2 class="sm-headline">Do telhado<br>aos dados.</h2>
-      <p class="sm-lede">O SolMais une modelagem do telhado, dimensionamento do sistema, acompanhamento do projeto e monitoramento energético em uma so interface. não e um site de empresa solar. E software de energia.</p>
-      <a href="projeto.html" class="sm-hero-cta">Ver produto em acao &rarr;</a>
+      <p class="sm-lede">O SolMais une modelagem do telhado, dimensionamento do sistema, acompanhamento do projeto e monitoramento energético em uma só interface. Não é um site de empresa solar. É software de energia.</p>
+      <a href="projeto.html" class="sm-hero-cta">Ver produto em ação &rarr;</a>
     </div>
     <div class="sm-product-visual">
       <div class="digital-twin-wrap">
@@ -52,7 +52,7 @@ function render(data, T) {
         <div class="sm-float-ui-title">Sistema</div>
         <div class="sm-float-ui-row"><span class="sm-float-ui-label">Potência</span><span class="sm-float-ui-value">5,5 kWp</span></div>
         <div class="sm-float-ui-row"><span class="sm-float-ui-label">Módulos</span><span class="sm-float-ui-value">10</span></div>
-        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Area</span><span class="sm-float-ui-value">26 m²</span></div>
+        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Área</span><span class="sm-float-ui-value">26 m²</span></div>
       </div>
       <div class="sm-float-ui sm-float-ui-bl">
         <div class="sm-float-ui-title">geração estimada</div>
@@ -157,7 +157,7 @@ function render(data, T) {
           <span class="sm-monitor-side-value">584 kWh</span>
         </div>
         <div class="sm-monitor-side-row">
-          <span class="sm-monitor-side-label">Economia/mes</span>
+          <span class="sm-monitor-side-label">Economia/mês</span>
           <span class="sm-monitor-side-value" style="color:var(--solar-dark)">R$ 480</span>
         </div>
         <div class="sm-monitor-side-row">
@@ -202,7 +202,7 @@ function render(data, T) {
   const cta = `<section class="sm-cta">
   <div class="sm-cta-inner">
     <h2 class="sm-headline dark">Pronto para<br>simular?</h2>
-    <p class="sm-lede dark">Faca uma simulação completa em 6 etapas e veja o resultado com gráficos, comparador e cenários financeiros.</p>
+    <p class="sm-lede dark">Faça uma simulação completa em 6 etapas e veja o resultado com gráficos, comparador e cenários financeiros.</p>
     <a href="simulador.html" class="sm-hero-cta">Iniciar simulação &rarr;</a>
     <p style="font-size:var(--fs-xs);color:var(--text-dark-secondary);margin-top:var(--space-5)">Plataforma demonstrativa — todos os dados são fictícios</p>
   </div>
@@ -221,7 +221,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data,
       title: 'Energia Solar: Simulador e Monitoramento',
-      description: 'Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geração e economia estimadas e acompanhe o projeto ate o monitoramento.',
+      description: 'Plataforma digital de energia solar fotovoltaica. Simule seu sistema em 6 etapas, veja geração e economia estimadas e acompanhe o projeto até o monitoramento.',
       canonical: '/',
       active: 'index',
       structuredData: graphSchema,
