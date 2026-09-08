@@ -375,8 +375,7 @@ function render(data, T) {
       </div>
 
       <div class="wizard-nav">
-        <button class="btn btn-secondary" id="wizard-prev" onclick="SolMais.wizardPrev()" disabled>Voltar</button><span style="width:var(--space-2);display:inline-block"></span>
-        <button class="btn btn-primary" id="wizard-next" onclick="SolMais.wizardNext()">Próximo ${T.ICONS.arrow}</button>
+        <button class="btn btn-secondary" id="wizard-prev" onclick="SolMais.wizardPrev()" disabled>Voltar</button>&nbsp;<button class="btn btn-primary" id="wizard-next" onclick="SolMais.wizardNext()">Próximo ${T.ICONS.arrow}</button>
       </div>
     </div>
   </div>
