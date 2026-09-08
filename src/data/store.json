@@ -13,7 +13,7 @@
     "https://expostacker.com.br",
     "https://github.com/lfelipef1dev-jpg/solmais"
   ],
-  "demoNotice": "Plataforma demonstrativa — todos os dados são fictícios. não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.",
+  "demoNotice": "Plataforma demonstrativa — todos os dados são fictícios. não constitui proposta comercial, projeto elétrico, orçamento, oferta de Crédito ou garantia de economia.",
   "nav": [
     { "label": "Início", "href": "index.html", "slug": "index" },
     { "label": "Simulador", "href": "simulador.html", "slug": "simulador" },
