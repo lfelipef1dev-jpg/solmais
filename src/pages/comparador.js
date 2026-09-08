@@ -35,7 +35,7 @@ function render(data, T) {
             <th>Caracteristica</th>
             ${systems.map(s => '<th' + (s.recommended ? ' class="recommended"' : '') + '>' + s.name + '</th>').join('')}
           </tr>
-          <tr><td>Potencia</td>${systems.map(s => '<td>' + s.power + ' kWp</td>').join('')}</tr>
+          <tr><td>Potência</td>${systems.map(s => '<td>' + s.power + ' kWp</td>').join('')}</tr>
           <tr><td>Módulos (550W)</td>${systems.map(s => '<td>' + s.panels + '</td>').join('')}</tr>
           <tr><td>Inversor</td>${systems.map(s => '<td>' + s.inverter + ' kW</td>').join('')}</tr>
           <tr><td>Area necessária</td>${systems.map(s => '<td>' + s.area + ' m²</td>').join('')}</tr>
@@ -44,7 +44,7 @@ function render(data, T) {
           <tr><td>Cobertura do consumo</td>${systems.map(s => '<td>' + s.coverage + '</td>').join('')}</tr>
           <tr><td>Investimento demo</td>${systems.map(s => '<td>' + T.formatBRL(s.invest) + '</td>').join('')}</tr>
           <tr><td>Payback estimado</td>${systems.map(s => '<td>' + s.payback + ' anos</td>').join('')}</tr>
-          <tr><td>Producao 25 anos</td>${systems.map(s => '<td>' + (s.prod25/1000).toFixed(0) + ' MWh</td>').join('')}</tr>
+          <tr><td>Produção 25 anos</td>${systems.map(s => '<td>' + (s.prod25/1000).toFixed(0) + ' MWh</td>').join('')}</tr>
         </table>
       </div>
       <p class="text-xs text-muted mt-4">Cenários demonstrativos — não constituem proposta comercial ou orcamento.</p>
@@ -56,7 +56,7 @@ function render(data, T) {
     filename: 'comparador.html', slug: 'comparador', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Comparador de Sistemas Solares',
-      description: 'Compare tres configuracoes de sistemas solares: econômico, recomendado e performance. Veja potencia, módulos, geração, cobertura, area, investimento e payback.',
+      description: 'Compare tres configuracoes de sistemas solares: econômico, recomendado e performance. Veja potência, módulos, geração, cobertura, area, investimento e payback.',
       canonical: '/comparador.html', active: 'simulador',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

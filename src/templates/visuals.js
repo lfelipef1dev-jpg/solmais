@@ -1,7 +1,7 @@
 /* SolMais — Sistema Visual 3.0
    DIRECAO DE ARTE: PREMIUM ENERGY-TECH + DIGITAL TWIN + ARCHITECTURAL
 
-   Elemento proprietario: DIGITAL TWIN
+   Elemento proprietário: DIGITAL TWIN
    A mesma casa isometrica premium reaparece em simulação, Resultado,
    Projeto e Monitoramento — criando identidade visual reconhecivel.
 
@@ -21,7 +21,7 @@ function escapeHtml(s) {
 
 /* ================================================================
    1. DIGITAL TWIN — Casa isometrica premium reutilizavel
-   O elemento proprietario do SolMais. Aparece em:
+   O elemento proprietário do SolMais. Aparece em:
    - Home (hero)
    - Simulador (resultado)
    - Projeto (showcase)
@@ -207,7 +207,7 @@ function digitalTwin(opts) {
     ${generating ? '<animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>' : ''}
   </circle>
 
-  <!-- Linha de conexao painel -> inversor (sutil) -->
+  <!-- Linha de conexão painel -> inversor (sutil) -->
   <path d="M ${w*0.35} ${h*0.42} L ${w*0.56} ${h*0.60}" stroke="${C.accent}" stroke-width="0.8" opacity="0.3" stroke-dasharray="2,2"/>
 
   <!-- ===== FLUXO ENERGETICO ANIMADO ===== -->
@@ -505,7 +505,7 @@ function equipmentRender(type, opts) {
       <!-- Brilho -->
       <rect x="4" y="4" width="192" height="132" rx="1" fill="url(#${id}-sheen)"/>
     </g>
-    <!-- Caixa de conexao (back) -->
+    <!-- Caixa de conexão (back) -->
     <rect x="135" y="175" width="30" height="12" rx="1" fill="#1e2330" stroke="#4b5563" stroke-width="0.5"/>
     <circle cx="150" cy="181" r="2" fill="#f59e0b" opacity="0.6"/>
     <!-- Label -->
@@ -560,7 +560,7 @@ function equipmentRender(type, opts) {
   }
 
   if (type === 'protection') {
-    return `<svg class="equipment-render-svg" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SolMais Protection Box - quadro de protecao">
+    return `<svg class="equipment-render-svg" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SolMais Protection Box - quadro de proteção">
     <defs>
       <linearGradient id="${id}-bg" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#1a1f2e"/>
@@ -830,7 +830,7 @@ function caseHero(type, opts) {
   const themes = {
     residencial: { sky: ['#0a0f1a', '#141d2e'], building: 'house', accent: '#f59e0b' },
     comercial: { sky: ['#0d1117', '#1a1f2e'], building: 'commercial', accent: '#f59e0b' },
-    condominio: { sky: ['#0a1520', '#162030'], building: 'condo', accent: '#f59e0b' },
+    condomínio: { sky: ['#0a1520', '#162030'], building: 'condo', accent: '#f59e0b' },
     rural: { sky: ['#0f1a0f', '#1a2a1a'], building: 'rural', accent: '#f59e0b' },
     galpao: { sky: ['#1a1a0d', '#2a2a15'], building: 'warehouse', accent: '#f59e0b' },
     compacto: { sky: ['#0d0f1a', '#161a2e'], building: 'compact', accent: '#f59e0b' }
@@ -866,9 +866,9 @@ function caseHero(type, opts) {
       ${Array.from({length: 6}).map((_, r) => Array.from({length: 5}).map((_, c) =>
         `<rect x="${300*0.18 + c*22}" y="${200*0.22 + r*16}" width="16" height="10" fill="rgba(96,165,250,0.15)" stroke="#1e2330" stroke-width="0.3"/>`
       ).join('')).join('')}`;
-  } else if (type === 'condominio') {
+  } else if (type === 'condomínio') {
     building = `
-      <!-- Condominio (3 torres) -->
+      <!-- Condomínio (3 torres) -->
       ${[0, 1, 2].map(i => {
         const x = 300*0.15 + i * 300*0.18;
         const hh = 200*0.5 - i * 200*0.05;
@@ -957,7 +957,7 @@ function caseHero(type, opts) {
     <span class="case-hero-badge">PROJETO DEMONSTRATIVO</span>
     <h1 class="case-hero-title">${escapeHtml(title)}</h1>
     <div class="case-hero-stats">
-      <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(power)}</span><span class="case-hero-stat-label">Potencia</span></div>
+      <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(power)}</span><span class="case-hero-stat-label">Potência</span></div>
       <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(modules)}</span><span class="case-hero-stat-label">Módulos</span></div>
       <div class="case-hero-stat"><span class="case-hero-stat-value">${escapeHtml(annual)}</span><span class="case-hero-stat-label">geração anual</span></div>
     </div>
@@ -976,7 +976,7 @@ function mapDemo(opts) {
   const pins = systems.map((s, i) => {
     const x = 60 + (i % 4) * 100 + Math.random() * 30;
     const y = 50 + Math.floor(i / 4) * 80 + Math.random() * 20;
-    const color = s.health && s.health.system === 'normal' ? '#22c55e' : s.health && s.health.system === 'atencao' ? '#f59e0b' : '#ef4444';
+    const color = s.health && s.health.system === 'normal' ? '#22c55e' : s.health && s.health.system === 'atenção' ? '#f59e0b' : '#ef4444';
     return `<g class="map-pin" transform="translate(${x} ${y})">
       <circle r="12" fill="${color}" opacity="0.15"><animate attributeName="r" values="12;18;12" dur="3s" repeatCount="indefinite" begin="${i*0.3}s"/></circle>
       <circle r="6" fill="${color}"/>
@@ -1003,7 +1003,7 @@ function mapDemo(opts) {
   <!-- Legenda -->
   <g transform="translate(20 250)">
     <circle cx="0" cy="0" r="4" fill="#22c55e"/><text x="10" y="3" fill="#94a3b8" font-size="8">Normal</text>
-    <circle cx="60" cy="0" r="4" fill="#f59e0b"/><text x="70" y="3" fill="#94a3b8" font-size="8">Atencao</text>
+    <circle cx="60" cy="0" r="4" fill="#f59e0b"/><text x="70" y="3" fill="#94a3b8" font-size="8">Atenção</text>
     <circle cx="130" cy="0" r="4" fill="#ef4444"/><text x="140" y="3" fill="#94a3b8" font-size="8">Alerta</text>
   </g>
 </svg>`;

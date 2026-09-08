@@ -41,14 +41,14 @@ function render(data, T) {
           <div style="width:24px;height:24px;border-radius:50%;background:var(--sm-blue);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700">03</div>
           <h4 style="font-size:var(--fs-sm)">Quadro</h4>
         </div>
-        <p class="text-sm text-muted">Protecao CC/CA</p>
+        <p class="text-sm text-muted">Proteção CC/CA</p>
       </div>
       <div class="kpi-premium">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:var(--space-2)">
           <div style="width:24px;height:24px;border-radius:50%;background:var(--sm-green);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700">04</div>
           <h4 style="font-size:var(--fs-sm)">Rede</h4>
         </div>
-        <p class="text-sm text-muted">Conexao distribuidora</p>
+        <p class="text-sm text-muted">Conexão distribuidora</p>
       </div>
     </div>
   </div>
@@ -98,7 +98,7 @@ function render(data, T) {
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">${sys.area} m²</div><div class="kpi-label">Area utilizada</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">48 m²</div><div class="kpi-label">Área disponível</div></div>
           <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">Norte</div><div class="kpi-label">orientação</div></div>
-          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">15°</div><div class="kpi-label">Inclinacao</div></div>
+          <div class="kpi-premium"><div class="kpi-value" style="font-size:var(--fs-lg)">15°</div><div class="kpi-label">Inclinação</div></div>
         </div>
       </div>
       <div class="roof-cad-wrap">
@@ -160,7 +160,7 @@ function render(data, T) {
         <h3>Dimensionamento</h3>
         <table class="data-table">
           <tr><th>Parametro</th><th>Valor</th></tr>
-          <tr><td>Potencia nominal</td><td>${sys.power} kWp</td></tr>
+          <tr><td>Potência nominal</td><td>${sys.power} kWp</td></tr>
           <tr><td>Módulos</td><td>${sys.panels} × 550 Wp</td></tr>
           <tr><td>Inversor</td><td>${sys.inverterPower} kW</td></tr>
           <tr><td>Area</td><td>${sys.area} m²</td></tr>

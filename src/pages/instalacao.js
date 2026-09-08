@@ -12,7 +12,7 @@ function render(data, T) {
     { item: 'Cabeamento CC e CA', done: true },
     { item: 'proteções (DC, AC, SPDA)', done: true },
     { item: 'Testes de comunicação', done: true },
-    { item: 'Ligacao e energizacao', done: true },
+    { item: 'Ligação e energizacao', done: true },
     { item: 'Fotos demonstrativas', done: true }
   ];
 
@@ -57,7 +57,7 @@ function render(data, T) {
         <div class="digital-twin-wrap" style="border-radius:12px;overflow:hidden">
           ${T.digitalTwin({ panels: 10, id: 'inst-twin', width: 300, height: 200, generating: true, showFlow: true })}
           <div style="padding:var(--space-3);background:var(--sm-charcoal)">
-            <div class="equipment-card-name">05. Sistema concluido</div>
+            <div class="equipment-card-name">05. Sistema concluído</div>
             <div class="equipment-card-spec">Energizacao e homologação</div>
           </div>
         </div>
@@ -80,7 +80,7 @@ function render(data, T) {
           </div>
         </div>`).join('')}
       </div>
-      <p class="text-xs text-muted mt-4">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexao previstas na regulamentacao vigente.</p>
+      <p class="text-xs text-muted mt-4">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexão previstas na regulamentação vigente.</p>
     </div>
 
     <div class="grid grid-2">
@@ -97,14 +97,14 @@ function render(data, T) {
         </div>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: var(--space-4)">homologação e conexao</h3>
+        <h3 style="margin-bottom: var(--space-4)">homologação e conexão</h3>
         <p class="text-sm text-secondary mb-4">O processo de homologação envolve etapas com a distribuidora local:</p>
         <div class="timeline-premium">
-          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Documentacao preparada</h4><p class="timeline-premium-desc">Projeto, memorial e documentos técnicos</p></div></div>
-          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Solicitacao enviada</h4><p class="timeline-premium-desc">Envio a distribuidora</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Documentação preparada</h4><p class="timeline-premium-desc">Projeto, memorial e documentos técnicos</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Solicitação enviada</h4><p class="timeline-premium-desc">Envio a distribuidora</p></div></div>
           <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Análise da distribuidora</h4><p class="timeline-premium-desc">Pode haver pendencias — variavel conforme caso</p></div></div>
-          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Vistoria realizada</h4><p class="timeline-premium-desc">Inspecao tecnica</p></div></div>
-          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Aprovacao/conexao</h4><p class="timeline-premium-desc">Sistema conectado a rede</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Vistoria realizada</h4><p class="timeline-premium-desc">Inspecao técnica</p></div></div>
+          <div class="timeline-premium-item"><div class="timeline-premium-dot done">${T.ICONS.check}</div><div class="timeline-premium-content"><h4>Aprovação/conexão</h4><p class="timeline-premium-desc">Sistema conectado a rede</p></div></div>
         </div>
         <p class="text-xs text-muted mt-4">não prometemos prazo universal — os procedimentos variam conforme distribuidora e caracteristicas do projeto.</p>
       </div>
@@ -115,8 +115,8 @@ function render(data, T) {
   return [{
     filename: 'instalacao.html', slug: 'instalacao', noindex: false,
     html: T.renderLayout({
-      store, data, title: 'instalação e Implantacao Solar',
-      description: 'Timeline de implantacao de energia solar fotovoltaica: simulação, análise tecnica, projeto elétrico, documentacao, instalação, vistoria e sistema conectado.',
+      store, data, title: 'instalação e Implantação Solar',
+      description: 'Timeline de implantação de energia solar fotovoltaica: simulação, análise técnica, projeto elétrico, documentação, instalação, vistoria e sistema conectado.',
       canonical: '/instalacao.html', active: '',
       structuredData: T.renderBreadcrumbSchema(bcItems, store.url), content
     })

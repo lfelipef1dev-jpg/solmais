@@ -44,8 +44,8 @@ function render(data, T) {
                     <option value="santos">Santos/SP</option>
                     <option value="saovicente">São Vicente/SP</option>
                     <option value="praiagrande">Praia Grande/SP</option>
-                    <option value="guaruja">Guaruja/SP</option>
-                    <option value="cubatao">Cubatao/SP</option>
+                    <option value="guaruja">Guarujá/SP</option>
+                    <option value="cubatao">Cubatão/SP</option>
                   </select>
                 </div>
               </div>
@@ -60,9 +60,9 @@ function render(data, T) {
                     <div class="option-card-icon">${T.ICONS.bolt}</div>
                     <div class="option-card-title">Comercial</div>
                   </div>
-                  <div class="option-card" data-value="condominio">
+                  <div class="option-card" data-value="condomínio">
                     <div class="option-card-icon">${T.ICONS.grid}</div>
-                    <div class="option-card-title">Condominio</div>
+                    <div class="option-card-title">Condomínio</div>
                   </div>
                   <div class="option-card" data-value="rural">
                     <div class="option-card-icon">${T.ICONS.leaf}</div>
@@ -74,7 +74,7 @@ function render(data, T) {
             <div>
               <div class="card" style="height:100%">
                 <h4 style="margin-bottom: var(--space-3)">Irradiação solar estimada</h4>
-                ${T.mapDemo({ systems: [{ projectId: 'Santos', health: { system: 'normal' } }, { projectId: 'S.Vicente', health: { system: 'normal' } }, { projectId: 'P.Grande', health: { system: 'atencao' } }, { projectId: 'Guaruja', health: { system: 'normal' } }, { projectId: 'Cubatao', health: { system: 'alerta' } }] })}
+                ${T.mapDemo({ systems: [{ projectId: 'Santos', health: { system: 'normal' } }, { projectId: 'S.Vicente', health: { system: 'normal' } }, { projectId: 'P.Grande', health: { system: 'atenção' } }, { projectId: 'Guarujá', health: { system: 'normal' } }, { projectId: 'Cubatão', health: { system: 'alerta' } }] })}
                 <div class="grid grid-2 mt-4">
                   <div class="kpi-card"><div class="kpi-value text-solar">4,8</div><div class="kpi-label">kWh/m²/dia</div></div>
                   <div class="kpi-card"><div class="kpi-value">1.750</div><div class="kpi-label">h sol/ano</div></div>
@@ -259,7 +259,7 @@ function render(data, T) {
               <div class="card">
                 <h4 class="text-sm text-muted mb-2">Dimensionamento</h4>
                 <div class="data-table" style="font-size: var(--fs-sm)">
-                  <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Potencia instalada</span><strong>5,50 kWp</strong></div>
+                  <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Potência instalada</span><strong>5,50 kWp</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Módulos</span><strong>10 x 550W</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Inversor</span><strong>5 kW</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Strings</span><strong>2</strong></div>

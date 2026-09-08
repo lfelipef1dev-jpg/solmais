@@ -46,7 +46,7 @@ function render(data, T) {
     <div class="admin-kpi-grid">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${projects.length}</div><div class="kpi-label">Projetos ativos</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalação').length}</div><div class="kpi-label">Em instalação</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potencia instalada</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potência instalada</div></div>
       <div class="kpi-card"><div class="kpi-card-icon ${activeAlerts > 0 ? 'warn' : 'gen'}">${T.ICONS.alert}</div><div class="kpi-value">${activeAlerts}</div><div class="kpi-label">Alertas abertos</div></div>
     </div>
 
@@ -56,7 +56,7 @@ function render(data, T) {
         <div class="bar-chart" style="height: 180px">
           ${[
             { label: 'simulação', count: projects.filter(p => p.stage === 'simulação').length },
-            { label: 'Documentacao', count: projects.filter(p => p.stage === 'documentacao').length },
+            { label: 'Documentação', count: projects.filter(p => p.stage === 'documentação').length },
             { label: 'instalação', count: projects.filter(p => p.stage === 'instalação').length },
             { label: 'Monitoramento', count: projects.filter(p => p.stage === 'monitoramento').length }
           ].map(s => {
@@ -86,7 +86,7 @@ function render(data, T) {
         <div>
           <div class="grid grid-3">
             <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'normal').length}</div><div class="kpi-label">Normal</div></div>
-            <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'atencao').length}</div><div class="kpi-label">Atencao</div></div>
+            <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'atenção').length}</div><div class="kpi-label">Atenção</div></div>
             <div class="kpi-card"><div class="kpi-card-icon solar" style="background:rgba(239,68,68,0.1);color:#ef4444">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health?.system === 'alerta').length}</div><div class="kpi-label">Alerta</div></div>
           </div>
           <p class="text-xs text-muted mt-4">Localizações demonstrativas — status simulado</p>
@@ -129,7 +129,7 @@ function render(data, T) {
   /* ----- Pipeline (Kanban) ----- */
   const stages = [
     { id: 'simulação', label: 'simulação' },
-    { id: 'documentacao', label: 'Documentacao' },
+    { id: 'documentacao', label: 'Documentação' },
     { id: 'instalação', label: 'instalação' },
     { id: 'monitoramento', label: 'Conectado' }
   ];
@@ -138,7 +138,7 @@ function render(data, T) {
     <p class="text-secondary mb-6">Fluxo de projetos — arraste cards entre colunas (demonstrativo)</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">${projects.filter(p => p.stage === 'simulação').length}</div><div class="kpi-label">simulação</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.doc}</div><div class="kpi-value">${projects.filter(p => p.stage === 'documentacao').length}</div><div class="kpi-label">Documentacao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.doc}</div><div class="kpi-value">${projects.filter(p => p.stage === 'documentação').length}</div><div class="kpi-label">Documentação</div></div>
       <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalação').length}</div><div class="kpi-label">instalação</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Conectado</div></div>
     </div>
@@ -167,11 +167,11 @@ function render(data, T) {
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${projects.length}</div><div class="kpi-label">Total projetos</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${projects.filter(p => p.stage === 'monitoramento').length}</div><div class="kpi-label">Conectados</div></div>
       <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.settings}</div><div class="kpi-value">${projects.filter(p => p.stage === 'instalação').length}</div><div class="kpi-label">Em instalação</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.bolt}</div><div class="kpi-value">${projects.reduce((s,p)=>s+p.power,0)} kWp</div><div class="kpi-label">Potencia total</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.bolt}</div><div class="kpi-value">${projects.reduce((s,p)=>s+p.power,0)} kWp</div><div class="kpi-label">Potência total</div></div>
     </div>
     <div class="card">
       <table class="data-table">
-        <tr><th>ID</th><th>Cliente</th><th>Local</th><th>Potencia</th><th>Estagio</th><th>Status</th></tr>
+        <tr><th>ID</th><th>Cliente</th><th>Local</th><th>Potência</th><th>Estagio</th><th>Status</th></tr>
         ${projects.map(p => `<tr>
           <td><strong>${p.id}</strong></td>
           <td>${T.escapeHtml(p.customerName)}</td>
@@ -197,14 +197,14 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <table class="data-table">
-        <tr><th>Projeto</th><th>Equipe</th><th>Cidade</th><th>Data</th><th>Potencia</th><th>Status</th></tr>
+        <tr><th>Projeto</th><th>Equipe</th><th>Cidade</th><th>Data</th><th>Potência</th><th>Status</th></tr>
         ${projects.filter(p => p.installedAt).map((p, i) => `<tr>
           <td><strong>${p.id}</strong></td>
           <td>Equipe ${['A', 'B', 'A', 'C', 'B'][i % 5]}</td>
           <td>${T.escapeHtml(p.location)}</td>
           <td>${p.installedAt}</td>
           <td>${p.power} kWp</td>
-          <td><span class="badge ${p.stage === 'monitoramento' ? 'badge-success' : 'badge-warn'}">${p.stage === 'monitoramento' ? 'Concluida' : 'Em andamento'}</span></td>
+          <td><span class="badge ${p.stage === 'monitoramento' ? 'badge-success' : 'badge-warn'}">${p.stage === 'monitoramento' ? 'Concluída' : 'Em andamento'}</span></td>
         </tr>`).join('')}
       </table>
     </div>
@@ -224,9 +224,9 @@ function render(data, T) {
     <p class="text-secondary mb-6">Monitoramento da frota — ${systems.length} sistemas demonstrativos</p>
     <div class="admin-kpi-grid mb-6">
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.check}</div><div class="kpi-value">${systems.filter(s => s.health.system === 'normal').length}</div><div class="kpi-label">Normais</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health.system === 'atencao').length}</div><div class="kpi-label">Atencao</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon warn">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health.system === 'atenção').length}</div><div class="kpi-label">Atenção</div></div>
       <div class="kpi-card"><div class="kpi-card-icon warn" style="background:var(--danger-soft);color:var(--danger)">${T.ICONS.alert}</div><div class="kpi-value">${systems.filter(s => s.health.system === 'alerta').length}</div><div class="kpi-label">Alerta</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potencia total</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potência total</div></div>
     </div>
 
     <!-- Cards visuais de sistemas -->
@@ -238,7 +238,7 @@ function render(data, T) {
             <h4 style="margin-bottom:var(--space-1)">${s.projectId}</h4>
             <p class="text-xs text-muted">${T.escapeHtml(s.customerName)} — ${T.escapeHtml(s.location)}</p>
           </div>
-          <span class="status-dot ${s.health.system === 'normal' ? 'normal' : s.health.system === 'atencao' ? 'atencao' : 'alerta'}"></span>
+          <span class="status-dot ${s.health.system === 'normal' ? 'normal' : s.health.system === 'atenção' ? 'atenção' : 'alerta'}"></span>
         </div>
         ${T.digitalTwin({ panels: s.panels, id: 'admin-sys-' + s.projectId, width: 280, height: 200, generating: s.health.system === 'normal' })}
         <div class="grid grid-2 mt-3">
@@ -250,14 +250,14 @@ function render(data, T) {
 
     <div class="card">
       <table class="data-table">
-        <tr><th>Sistema</th><th>Cliente</th><th>Local</th><th>Potencia</th><th>geração hoje</th><th>Status</th><th>Ultima comun.</th></tr>
+        <tr><th>Sistema</th><th>Cliente</th><th>Local</th><th>Potência</th><th>geração hoje</th><th>Status</th><th>Ultima comun.</th></tr>
         ${systems.map(s => `<tr>
           <td><strong>${s.projectId}</strong></td>
           <td>${T.escapeHtml(s.customerName)}</td>
           <td>${T.escapeHtml(s.location)}</td>
           <td>${s.power} kWp</td>
           <td>${s.production.today} kWh</td>
-          <td><span class="status-dot ${s.health.system === 'normal' ? 'normal' : s.health.system === 'atencao' ? 'atencao' : 'alerta'}"></span> ${s.health.system}</td>
+          <td><span class="status-dot ${s.health.system === 'normal' ? 'normal' : s.health.system === 'atenção' ? 'atenção' : 'alerta'}"></span> ${s.health.system}</td>
           <td>${s.health.lastUpdate}</td>
         </tr>`).join('')}
       </table>
@@ -310,7 +310,7 @@ function render(data, T) {
     </div>
     <div class="card">
       <table class="data-table">
-        <tr><th>ID</th><th>Sistema</th><th>Tipo</th><th>Severidade</th><th>Descricao</th><th>Status</th><th>Acoes</th></tr>
+        <tr><th>ID</th><th>Sistema</th><th>Tipo</th><th>Severidade</th><th>Descrição</th><th>Status</th><th>Acoes</th></tr>
         ${alerts.map(a => `<tr>
           <td><strong>${a.id}</strong></td>
           <td>${a.projectId}</td>
@@ -412,7 +412,7 @@ function render(data, T) {
       <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.bolt}</div><div class="kpi-value">142</div><div class="kpi-label">Simulacoes (mes)</div></div>
       <div class="kpi-card"><div class="kpi-card-icon gen">${T.ICONS.chart}</div><div class="kpi-value">38%</div><div class="kpi-label">Conversao</div></div>
       <div class="kpi-card"><div class="kpi-card-icon info">${T.ICONS.cash}</div><div class="kpi-value">${T.formatBRL(32000)}</div><div class="kpi-label">Ticket demo</div></div>
-      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potencia projetada</div></div>
+      <div class="kpi-card"><div class="kpi-card-icon solar">${T.ICONS.panel}</div><div class="kpi-value">${totalPower} kWp</div><div class="kpi-label">Potência projetada</div></div>
     </div>
     <div class="grid grid-2 mb-6">
       <div class="chart-premium">
@@ -447,12 +447,12 @@ function render(data, T) {
     <div class="card mt-6">
       <h3 style="margin-bottom: var(--space-4)">Distribuição por região</h3>
       <table class="data-table">
-        <tr><th>Região</th><th>Projetos</th><th>Potencia</th><th>% do total</th></tr>
+        <tr><th>Região</th><th>Projetos</th><th>Potência</th><th>% do total</th></tr>
         <tr><td>Santos</td><td>2</td><td>9,9 kWp</td><td>15%</td></tr>
         <tr><td>São Vicente</td><td>1</td><td>18 kWp</td><td>27%</td></tr>
         <tr><td>Praia Grande</td><td>1</td><td>35 kWp</td><td>53%</td></tr>
-        <tr><td>Guaruja</td><td>1</td><td>6,6 kWp</td><td>10%</td></tr>
-        <tr><td>Cubatao</td><td>1</td><td>4,4 kWp</td><td>7%</td></tr>
+        <tr><td>Guarujá</td><td>1</td><td>6,6 kWp</td><td>10%</td></tr>
+        <tr><td>Cubatão</td><td>1</td><td>4,4 kWp</td><td>7%</td></tr>
       </table>
     </div>
   `;

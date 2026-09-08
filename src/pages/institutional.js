@@ -78,7 +78,7 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Marco legal — Lei 14.300</h2>
-      <p class="text-secondary">A Lei 14.300/2022 instituiu o marco legal da micro e minigeração distribuída. Para unidades sujeitas a transicao do art. 27, o percentual previsto para 2026 e de 60% sobre as componentes tarifarias especificadas na lei. A ANEEL atualiza periodicamente suas orientacoes sobre as modalidades vigentes.</p>
+      <p class="text-secondary">A Lei 14.300/2022 instituiu o marco legal da micro e minigeração distribuída. Para unidades sujeitas a transição do art. 27, o percentual previsto para 2026 e de 60% sobre as componentes tarifarias especificadas na lei. A ANEEL atualiza periodicamente suas orientacoes sobre as modalidades vigentes.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Importante</h2>
@@ -92,7 +92,7 @@ function render(data, T) {
     html: T.renderLayout({
       store, data, title: 'compensação de Energia — SCEE',
       description: 'Como funciona o sistema de compensação de energia elétrica (SCEE), os créditos de energia e o marco legal da microgeração distribuída (Lei 14.300).',
-      canonical: '/compensacao.html', active: 'conteudo',
+      canonical: '/compensação.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo', href: 'conteudo.html' }, { label: 'compensação' }], store.url),
       content: compContent
     })
@@ -106,10 +106,10 @@ function render(data, T) {
 
     <div class="card mb-6"><h2>Autoconsumo local</h2><p class="text-secondary mt-2">geração e consumo na mesma unidade consumidora. A energia produzida e consumida no proprio imóvel onde o sistema esta instalado.</p></div>
     <div class="card mb-6"><h2>Autoconsumo remoto</h2><p class="text-secondary mt-2">geração em uma unidade e consumo em outra, dentro da mesma area de concessão da distribuidora. Permite instalar módulos fotovoltaicos em um imóvel e abater a conta de outro.</p></div>
-    <div class="card mb-6"><h2>Multiplas unidades consumidoras</h2><p class="text-secondary mt-2">Um unico sistema atende a varias unidades do mesmo titular (ex: condominio). A compensação e distribuída entre as unidades conforme regras especificas.</p></div>
+    <div class="card mb-6"><h2>Multiplas unidades consumidoras</h2><p class="text-secondary mt-2">Um unico sistema atende a varias unidades do mesmo titular (ex: condomínio). A compensação e distribuída entre as unidades conforme regras especificas.</p></div>
     <div class="card mb-6"><h2>geração compartilhada</h2><p class="text-secondary mt-2">Condominios ou grupos de consumidores se unem para investir em um sistema de geração compartilhada. A energia e os créditos são distribuidos entre os participantes.</p></div>
 
-    <p class="text-xs text-muted">Conteúdo informativo — não constitui aconselhamento regulatorio. Consulte a ANEEL e a regulamentacao vigente para detalhes.</p>
+    <p class="text-xs text-muted">Conteúdo informativo — não constitui aconselhamento regulatorio. Consulte a ANEEL e a regulamentação vigente para detalhes.</p>
   </div>
 </section>`;
 
@@ -167,7 +167,7 @@ function render(data, T) {
     filename: 'conteudo.html', slug: 'conteudo', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Central de Conhecimento',
-      description: 'Central de conhecimento sobre energia solar fotovoltaica. Artigos sobre fundamentos, equipamentos, regulamentacao, dimensionamento e manutenção.',
+      description: 'Central de conhecimento sobre energia solar fotovoltaica. Artigos sobre fundamentos, equipamentos, regulamentação, dimensionamento e manutenção.',
       canonical: '/conteudo.html', active: 'conteudo',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Conteúdo' }], store.url),
       content: contContent
@@ -242,7 +242,7 @@ function render(data, T) {
     filename: 'projetos.html', slug: 'projetos', noindex: false,
     html: T.renderLayout({
       store, data, title: 'Projetos Demonstrativos',
-      description: 'Cases demonstrativos de sistemas solares fotovoltaicos: residencial, comercial, condominio e rural. Veja potencia, módulos, geração e payback de cada projeto.',
+      description: 'Cases demonstrativos de sistemas solares fotovoltaicos: residencial, comercial, condomínio e rural. Veja potência, módulos, geração e payback de cada projeto.',
       canonical: '/projetos.html', active: 'projetos',
       ogImage: store.url.replace(/\/$/, '') + '/img/og/projetos.svg',
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Projetos' }], store.url),
@@ -369,7 +369,7 @@ function render(data, T) {
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Para quem</h2>
-      <p class="text-secondary">Para quem quer entender como funciona uma operação solar completa — do primeiro contato ao monitoramento em producao. Para empresas do setor que precisam de uma plataforma digital para sua operação.</p>
+      <p class="text-secondary">Para quem quer entender como funciona uma operação solar completa — do primeiro contato ao monitoramento em produção. Para empresas do setor que precisam de uma plataforma digital para sua operação.</p>
     </div>
     <div class="card mb-6">
       <h2 style="margin-bottom: var(--space-3)">Caracteristicas</h2>
@@ -415,7 +415,7 @@ function render(data, T) {
       </div>
       <div class="field"><label class="label">Assunto</label><input type="text" class="input" placeholder="Assunto"></div>
       <div class="field"><label class="label">Mensagem</label><textarea class="textarea" placeholder="Sua mensagem"></textarea></div>
-      <button class="btn btn-primary" onclick="SolMais.toast('Formulario demonstrativo — mensagens não são enviadas', 'info')">Enviar mensagem</button>
+      <button class="btn btn-primary" onclick="SolMais.toast('Formulário demonstrativo — mensagens não são enviadas', 'info')">Enviar mensagem</button>
     </div>
     <div class="card">
       <p class="text-sm text-secondary">Esta e uma plataforma demonstrativa. não coletamos dados nem atendemos clientes reais. Use o simulador para explorar a experiencia completa.</p>
@@ -426,7 +426,7 @@ function render(data, T) {
   pages.push({
     filename: 'contato.html', slug: 'contato', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Contato', description: 'Entre em contato com a plataforma demonstrativa SolMais. Formulario de contato disponível. Plataforma demo: não atendemos clientes reais nem coletamos dados.',
+      store, data, title: 'Contato', description: 'Entre em contato com a plataforma demonstrativa SolMais. Formulário de contato disponível. Plataforma demo: não atendemos clientes reais nem coletamos dados.',
       canonical: '/contato.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Contato' }], store.url),
       content: contactContent
@@ -439,7 +439,7 @@ function render(data, T) {
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'FAQ' }])}
     ${T.pageHero('Perguntas Frequentes', 'Duvidas comuns sobre energia solar fotovoltaica', { icon: T.ICONS.support })}
     <div class="card mb-4"><h2>Quanto posso economizar?</h2><p class="text-secondary mt-2">Sistemas fotovoltaicos podem reduzir significativamente a energia faturada da rede, mas o resultado depende do perfil de consumo, dimensionamento, tarifa, distribuidora e regras aplicáveis.</p></div>
-    <div class="card mb-4"><h2>Quanto tempo leva a homologação?</h2><p class="text-secondary mt-2">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexao previstas na regulamentacao vigem. não prometemos prazo universal.</p></div>
+    <div class="card mb-4"><h2>Quanto tempo leva a homologação?</h2><p class="text-secondary mt-2">Os prazos variam conforme distribuidora, caracteristicas do projeto e etapas de conexão previstas na regulamentação vigem. não prometemos prazo universal.</p></div>
     <div class="card mb-4"><h2>Qual a garantia dos módulos fotovoltaicos?</h2><p class="text-secondary mt-2">Garantias variam conforme fabricante, modelo e componente. Os períodos apresentados nesta demonstração são ilustrativos.</p></div>
     <div class="card mb-4"><h2>Funciona em dias nublados?</h2><p class="text-secondary mt-2">Sim. Módulos fotovoltaicos fotovoltaicos geram eletricidade com luz difusa, não apenas com sol direto. A geração reduz, mas não para.</p></div>
     <div class="card mb-4"><h2>Os dados são reais?</h2><p class="text-secondary mt-2">não. Todos os clientes, sistemas, projetos, métricas, valores e documentos são fictícios e claramente identificados como demonstrativos.</p></div>

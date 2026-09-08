@@ -50,7 +50,7 @@ function render(data, T) {
       </div>
       <div class="sm-float-ui sm-float-ui-tr">
         <div class="sm-float-ui-title">Sistema</div>
-        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Potencia</span><span class="sm-float-ui-value">5,5 kWp</span></div>
+        <div class="sm-float-ui-row"><span class="sm-float-ui-label">Potência</span><span class="sm-float-ui-value">5,5 kWp</span></div>
         <div class="sm-float-ui-row"><span class="sm-float-ui-label">Módulos</span><span class="sm-float-ui-value">10</span></div>
         <div class="sm-float-ui-row"><span class="sm-float-ui-label">Area</span><span class="sm-float-ui-value">26 m²</span></div>
       </div>

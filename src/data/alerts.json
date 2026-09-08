@@ -17,7 +17,7 @@
     "projectId": "SOL-2091",
     "type": "producao-abaixo",
     "severity": "médio",
-    "title": "Producao 8% abaixo do esperado",
+    "title": "Produção 8% abaixo do esperado",
     "description": "Sistema SOL-2091 gerando abaixo da estimativa — possivel sombreamento",
     "createdAt": "2026-08-31 14:00",
     "status": "aberto",

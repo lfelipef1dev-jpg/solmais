@@ -40,7 +40,7 @@ function render(data, T) {
       </div>
     </div>
 
-    <!-- Numero protagonista -->
+    <!-- Número protagonista -->
     <div class="sm-mon-now-block">
       <div class="sm-mega-number">3,42<span class="unit">kW</span></div>
       <div class="sm-mon-now-label">Gerando agora · ${sys.projectId}</div>
@@ -87,7 +87,7 @@ function render(data, T) {
     <div class="grid grid-4">
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
         <h2 style="color:var(--text-dark)">Performance</h2>
-        ${T.gauge(92, { id: 'g1', label: 'Eficiencia', unit: '%', max: 100, color: '#22c55e', size: 160 })}
+        ${T.gauge(92, { id: 'g1', label: 'Eficiência', unit: '%', max: 100, color: '#22c55e', size: 160 })}
       </div>
       <div class="chart-premium text-center" style="background:var(--surface-dark);border-color:var(--border-dark)">
         <h2 style="color:var(--text-dark)">Irradiação</h2>

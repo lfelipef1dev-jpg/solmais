@@ -17,7 +17,7 @@
     "description": "Entenda as tres unidades mais confundidas no universo solar.",
     "readTime": "3 min",
     "date": "2026-08-16",
-    "content": "kW (quilowatt) e potencia instantanea. kWh (quilowatt-hora) e energia gerada ou consumida ao longo do tempo. kWp (quilowatt-pico) e a potencia nominal do painel em condições padrao de teste. Um sistema de 5,5 kWp pode gerar 650 kWh por mes dependendo da irradiação local."
+    "content": "kW (quilowatt) e potência instantanea. kWh (quilowatt-hora) e energia gerada ou consumida ao longo do tempo. kWp (quilowatt-pico) e a potência nominal do painel em condições padrao de teste. Um sistema de 5,5 kWp pode gerar 650 kWh por mes dependendo da irradiação local."
   },
   {
     "id": "art-03",
@@ -57,7 +57,7 @@
     "description": "Entenda os fatores que determinam o tamanho do seu sistema.",
     "readTime": "6 min",
     "date": "2026-08-20",
-    "content": "O dimensionamento considera consumo médio, tarifa, irradiação local, área disponível, orientação, sombreamento, tipo de telhado e objetivos do cliente. O resultado e a potencia em kWp, numero de módulos, inversor e area necessária."
+    "content": "O dimensionamento considera consumo médio, tarifa, irradiação local, área disponível, orientação, sombreamento, tipo de telhado e objetivos do cliente. O resultado e a potência em kWp, número de módulos, inversor e area necessária."
   },
   {
     "id": "art-07",
@@ -77,7 +77,7 @@
     "description": "Sistemas solares exigem pouca manutenção, mas não zero.",
     "readTime": "4 min",
     "date": "2026-08-22",
-    "content": "A manutenção inclui limpeza periodica dos módulos, verificacao de conexoes, inspecao do inversor e monitoramento de desempenho. Sistemas bem mantidos podem operar por 25+ anos com degradacao controlada."
+    "content": "A manutenção inclui limpeza periodica dos módulos, verificação de conexoes, inspecao do inversor e monitoramento de desempenho. Sistemas bem mantidos podem operar por 25+ anos com degradacao controlada."
   },
   {
     "id": "art-09",
@@ -97,6 +97,6 @@
     "description": "Como a energia solar complementa a mobilidade elétrica.",
     "readTime": "4 min",
     "date": "2026-08-24",
-    "content": "Carregar um carro elétrico com energia solar reduz o custo de operação e a pegada de carbono. O dimensionamento do sistema precisa considerar o consumo adicional do veiculo. A integracao solar + VE e uma tendencia crescente."
+    "content": "Carregar um carro elétrico com energia solar reduz o custo de operação e a pegada de carbono. O dimensionamento do sistema precisa considerar o consumo adicional do veiculo. A integração solar + VE e uma tendencia crescente."
   }
 ]

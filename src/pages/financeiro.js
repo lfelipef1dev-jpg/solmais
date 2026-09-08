@@ -44,7 +44,7 @@ function render(data, T) {
     </div>
 
     <div class="chart-container">
-      <h3>Energia convencional vs Solar — projecao 25 anos (dados demonstrativos)</h3>
+      <h3>Energia convencional vs Solar — projeção 25 anos (dados demonstrativos)</h3>
       <div class="bar-chart" style="height: 200px">
         ${Array.from({ length: 25 }).map((_, i) => {
           const year = i + 1;

@@ -6,12 +6,12 @@ function render(data, T) {
   const bcItems = [{ label: 'Inicio', href: 'index.html' }, { label: 'Portal', href: 'conta.html' }, { label: 'Suporte' }];
 
   const categories = [
-    { icon: 'bolt', label: 'Sistema não esta gerando', desc: 'Producao zero ou abaixo do esperado' },
+    { icon: 'bolt', label: 'Sistema não esta gerando', desc: 'Produção zero ou abaixo do esperado' },
     { icon: 'chart', label: 'App/monitoramento', desc: 'Problemas com o dashboard' },
     { icon: 'cash', label: 'Conta de energia', desc: 'Duvidas sobre faturamento e compensação' },
     { icon: 'bolt', label: 'Inversor', desc: 'Status, erros e reinicializacao' },
-    { icon: 'check', label: 'Garantia', desc: 'Cobertura e solicitacao' },
-    { icon: 'doc', label: 'Documentacao', desc: 'Projetos, manuais e termos' },
+    { icon: 'check', label: 'Garantia', desc: 'Cobertura e solicitação' },
+    { icon: 'doc', label: 'Documentação', desc: 'Projetos, manuais e termos' },
     { icon: 'settings', label: 'manutenção', desc: 'Limpeza, inspecao e reparos' }
   ];
 
@@ -44,7 +44,7 @@ function render(data, T) {
           <label class="label">Categoria</label>
           <select class="select" id="ticket-cat">
             <option>Monitoramento</option><option>Inversor</option><option>Conta de energia</option>
-            <option>Documentacao</option><option>manutenção</option><option>Garantia</option>
+            <option>Documentação</option><option>manutenção</option><option>Garantia</option>
           </select>
         </div>
         <div class="field">
@@ -52,7 +52,7 @@ function render(data, T) {
           <input type="text" class="input" id="ticket-subject" placeholder="Resumo do problema">
         </div>
         <div class="field">
-          <label class="label">Descricao</label>
+          <label class="label">Descrição</label>
           <textarea class="textarea" id="ticket-desc" placeholder="Descreva o problema em detalhes"></textarea>
         </div>
         <div class="field">

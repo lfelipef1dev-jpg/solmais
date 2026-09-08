@@ -112,12 +112,12 @@
       "consumedToday": 47.3
     },
     "health": {
-      "system": "atencao",
+      "system": "atenção",
       "inverter": "online",
       "modules": "normal",
       "communication": "online",
       "lastUpdate": "5 min",
-      "note": "Producao 8% abaixo do esperado — possivel sombreamento"
+      "note": "Produção 8% abaixo do esperado — possivel sombreamento"
     },
     "monthlyData": [
       { "month": "Jan", "estimated": 2200, "generated": 2180 },
@@ -148,7 +148,7 @@
     "id": "sys-003",
     "projectId": "SOL-1038",
     "customerId": "cus-003",
-    "customerName": "Condominio Praia Grande",
+    "customerName": "Condomínio Praia Grande",
     "type": "condominio",
     "location": "Praia Grande, SP",
     "cep": "11700-000",
@@ -220,9 +220,9 @@
     "id": "sys-004",
     "projectId": "SOL-3012",
     "customerId": "cus-004",
-    "customerName": "Sitio Cubatao",
+    "customerName": "Sitio Cubatão",
     "type": "rural",
-    "location": "Cubatao, SP",
+    "location": "Cubatão, SP",
     "cep": "11500-000",
     "status": "alert",
     "installedAt": "2026-05-08",
@@ -293,9 +293,9 @@
     "id": "sys-005",
     "projectId": "SOL-5520",
     "customerId": "cus-005",
-    "customerName": "Residencial Guaruja",
+    "customerName": "Residencial Guarujá",
     "type": "residencial",
-    "location": "Guaruja, SP",
+    "location": "Guarujá, SP",
     "cep": "11400-000",
     "status": "operational",
     "installedAt": "2026-06-22",

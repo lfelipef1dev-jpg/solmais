@@ -7,20 +7,20 @@ function render(data, T) {
   const privContent = `<section class="section">
   <div class="container container-narrow">
     ${T.renderBreadcrumb([{ label: 'Inicio', href: 'index.html' }, { label: 'Privacidade' }])}
-    ${T.pageHero('Politica de Privacidade', 'Plataforma demonstrativa — atualizado em setembro 2026', { icon: T.ICONS.doc })}
+    ${T.pageHero('Política de Privacidade', 'Plataforma demonstrativa — atualizado em setembro 2026', { icon: T.ICONS.doc })}
 
     <div class="card mb-4"><h3>1. Natureza demonstrativa</h3><p class="text-secondary mt-2">O SolMais e uma plataforma demonstrativa. não coletamos dados pessoais reais, não processamos pagamentos e não celebramos contratos comerciais.</p></div>
     <div class="card mb-4"><h3>2. Dados locais</h3><p class="text-secondary mt-2">Dados inseridos no simulador, portal e admin são armazenados apenas no seu navegador (localStorage). não são enviados a nenhum servidor.</p></div>
     <div class="card mb-4"><h3>3. Cookies</h3><p class="text-secondary mt-2">Esta plataforma não utiliza cookies de rastreamento. Apenas armazenamento local para persistencia de dados demonstrativos.</p></div>
     <div class="card mb-4"><h3>4. Analytics</h3><p class="text-secondary mt-2">Podemos utilizar analytics anonimizados para entender o uso da plataforma. Nenhum dado pessoal e coletado.</p></div>
-    <div class="card mb-4"><h3>5. Contato</h3><p class="text-secondary mt-2">Para questoes sobre esta politica: ${T.escapeHtml(store.email)} (email demonstrativo).</p></div>
+    <div class="card mb-4"><h3>5. Contato</h3><p class="text-secondary mt-2">Para questoes sobre esta política: ${T.escapeHtml(store.email)} (email demonstrativo).</p></div>
   </div>
 </section>`;
 
   pages.push({
     filename: 'privacidade.html', slug: 'privacidade', noindex: true,
     html: T.renderLayout({
-      store, data, title: 'Politica de Privacidade', description: 'Politica de privacidade da plataforma demonstrativa SolMais.',
+      store, data, title: 'Política de Privacidade', description: 'Política de privacidade da plataforma demonstrativa SolMais.',
       canonical: '/privacidade.html', active: '', noindex: true,
       structuredData: T.renderBreadcrumbSchema([{ label: 'Inicio', href: 'index.html' }, { label: 'Privacidade' }], store.url),
       content: privContent

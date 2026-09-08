@@ -30,14 +30,14 @@
     "description": "Memorial descritivo do sistema — documento demonstrativo"
   },
   {
-    "id": "doc-termo-conexao",
-    "name": "Termo de Conexao — DEMO",
+    "id": "doc-termo-conexão",
+    "name": "Termo de Conexão — DEMO",
     "projectId": "SOL-4821",
     "type": "PDF",
     "size": "650 KB",
     "uploadedAt": "2026-02-22",
     "demo": true,
-    "description": "Termo de conexao com a distribuidora — documento demonstrativo"
+    "description": "Termo de conexão com a distribuidora — documento demonstrativo"
   },
   {
     "id": "doc-manual",

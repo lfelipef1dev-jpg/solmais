@@ -44,7 +44,7 @@
   {
     "id": "case-003",
     "slug": "condominio-praia-grande-demo",
-    "title": "Condominio Praia Grande — DEMO",
+    "title": "Condomínio Praia Grande — DEMO",
     "type": "condominio",
     "location": "Praia Grande, SP",
     "power": 35.0,
@@ -65,9 +65,9 @@
   {
     "id": "case-004",
     "slug": "residencial-guaruja-demo",
-    "title": "Residencial Guaruja — DEMO",
+    "title": "Residencial Guarujá — DEMO",
     "type": "residencial",
-    "location": "Guaruja, SP",
+    "location": "Guarujá, SP",
     "power": 6.6,
     "panels": 12,
     "inverter": "6 kW",
@@ -86,9 +86,9 @@
   {
     "id": "case-005",
     "slug": "rural-cubatao-demo",
-    "title": "Rural Cubatao — DEMO",
+    "title": "Rural Cubatão — DEMO",
     "type": "rural",
-    "location": "Cubatao, SP",
+    "location": "Cubatão, SP",
     "power": 4.4,
     "panels": 8,
     "inverter": "4 kW",
