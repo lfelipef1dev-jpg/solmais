@@ -263,7 +263,7 @@ function render(data, T) {
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Módulos</span><strong>10 x 550W</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Inversor</span><strong>5 kW</strong></div>
                   <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;border-bottom:1px solid var(--border)"><span class="text-secondary">Strings</span><strong>2</strong></div>
-                  <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0"><span class="text-secondary">Área estimada</span><strong>~26 m2</strong></div>
+                  <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0"><span class="text-secondary">Área estimada</span><strong>~26 m²</strong></div>
                 </div>
               </div>
             </div>
@@ -303,7 +303,7 @@ function render(data, T) {
             <div class="result-card"><div class="val">4,8 anos</div><div class="lbl">Payback estimado</div></div>
             <div class="result-card"><div class="val">5,2 t/ano</div><div class="lbl">CO2 evitado</div></div>
             <div class="result-card"><div class="val">10</div><div class="lbl">Módulos</div></div>
-            <div class="result-card"><div class="val">26 m2</div><div class="lbl">Área necessária</div></div>
+            <div class="result-card"><div class="val">26 m²</div><div class="lbl">Área necessária</div></div>
           </div>
 
           <!-- Gráfico premium geração vs consumo -->
@@ -376,7 +376,7 @@ function render(data, T) {
 
       <div class="wizard-nav">
         <button class="btn btn-secondary" id="wizard-prev" onclick="SolMais.wizardPrev()" disabled>Voltar</button>
-        <button class="btn btn-primary" id="wizard-next" onclick="SolMais.wizardNext()">Proximo ${T.ICONS.arrow}</button>
+        <button class="btn btn-primary" id="wizard-next" onclick="SolMais.wizardNext()">Próximo ${T.ICONS.arrow}</button>
       </div>
     </div>
   </div>

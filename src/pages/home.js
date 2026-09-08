@@ -106,7 +106,7 @@ function render(data, T) {
   <div class="sm-twin-wow-grid">
     <div class="sm-twin-wow-header">
       <span class="sm-eyebrow">Digital Twin</span>
-      <h2 class="sm-headline dark" style="margin-top:var(--space-3)">A mêsma casa.<br>Em todo lugar.</h2>
+      <h2 class="sm-headline dark" style="margin-top:var(--space-3)">A mesma casa.<br>Em todo lugar.</h2>
       <p class="sm-lede dark" style="margin:var(--space-3) auto 0">O Digital Twin do SolMais aparece na simulação, no projeto e no monitoramento. Continuidade visual. Identidade de produto.</p>
     </div>
     <div class="sm-twin-wow-stage">
@@ -153,7 +153,7 @@ function render(data, T) {
           <span class="sm-monitor-side-value">18,7 kWh</span>
         </div>
         <div class="sm-monitor-side-row">
-          <span class="sm-monitor-side-label">Mes</span>
+          <span class="sm-monitor-side-label">Mês</span>
           <span class="sm-monitor-side-value">584 kWh</span>
         </div>
         <div class="sm-monitor-side-row">
