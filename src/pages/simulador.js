@@ -370,7 +370,7 @@ function render(data, T) {
               <a href="projeto.html" class="btn btn-secondary">${T.ICONS.panel} Ver projeto demo</a>
             </div>
           </div>
-          <p class="text-xs text-muted text-center mt-4">Estimativa demonstrativa — não constitui proposta comercial, projeto elétrico, orcamento, oferta de Crédito ou garantia de economia.</p>
+          <p class="text-xs text-muted text-center mt-4">Estimativa demonstrativa — não constitui proposta comercial, projeto elétrico, orçamento, oferta de crédito ou garantia de economia.</p>
         </div>
       </div>
 

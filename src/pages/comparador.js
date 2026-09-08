@@ -47,7 +47,7 @@ function render(data, T) {
           <tr><td>Produção 25 anos</td>${systems.map(s => '<td>' + (s.prod25/1000).toFixed(0) + ' MWh</td>').join('')}</tr>
         </table>
       </div>
-      <p class="text-xs text-muted mt-4">Cenários demonstrativos — não constituem proposta comercial ou orcamento.</p>
+      <p class="text-xs text-muted mt-4">Cenários demonstrativos — não constituem proposta comercial ou orçamento.</p>
     </div>
   </div>
 </section>`;
