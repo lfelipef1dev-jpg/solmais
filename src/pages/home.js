@@ -162,7 +162,7 @@ function render(data, T) {
         </div>
         <div class="sm-monitor-side-row">
           <span class="sm-monitor-side-label">CO² evitado</span>
-          <span class="sm-monitor-side-value" style="color:var(--gen)">2,1 t/mes</span>
+          <span class="sm-monitor-side-value" style="color:var(--gen-dark)">2,1 t/mes</span>
         </div>
         <div style="margin-top:var(--space-4)">
           ${T.solarCurve({ id: 'mon-preview', width: 500, height: 180, showConsumption: true, peak: '4,82 kW', peakTime: '12:38' })}
@@ -204,7 +204,7 @@ function render(data, T) {
     <h2 class="sm-headline dark">Pronto para<br>simular?</h2>
     <p class="sm-lede dark">Faca uma simulacao completa em 6 etapas e veja o resultado com graficos, comparador e cenarios financeiros.</p>
     <a href="simulador.html" class="sm-hero-cta">Iniciar simulacao &rarr;</a>
-    <p style="font-size:var(--fs-xs);color:var(--text-dark-muted);margin-top:var(--space-5)">Plataforma demonstrativa — todos os dados sao ficticios</p>
+    <p style="font-size:var(--fs-xs);color:var(--text-dark-secondary);margin-top:var(--space-5)">Plataforma demonstrativa — todos os dados sao ficticios</p>
   </div>
 </section>`;
 

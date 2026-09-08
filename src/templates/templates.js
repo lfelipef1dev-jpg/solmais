@@ -54,7 +54,7 @@ function renderHead(opts) {
   const noindex = opts.noindex ? '<meta name="robots" content="noindex, nofollow">' : '<meta name="robots" content="index, follow">';
   const ogType = opts.ogType || 'website';
   const ogImage = opts.ogImage || (store.url.replace(/\/$/, '') + '/og-image.jpg');
-  const cssFiles = (opts.cssFiles || ['base.css', 'components.css', 'pages.css']).map(f => '<link rel="stylesheet" href="styles/' + f + '">').join('\n  ');
+  const cssFiles = (opts.cssFiles || ['base.css', 'components.css', 'pages.css']).map(f => '<link rel="stylesheet" href="styles/' + f + '?v=2">').join('\n  ');
   const structuredData = opts.structuredData ? (Array.isArray(opts.structuredData) ? opts.structuredData : [opts.structuredData]).map(s => '<script type="application/ld+json">' + JSON.stringify(s) + '</script>').join('\n  ') : '';
   const preload = opts.preload ? '<link rel="preload" as="image" href="' + opts.preload + '" fetchpriority="high">' : '';
 
@@ -129,7 +129,7 @@ function renderFooter(store) {
     { title: 'Institucional', links: store.footerLinks.institucional }
   ];
   const colHtml = cols.map(col =>
-    '<div class="footer-col"><h4>' + escapeHtml(col.title) + '</h4><ul>' +
+    '<div class="footer-col"><h3>' + escapeHtml(col.title) + '</h3><ul>' +
     col.links.map(l => '<li><a href="' + l.href + '">' + escapeHtml(l.label) + '</a></li>').join('') +
     '</ul></div>'
   ).join('');
@@ -228,7 +228,7 @@ function renderLayout(opts) {
   const announcement = renderAnnouncement(store);
   const header = renderHeader(store, store.nav || [], opts);
   const footer = renderFooter(store);
-  const jsFiles = (opts.jsFiles || ['app.js']).map(f => '<script src="scripts/' + f + '" defer></script>').join('\n  ');
+  const jsFiles = (opts.jsFiles || ['app.js']).map(f => '<script src="scripts/' + f + '?v=2" defer></script>').join('\n  ');
   const dataScript = '<script>window.SOLMAIS_STORE = ' + JSON.stringify(store).replace(/</g, '\\u003c') + ';</script>';
 
   return `${head}

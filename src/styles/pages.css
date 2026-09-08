@@ -2039,8 +2039,13 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--solar);
+  color: var(--solar-dark);
   margin-bottom: var(--space-4);
+}
+.sm-hero .sm-eyebrow,
+.sm-twin-wow .sm-eyebrow,
+.sm-cta .sm-eyebrow {
+  color: var(--solar);
 }
 .sm-headline {
   font-family: var(--font-display);
@@ -2449,7 +2454,7 @@
 }
 .sm-monitor-side-label {
   font-size: var(--fs-sm);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }

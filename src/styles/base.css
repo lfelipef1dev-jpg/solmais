@@ -64,6 +64,7 @@
 
   /* Generation/positive — tech green somente para status */
   --gen: #16A34A;
+  --gen-dark: #15803D;
   --gen-soft: rgba(22,163,74,0.10);
   --gen-glow: rgba(22,163,74,0.15);
 
@@ -223,7 +224,7 @@ h3 { font-size: var(--fs-base); }
   align-items: center;
   gap: var(--space-1);
   background: var(--warn-soft);
-  color: var(--warn);
+  color: var(--text);
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-full);
   font-size: var(--fs-xs);
