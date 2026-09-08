@@ -84,7 +84,7 @@ async function build() {
   await copyMinifiedJs(path.join(SRC, 'scripts'), path.join(OUT, 'scripts'));
 
   // Copiar arquivos raiz
-  ['favicon.svg', 'og-image.jpg', '_headers'].forEach(f => {
+  ['favicon.svg', 'favicon.png', 'og-image.jpg', '_headers'].forEach(f => {
     const src = path.join(__dirname, f);
     if (fs.existsSync(src)) fs.copyFileSync(src, path.join(OUT, f));
   });
